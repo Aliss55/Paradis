@@ -3,16 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
+import {SharedModule} from "./shared/shared.module";
+import {PrimeNGModule} from "./styling/prime-ng.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    PrimeNGModule
   ],
   providers: [],
   bootstrap: [AppComponent]
