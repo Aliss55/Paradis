@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {NavBarComponent} from "./nav-bar/nav-bar.component";
 import {PrimeNGModule} from "../styling/prime-ng.module";
+import {TranslateModule} from "@ngx-translate/core";
 
 
 
@@ -9,11 +10,12 @@ import {PrimeNGModule} from "../styling/prime-ng.module";
   declarations: [
     NavBarComponent
   ],
-  imports: [
-    CommonModule,
-    PrimeNGModule
+    imports: [
+        CommonModule,
+        PrimeNGModule,
+        TranslateModule
 
-  ],
+    ],
   exports:[
     NavBarComponent
   ]
