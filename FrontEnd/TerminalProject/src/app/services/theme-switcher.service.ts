@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, Subject} from "rxjs";
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ThemeSwitcherService {
-
   private theme$ = new BehaviorSubject<string>('light');
+  public actualTheme = this.theme$.asObservable();
 
   public initTheme(): void {
-    const storedTheme:string | null = localStorage.getItem('theme$');
+    const storedTheme: string | null = localStorage.getItem('theme$');
     if (storedTheme) {
       this.theme$.next(storedTheme);
     }
@@ -29,17 +29,14 @@ export class ThemeSwitcherService {
     document.head.appendChild(link);
   }
 
-    private updateLinkToStylesheet(): void {
+  private updateLinkToStylesheet(): void {
     const link = document.getElementById('theme$') as HTMLLinkElement;
     if (link) {
       link.href = `/assets/themes/${this.theme$.value}-theme.css`;
     }
   }
 
+  public getTheme(): string {
+    return this.theme$.value;
+  }
 }
-
-
-
-
-
-

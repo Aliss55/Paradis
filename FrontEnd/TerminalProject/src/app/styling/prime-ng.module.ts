@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DockModule } from 'primeng/dock';
 import { CardModule } from 'primeng/card';
 import { MenubarModule } from 'primeng/menubar';
@@ -14,14 +14,14 @@ import { MenubarModule } from 'primeng/menubar';
     BrowserAnimationsModule,
     DockModule,
     CardModule,
-    MenubarModule
+    MenubarModule,
   ],
   exports: [
     ButtonModule,
     BrowserAnimationsModule,
     DockModule,
     CardModule,
-    MenubarModule
-  ]
+    MenubarModule,
+  ],
 })
-export class PrimeNGModule { }
+export class PrimeNGModule {}

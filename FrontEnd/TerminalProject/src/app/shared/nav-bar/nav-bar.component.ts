@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ThemeSwitcherService } from '../../services/theme-switcher.service';
 
@@ -13,6 +13,8 @@ export class NavBarComponent {
     private themeService: ThemeSwitcherService,
   ) {}
 
+  public actualTheme: string = this.themeService.getTheme();
+
   public toggleLanguage() {
     this.translateService.use(
       this.translateService.currentLang === 'en' ? 'es' : 'en',
@@ -21,5 +23,6 @@ export class NavBarComponent {
 
   public toggleTheme(): void {
     this.themeService.toggleTheme();
+    this.actualTheme = this.themeService.getTheme();
   }
 }
