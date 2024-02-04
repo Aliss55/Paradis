@@ -12,15 +12,13 @@ export class AppComponent implements OnInit{
 
   constructor(translateService: TranslateService, private themeService: ThemeSwitcherService){
     translateService.setDefaultLang('en');
-    translateService.use('en');
+    // translateService.use('en');
   }
 
   ngOnInit(): void {
       this.themeService.initTheme();
   }
 
-    toggleTheme(): void{
-    this.themeService.toggleTheme();
-    }
+
 
 }
