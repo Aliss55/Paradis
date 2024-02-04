@@ -11,8 +11,8 @@ export class AppComponent implements OnInit{
   title = 'TerminalProject';
 
   constructor(translateService: TranslateService, private themeService: ThemeSwitcherService){
-    translateService.setDefaultLang('es');
-    translateService.use('es');
+    translateService.setDefaultLang('en');
+    translateService.use('en');
   }
 
   ngOnInit(): void {
