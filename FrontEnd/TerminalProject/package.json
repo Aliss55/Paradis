@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
-    "start:scss": "ng serve && npx sass --watch ./src/assets/themes/dark-theme.scss:./src/assets/themes/dark-theme.css && npx sass --watch ./src/assets/themes/light-theme.scss:./src/assets/themes/light-theme.css",
+    "compile:scss": "npx sass --watch ../packages/Light-Theme/blue/theme.scss:./src/assets/light-theme.css ../packages/Dark-Theme/purple/theme.scss:./src/assets/dark-theme.css",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

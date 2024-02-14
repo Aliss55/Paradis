@@ -13,7 +13,7 @@
   --text-color: rgb(255, 255, 255);
   --text-color-secondary: rgba(255, 255, 255, 0.6);
   --primary-color: rgb(255, 255, 255);
-  --primary-color-text: #030712;
+  --primary-color-text: #2b55ca;
   --surface-0: #111827;
   --surface-50: #1f2937;
   --surface-100: #374151;
@@ -436,7 +436,7 @@
     margin: 0;
     padding: 0.75rem 1.25rem;
     color: rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     font-weight: 700;
   }
   p-autocomplete.ng-dirty.ng-invalid > .p-autocomplete > .p-inputtext {
@@ -803,7 +803,7 @@
   }
   .p-checkbox .p-checkbox-box .p-checkbox-icon {
     transition-duration: 0.2s;
-    color: #030712;
+    color: #2b55ca;
     font-size: 14px;
   }
   .p-checkbox .p-checkbox-box .p-icon {
@@ -826,7 +826,7 @@
   .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
     border-color: #ddd6fe;
     background: #ddd6fe;
-    color: #030712;
+    color: #2b55ca;
   }
   p-checkbox.ng-dirty.ng-invalid > .p-checkbox > .p-checkbox-box {
     border-color: #fca5a5;
@@ -1011,7 +1011,7 @@
     margin: 0;
     padding: 0.75rem 1.25rem;
     color: rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     font-weight: 700;
   }
   .p-dropdown-panel .p-dropdown-items .p-dropdown-empty-message {
@@ -1156,7 +1156,7 @@
     background: rgb(255, 255, 255);
   }
   .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider:before {
-    background: #030712;
+    background: #2b55ca;
   }
   .p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover .p-inputswitch-slider {
     background: #c4b5fd;
@@ -1301,7 +1301,7 @@
     margin: 0;
     padding: 0.75rem 1.25rem;
     color: rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     font-weight: 700;
   }
   .p-listbox .p-listbox-list .p-listbox-empty-message {
@@ -1458,7 +1458,7 @@
     margin: 0;
     padding: 0.75rem 1.25rem;
     color: rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     font-weight: 700;
   }
   .p-multiselect-panel .p-multiselect-items .p-multiselect-empty-message {
@@ -1542,7 +1542,7 @@
     width: 12px;
     height: 12px;
     transition-duration: 0.2s;
-    background-color: #030712;
+    background-color: #2b55ca;
   }
   .p-radiobutton .p-radiobutton-box.p-highlight {
     border-color: rgb(255, 255, 255);
@@ -1551,7 +1551,7 @@
   .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
     border-color: #ddd6fe;
     background: #ddd6fe;
-    color: #030712;
+    color: #2b55ca;
   }
   p-radiobutton.ng-dirty.ng-invalid > .p-radiobutton > .p-radiobutton-box {
     border-color: #fca5a5;
@@ -1623,20 +1623,20 @@
   .p-selectbutton .p-button.p-highlight {
     background: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
-    color: #030712;
+    color: #2b55ca;
   }
   .p-selectbutton .p-button.p-highlight .p-button-icon-left,
   .p-selectbutton .p-button.p-highlight .p-button-icon-right {
-    color: #030712;
+    color: #2b55ca;
   }
   .p-selectbutton .p-button.p-highlight:hover {
     background: #c4b5fd;
     border-color: #c4b5fd;
-    color: #030712;
+    color: #2b55ca;
   }
   .p-selectbutton .p-button.p-highlight:hover .p-button-icon-left,
   .p-selectbutton .p-button.p-highlight:hover .p-button-icon-right {
-    color: #030712;
+    color: #2b55ca;
   }
   p-selectbutton.ng-dirty.ng-invalid > .p-selectbutton > .p-button {
     border-color: #fca5a5;
@@ -1714,20 +1714,20 @@
   .p-togglebutton.p-button.p-highlight {
     background: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
-    color: #030712;
+    color: #2b55ca;
   }
   .p-togglebutton.p-button.p-highlight .p-button-icon-left,
   .p-togglebutton.p-button.p-highlight .p-button-icon-right {
-    color: #030712;
+    color: #2b55ca;
   }
   .p-togglebutton.p-button.p-highlight:hover {
     background: #c4b5fd;
     border-color: #c4b5fd;
-    color: #030712;
+    color: #2b55ca;
   }
   .p-togglebutton.p-button.p-highlight:hover .p-button-icon-left,
   .p-togglebutton.p-button.p-highlight:hover .p-button-icon-right {
-    color: #030712;
+    color: #2b55ca;
   }
   p-togglebutton.ng-dirty.ng-invalid > .p-togglebutton.p-button {
     border-color: #fca5a5;
@@ -1850,7 +1850,7 @@
     right: 3rem;
   }
   .p-button {
-    color: #030712;
+    color: #2b55ca;
     background: rgb(255, 255, 255);
     border: 1px solid rgb(255, 255, 255);
     padding: 0.75rem 1.25rem;
@@ -1860,12 +1860,12 @@
   }
   .p-button:not(:disabled):hover {
     background: #c4b5fd;
-    color: #030712;
+    color: #2b55ca;
     border-color: #c4b5fd;
   }
   .p-button:not(:disabled):active {
     background: #ddd6fe;
-    color: #030712;
+    color: #2b55ca;
     border-color: #ddd6fe;
   }
   .p-button.p-button-outlined {
@@ -1947,7 +1947,7 @@
     height: 1rem;
     line-height: 1rem;
     color: rgb(255, 255, 255);
-    background-color: #030712;
+    background-color: #2b55ca;
   }
   .p-button.p-button-raised {
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
@@ -3503,7 +3503,7 @@
     border-radius: 50%;
     width: 1rem;
     height: 1rem;
-    background-color: #030712;
+    background-color: #2b55ca;
   }
   .p-timeline .p-timeline-event-connector {
     background-color: #424b57;
@@ -4321,7 +4321,7 @@
   }
   .p-overlaypanel .p-overlaypanel-close {
     background: rgb(255, 255, 255);
-    color: #030712;
+    color: #2b55ca;
     width: 2rem;
     height: 2rem;
     transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
@@ -4332,7 +4332,7 @@
   }
   .p-overlaypanel .p-overlaypanel-close:enabled:hover {
     background: #c4b5fd;
-    color: #030712;
+    color: #2b55ca;
   }
   .p-overlaypanel:after {
     border: solid transparent;
@@ -4450,16 +4450,16 @@
   }
   .p-fileupload-choose:not(.p-disabled):hover {
     background: #c4b5fd;
-    color: #030712;
+    color: #2b55ca;
     border-color: #c4b5fd;
   }
   .p-fileupload-choose:not(.p-disabled):active {
     background: #ddd6fe;
-    color: #030712;
+    color: #2b55ca;
     border-color: #ddd6fe;
   }
   .p-breadcrumb {
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     border: 1px solid #424b57;
     border-radius: 6px;
     padding: 1rem;
@@ -4491,7 +4491,7 @@
   }
   .p-contextmenu {
     padding: 0.25rem 0;
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     color: rgb(255, 255, 255);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
@@ -4503,7 +4503,7 @@
   }
   .p-contextmenu .p-submenu-list {
     padding: 0.25rem 0;
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
     border-radius: 6px;
@@ -4645,7 +4645,7 @@
   }
   .p-megamenu {
     padding: 0.5rem;
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     color: rgb(255, 255, 255);
     border: 1px solid #424b57;
     border-radius: 6px;
@@ -4710,7 +4710,7 @@
     color: rgb(255, 255, 255);
   }
   .p-megamenu .p-megamenu-panel {
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     color: rgb(255, 255, 255);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
@@ -4719,7 +4719,7 @@
     margin: 0;
     padding: 0.75rem 1.25rem;
     color: rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     font-weight: 700;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
@@ -4769,7 +4769,7 @@
   }
   .p-menu {
     padding: 0.25rem 0;
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     color: rgb(255, 255, 255);
     border: 1px solid #424b57;
     border-radius: 6px;
@@ -4832,7 +4832,7 @@
     color: rgb(255, 255, 255);
   }
   .p-menu.p-menu-overlay {
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
@@ -4840,7 +4840,7 @@
     margin: 0;
     padding: 0.75rem 1.25rem;
     color: rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     font-weight: 700;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
@@ -4851,7 +4851,7 @@
   }
   .p-menu .p-menuitem-badge {
     background: rgb(255, 255, 255);
-    color: #030712;
+    color: #2b55ca;
     font-size: 0.75rem;
     font-weight: 700;
     min-width: 1.5rem;
@@ -4864,7 +4864,7 @@
   }
   .p-menubar {
     padding: 0.5rem;
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     color: rgb(255, 255, 255);
     border: 1px solid #424b57;
     border-radius: 6px;
@@ -4961,7 +4961,7 @@
   }
   .p-menubar .p-submenu-list {
     padding: 0.25rem 0;
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
     width: 12.5rem;
@@ -4998,7 +4998,7 @@
       position: absolute;
       display: none;
       padding: 0.25rem 0;
-      background: rgb(0, 0, 0);
+      background: rgb(167, 44, 44);
       border: 1px solid #424b57;
       box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
       width: 100%;
@@ -5190,7 +5190,7 @@
   }
   .p-slidemenu {
     padding: 0.25rem 0;
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     color: rgb(255, 255, 255);
     border: 1px solid #424b57;
     border-radius: 6px;
@@ -5259,13 +5259,13 @@
     color: rgb(255, 255, 255);
   }
   .p-slidemenu.p-slidemenu-overlay {
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
   .p-slidemenu .p-slidemenu-list {
     padding: 0.25rem 0;
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
@@ -5291,7 +5291,7 @@
   }
   .p-slidemenu .p-menuitem-badge {
     background: rgb(255, 255, 255);
-    color: #030712;
+    color: #2b55ca;
     font-size: 0.75rem;
     font-weight: 700;
     min-width: 1.5rem;
@@ -5353,7 +5353,7 @@
   }
   .p-tabmenu .p-tabmenu-nav .p-menuitem-badge {
     background: rgb(255, 255, 255);
-    color: #030712;
+    color: #2b55ca;
     font-size: 0.75rem;
     font-weight: 700;
     min-width: 1.5rem;
@@ -5418,14 +5418,14 @@
   }
   .p-tieredmenu {
     padding: 0.25rem 0;
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     color: rgb(255, 255, 255);
     border: 1px solid #424b57;
     border-radius: 6px;
     width: 12.5rem;
   }
   .p-tieredmenu.p-tieredmenu-overlay {
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
@@ -5434,7 +5434,7 @@
   }
   .p-tieredmenu .p-submenu-list {
     padding: 0.25rem 0;
-    background: rgb(0, 0, 0);
+    background: rgb(167, 44, 44);
     border: 1px solid #424b57;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
@@ -5902,7 +5902,7 @@
   }
   .p-badge {
     background: rgb(255, 255, 255);
-    color: #030712;
+    color: #2b55ca;
     font-size: 0.75rem;
     font-weight: 700;
     min-width: 1.5rem;
@@ -6002,7 +6002,7 @@
     background: rgb(255, 255, 255);
   }
   .p-progressbar .p-progressbar-label {
-    color: #030712;
+    color: #2b55ca;
     line-height: 1.5rem;
   }
   .p-scrolltop {
@@ -6035,7 +6035,7 @@
   }
   .p-tag {
     background: rgb(255, 255, 255);
-    color: #030712;
+    color: #2b55ca;
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.25rem 0.4rem;
@@ -6154,7 +6154,7 @@
   }
   .p-steps .p-steps-item.p-highlight .p-steps-number {
     background: rgb(255, 255, 255);
-    color: #030712;
+    color: #2b55ca;
   }
 }
 
