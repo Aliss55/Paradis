@@ -35,8 +35,4 @@ export class ThemeSwitcherService {
       link.href = `/assets/themes/${this.theme$.value}-theme.css`;
     }
   }
-
-  public getTheme(): string {
-    return this.theme$.value;
-  }
 }
