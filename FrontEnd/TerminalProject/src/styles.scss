@@ -13,18 +13,27 @@ body{
     #b76f92,
     #00c2ff,
     #00c2ff 114.41%);
-  animation: light-theme 10s ease infinite;
+  animation: motion 10s ease infinite;
+}
+.dark-theme-gradient {
+  background-size: 200% 200%;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(120deg, #0748B0, #2C0859, #06132C,
+    #07050A);
+  animation: motion 10s ease infinite;
 }
 
-@-webkit-keyframes light-theme {
-  0% { background-position: 0% 50%; }
+@-webkit-keyframes motion {
+  0% { background-position: 0 50%; }
   10% { background-position: 40% 50%; }
   20% { background-position: 80% 50%; }
   20% { background-position: 50% 50%; }
   40% { background-position: 100% 50%; }
 }
-@-moz-keyframes light-theme {
-  0% { background-position: 0% 50%; }
+// Firefox configuration
+@-moz-keyframes motion {
+  0% { background-position: 0 50%; }
   10% { background-position: 40% 50%; }
   20% { background-position: 80% 50%; }
   20% { background-position: 50% 50%; }
@@ -32,8 +41,8 @@ body{
 }
 
 // Edge configuration
-@keyframes light-theme {
-  0% { background-position: 0% 50%; }
+@keyframes motion {
+  0% { background-position: 0 50%; }
   10% { background-position: 40% 50%; }
   20% { background-position: 80% 50%; }
   20% { background-position: 50% 50%; }
