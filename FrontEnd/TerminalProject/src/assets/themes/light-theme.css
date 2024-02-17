@@ -13,7 +13,7 @@
   --text-color: #000000;
   --text-color-secondary: #6b7280;
   --primary-color: #0E8CD9;
-  --primary-color-text: #ffffff;
+  --primary-color-text: #000000;
   --surface-0: #ffffff;
   --surface-50: #f9fafb;
   --surface-100: #f3f4f6;
@@ -803,7 +803,7 @@
   }
   .p-checkbox .p-checkbox-box .p-checkbox-icon {
     transition-duration: 0.2s;
-    color: #ffffff;
+    color: #000000;
     font-size: 14px;
   }
   .p-checkbox .p-checkbox-box .p-icon {
@@ -826,7 +826,7 @@
   .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
     border-color: #1D4ED8;
     background: #1D4ED8;
-    color: #ffffff;
+    color: #000000;
   }
   p-checkbox.ng-dirty.ng-invalid > .p-checkbox > .p-checkbox-box {
     border-color: #e24c4c;
@@ -1542,7 +1542,7 @@
     width: 12px;
     height: 12px;
     transition-duration: 0.2s;
-    background-color: #ffffff;
+    background-color: #000000;
   }
   .p-radiobutton .p-radiobutton-box.p-highlight {
     border-color: #0E8CD9;
@@ -1551,7 +1551,7 @@
   .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
     border-color: #1D4ED8;
     background: #1D4ED8;
-    color: #ffffff;
+    color: #000000;
   }
   p-radiobutton.ng-dirty.ng-invalid > .p-radiobutton > .p-radiobutton-box {
     border-color: #e24c4c;
@@ -1623,20 +1623,20 @@
   .p-selectbutton .p-button.p-highlight {
     background: #0E8CD9;
     border-color: #0E8CD9;
-    color: #ffffff;
+    color: #000000;
   }
   .p-selectbutton .p-button.p-highlight .p-button-icon-left,
   .p-selectbutton .p-button.p-highlight .p-button-icon-right {
-    color: #ffffff;
+    color: #000000;
   }
   .p-selectbutton .p-button.p-highlight:hover {
     background: #3B82F6;
     border-color: #3B82F6;
-    color: #ffffff;
+    color: #000000;
   }
   .p-selectbutton .p-button.p-highlight:hover .p-button-icon-left,
   .p-selectbutton .p-button.p-highlight:hover .p-button-icon-right {
-    color: #ffffff;
+    color: #000000;
   }
   p-selectbutton.ng-dirty.ng-invalid > .p-selectbutton > .p-button {
     border-color: #e24c4c;
@@ -1714,20 +1714,20 @@
   .p-togglebutton.p-button.p-highlight {
     background: #0E8CD9;
     border-color: #0E8CD9;
-    color: #ffffff;
+    color: #000000;
   }
   .p-togglebutton.p-button.p-highlight .p-button-icon-left,
   .p-togglebutton.p-button.p-highlight .p-button-icon-right {
-    color: #ffffff;
+    color: #000000;
   }
   .p-togglebutton.p-button.p-highlight:hover {
     background: #3B82F6;
     border-color: #3B82F6;
-    color: #ffffff;
+    color: #000000;
   }
   .p-togglebutton.p-button.p-highlight:hover .p-button-icon-left,
   .p-togglebutton.p-button.p-highlight:hover .p-button-icon-right {
-    color: #ffffff;
+    color: #000000;
   }
   p-togglebutton.ng-dirty.ng-invalid > .p-togglebutton.p-button {
     border-color: #e24c4c;
@@ -1850,7 +1850,7 @@
     right: 3rem;
   }
   .p-button {
-    color: #ffffff;
+    color: #000000;
     background: #0E8CD9;
     border: 1px solid #0E8CD9;
     padding: 0.75rem 1.25rem;
@@ -1860,12 +1860,12 @@
   }
   .p-button:not(:disabled):hover {
     background: #3B82F6;
-    color: #ffffff;
+    color: #000000;
     border-color: #3B82F6;
   }
   .p-button:not(:disabled):active {
     background: #1D4ED8;
-    color: #ffffff;
+    color: #000000;
     border-color: #1D4ED8;
   }
   .p-button.p-button-outlined {
@@ -1947,7 +1947,7 @@
     height: 1rem;
     line-height: 1rem;
     color: #0E8CD9;
-    background-color: #ffffff;
+    background-color: #000000;
   }
   .p-button.p-button-raised {
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -3503,7 +3503,7 @@
     border-radius: 50%;
     width: 1rem;
     height: 1rem;
-    background-color: #ffffff;
+    background-color: #000000;
   }
   .p-timeline .p-timeline-event-connector {
     background-color: #e5e7eb;
@@ -4321,7 +4321,7 @@
   }
   .p-overlaypanel .p-overlaypanel-close {
     background: #0E8CD9;
-    color: #ffffff;
+    color: #000000;
     width: 2rem;
     height: 2rem;
     transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
@@ -4332,7 +4332,7 @@
   }
   .p-overlaypanel .p-overlaypanel-close:enabled:hover {
     background: #3B82F6;
-    color: #ffffff;
+    color: #000000;
   }
   .p-overlaypanel:after {
     border: solid transparent;
@@ -4450,12 +4450,12 @@
   }
   .p-fileupload-choose:not(.p-disabled):hover {
     background: #3B82F6;
-    color: #ffffff;
+    color: #000000;
     border-color: #3B82F6;
   }
   .p-fileupload-choose:not(.p-disabled):active {
     background: #1D4ED8;
-    color: #ffffff;
+    color: #000000;
     border-color: #1D4ED8;
   }
   .p-breadcrumb {
@@ -4851,7 +4851,7 @@
   }
   .p-menu .p-menuitem-badge {
     background: #0E8CD9;
-    color: #ffffff;
+    color: #000000;
     font-size: 0.75rem;
     font-weight: 700;
     min-width: 1.5rem;
@@ -5291,7 +5291,7 @@
   }
   .p-slidemenu .p-menuitem-badge {
     background: #0E8CD9;
-    color: #ffffff;
+    color: #000000;
     font-size: 0.75rem;
     font-weight: 700;
     min-width: 1.5rem;
@@ -5353,7 +5353,7 @@
   }
   .p-tabmenu .p-tabmenu-nav .p-menuitem-badge {
     background: #0E8CD9;
-    color: #ffffff;
+    color: #000000;
     font-size: 0.75rem;
     font-weight: 700;
     min-width: 1.5rem;
@@ -5902,7 +5902,7 @@
   }
   .p-badge {
     background: #0E8CD9;
-    color: #ffffff;
+    color: #000000;
     font-size: 0.75rem;
     font-weight: 700;
     min-width: 1.5rem;
@@ -6002,7 +6002,7 @@
     background: #0E8CD9;
   }
   .p-progressbar .p-progressbar-label {
-    color: #ffffff;
+    color: #000000;
     line-height: 1.5rem;
   }
   .p-scrolltop {
@@ -6035,7 +6035,7 @@
   }
   .p-tag {
     background: #0E8CD9;
-    color: #ffffff;
+    color: #000000;
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.25rem 0.4rem;
@@ -6142,7 +6142,7 @@
   }
   .p-steps .p-steps-item.p-highlight .p-steps-number {
     background: #0E8CD9;
-    color: #ffffff;
+    color: #000000;
   }
 }
 
