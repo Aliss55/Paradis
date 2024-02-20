@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
-    "start:scss": "ng serve && npx sass --watch ./src/assets/themes/dark-theme.scss:./src/assets/themes/dark-theme.css && npx sass --watch ./src/assets/themes/light-theme.scss:./src/assets/themes/light-theme.css",
+    "compile:scss": "npx sass --watch ../packages/Light-Theme/blue/theme.scss:./src/assets/themes/light-theme.css ../packages/Dark-Theme/purple/theme.scss:./src/assets/themes/dark-theme.css",
+    "compile:scssOnce": "npx sass ../packages/Light-Theme/blue/theme.scss:./src/assets/themes/light-theme.css ../packages/Dark-Theme/purple/theme.scss:./src/assets/themes/dark-theme.css",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -21,6 +22,7 @@
     "@angular/router": "^17.1.0",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
+    "material-icons": "^1.13.12",
     "primeflex": "^3.3.1",
     "primeng": "^17.3.3",
     "rxjs": "~7.8.0",
@@ -35,6 +37,7 @@
     "@briebug/jest-schematic": "^6.0.0",
     "@types/jest": "29.5.11",
     "jest": "^29.7.0",
+    "prettier": "3.2.5",
     "typescript": "~5.3.2"
   }
 }
