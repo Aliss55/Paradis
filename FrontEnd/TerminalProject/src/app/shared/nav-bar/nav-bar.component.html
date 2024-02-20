@@ -1,0 +1,32 @@
+<p-menubar
+  [model]="[
+    {
+      label: 'OPTIONS.ABOUT_US' | translate
+    },
+    {
+      label: 'OPTIONS.ACTIVITIES' | translate
+    },
+    {
+      label: 'OPTIONS.BLOG' | translate
+    },
+    {
+      label: 'OPTIONS.ANALIZE_TEXT' | translate
+    },
+  ]"
+>
+  <ng-template pTemplate="start">
+    <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
+  </ng-template>
+
+  <ng-template pTemplate="end">
+    <p-button [rounded]="true" [outlined]="true" (click)="toggleLanguage()" >
+      <span class="material-icons-outlined" >translate</span>
+    </p-button>
+    <p-button [rounded]="true" [outlined]="true" (click)="toggleTheme()" >
+      <span *ngIf="actualTheme=='dark'" class="material-icons-outlined" >wb_sunny</span>
+      <span *ngIf="actualTheme=='light'" class="material-icons-outlined" >bedtime</span>
+    </p-button>
+  </ng-template>
+
+</p-menubar>
+
