@@ -14,7 +14,8 @@ $colors: (
 );
 
 //reused color variables
-$shade000: #ffffff !default; //surface
+$shade000: rgba(255, 255, 255, 0.3) !default; //surface
+//$shade000: linear-gradient(155deg, rgba(255, 255, 255, 0.56) 0%, rgba(255, 255, 255, 0.00) 100%) !default; //surface
 $shade100: #ffffff !default; //header background
 $shade200: #f3f4f6 !default; //hover background
 $shade300: #e5e7eb !default; //border, divider
@@ -31,7 +32,8 @@ $fontSize: 1rem !default;
 $fontWeight: normal !default;
 $textColor: $shade700 !default;
 $textSecondaryColor: $shade600 !default;
-$borderRadius: 6px !default;
+$borderRadius: 3px !default;
+$cardBorderRadius: 30px !default;
 $transitionDuration: 0.2s !default;
 $formElementTransition: background-color $transitionDuration,
     color $transitionDuration, border-color $transitionDuration,
@@ -440,7 +442,7 @@ $cardSubTitleFontWeight: 400 !default;
 $cardSubTitleColor: $shade600 !default;
 $cardContentPadding: 1.25rem 0 !default;
 $cardFooterPadding: 1.25rem 0 0 0 !default;
-$cardShadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+$cardShadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12) !default;
 
 //editor
