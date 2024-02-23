@@ -19,7 +19,7 @@ $shade100: rgba(255, 255, 255, 0.6) !default; //text secondary color
 $shade500: #6b7280 !default;
 $shade600: rgba(0, 0, 0, 0.92) !default; //input bg, border, divider
 $shade700: rgb(0, 0, 0) !default; //menu bg
-$shade800: #1f2937 !default; //elevated surface
+$shade800: rgba(7, 5, 10, 0.7) !default; //elevated surface
 $shade900: #111827 !default; //ground surface
 
 $hoverBg: rgba(255, 255, 255, 0.03) !default;
@@ -31,6 +31,7 @@ $fontWeight: normal !default;
 $textColor: $shade000 !default;
 $textSecondaryColor: $shade100 !default;
 $borderRadius: 6px !default;
+$cardBorderRadius: 30px !default;
 $transitionDuration: 0.2s !default;
 $formElementTransition: background-color $transitionDuration,
     color $transitionDuration, border-color $transitionDuration,
@@ -443,7 +444,7 @@ $cardSubTitleFontWeight: 400 !default;
 $cardSubTitleColor: $shade100 !default;
 $cardContentPadding: 1.25rem 0 !default;
 $cardFooterPadding: 1.25rem 0 0 0 !default;
-$cardShadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+$cardShadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12) !default;
 
 //editor
