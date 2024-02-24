@@ -1159,7 +1159,7 @@
     background: #2b55ca;
   }
   .p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover .p-inputswitch-slider {
-    background: #c4b5fd;
+    background: #ffffff;
   }
   p-inputswitch.ng-dirty.ng-invalid > .p-inputswitch > .p-inputswitch-slider {
     border-color: #fca5a5;
@@ -1630,8 +1630,8 @@
     color: #2b55ca;
   }
   .p-selectbutton .p-button.p-highlight:hover {
-    background: #c4b5fd;
-    border-color: #c4b5fd;
+    background: #ffffff;
+    border-color: #ffffff;
     color: #2b55ca;
   }
   .p-selectbutton .p-button.p-highlight:hover .p-button-icon-left,
@@ -1721,8 +1721,8 @@
     color: #2b55ca;
   }
   .p-togglebutton.p-button.p-highlight:hover {
-    background: #c4b5fd;
-    border-color: #c4b5fd;
+    background: #ffffff;
+    border-color: #ffffff;
     color: #2b55ca;
   }
   .p-togglebutton.p-button.p-highlight:hover .p-button-icon-left,
@@ -1859,29 +1859,29 @@
     border-radius: 6px;
   }
   .p-button:not(:disabled):hover {
-    background: #c4b5fd;
-    color: #2b55ca;
-    border-color: #c4b5fd;
+    background: #ffffff;
+    color: transparent;
+    border-color: transparent;
   }
   .p-button:not(:disabled):active {
     background: #ddd6fe;
-    color: #2b55ca;
-    border-color: #ddd6fe;
+    color: transparent;
+    border-color: transparent;
   }
   .p-button.p-button-outlined {
     background-color: transparent;
     color: rgb(255, 255, 255);
-    border: 1px solid;
+    border: transparent;
   }
   .p-button.p-button-outlined:not(:disabled):hover {
     background: rgba(255, 255, 255, 0.04);
     color: rgb(255, 255, 255);
-    border: 1px solid;
+    border: transparent;
   }
   .p-button.p-button-outlined:not(:disabled):active {
     background: rgba(255, 255, 255, 0.16);
     color: rgb(255, 255, 255);
-    border: 1px solid;
+    border: transparent;
   }
   .p-button.p-button-outlined.p-button-plain {
     color: rgba(255, 255, 255, 0.6);
@@ -4331,7 +4331,7 @@
     right: -1rem;
   }
   .p-overlaypanel .p-overlaypanel-close:enabled:hover {
-    background: #c4b5fd;
+    background: #ffffff;
     color: #2b55ca;
   }
   .p-overlaypanel:after {
@@ -4449,9 +4449,9 @@
     margin-top: 0;
   }
   .p-fileupload-choose:not(.p-disabled):hover {
-    background: #c4b5fd;
+    background: #ffffff;
     color: #2b55ca;
-    border-color: #c4b5fd;
+    border-color: #ffffff;
   }
   .p-fileupload-choose:not(.p-disabled):active {
     background: #ddd6fe;

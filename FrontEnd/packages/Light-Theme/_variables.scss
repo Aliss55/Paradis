@@ -14,7 +14,7 @@ $colors: (
 );
 
 //reused color variables
-$shade000: rgba(255, 255, 255, 0.3) !default; //surface
+$shade000: rgba(255, 255, 255, 0.5) !default; //surface
 //$shade000: linear-gradient(155deg, rgba(255, 255, 255, 0.56) 0%, rgba(255, 255, 255, 0.00) 100%) !default; //surface
 $shade100: #ffffff !default; //header background
 $shade200: #f3f4f6 !default; //hover background
@@ -55,6 +55,7 @@ $scaleLG: 1.25 !default;
 
 //focus
 $focusOutlineColor: $primaryLightColor !default;
+//$focusOutlineColor: transparent !default;
 $focusOutline: 0 none !default;
 $focusOutlineOffset: 0 !default;
 $focusShadow: 0 0 0 0.2rem $focusOutlineColor !default;
@@ -129,20 +130,21 @@ $passwordStrongBg: #29c76f !default;
 $buttonPadding: 0.75rem 1.25rem !default;
 $buttonIconOnlyWidth: 3rem !default;
 $buttonIconOnlyPadding: 0.75rem 0 !default;
-$buttonBg: $primaryColor !default;
+$buttonBg: #000000 !default;
 $buttonTextColor: $primaryTextColor !default;
-$buttonBorder: 1px solid $primaryColor !default;
+//$buttonBorder: 1px solid $primaryColor !default;
+$buttonBorder: 1px none $primaryColor !default;
 $buttonHoverBg: $primaryDarkColor !default;
 $buttonTextHoverColor: $primaryTextColor !default;
 $buttonHoverBorderColor: $primaryDarkColor !default;
 $buttonActiveBg: $primaryDarkerColor !default;
 $buttonTextActiveColor: $primaryTextColor !default;
-$buttonActiveBorderColor: $primaryDarkerColor !default;
-$raisedButtonShadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+$buttonActiveBorderColor: transparent !default;
+$raisedButtonShadow: 0 3px 1px -2px rgba(255, 255, 255, 0),
     0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !default;
 $roundedButtonBorderRadius: 2rem !default;
 
-$textButtonHoverBgOpacity: 0.04 !default;
+$textButtonHoverBgOpacity: 0.06 !default;
 $textButtonActiveBgOpacity: 0.16 !default;
 $outlinedButtonBorder: 1px solid !default;
 $plainButtonTextColor: $textSecondaryColor !default;
@@ -687,7 +689,7 @@ $horizontalMenuBg: $shade100 !default;
 $horizontalMenuBorder: $menuBorder !default;
 $horizontalMenuTextColor: $menuTextColor !default;
 $horizontalMenuRootMenuitemPadding: $menuitemPadding !default;
-$horizontalMenuRootMenuitemBorderRadius: $borderRadius !default;
+$horizontalMenuRootMenuitemBorderRadius: 50px !default;
 $horizontalMenuRootMenuitemTextColor: $menuitemTextColor !default;
 $horizontalMenuRootMenuitemIconColor: $menuitemIconColor !default;
 $horizontalMenuRootMenuitemTextHoverColor: $menuitemTextHoverColor !default;

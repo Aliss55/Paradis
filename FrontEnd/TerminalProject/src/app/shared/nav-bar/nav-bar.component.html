@@ -19,10 +19,10 @@
   </ng-template>
 
   <ng-template pTemplate="end">
-    <p-button [rounded]="true" [outlined]="true" (click)="toggleLanguage()" >
+    <p-button   [rounded]="true" [outlined]="true" (click)="toggleLanguage()" >
       <span class="material-icons-outlined" >translate</span>
     </p-button>
-    <p-button [rounded]="true" [outlined]="true" (click)="toggleTheme()" >
+    <p-button   [rounded]="true" [outlined]="true"  (click)="toggleTheme()" >
       <span *ngIf="actualTheme=='dark'" class="material-icons-outlined" >wb_sunny</span>
       <span *ngIf="actualTheme=='light'" class="material-icons-outlined" >bedtime</span>
     </p-button>
