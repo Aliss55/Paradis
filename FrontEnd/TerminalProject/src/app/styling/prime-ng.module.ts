@@ -4,7 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DockModule } from 'primeng/dock';
 import { CardModule } from 'primeng/card';
-import { MenubarModule } from 'primeng/menubar';
+import { ToolbarModule } from 'primeng/toolbar';
 
 @NgModule({
   declarations: [],
@@ -14,14 +14,14 @@ import { MenubarModule } from 'primeng/menubar';
     BrowserAnimationsModule,
     DockModule,
     CardModule,
-    MenubarModule,
+    ToolbarModule,
   ],
   exports: [
     ButtonModule,
     BrowserAnimationsModule,
     DockModule,
     CardModule,
-    MenubarModule,
+    ToolbarModule,
   ],
 })
 export class PrimeNGModule {}
