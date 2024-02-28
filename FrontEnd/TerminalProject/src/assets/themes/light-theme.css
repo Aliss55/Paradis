@@ -1,8 +1,8 @@
 :root {
-  font-family: "Inter var", sans-serif;
+  font-family: "Raleway-variable", sans-serif;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   font-variation-settings: normal;
-  --font-family: "Inter var", sans-serif;
+  --font-family: "Raleway-variable", sans-serif;
   --font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   --surface-a: rgba(255, 255, 255, 0.5);
   --surface-b: #ffffff;
@@ -57,7 +57,7 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: "Regular";
-  src: url("./fonts/Raleway-Italic-VariableFont_wght.ttf") format("ttf");
+  src: url("./fonts/Raleway-VariableFont_wght.ttf") format("truetype");
 }
 @font-face {
   font-family: "Raleway-italic";
@@ -65,7 +65,7 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: "Italic";
-  src: url("./fonts/Raleway-Italic-VariableFont_wght.ttf") format("ttf");
+  src: url("./fonts/Raleway-Italic-VariableFont_wght.ttf") format("truetype");
 }
 :root {
   --blue-50:#f5f9ff;
