@@ -4,5 +4,14 @@
     "ACTIVITIES": "Actividades",
     "BLOG": "Blog",
     "ANALIZE_TEXT": "Analiza tu texto"
+  },
+  "ANALIZE_TEXT_LABELS": {
+    "HOME_LABEL": "¡Escribe algo para experimentar!"
+  },
+  "BLOG_LABELS": {
+    "HOME_LABEL": "Entérate más acerca de la lengua española"
+  },
+  "ACTIVITIES_LABELS": {
+    "HOME_LABEL": "¡A practicar!"
   }
 }
