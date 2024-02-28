@@ -1,32 +1,47 @@
-
 <div class="grid">
+  <div class="md:col-6 sm:col-12">
+    <p-card styleClass="h-full">
+      <div class="grid">
+        <div class="sm:col-6 md:col-12">
+          <div class="title md:text-6xl sm:text-base">
+            {{ "OPTIONS.ANALIZE_TEXT" | translate }}
+          </div>
+        </div>
 
-  <div class="col-6 ">
-    <p-card [style]="{height: '85vh'}" >
- aaaaa
+        <div class="sm:col-6 md:col-12">
+          <div class="subtitle">
+            {{ "ANALIZE_TEXT_LABELS.HOME_LABEL" | translate }}
+          </div>
+        </div>
+      </div>
     </p-card>
   </div>
 
-  <div class="col-6">
-
+  <div class="md:col-6 sm:col-12">
     <div class="grid">
       <div class="col-12">
-        <p-card [style]="{height: '42vh'}" >
-          hello
+        <p-card styleClass="h-full">
+          <div class="title md:text-6xl sm:text-base">
+            {{ "OPTIONS.BLOG" | translate }}
+          </div>
+          <div class="subtitle">
+            {{ "BLOG_LABELS.HOME_LABEL" | translate }}
+          </div>
         </p-card>
       </div>
     </div>
 
     <div class="grid">
       <div class="col-12">
-        <p-card [style]="{height: '42vh'}" >
-          hello
+        <p-card styleClass="h-full">
+          <div class="title md:text-6xl sm:text-base">
+            {{ "OPTIONS.ACTIVITIES" | translate }}
+          </div>
+          <div class="subtitle">
+            {{ "ACTIVITIES_LABELS.HOME_LABEL" | translate }}
+          </div>
         </p-card>
       </div>
     </div>
-
   </div>
-
 </div>
-
-
