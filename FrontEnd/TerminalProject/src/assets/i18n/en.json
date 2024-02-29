@@ -1,5 +1,6 @@
 {
   "OPTIONS": {
+    "HOME": "Home",
     "ABOUT_US": "About us",
     "ACTIVITIES": "Activities",
     "BLOG": "Blog",
@@ -13,5 +14,7 @@
   },
   "ACTIVITIES_LABELS": {
     "HOME_LABEL": "Let's practice!"
-  }
+  },
+  "MENU": "Menu",
+  "PROJECT_NUMBER": "Terminal Project 2024-A012"
 }
