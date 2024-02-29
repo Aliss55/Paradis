@@ -1,32 +1,53 @@
-<p-menubar
-  [model]="[
-    {
-      label: 'OPTIONS.ABOUT_US' | translate
-    },
-    {
-      label: 'OPTIONS.ACTIVITIES' | translate
-    },
-    {
-      label: 'OPTIONS.BLOG' | translate
-    },
-    {
-      label: 'OPTIONS.ANALIZE_TEXT' | translate
-    },
-  ]"
->
-  <ng-template pTemplate="start">
-    <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
-  </ng-template>
+<p-toolbar>
 
-  <ng-template pTemplate="end">
-    <p-button   [rounded]="true" [outlined]="true" (click)="toggleLanguage()" >
-      <span class="material-icons-outlined" >translate</span>
-    </p-button>
-    <p-button   [rounded]="true" [outlined]="true"  (click)="toggleTheme()" >
-      <span *ngIf="actualTheme=='dark'" class="material-icons-outlined" >wb_sunny</span>
-      <span *ngIf="actualTheme=='light'" class="material-icons-outlined" >bedtime</span>
-    </p-button>
-  </ng-template>
+  <div class="p-toolbar-group-start ml-5">
+    <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" />
+  </div>
 
-</p-menubar>
+  <div class="p-toolbar-group-center cel:hidden">
+    <p-button
+      [rounded]="true"
+      [outlined]="true"
+      size="large"
+      class="marginOptions"
+    >
+      {{ 'OPTIONS.ABOUT_US' | translate }}
+    </p-button>
+    <p-button
+      [rounded]="true"
+      [outlined]="true"
+      size="large"
+      class="marginOptions"
+    >
+      {{ 'OPTIONS.ACTIVITIES' | translate }}
+    </p-button>
+    <p-button
+      [rounded]="true"
+      [outlined]="true"
+      size="large"
+      class="marginOptions"
+    >
+      {{ 'OPTIONS.BLOG' | translate }}
+    </p-button>
+    <p-button
+      [rounded]="true"
+      [outlined]="true"
+      size="large"
+      class="marginOptions"
+    >
+      {{ 'OPTIONS.ANALIZE_TEXT' | translate }}
+    </p-button>
+  </div>
+
+  <div class="p-toolbar-group-end">
+    <p-button   [rounded]="true" [outlined]="true" (click)="toggleLanguage()" size="large" >
+      <i class="material-icons-outlined text-3xl" >translate</i>
+    </p-button>
+    <p-button   [rounded]="true" [outlined]="true"  (click)="toggleTheme()" size="large">
+      <i *ngIf="actualTheme=='dark'" class="material-icons-outlined text-3xl" >wb_sunny</i>
+      <i *ngIf="actualTheme=='light'" class="material-icons-outlined text-3xl" >bedtime</i>
+    </p-button>
+  </div>
+
+</p-toolbar>
 
