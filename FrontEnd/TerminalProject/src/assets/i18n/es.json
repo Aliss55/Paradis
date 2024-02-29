@@ -1,5 +1,6 @@
 {
   "OPTIONS": {
+    "HOME": "Inicio",
     "ABOUT_US": "Acerca de nosotros",
     "ACTIVITIES": "Actividades",
     "BLOG": "Blog",
@@ -13,5 +14,7 @@
   },
   "ACTIVITIES_LABELS": {
     "HOME_LABEL": "¡A practicar!"
-  }
+  },
+  "MENU": "Menú",
+  "PROJECT_NUMBER": "Trabajo terminal 2024-A012"
 }
