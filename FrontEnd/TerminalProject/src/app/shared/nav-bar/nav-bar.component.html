@@ -1,7 +1,25 @@
 <p-toolbar>
 
   <div class="p-toolbar-group-start ml-5">
+    <div class="flex justify-content-between flex-wrap">
     <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" />
+
+      <p-sidebar [(visible)]="sidebarVisible">
+        <ng-template pTemplate="header">Header Content</ng-template>
+        <ng-template pTemplate="content">Body Content</ng-template>
+        <ng-template pTemplate="footer">Footer Content</ng-template>
+      </p-sidebar>
+
+      <p-button
+        [rounded]="true"
+        [outlined]="true"
+        (click)="sidebarVisible = true"
+        styleClass="mx-2"
+        class="menu-button"
+      >
+        <i class="material-icons-outlined text-3xl" >menu</i>
+      </p-button>
+    </div>
   </div>
 
   <div class="p-toolbar-group-center cel:hidden">

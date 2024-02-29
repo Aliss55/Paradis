@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class NavBarComponent implements OnInit {
   public actualTheme!: string | null;
+  public sidebarVisible: boolean = false;
   constructor(
     private translateService: TranslateService,
     private themeService: ThemeSwitcherService,
@@ -17,11 +18,16 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit(): void {
     this.actualTheme = localStorage.getItem('theme$');
+    // cambiar a true sidbarVisible cuando la pantalla sea menor a 768px
+    if (window.innerWidth <= 929) {
+      this.sidebarVisible = !this.sidebarVisible;
+    }
   }
 
   // public actualTheme: any = this.themeService.actualTheme.subscribe(
   //   (theme) => (this.actualTheme = theme),
   // );
+
 
   public toggleLanguage() {
     const observable$ = this.translateService.use(
