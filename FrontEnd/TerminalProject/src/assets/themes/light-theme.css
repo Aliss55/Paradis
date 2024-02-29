@@ -4351,7 +4351,7 @@
     border-top-color: rgba(255, 255, 255, 0.5);
   }
   .p-sidebar {
-    background: rgba(255, 255, 255, 0.5);
+    background: #ffffff;
     color: #000000;
     border: 0 none;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
