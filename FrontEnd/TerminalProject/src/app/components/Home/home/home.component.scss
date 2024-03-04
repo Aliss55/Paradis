@@ -22,9 +22,24 @@
   }
 }
 
-.h-45rem {
-  height: 35rem !important;
+@media screen and (width >= 1204px) {
+  .analizerText {
+    height: 35rem !important;
+  }
 }
+
+@media screen and (832px <= width < 1204px) {
+  .analizerText {
+    height: 28rem !important;
+  }
+}
+
+@media screen and (width < 832px) {
+  .analizerText {
+    height: 20rem !important;
+  }
+}
+
 
 :host ::ng-deep {
   .p-card {
