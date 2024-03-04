@@ -1,12 +1,38 @@
 
 :host-context(.light-theme-gradient){
   .title{
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
 :host-context(.dark-theme-gradient){
   .title{
-    text-shadow: 1px 1px 2px yellow;
-    color: #ff6259;
+    background: linear-gradient(180deg, #FFF 0%, #FFD132 53.15%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cel\:text-4xl {
+    font-size: 2rem !important;
+  }
+  .cel\:text-xl {
+    font-size: 1.25rem !important;
+  }
+}
+
+.h-45rem {
+  height: 35rem !important;
+}
+
+:host ::ng-deep {
+  .p-card {
+    .p-card-content{
+      padding: 6rem 3rem 15px !important;
+    }
+    .p-card-body{
+      padding: 0 !important;
+    }
   }
 }
