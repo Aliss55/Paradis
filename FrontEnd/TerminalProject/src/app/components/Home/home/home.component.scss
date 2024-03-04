@@ -72,10 +72,23 @@
   }
 }
 
+@media screen and (height < 832px) {
+
+  .analizerText {
+    height: 22rem !important;
+  }
+  .blogs {
+    height: 15rem !important;
+  }
+  .activities {
+    height: 15rem !important;
+  }
+}
+
 
 :host ::ng-deep {
   .card1 .p-card-content {
-    padding: 6rem 3rem 15px !important;
+    padding: 6rem 3rem 10px !important;
   }
 
   .card2 .p-card-content {
@@ -85,6 +98,21 @@
 
   .card3 .p-card-content {
     padding: 3rem 2rem 1rem !important;
+  }
+
+  @media screen and (height < 832px) {
+    .card1 .p-card-content {
+      padding: 3rem 3rem 1.2rem !important;
+    }
+
+    .card2 .p-card-content {
+      padding: 2rem 2rem 1rem !important;
+
+    }
+
+    .card3 .p-card-content {
+      padding: 2rem 2rem 1rem !important;
+    }
   }
 
   .p-card{
