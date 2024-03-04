@@ -20,11 +20,31 @@
   .cel\:text-xl {
     font-size: 1.25rem !important;
   }
+  .cel\:mt-2 {
+    margin-top: 0.5rem !important;
+  }
+  .cel\:col-12 {
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  .cel\:col-6 {
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    width: 50%;
+  }
 }
 
 @media screen and (width >= 1204px) {
   .analizerText {
     height: 35rem !important;
+  }
+  .blogs {
+    height: 22rem !important;
+  }
+
+  .activities {
+    height: 22rem !important;
   }
 }
 
@@ -32,20 +52,42 @@
   .analizerText {
     height: 28rem !important;
   }
+  .blogs {
+    height: 22rem !important;
+  }
+  .activities {
+    height: 22rem !important;
+  }
 }
 
 @media screen and (width < 832px) {
   .analizerText {
     height: 20rem !important;
   }
+  .blogs {
+    height: 10rem !important;
+  }
+  .activities {
+    height: 10rem !important;
+  }
 }
 
 
 :host ::ng-deep {
-  .p-card {
-    .p-card-content{
-      padding: 6rem 3rem 15px !important;
-    }
+  .card1 .p-card-content {
+    padding: 6rem 3rem 15px !important;
+  }
+
+  .card2 .p-card-content {
+    padding: 3rem 2rem 1rem !important;
+
+  }
+
+  .card3 .p-card-content {
+    padding: 3rem 2rem 1rem !important;
+  }
+
+  .p-card{
     .p-card-body{
       padding: 0 !important;
     }
