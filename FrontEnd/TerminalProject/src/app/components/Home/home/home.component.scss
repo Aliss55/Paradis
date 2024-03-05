@@ -85,10 +85,38 @@
   }
 }
 
+@media screen and (height >= 1300px) {
+
+  .analizerText {
+    height: 50vh !important;
+  }
+  .blogs {
+    height: 40vh !important;
+  }
+
+  .activities {
+    height: 40vh !important;
+  }
+}
+
+@media screen and (height >= 1048px) {
+
+  .analizerText {
+    height: 47vh !important;
+  }
+  .blogs {
+    height: 37vh !important;
+  }
+
+  .activities {
+    height: 37vh !important;
+  }
+}
+
 
 :host ::ng-deep {
   .card1 .p-card-content {
-    padding: 6rem 3rem 10px !important;
+    padding: 6rem 3rem 1rem !important;
   }
 
   .card2 .p-card-content {
