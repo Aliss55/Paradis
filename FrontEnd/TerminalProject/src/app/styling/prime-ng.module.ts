@@ -1,4 +1,3 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { CommonModule } from '@angular/common';
@@ -19,7 +18,7 @@ import { ToolbarModule } from 'primeng/toolbar';
     ToolbarModule,
   ],
   exports: [
-    BrowserAnimationsModule,
+
     ButtonModule,
     CardModule,
     DockModule,
