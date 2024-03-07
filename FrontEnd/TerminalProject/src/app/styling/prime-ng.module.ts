@@ -10,7 +10,7 @@ import { ToolbarModule } from 'primeng/toolbar';
 @NgModule({
   declarations: [],
   imports: [
-    BrowserAnimationsModule,
+
     ButtonModule,
     CardModule,
     CommonModule,
