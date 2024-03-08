@@ -57,7 +57,7 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: "Regular";
-  src: url("./fonts/Raleway-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("./fonts/Raleway-VariableFont_wght.ttf") format("truetype");
 }
 @font-face {
   font-family: "Raleway-italic";

@@ -1,0 +1,14 @@
+<div class="grid">
+  <div *ngFor="let item of items" class="md:col-6 sm:col-12 col-12">
+    <p-card styleClass="sm:p-4 sm:h-23rem md:h-27rem">
+      <div class="flex">
+        <h2 class="sm:text-5xl md:text-2xl lg:text-4xl xl:text-6xl">{{ item.name }}</h2>
+        <img  [src]="item.image" alt="Image description" class="sm:h-10rem md:h-6rem lg:h-10rem xl:h-15rem h-7rem sm:mx-5 mx-1">
+      </div>
+      <div class="card-body">
+        <p class="sm:text-3xl md:text-1xl lg:text-3xl xl:text-5xl text-lg">{{ item.description }}</p>
+      </div>
+
+    </p-card>
+  </div>
+</div>
