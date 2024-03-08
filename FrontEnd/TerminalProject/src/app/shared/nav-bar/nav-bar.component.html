@@ -1,32 +1,106 @@
-<p-menubar
-  [model]="[
-    {
-      label: 'OPTIONS.ABOUT_US' | translate
-    },
-    {
-      label: 'OPTIONS.ACTIVITIES' | translate
-    },
-    {
-      label: 'OPTIONS.BLOG' | translate
-    },
-    {
-      label: 'OPTIONS.ANALIZE_TEXT' | translate
-    },
-  ]"
->
-  <ng-template pTemplate="start">
-    <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
-  </ng-template>
+<p-toolbar>
 
-  <ng-template pTemplate="end">
-    <p-button [rounded]="true" [outlined]="true" (click)="toggleLanguage()" >
-      <span class="material-icons-outlined" >translate</span>
-    </p-button>
-    <p-button [rounded]="true" [outlined]="true" (click)="toggleTheme()" >
-      <span *ngIf="actualTheme=='dark'" class="material-icons-outlined" >wb_sunny</span>
-      <span *ngIf="actualTheme=='light'" class="material-icons-outlined" >bedtime</span>
-    </p-button>
-  </ng-template>
+  <div class="p-toolbar-group-start ml-5">
+    <div class="flex justify-content-between flex-wrap">
+    <img alt="logo" src="https://primefaces.org/cdn/primeng/images/primeng.svg" />
 
-</p-menubar>
+      <p-sidebar [(visible)]="sidebarVisible">
+        <ng-template pTemplate="header">
+          <h2>
+          {{'MENU' | translate}}
+          </h2>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <hr>
+          <ul class="list-none p-0 m-0 overflow-hidden">
+            <li>
+              <a class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                <i class="material-icons">group</i>
+                <span class="ml-3">{{ 'OPTIONS.ABOUT_US' | translate }}</span>
+              </a>
+            </li>
+            <li>
+              <a class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                <i class="material-icons">extension</i>
+                <span class="ml-3">{{ 'OPTIONS.ACTIVITIES' | translate }}</span>
+              </a>
+            </li>
+            <li>
+              <a class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                <i class="material-icons">sticky_note_2</i>
+                <span class="ml-3">{{ 'OPTIONS.BLOG' | translate }}</span>
+              </a>
+            </li>
+            <li>
+              <a class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                <i class="material-icons">rate_review</i>
+                <span class="ml-3">{{ 'OPTIONS.ANALIZE_TEXT' | translate }}</span>
+              </a>
+            </li>
+          </ul>
+
+        </ng-template>
+        <ng-template pTemplate="footer" >
+            <span class="text-color-secondary"> {{ 'PROJECT_NUMBER' | translate }} </span>
+        </ng-template>
+      </p-sidebar>
+
+      <p-button
+        [rounded]="true"
+        [outlined]="true"
+        (click)="sidebarVisible = true"
+        styleClass="mx-2"
+        class="menu-button"
+      >
+        <i class="material-icons-outlined text-3xl" >menu</i>
+      </p-button>
+    </div>
+  </div>
+
+  <div class="p-toolbar-group-center cel:hidden">
+    <p-button
+      [rounded]="true"
+      [outlined]="true"
+      size="large"
+      class="marginOptions"
+    >
+      {{ 'OPTIONS.ABOUT_US' | translate }}
+    </p-button>
+    <p-button
+      [rounded]="true"
+      [outlined]="true"
+      size="large"
+      class="marginOptions"
+    >
+      {{ 'OPTIONS.ACTIVITIES' | translate }}
+    </p-button>
+    <p-button
+      [rounded]="true"
+      [outlined]="true"
+      size="large"
+      class="marginOptions"
+    >
+      {{ 'OPTIONS.BLOG' | translate }}
+    </p-button>
+    <p-button
+      [rounded]="true"
+      [outlined]="true"
+      size="large"
+      class="marginOptions"
+    >
+      {{ 'OPTIONS.ANALIZE_TEXT' | translate }}
+    </p-button>
+  </div>
+
+  <div class="p-toolbar-group-end">
+    <p-button   [rounded]="true" [outlined]="true" (click)="toggleLanguage()" size="large" >
+      <i class="material-icons-outlined text-3xl" >translate</i>
+    </p-button>
+    <p-button   [rounded]="true" [outlined]="true"  (click)="toggleTheme()" size="large">
+      <i *ngIf="actualTheme=='dark'" class="material-icons-outlined text-3xl" >wb_sunny</i>
+      <i *ngIf="actualTheme=='light'" class="material-icons-outlined text-3xl" >bedtime</i>
+    </p-button>
+  </div>
+
+</p-toolbar>
 

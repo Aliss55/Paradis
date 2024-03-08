@@ -1,0 +1,136 @@
+@media screen and (max-width: 768px) {
+  .cel\:text-4xl {
+    font-size: 2rem !important;
+  }
+  .cel\:text-xl {
+    font-size: 1.25rem !important;
+  }
+  .cel\:mt-2 {
+    margin-top: 0.5rem !important;
+  }
+  .cel\:col-12 {
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  .cel\:col-6 {
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    width: 50%;
+  }
+}
+
+@media screen and (width >= 1204px) {
+  .analizerText {
+    height: 35rem !important;
+  }
+  .blogs {
+    height: 22rem !important;
+  }
+
+  .activities {
+    height: 22rem !important;
+  }
+}
+
+@media screen and (832px <= width < 1204px) {
+  .analizerText {
+    height: 28rem !important;
+  }
+  .blogs {
+    height: 22rem !important;
+  }
+  .activities {
+    height: 22rem !important;
+  }
+}
+
+@media screen and (width < 832px) {
+  .analizerText {
+    height: 20rem !important;
+  }
+  .blogs {
+    height: 10rem !important;
+  }
+  .activities {
+    height: 10rem !important;
+  }
+}
+
+@media screen and (height < 832px) {
+
+  .analizerText {
+    height: 22rem !important;
+  }
+  .blogs {
+    height: 15rem !important;
+  }
+  .activities {
+    height: 15rem !important;
+  }
+}
+
+@media screen and (height >= 1300px) {
+
+  .analizerText {
+    height: 50vh !important;
+  }
+  .blogs {
+    height: 40vh !important;
+  }
+
+  .activities {
+    height: 40vh !important;
+  }
+}
+
+@media screen and (height >= 1048px) {
+
+  .analizerText {
+    height: 47vh !important;
+  }
+  .blogs {
+    height: 37vh !important;
+  }
+
+  .activities {
+    height: 37vh !important;
+  }
+}
+
+
+:host ::ng-deep {
+  .card1 .p-card-content {
+    padding: 6rem 3rem 1rem !important;
+  }
+
+  .card2 .p-card-content {
+    padding: 3rem 2rem 1rem !important;
+
+  }
+
+  .card3 .p-card-content {
+    padding: 3rem 2rem 1rem !important;
+  }
+
+  @media screen and (height < 832px) {
+    .card1 .p-card-content {
+      padding: 3rem 3rem 1.2rem !important;
+    }
+
+    .card2 .p-card-content {
+      padding: 2rem 2rem 1rem !important;
+
+    }
+
+    .card3 .p-card-content {
+      padding: 2rem 2rem 1rem !important;
+    }
+  }
+
+  .p-card{
+    .p-card-body{
+      padding: 0 !important;
+    }
+  }
+}

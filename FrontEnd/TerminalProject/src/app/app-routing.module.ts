@@ -8,7 +8,8 @@ const routes: Routes = [
     path: 'blog',
     loadChildren: () => import('./components/Blog/blog.module').then( m => m.BlogModule ),
   },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '**', redirectTo: '/home',
+  }
 ];
 
 @NgModule({

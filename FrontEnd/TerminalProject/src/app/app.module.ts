@@ -9,6 +9,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HomeComponent } from './components/Home/home/home.component';
+import {CommonModule} from "@angular/common";
+import { RouterModule } from '@angular/router';
+import {BlogModule} from "./components/Blog/blog.module";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -18,6 +22,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    RouterModule,
     AppRoutingModule,
     SharedModule,
     PrimeNGModule,
@@ -30,6 +36,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
     }),
   ],
+  exports: [TranslateModule],
   providers: [HttpClient],
   bootstrap: [AppComponent],
 })

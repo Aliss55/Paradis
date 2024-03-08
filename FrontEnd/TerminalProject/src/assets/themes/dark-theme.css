@@ -1,8 +1,8 @@
 :root {
-  font-family: "Inter var", sans-serif;
+  font-family: "Raleway-variable", sans-serif;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   font-variation-settings: normal;
-  --font-family: "Inter var", sans-serif;
+  --font-family: "Raleway-variable", sans-serif;
   --font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   --surface-a: rgba(7, 5, 10, 0.7);
   --surface-b: #111827;
@@ -52,20 +52,20 @@
 }
 
 @font-face {
-  font-family: "Inter var";
+  font-family: "Raleway-variable";
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
   font-named-instance: "Regular";
-  src: url("./fonts/Inter-roman.var.woff2?v=3.19") format("woff2");
+  src: url("./fonts/Raleway-VariableFont_wght.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Inter var";
+  font-family: "Raleway-italic";
   font-weight: 100 900;
   font-display: swap;
   font-style: italic;
   font-named-instance: "Italic";
-  src: url("./fonts/Inter-italic.var.woff2?v=3.19") format("woff2");
+  src: url("./fonts/Raleway-Italic-VariableFont_wght.ttf") format("truetype");
 }
 :root {
   --blue-50:#f5f9ff;
@@ -1159,7 +1159,7 @@
     background: #2b55ca;
   }
   .p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover .p-inputswitch-slider {
-    background: #c4b5fd;
+    background: #ffffff;
   }
   p-inputswitch.ng-dirty.ng-invalid > .p-inputswitch > .p-inputswitch-slider {
     border-color: #fca5a5;
@@ -1630,8 +1630,8 @@
     color: #2b55ca;
   }
   .p-selectbutton .p-button.p-highlight:hover {
-    background: #c4b5fd;
-    border-color: #c4b5fd;
+    background: #ffffff;
+    border-color: #ffffff;
     color: #2b55ca;
   }
   .p-selectbutton .p-button.p-highlight:hover .p-button-icon-left,
@@ -1721,8 +1721,8 @@
     color: #2b55ca;
   }
   .p-togglebutton.p-button.p-highlight:hover {
-    background: #c4b5fd;
-    border-color: #c4b5fd;
+    background: #ffffff;
+    border-color: #ffffff;
     color: #2b55ca;
   }
   .p-togglebutton.p-button.p-highlight:hover .p-button-icon-left,
@@ -1859,29 +1859,29 @@
     border-radius: 6px;
   }
   .p-button:not(:disabled):hover {
-    background: #c4b5fd;
-    color: #2b55ca;
-    border-color: #c4b5fd;
+    background: #ffffff;
+    color: transparent;
+    border-color: transparent;
   }
   .p-button:not(:disabled):active {
     background: #ddd6fe;
-    color: #2b55ca;
-    border-color: #ddd6fe;
+    color: transparent;
+    border-color: transparent;
   }
   .p-button.p-button-outlined {
     background-color: transparent;
     color: rgb(255, 255, 255);
-    border: 1px solid;
+    border: transparent;
   }
   .p-button.p-button-outlined:not(:disabled):hover {
     background: rgba(255, 255, 255, 0.04);
     color: rgb(255, 255, 255);
-    border: 1px solid;
+    border: transparent;
   }
   .p-button.p-button-outlined:not(:disabled):active {
     background: rgba(255, 255, 255, 0.16);
     color: rgb(255, 255, 255);
-    border: 1px solid;
+    border: transparent;
   }
   .p-button.p-button-outlined.p-button-plain {
     color: rgba(255, 255, 255, 0.6);
@@ -3929,7 +3929,7 @@
   }
   .p-card {
     background: rgba(7, 5, 10, 0.7);
-    color: rgb(255, 255, 255);
+    color: white;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
     border-radius: 30px;
   }
@@ -4181,7 +4181,7 @@
     border-bottom-left-radius: 6px;
   }
   .p-toolbar {
-    background: rgba(7, 5, 10, 0.7);
+    background: black;
     border: 1px solid rgba(0, 0, 0, 0.92);
     padding: 1.25rem;
     border-radius: 6px;
@@ -4331,7 +4331,7 @@
     right: -1rem;
   }
   .p-overlaypanel .p-overlaypanel-close:enabled:hover {
-    background: #c4b5fd;
+    background: #ffffff;
     color: #2b55ca;
   }
   .p-overlaypanel:after {
@@ -4351,7 +4351,7 @@
     border-top-color: rgba(0, 0, 0, 0.92);
   }
   .p-sidebar {
-    background: rgba(7, 5, 10, 0.7);
+    background: black;
     color: rgb(255, 255, 255);
     border: 1px solid rgba(0, 0, 0, 0.92);
     box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
@@ -4449,9 +4449,9 @@
     margin-top: 0;
   }
   .p-fileupload-choose:not(.p-disabled):hover {
-    background: #c4b5fd;
+    background: #ffffff;
     color: #2b55ca;
-    border-color: #c4b5fd;
+    border-color: #ffffff;
   }
   .p-fileupload-choose:not(.p-disabled):active {
     background: #ddd6fe;

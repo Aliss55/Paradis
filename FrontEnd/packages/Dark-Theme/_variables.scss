@@ -25,7 +25,7 @@ $shade900: #111827 !default; //ground surface
 $hoverBg: rgba(255, 255, 255, 0.03) !default;
 
 //global
-$fontFamily: "Inter var", sans-serif !default;
+$fontFamily: "Raleway-variable", sans-serif !default;
 $fontSize: 1rem !default;
 $fontWeight: normal !default;
 $textColor: $shade000 !default;
@@ -353,6 +353,7 @@ $inputSwitchHandleOnBg: $primaryTextColor !default;
 $panelHeaderBorderColor: $shade600 !default;
 $panelHeaderBorder: 1px solid $shade600 !default;
 $panelHeaderBg: $shade800 !default;
+$panelToolbarBg: black !default;
 $panelHeaderTextColor: $shade000 !default;
 $panelHeaderFontWeight: 700 !default;
 $panelHeaderPadding: 1.25rem !default;
@@ -602,6 +603,7 @@ $errorMessageIconColor: #fca5a5 !default;
 //overlays
 $overlayContentBorder: 1px solid $shade600 !default;
 $overlayContentBg: $panelContentBg !default;
+$sidebarBg: black !default;
 $overlayContainerShadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
     0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12) !default;
 
@@ -840,10 +842,10 @@ $imagePreviewActionIconFontSize: 1.5rem !default;
 $imagePreviewActionIconBorderRadius: 50% !default;
 
 :root {
-    font-family: "Inter var", sans-serif;
+    font-family: "Raleway-variable", sans-serif;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     font-variation-settings: normal;
-    --font-family: "Inter var", sans-serif;
+    --font-family: "Raleway-variable", sans-serif;
     --font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     --surface-a: #{$shade800};
     --surface-b: #{$shade900};

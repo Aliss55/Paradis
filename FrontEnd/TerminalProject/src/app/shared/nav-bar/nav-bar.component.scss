@@ -1,17 +1,33 @@
-.toggle_options{
-  flex-basis: 25%;
-  margin-left: 1%;
+@media screen and (width>929px){
+  .menu-button{
+    display:none !important;
+  }
 }
 
-.activity_options{
-  flex-basis: 75%;
-  padding-right: 5%;
-  margin-left: 1%;
+@media screen and (width >= 1188px) {
+  .marginOptions {
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+  }
 }
 
-.bar{
-  background-color: white;
-  padding: 0;
-  margin: 0;
-  border-width: 0;
+@media screen and (width >= 1500px) {
+  .marginOptions {
+    margin-left: 4rem !important;
+    margin-right: 4rem !important;
+  }
+}
+
+@media screen and (width <= 929px) {
+  .cel\:hidden {
+    display: none !important;
+  }
+}
+
+:host ::ng-deep.p-toolbar{
+  padding:.4rem;
+}
+
+:host ::ng-deep.p-sidebar-header{
+  padding-bottom: 0;
 }
