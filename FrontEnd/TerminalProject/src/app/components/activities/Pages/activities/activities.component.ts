@@ -1,30 +1,30 @@
 import { Component } from '@angular/core';
 import {Options} from "../../../../interfaces/options";
+
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrl: './blog.component.scss'
+  selector: 'app-activities',
+  templateUrl: './activities.component.html',
+  styleUrl: './activities.component.scss'
 })
-export class BlogComponent {
-  public blogs :Options[]= [
+export class ActivitiesComponent {
+  public activities :Options[]= [
     {
-      name: 'Oraciones',
-      description: '¿Que son las oraciones?',
+      name: 'Oraciones incompletas',
+      description: 'Completa las oraciones',
       image: './assets/home-images/pingu.jpg',
       link: '/home',
     },
     {
-      name: 'Blog 1',
+      name: 'Actividades 1',
       description: 'in this blo we will talk about the latest news',
       image: './assets/home-images/Blog-Igu.svg',
       link: '/home',
     },
     {
-      name: 'Blog 2',
+      name: 'Actividades 2',
       description: 'in this blo we will talk about the latest news',
       image: './assets/home-images/igu-actividades.svg',
       link: '/home',
     },
   ];
-
 }
