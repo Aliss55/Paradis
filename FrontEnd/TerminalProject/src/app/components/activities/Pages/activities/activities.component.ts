@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import {Options} from "../../../../interfaces/options";
+import { Options } from '../../../../interfaces/options';
 
 @Component({
   selector: 'app-activities',
   templateUrl: './activities.component.html',
-  styleUrl: './activities.component.scss'
+  styleUrl: './activities.component.scss',
 })
 export class ActivitiesComponent {
-  public activities :Options[]= [
+  public activities: Options[] = [
     {
       name: 'Oraciones incompletas',
       description: 'Completa las oraciones',
       image: './assets/home-images/pingu.jpg',
-      link: '/home',
+      link: '/activities/complete-sentences',
     },
     {
       name: 'Actividades 1',
