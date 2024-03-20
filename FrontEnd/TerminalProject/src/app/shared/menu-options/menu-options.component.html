@@ -1,7 +1,7 @@
 <div class="grid">
   <div *ngFor="let option of options" class="md:col-6 sm:col-12 col-12">
-    <p-card styleClass="sm:p-4 sm:h-23rem md:h-30rem">
-      <div class="flex">
+    <p-card styleClass="sm:p-4 sm:h-23rem md:h-30rem" >
+      <div class="flex" [routerLink]="option.link">
         <h2 class="sm:text-5xl md:text-2xl lg:text-4xl xl:text-6xl">{{ option.name }}</h2>
         <img  [src]="option.image" alt="Image description" class="sm:h-10rem md:h-6rem lg:h-10rem xl:h-15rem h-7rem sm:mx-5 mx-1">
       </div>
