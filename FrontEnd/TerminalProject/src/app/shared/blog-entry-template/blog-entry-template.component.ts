@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-blog-entry-template',
+  selector: 'shared-blog-entry-template',
   templateUrl: './blog-entry-template.component.html',
-  styleUrl: './blog-entry-template.component.scss'
+  styleUrl: './blog-entry-template.component.scss',
 })
 export class BlogEntryTemplateComponent {
-
+  @Input()
+  public title: string = '';
+  @Input()
+  public mainExplanation: string = '';
+  @Input()
+  public subtitle: string = '';
+  @Input()
+  public secondExplanation: string = '';
 }
