@@ -1,4 +1,3 @@
-<p>complete-sentences-activity works!</p>
 <div class="title xl:text-7xl text-4xl flex justify-content-center">
     {{"ACTIVITIES_LABELS.TITLE" | translate}}
 </div>
@@ -28,6 +27,7 @@
                     <tr>
                         <th class="text-center"> Persona gramatical</th>
                         <th class="text-center"> Verbo conjugado</th>
+                        <th class="text-center" *ngIf="isTableFilled()"> Resultado</th>
                     </tr>
                 </ng-template>
                 <ng-template let-index="rowIndex" let-subject_and_verb pTemplate="body">
@@ -37,42 +37,21 @@
                             <div (onDrop)="drop(index)"
                                  class="p-4 border-1 surface-border border-round "
                                  pDroppable>
-                                <div *ngIf="selectedConjugations && draggedConjugation">
+                                <div *ngIf="draggedConjugation && draggedConjugationByRow[index]">
                                     <div>
-                                        {{draggedConjugationByRow[index]?.conjugated_verb}}
+                                        {{draggedConjugationByRow[index].conjugated_verb}}
                                     </div>
-
-                                    <!--                                <ul *ngIf="draggedConjugation"-->
-                                    <!--                                    class="list-none flex flex-column gap-2 p-0 m-0"-->
-                                    <!--                                >-->
-                                    <!--                                    <li class="p-2 border-round shadow-1">-->
-                                    <!--                                        {{draggedConjugation.conjugated_verb}}-->
-                                    <!--                                    </li>-->
-
-                                    <!--                                </ul>-->
                                 </div>
                             </div>
-
+                        </td>
+                        <td class="text-center" *ngIf="isTableFilled()">
+                            <div>
+                                {{draggedConjugationByRow[index].evaluation}}
+                            </div>
                         </td>
                     </tr>
                 </ng-template>
             </p-table>
-
-
-            <!--            <div (onDrop)="drop(1)"-->
-            <!--                 class="p-2 border-1 surface-border border-round w-15rem"-->
-            <!--                 pDroppable>-->
-            <!--                <p class="text-center surface-border border-bottom-1">Drop Zone</p>-->
-            <!--                <ul *ngIf="selectedConjugations"-->
-            <!--                    class="list-none flex flex-column gap-2 p-0 m-0"-->
-            <!--                >-->
-            <!--                    <li *ngFor="let conjugatiion_and_subject of selectedConjugations" class="p-2 border-round shadow-1">-->
-            <!--                        {{conjugatiion_and_subject.conjugated_verb}}-->
-            <!--                    </li>-->
-
-            <!--                </ul>-->
-            <!--            </div>-->
-
 
         </p-card>
 

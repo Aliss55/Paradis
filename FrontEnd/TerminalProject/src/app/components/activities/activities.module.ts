@@ -5,13 +5,13 @@ import { ActivitiesRoutingModule } from './activities-routing.module';
 import { ActivitiesComponent } from './Pages/activities/activities.component';
 import { SharedModule } from '../../shared/shared.module';
 import { TranslateModule } from '@ngx-translate/core';
-import { CompleteSentencesActivityComponent } from './Pages/complete-sentences-activity/complete-sentences-activity.component';
+import { DragVerbs } from './Pages/complete-sentences-activity/drag-verbs.component';
 import { PrimeNGModule } from '../../styling/prime-ng.module';
 import { DragDropModule } from 'primeng/dragdrop';
 import { TableModule } from 'primeng/table';
 
 @NgModule({
-  declarations: [ActivitiesComponent, CompleteSentencesActivityComponent],
+  declarations: [ActivitiesComponent, DragVerbs],
   imports: [
     CommonModule,
     ActivitiesRoutingModule,

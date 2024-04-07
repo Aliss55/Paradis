@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ActivitiesComponent } from './Pages/activities/activities.component';
-import { CompleteSentencesActivityComponent } from './Pages/complete-sentences-activity/complete-sentences-activity.component';
+import { DragVerbs } from './Pages/complete-sentences-activity/drag-verbs.component';
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'complete-sentences',
-    component: CompleteSentencesActivityComponent,
+    component: DragVerbs,
   },
 ];
 
