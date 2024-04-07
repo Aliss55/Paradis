@@ -8,6 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { CompleteSentencesActivityComponent } from './Pages/complete-sentences-activity/complete-sentences-activity.component';
 import { PrimeNGModule } from '../../styling/prime-ng.module';
 import { DragDropModule } from 'primeng/dragdrop';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [ActivitiesComponent, CompleteSentencesActivityComponent],
@@ -18,6 +19,7 @@ import { DragDropModule } from 'primeng/dragdrop';
     TranslateModule,
     PrimeNGModule,
     DragDropModule,
+    TableModule,
   ],
 })
 export class ActivitiesModule {}
