@@ -8,6 +8,10 @@ const routes: Routes = [
     path: 'blog',
     loadChildren: () => import('./components/Blog/blog.module').then( m => m.BlogModule ),
   },
+  {
+    path: 'activities',
+    loadChildren: () => import('./components/activities/activities.module').then( m => m.ActivitiesModule ),
+  },
   { path: '**', redirectTo: '/home',
   }
 ];

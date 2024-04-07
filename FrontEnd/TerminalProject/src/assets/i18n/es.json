@@ -3,7 +3,7 @@
     "HOME": "Inicio",
     "ABOUT_US": "Acerca de nosotros",
     "ACTIVITIES": "Actividades",
-    "BLOG": "Blog",
+    "BLOG": "Blogs",
     "ANALIZE_TEXT": "Analiza tu texto"
   },
   "ANALIZE_TEXT_LABELS": {
@@ -13,7 +13,8 @@
     "HOME_LABEL": "Entérate más acerca de la lengua española"
   },
   "ACTIVITIES_LABELS": {
-    "HOME_LABEL": "¡A practicar!"
+    "HOME_LABEL": "¡A practicar!",
+    "TITLE": "Actividades educativas"
   },
   "MENU": "Menú",
   "PROJECT_NUMBER": "Trabajo terminal 2024-A012"

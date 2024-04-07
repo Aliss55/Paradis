@@ -1,6 +1,6 @@
 <div class="grid p-1">
   <div class="lg:col-6 col-12 h-max">
-    <p-card styleClass="card-1">
+    <p-card styleClass="card-1 cursor-pointer">
 
       <div class="title xl:text-7xl text-4xl">
         {{ "OPTIONS.ANALIZE_TEXT" | translate }}
@@ -10,8 +10,8 @@
         {{ "ANALIZE_TEXT_LABELS.HOME_LABEL" | translate }}
       </div>
 
-      <div class="flex justify-content-center">
-        <img alt="analize_text" class="responsive-image-analizer" src='assets/home-images/AnalizarTextos2.svg'>
+      <div class="flex justify-content-center overflow-hidden">
+        <img alt="analize_text" class="responsive-image-analizer zoom" src='assets/home-images/AnalizarTextos2.svg'>
       </div>
 
     </p-card>
@@ -21,7 +21,7 @@
 
     <div class="grid">
       <div class="col-12">
-        <p-card styleClass="card-2" [routerLink]="['/blog']">
+        <p-card styleClass="card-2 cursor-pointer" [routerLink]="['/blog']">
           <div class="grid">
             <div class="sm:col col-12">
               <div class="title xl:text-7xl text-4xl">
@@ -32,8 +32,8 @@
               </div>
             </div>
 
-            <div class="sm:col col-12 flex justify-content-center">
-              <img alt="blog" class="responsive-image-blog" src='assets/home-images/Blog-Igu.svg'>
+            <div class="sm:col col-12 flex justify-content-center overflow-hidden">
+              <img alt="blog" class="responsive-image-blog zoom" src='assets/home-images/Blog-Igu.svg'>
             </div>
 
 
@@ -44,7 +44,7 @@
       </div>
 
       <div class="col-12">
-        <p-card styleClass="card-3">
+        <p-card styleClass="card-3 cursor-pointer" [routerLink]="['/activities']">
           <div class="grid">
             <div class="sm:col col-12">
               <div class="title xl:text-7xl text-4xl">
@@ -55,8 +55,8 @@
               </div>
             </div>
 
-            <div class="sm:col col-12 flex justify-content-center">
-              <img alt="blog" class="responsive-image-blog" src='assets/home-images/igu-actividades.svg'>
+            <div class="sm:col col-12 flex justify-content-center overflow-hidden">
+              <img alt="blog" class="responsive-image-blog zoom" src='assets/home-images/igu-actividades.svg'>
             </div>
 
 

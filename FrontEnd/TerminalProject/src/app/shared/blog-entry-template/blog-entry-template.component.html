@@ -1,0 +1,20 @@
+<div class="grid">
+  <div class="col-10 col-offset-1">
+    <p-card>
+      <div class="title text-center card-title">
+        {{title}}
+      </div>
+      <div class="explanation">
+        {{mainExplanation}}
+      </div>
+      <div *ngIf="subtitle">
+        <div class="subtitle title">
+          {{subtitle}}
+        </div>
+        <div class="explanation">
+          {{secondExplanation}}
+        </div>
+      </div>
+    </p-card>
+  </div>
+</div>

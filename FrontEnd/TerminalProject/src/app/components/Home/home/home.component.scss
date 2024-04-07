@@ -12,7 +12,7 @@
 
     .responsive-image-analizer {
       max-width: 100%;
-      height: calc($cardHeight1 - 9rem);
+      height: calc($cardHeight1 - 9.5rem);
       object-fit: contain;
     }
 
@@ -24,7 +24,7 @@
 
     .responsive-image-blog {
       max-width: 100%;
-      height: calc($cardHeight2 - 67px);
+      height: calc($cardHeight2 - 100px);
       object-fit: contain;
     }
 
@@ -60,6 +60,16 @@
 
 
   }
+
+  .zoom {
+    transition: transform 0.5s; /* Animation */
+  }
+
+  &:hover .zoom {
+    transform: scale(1.45); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
 }
+
+
 
 
