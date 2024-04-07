@@ -2,10 +2,44 @@
 <div class="title xl:text-7xl text-4xl flex justify-content-center">
   {{"ACTIVITIES_LABELS.TITLE" | translate}}
 </div>
-<div class="grid activity-panel" >
+<div class="grid activity-panel">
   <div class="col-10 col-offset-1">
     <p-card>
-      hello
+
+
+      <div *ngFor="let subject_and_verb of play_conjugations_in_present_tense">
+        {{subject_and_verb.subject}} - {{subject_and_verb.conjugated_verb}}
+      </div>
+
+      <div class="p-2 border-1 surface-border border-round w-15rem">
+        <ul class="list-none flex flex-column gap-2 p-0 m-0 text-center">
+          <li *ngFor="let subject_and_verb of play_conjugations_in_present_tense"
+              class="p-2 border-round shadow-1"
+              pDraggable
+              (onDragStart)="dragStart(subject_and_verb)"
+              (onDragEnd)="dragEnd()"
+          >
+            {{subject_and_verb.conjugated_verb}}
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="p-2 border-1 surface-border border-round w-15rem"
+           pDroppable
+          (onDrop)="drop()">
+        <p class="text-center surface-border border-bottom-1">Drop Zone</p>
+        <ul class="list-none flex flex-column gap-2 p-0 m-0"
+          *ngIf="selectedConjugations"
+        >
+          <li *ngFor="let conjugatiion_and_subject of selectedConjugations" class="p-2 border-round shadow-1">
+              {{conjugatiion_and_subject.conjugated_verb}}
+          </li>
+
+        </ul>
+      </div>
+
+
     </p-card>
 
   </div>
