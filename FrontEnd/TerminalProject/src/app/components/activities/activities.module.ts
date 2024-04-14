@@ -5,13 +5,14 @@ import { ActivitiesRoutingModule } from './activities-routing.module';
 import { ActivitiesComponent } from './Pages/activities/activities.component';
 import { SharedModule } from '../../shared/shared.module';
 import { TranslateModule } from '@ngx-translate/core';
-import { DragVerbs } from './Pages/complete-sentences-activity/drag-verbs.component';
 import { PrimeNGModule } from '../../styling/prime-ng.module';
 import { DragDropModule } from 'primeng/dragdrop';
 import { TableModule } from 'primeng/table';
+import { ChipModule } from 'primeng/chip';
+import { ProfessionsAndOccupationsComponent } from './Pages/professions-and-occupations/professions-and-occupations.component';
 
 @NgModule({
-  declarations: [ActivitiesComponent, DragVerbs],
+  declarations: [ActivitiesComponent, ProfessionsAndOccupationsComponent],
   imports: [
     CommonModule,
     ActivitiesRoutingModule,
@@ -20,6 +21,7 @@ import { TableModule } from 'primeng/table';
     PrimeNGModule,
     DragDropModule,
     TableModule,
+    ChipModule,
   ],
 })
 export class ActivitiesModule {}

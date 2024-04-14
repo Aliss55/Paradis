@@ -7,12 +7,14 @@ import { MenuOptionsComponent } from './menu-options/menu-options.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogEntryTemplateComponent } from './blog-entry-template/blog-entry-template.component';
+import { CardsGameComponent } from './cards-game/cards-game.component';
 
 @NgModule({
   declarations: [
     NavBarComponent,
     MenuOptionsComponent,
     BlogEntryTemplateComponent,
+    CardsGameComponent,
   ],
   imports: [
     CommonModule,
@@ -21,6 +23,11 @@ import { BlogEntryTemplateComponent } from './blog-entry-template/blog-entry-tem
     HttpClientModule,
     TranslateModule,
   ],
-  exports: [NavBarComponent, MenuOptionsComponent, BlogEntryTemplateComponent],
+  exports: [
+    NavBarComponent,
+    MenuOptionsComponent,
+    BlogEntryTemplateComponent,
+    CardsGameComponent,
+  ],
 })
 export class SharedModule {}

@@ -6,6 +6,10 @@ import { NgModule } from '@angular/core';
 import { SidebarModule } from 'primeng/sidebar';
 import { ToolbarModule } from 'primeng/toolbar';
 import { TableModule } from 'primeng/table';
+import { ChipModule } from 'primeng/chip';
+import { Tooltip, TooltipModule } from 'primeng/tooltip';
+import { FieldsetModule } from 'primeng/fieldset';
+import { TagModule } from 'primeng/tag';
 
 @NgModule({
   declarations: [],
@@ -17,6 +21,10 @@ import { TableModule } from 'primeng/table';
     SidebarModule,
     ToolbarModule,
     TableModule,
+    ChipModule,
+    TooltipModule,
+    FieldsetModule,
+    TagModule,
   ],
   exports: [
     ButtonModule,
@@ -25,6 +33,10 @@ import { TableModule } from 'primeng/table';
     SidebarModule,
     ToolbarModule,
     TableModule,
+    ChipModule,
+    TooltipModule,
+    FieldsetModule,
+    TagModule,
   ],
 })
 export class PrimeNGModule {}
