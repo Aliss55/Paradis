@@ -1,4 +1,4 @@
-<ng-template [ngIf]="areInstructionsBeingDisplayed === true">
+<ng-template [ngIf]="areInstructionsBeingDisplayed">
     <p-card >
         These are the instructions
 
@@ -10,7 +10,7 @@
 </ng-template>
 
 
-<ng-template [ngIf]="areInstructionsBeingDisplayed === false">
+<ng-template [ngIf]="!areInstructionsBeingDisplayed">
     <!--  <p-card class="text-center m-6" >-->
     <!--    Se mostrarán dos imagenes, da click en el nombre que describe la profesión u ocupación que se muestra en la imagen.-->
     <!--  </p-card>-->
