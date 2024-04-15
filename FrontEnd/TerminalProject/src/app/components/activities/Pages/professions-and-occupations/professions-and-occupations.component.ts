@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styleUrl: './professions-and-occupations.component.scss',
 })
 export class ProfessionsAndOccupationsComponent {
-  professiond_and_occupations = [
+  professions_and_occupations = [
     {
       image_url: 'https://primefaces.org/cdn/primeng/images/usercard.png',
       answer: 'chef',
