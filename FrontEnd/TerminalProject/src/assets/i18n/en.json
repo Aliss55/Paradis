@@ -14,7 +14,13 @@
   },
   "ACTIVITIES_LABELS": {
     "HOME_LABEL": "Let's practice!",
-    "TITLE": "Educative activities"
+    "TITLE": "Educative activities",
+    "CARDS_GAME": {
+      "INSTRUCTIONS_DESCRIPTION": "In this activity you are going to see a box with an image and three option buttons. \n Your task is to click on the button which shows the best description word for the image. After clicking one option another box with a new image will appear. At the end of the activity you will be able to see your score.",
+      "INSTRUCTIONS_TO_START": "Click on the button below to start the game.",
+      "INSTRUCTIONS_WARNING": "Consider that all the activities will be available only in spanish, because they are made for you to practice the language.",
+      "START_GAME": "Start activity"
+    }
   },
   "MENU": "Menu",
   "PROJECT_NUMBER": "Terminal Project 2024-A012"
