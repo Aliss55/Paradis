@@ -39,6 +39,8 @@ export class CardsGameComponent {
   public areInstructionsBeingDisplayed: boolean = true;
   public animationState: string = 'opacityZero';
   public cardCounter: number = 0;
+  public correctAnswersCounter: number = 0;
+  public finalScoreDisplayed: boolean = false;
 
   public toggleShowInstructions() {
     this.areInstructionsBeingDisplayed = !this.areInstructionsBeingDisplayed;
@@ -79,11 +81,17 @@ export class CardsGameComponent {
     return array;
   }
 
-  changeCardData() {
+  updateCardData(selectedButtonIndex: number) {
     this.animationState = 'opacityZero';
     this.cardCounter++;
+    if (this.cardCounter == this.questions_and_answers.length) {
+      this.toggleShowFinalScore();
+    }
+    this.evaluateAnswer(selectedButtonIndex);
+    console.warn(this.currentCardData.buttonValues);
     this.setCardData();
   }
+
   setCardData() {
     let buttonValues = [
       this.questions_and_answers[this.cardCounter].answer,
@@ -95,8 +103,22 @@ export class CardsGameComponent {
       this.questions_and_answers[this.cardCounter].image_url;
   }
 
+  private evaluateAnswer(selectedButtonIndex: number) {
+    if (this.currentCardData?.buttonValues) {
+      this.currentCardData.buttonValues[selectedButtonIndex] ===
+      this.questions_and_answers[this.cardCounter].answer
+        ? this.correctAnswersCounter++
+        : null;
+    }
+  }
+
+  toggleShowFinalScore() {
+    this.finalScoreDisplayed = !this.finalScoreDisplayed;
+  }
+
   animationDone(event: AnimationEvent) {
     this.animationState = 'nonOpacity';
-    // console.log('Animation done', event);
   }
 }
+
+//todo: fix evaluation of answers, the data is wrong

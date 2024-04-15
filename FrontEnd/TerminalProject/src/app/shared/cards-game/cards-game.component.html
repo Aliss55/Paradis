@@ -26,25 +26,35 @@
 </ng-template>
 
 
-<ng-template [ngIf]="!areInstructionsBeingDisplayed">
-    <!--  <p-card class="text-center m-6" >-->
-    <!--    Se mostrarán dos imagenes, da click en el nombre que describe la profesión u ocupación que se muestra en la imagen.-->
-    <!--  </p-card>-->
-
+<ng-template [ngIf]="!areInstructionsBeingDisplayed && !finalScoreDisplayed">
     <div class="m-2">
         <p-card class="text-center" styleClass="cards" [@fadeInOut]="animationState" (@fadeInOut.done)="animationDone($event)">
             <ng-template pTemplate="header">
                 <img alt="Card" [src]="currentCardData.img_url" />
             </ng-template>
             <ng-template pTemplate="content">
-                <p-button [label]="currentCardData.buttonValues ? currentCardData.buttonValues[0] : 'default'" (click)="changeCardData()" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
-                <p-button [label]="currentCardData.buttonValues ? currentCardData.buttonValues[1] : 'default'" (click)="changeCardData()" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
-                <p-button [label]="currentCardData.buttonValues ? currentCardData.buttonValues[2] : 'default'" (click)="changeCardData()" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+                <p-button [label]="currentCardData.buttonValues ? currentCardData.buttonValues[0] : 'default'" (click)="updateCardData(0)" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+                <p-button [label]="currentCardData.buttonValues ? currentCardData.buttonValues[1] : 'default'" (click)="updateCardData(1)" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+                <p-button [label]="currentCardData.buttonValues ? currentCardData.buttonValues[2] : 'default'" (click)="updateCardData(2)" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
             </ng-template>
         </p-card>
 
     </div>
 
+</ng-template>
+
+<ng-template [ngIf]="finalScoreDisplayed">
+  <p-card  class="text-center" styleClass="cards" [@fadeInOut]="animationState" (@fadeInOut.done)="animationDone($event)">
+    <ng-template pTemplate="header">
+      <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
+    </ng-template>
+    <ng-template pTemplate="subheader">
+      <h5>
+        Your final score is: {{ correctAnswersCounter }}
+      </h5>
+    </ng-template>
+
+  </p-card>
 </ng-template>
 
 

@@ -1,0 +1,14 @@
+.card_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(40vh - 8.5rem);
+  margin-top: calc(20vh + 20px);
+  //padding: 2rem;
+
+  @media screen and (max-width: 870px) {
+    height: auto;
+    margin-top: 4rem;
+  }
+}

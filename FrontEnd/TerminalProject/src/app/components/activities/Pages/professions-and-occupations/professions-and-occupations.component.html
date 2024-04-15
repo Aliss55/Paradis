@@ -1,5 +1,7 @@
 <div class="title xl:text-7xl text-4xl flex justify-content-center">
-    Profesiones y ocupaciones
+    {{ 'ACTIVITIES_LABELS.CARDS_GAME.PROFESSIONS_OCCUPATIONS' | translate}}
 </div>
 
-<shared-cards-game [questions_and_answers]="professiond_and_occupations"  ></shared-cards-game>
+<div class="card_container">
+<shared-cards-game [questions_and_answers]="professions_and_occupations"  ></shared-cards-game>
+</div>
