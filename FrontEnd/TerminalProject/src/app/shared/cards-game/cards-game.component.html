@@ -1,9 +1,25 @@
 <ng-template [ngIf]="areInstructionsBeingDisplayed">
     <p-card >
-        These are the instructions
+        <div class="m-3 text-center instructions" >
+            <p >
+                {{ 'ACTIVITIES_LABELS.CARDS_GAME.INSTRUCTIONS_DESCRIPTION' | translate }}
+            </p>
+            <p>
+                {{ 'ACTIVITIES_LABELS.CARDS_GAME.INSTRUCTIONS_TO_START' | translate }}
+            </p>
 
-        <ng-template pTemplate="content">
-            <p-button label="Comenzar" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }" (click)="toggleShowInstructions()"></p-button>
+            <div class="flex flex-wrap  justify-content-center">
+            <p class="vertical-align-middle">
+                <i class="material-icons-outlined m-2">warning_amber</i>
+                {{ 'ACTIVITIES_LABELS.CARDS_GAME.INSTRUCTIONS_WARNING' | translate }}
+            </p>
+            </div>
+        </div>
+
+        <ng-template pTemplate="content" >
+            <div class="text-center">
+            <p-button  [label]="'ACTIVITIES_LABELS.CARDS_GAME.START_GAME' | translate" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }" (click)="toggleShowInstructions()"></p-button>
+            </div>
         </ng-template>
     </p-card>
 
