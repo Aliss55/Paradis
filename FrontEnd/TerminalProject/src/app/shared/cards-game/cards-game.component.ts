@@ -7,8 +7,8 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { professions_and_occupations } from '../../components/Activities/utils/professions_and_occupations_enum';
-import { vocabulary_card_interface } from '../../components/Activities/utils/vocabulary_card_interface';
+import { professions_and_occupations } from '../utils/professions_and_occupations_enum';
+import { vocabulary_card_interface } from '../utils/vocabulary_card_interface';
 import { MessageService } from 'primeng/api';
 
 @Component({
