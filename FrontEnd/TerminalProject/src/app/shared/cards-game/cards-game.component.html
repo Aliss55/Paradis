@@ -1,4 +1,4 @@
-<ng-template [ngIf]="areInstructionsBeingDisplayed">
+<!--<ng-template [ngIf]="areInstructionsBeingDisplayed">
     <p-card >
         <div class="m-3 text-center instructions" >
             <p >
@@ -23,40 +23,93 @@
         </ng-template>
     </p-card>
 
-</ng-template>
+</ng-template>-->
 
+<div class="flex flex-column my-8 p-1">
+  <div *ngIf="!finalScoreDisplayed" class="flex align-items-center justify-content-center">
+    <p-card>
+      <ng-template pTemplate="subheader">
+        {{ 'ACTIVITIES_LABELS.CARDS_GAME.INSTRUCTIONS_DESCRIPTION' | translate }}
+      </ng-template>
+    </p-card>
+  </div>
+  <div class="flex align-content-center justify-content-center  mt-8">
+    <p-card (@fadeInOut.done)="animationDone($event)" [@fadeInOut]="animationState" styleClass="cards">
+      <ng-template pTemplate="header">
+        <img [src]="currentCardData.img_url" class="md:h-23rem md:w-full">
+      </ng-template>
 
-<ng-template [ngIf]="!areInstructionsBeingDisplayed && !finalScoreDisplayed">
-    <div class="m-2">
+      <div class="flex justify-content-center align-content-center">
+
+        <p-button (click)="updateCardData(0)"
+                  [label]="currentCardData.buttonValues ? currentCardData.buttonValues[0] : 'default'" [style]="{ 'margin-left': '.5em' }" icon="pi pi-times"
+                  styleClass="p-button-secondary"></p-button>
+
+        <p-button (click)="updateCardData(1)"
+                  [label]="currentCardData.buttonValues ? currentCardData.buttonValues[1] : 'default'" [style]="{ 'margin-left': '.5em' }" icon="pi pi-times"
+                  styleClass="p-button-secondary"></p-button>
+
+        <p-button (click)="updateCardData(2)"
+                  [label]="currentCardData.buttonValues ? currentCardData.buttonValues[2] : 'default'" [style]="{ 'margin-left': '.5em' }" icon="pi pi-times"
+                  styleClass="p-button-secondary"></p-button>
+
+      </div>
+
+    </p-card>
+  </div>
+
+  <p-toast [life]="1000" key="success" position="top-center"></p-toast>
+  <p-toast [life]="1000" key="error" position="top-center"></p-toast>
+</div>
+
+<!--<div class="flex justify-content-center flex-wrap m-5">
+  <div *ngIf="!finalScoreDisplayed" class="flex justify-content-center align-content-center flex-wrap">
+
+      <div class="flex m-2">
+        <p-card>
+          <ng-template pTemplate="subheader">
+            {{ 'ACTIVITIES_LABELS.CARDS_GAME.INSTRUCTIONS_DESCRIPTION' | translate }}
+          </ng-template>
+        </p-card>
+      </div>
+
+      <div class=" flex m-2">
         <p-card class="text-center" styleClass="cards" [@fadeInOut]="animationState" (@fadeInOut.done)="animationDone($event)">
-            <ng-template pTemplate="header">
-                <img alt="Card" [src]="currentCardData.img_url" />
-            </ng-template>
-            <ng-template pTemplate="content">
-                <p-button [label]="currentCardData.buttonValues ? currentCardData.buttonValues[0] : 'default'" (click)="updateCardData(0)" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
-                <p-button [label]="currentCardData.buttonValues ? currentCardData.buttonValues[1] : 'default'" (click)="updateCardData(1)" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
-                <p-button [label]="currentCardData.buttonValues ? currentCardData.buttonValues[2] : 'default'" (click)="updateCardData(2)" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
-            </ng-template>
+          <ng-template pTemplate="header">
+            <img alt="Card" [src]="currentCardData.img_url" />
+          </ng-template>
+
+            <p-button [label]="currentCardData.buttonValues ? currentCardData.buttonValues[0] : 'default'" (click)="updateCardData(0)" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+            <p-button [label]="currentCardData.buttonValues ? currentCardData.buttonValues[1] : 'default'" (click)="updateCardData(1)" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+            <p-button [label]="currentCardData.buttonValues ? currentCardData.buttonValues[2] : 'default'" (click)="updateCardData(2)" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+
         </p-card>
 
-    </div>
-  <p-toast key="success" [life]="1000" position="top-center"></p-toast>
-  <p-toast key="error" [life]="1000" position="top-center"></p-toast>
-</ng-template>
+      </div>
 
-<ng-template [ngIf]="finalScoreDisplayed">
-  <p-card  class="text-center" styleClass="cards" [@fadeInOut]="animationState" (@fadeInOut.done)="animationDone($event)">
-    <ng-template pTemplate="header">
-      <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
-    </ng-template>
-    <ng-template pTemplate="subheader">
-      <h5>
-        Your final score is: {{ correctAnswersCounter }}
-      </h5>
-    </ng-template>
+  </div>
 
-  </p-card>
-</ng-template>
+  <div class="flex">
+    <ng-template [ngIf]="finalScoreDisplayed">
+      <p-card  class="text-center" styleClass="cards" [@fadeInOut]="animationState" (@fadeInOut.done)="animationDone($event)">
+        <ng-template pTemplate="header">
+          <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
+        </ng-template>
+        <ng-template pTemplate="subheader">
+          <h5>
+            Your final score is: {{ correctAnswersCounter }}
+          </h5>
+        </ng-template>
+
+      </p-card>
+    </ng-template>
+  </div>
+
+
+
+</div>-->
+
+
 
 
 
