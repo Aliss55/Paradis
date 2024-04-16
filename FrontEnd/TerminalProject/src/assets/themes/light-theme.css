@@ -2003,15 +2003,15 @@
   .p-buttonset.p-button-secondary > .p-button,
   .p-splitbutton.p-button-secondary > .p-button {
     color: #ffffff;
-    background: #64748b;
-    border: 1px solid #64748b;
+    background: #432695;
+    border: 1px solid #7764b9;
   }
   .p-button.p-button-secondary:not(:disabled):hover,
   .p-buttonset.p-button-secondary > .p-button:not(:disabled):hover,
   .p-splitbutton.p-button-secondary > .p-button:not(:disabled):hover {
-    background: #475569;
+    background: #1c0357;
     color: #ffffff;
-    border-color: #475569;
+    border-color: #432695;
   }
   .p-button.p-button-secondary:not(:disabled):focus,
   .p-buttonset.p-button-secondary > .p-button:not(:disabled):focus,
@@ -2021,51 +2021,51 @@
   .p-button.p-button-secondary:not(:disabled):active,
   .p-buttonset.p-button-secondary > .p-button:not(:disabled):active,
   .p-splitbutton.p-button-secondary > .p-button:not(:disabled):active {
-    background: #334155;
+    background: #5e35d0;
     color: #ffffff;
-    border-color: #334155;
+    border-color: #6e49d3;
   }
   .p-button.p-button-secondary.p-button-outlined,
   .p-buttonset.p-button-secondary > .p-button.p-button-outlined,
   .p-splitbutton.p-button-secondary > .p-button.p-button-outlined {
     background-color: transparent;
-    color: #64748b;
+    color: #432695;
     border: 1px solid;
   }
   .p-button.p-button-secondary.p-button-outlined:not(:disabled):hover,
   .p-buttonset.p-button-secondary > .p-button.p-button-outlined:not(:disabled):hover,
   .p-splitbutton.p-button-secondary > .p-button.p-button-outlined:not(:disabled):hover {
-    background: rgba(100, 116, 139, 0.06);
-    color: #64748b;
+    background: rgba(67, 38, 149, 0.06);
+    color: #432695;
     border: 1px solid;
   }
   .p-button.p-button-secondary.p-button-outlined:not(:disabled):active,
   .p-buttonset.p-button-secondary > .p-button.p-button-outlined:not(:disabled):active,
   .p-splitbutton.p-button-secondary > .p-button.p-button-outlined:not(:disabled):active {
-    background: rgba(100, 116, 139, 0.16);
-    color: #64748b;
+    background: rgba(67, 38, 149, 0.16);
+    color: #432695;
     border: 1px solid;
   }
   .p-button.p-button-secondary.p-button-text,
   .p-buttonset.p-button-secondary > .p-button.p-button-text,
   .p-splitbutton.p-button-secondary > .p-button.p-button-text {
     background-color: transparent;
-    color: #64748b;
+    color: #432695;
     border-color: transparent;
   }
   .p-button.p-button-secondary.p-button-text:not(:disabled):hover,
   .p-buttonset.p-button-secondary > .p-button.p-button-text:not(:disabled):hover,
   .p-splitbutton.p-button-secondary > .p-button.p-button-text:not(:disabled):hover {
-    background: rgba(100, 116, 139, 0.06);
+    background: rgba(67, 38, 149, 0.06);
     border-color: transparent;
-    color: #64748b;
+    color: #432695;
   }
   .p-button.p-button-secondary.p-button-text:not(:disabled):active,
   .p-buttonset.p-button-secondary > .p-button.p-button-text:not(:disabled):active,
   .p-splitbutton.p-button-secondary > .p-button.p-button-text:not(:disabled):active {
-    background: rgba(100, 116, 139, 0.16);
+    background: rgba(67, 38, 149, 0.16);
     border-color: transparent;
-    color: #64748b;
+    color: #432695;
   }
   .p-button.p-button-info,
   .p-buttonset.p-button-info > .p-button,
@@ -2577,31 +2577,31 @@
   }
   .p-splitbutton.p-button-secondary.p-button-outlined > .p-button {
     background-color: transparent;
-    color: #64748b;
+    color: #432695;
     border: 1px solid;
   }
   .p-splitbutton.p-button-secondary.p-button-outlined > .p-button:not(:disabled):hover {
-    background: rgba(100, 116, 139, 0.06);
-    color: #64748b;
+    background: rgba(67, 38, 149, 0.06);
+    color: #432695;
   }
   .p-splitbutton.p-button-secondary.p-button-outlined > .p-button:not(:disabled):active {
-    background: rgba(100, 116, 139, 0.16);
-    color: #64748b;
+    background: rgba(67, 38, 149, 0.16);
+    color: #432695;
   }
   .p-splitbutton.p-button-secondary.p-button-text > .p-button {
     background-color: transparent;
-    color: #64748b;
+    color: #432695;
     border-color: transparent;
   }
   .p-splitbutton.p-button-secondary.p-button-text > .p-button:not(:disabled):hover {
-    background: rgba(100, 116, 139, 0.06);
+    background: rgba(67, 38, 149, 0.06);
     border-color: transparent;
-    color: #64748b;
+    color: #432695;
   }
   .p-splitbutton.p-button-secondary.p-button-text > .p-button:not(:disabled):active {
-    background: rgba(100, 116, 139, 0.16);
+    background: rgba(67, 38, 149, 0.16);
     border-color: transparent;
-    color: #64748b;
+    color: #432695;
   }
   .p-splitbutton.p-button-info.p-button-outlined > .p-button {
     background-color: transparent;
@@ -5910,7 +5910,7 @@
     line-height: 1.5rem;
   }
   .p-badge.p-badge-secondary {
-    background-color: #64748b;
+    background-color: #432695;
     color: #ffffff;
   }
   .p-badge.p-badge-success {
@@ -6104,7 +6104,7 @@
     box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px gray, 0 1px 2px 0 rgb(0, 0, 0);
   }
   .p-button.p-button-secondary:enabled:focus {
-    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #b0b9c6, 0 1px 2px 0 rgb(0, 0, 0);
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #977ede, 0 1px 2px 0 rgb(0, 0, 0);
   }
   .p-button.p-button-success:enabled:focus {
     box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #88eaac, 0 1px 2px 0 rgb(0, 0, 0);
