@@ -9,11 +9,13 @@ import {
 } from '@angular/animations';
 import { professions_and_occupations } from '../../components/Activities/utils/professions_and_occupations_enum';
 import { vocabulary_card_interface } from '../../components/Activities/utils/vocabulary_card_interface';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'shared-cards-game',
   templateUrl: './cards-game.component.html',
   styleUrl: './cards-game.component.scss',
+  providers: [MessageService],
   animations: [
     trigger('fadeInOut', [
       state(
@@ -42,6 +44,8 @@ export class CardsGameComponent {
   public correctAnswersCounter: number = 0;
   public finalScoreDisplayed: boolean = false;
 
+  constructor(public messageService: MessageService) {}
+
   public toggleShowInstructions() {
     this.areInstructionsBeingDisplayed = !this.areInstructionsBeingDisplayed;
   }
@@ -69,8 +73,7 @@ export class CardsGameComponent {
   private getRandomEnumValues() {
     const enumValues: string[] = Object.values(professions_and_occupations);
     const shuffledValues: string[] = this.shuffleArray(enumValues);
-    const randomValues: string[] = shuffledValues.slice(0, 2);
-    return randomValues;
+    return shuffledValues.slice(0, 2);
   }
 
   private shuffleArray(array: any[]) {
@@ -82,14 +85,15 @@ export class CardsGameComponent {
   }
 
   updateCardData(selectedButtonIndex: number) {
+    this.notifySucess('Answer Submitted');
+    this.evaluateAnswer(selectedButtonIndex);
     this.animationState = 'opacityZero';
     this.cardCounter++;
     if (this.cardCounter == this.questions_and_answers.length) {
       this.toggleShowFinalScore();
+    } else {
+      this.setCardData();
     }
-    this.evaluateAnswer(selectedButtonIndex);
-    console.warn(this.currentCardData.buttonValues);
-    this.setCardData();
   }
 
   setCardData() {
@@ -107,9 +111,32 @@ export class CardsGameComponent {
     if (this.currentCardData?.buttonValues) {
       this.currentCardData.buttonValues[selectedButtonIndex] ===
       this.questions_and_answers[this.cardCounter].answer
-        ? this.correctAnswersCounter++
-        : null;
+        ? this.updateCorrectCountAndNotify('¡Respuesta correcta!')
+        : this.notifyError('¡Inténtalo de nuevo!');
     }
+  }
+
+  private updateCorrectCountAndNotify(message: string) {
+    this.correctAnswersCounter++;
+    this.notifySucess(message);
+  }
+
+  private notifyError(message: string) {
+    this.messageService.clear();
+    this.messageService.add({
+      key: 'error',
+      severity: 'error',
+      detail: message,
+    });
+  }
+
+  private notifySucess(message: string) {
+    this.messageService.clear();
+    this.messageService.add({
+      key: 'success',
+      severity: 'success',
+      detail: message,
+    });
   }
 
   toggleShowFinalScore() {
@@ -120,5 +147,3 @@ export class CardsGameComponent {
     this.animationState = 'nonOpacity';
   }
 }
-
-//todo: fix evaluation of answers, the data is wrong

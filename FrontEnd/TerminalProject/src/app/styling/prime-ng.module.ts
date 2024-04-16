@@ -10,6 +10,7 @@ import { ChipModule } from 'primeng/chip';
 import { Tooltip, TooltipModule } from 'primeng/tooltip';
 import { FieldsetModule } from 'primeng/fieldset';
 import { TagModule } from 'primeng/tag';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [],
@@ -25,6 +26,7 @@ import { TagModule } from 'primeng/tag';
     TooltipModule,
     FieldsetModule,
     TagModule,
+    ToastModule,
   ],
   exports: [
     ButtonModule,
@@ -37,6 +39,7 @@ import { TagModule } from 'primeng/tag';
     TooltipModule,
     FieldsetModule,
     TagModule,
+    ToastModule,
   ],
 })
 export class PrimeNGModule {}
