@@ -4,7 +4,8 @@
     "ABOUT_US": "About us",
     "ACTIVITIES": "Activities",
     "BLOG": "Blogs",
-    "ANALIZE_TEXT": "Analyze your text"
+    "ANALIZE_TEXT": "Analyze your text",
+    "TERMS_AND_CONDITIONS": "Terms and conditions"
   },
   "ANALIZE_TEXT_LABELS": {
     "HOME_LABEL": "Write something to try!"
