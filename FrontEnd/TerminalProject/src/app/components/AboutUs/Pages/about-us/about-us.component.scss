@@ -1,0 +1,69 @@
+.background {
+  width: 100vw;
+  height: 75vh;
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: -20px;
+  margin-top: -12px;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  opacity: 0.7;
+}
+.titles{
+  margin-top: 5%;
+}
+.team {
+  justify-content: space-between;
+  //margin-top: -5%;
+  position:absolute;
+  z-index: 1;
+}
+.little_title{
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.71);
+  font-weight: bold;
+  margin-right:25%
+}
+.big_title{
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.big_title_margin{
+  margin-left: 8%;
+}
+
+.description{
+  margin: 5%;
+  font-size: 1.5rem;
+}
+.name{
+  margin-left: 7%;
+  margin-top: 15%;
+  letter-spacing: 1.5px;
+}
+
+.first-name{
+  padding-bottom:10%;
+  //background-color: #685ab7;
+  //transform: skew(-15deg);
+}
+.last-name{
+  padding-bottom: 20%;
+  padding-left:1.2%;
+}
+
+.name:hover{
+  color: #c1e9ee;
+}
+
+.p-card>:hover{
+  background-color: #685ab7;
+  transform: skew(-15deg);
+  transition: 0.5s;
+}
+
+
