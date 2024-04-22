@@ -5,11 +5,11 @@ import { ActivitiesRoutingModule } from './activities-routing.module';
 import { ActivitiesComponent } from './Pages/activities/activities.component';
 import { SharedModule } from '../../shared/shared.module';
 import { TranslateModule } from '@ngx-translate/core';
-import { CompleteSentencesActivityComponent } from './Pages/complete-sentences-activity/complete-sentences-activity.component';
 import { PrimeNGModule } from '../../styling/prime-ng.module';
+import { ProfessionsAndOccupationsComponent } from './Pages/professions-and-occupations/professions-and-occupations.component';
 
 @NgModule({
-  declarations: [ActivitiesComponent, CompleteSentencesActivityComponent],
+  declarations: [ActivitiesComponent, ProfessionsAndOccupationsComponent],
   imports: [
     CommonModule,
     ActivitiesRoutingModule,

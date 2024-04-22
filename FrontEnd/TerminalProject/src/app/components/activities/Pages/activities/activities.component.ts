@@ -15,10 +15,10 @@ export class ActivitiesComponent {
       link: '/activities/complete-sentences',
     },
     {
-      name: 'Actividades 1',
+      name: 'Profesiones y ocupaciones',
       description: 'in this blo we will talk about the latest news',
       image: './assets/home-images/Blog-Igu.svg',
-      link: '/home',
+      link: '/activities/professions-and-occupations',
     },
     {
       name: 'Actividades 2',
