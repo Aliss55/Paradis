@@ -1,26 +1,20 @@
-.background {
-  width: 100vw;
-  height: 75vh;
-  background-color: #000000;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-left: -20px;
-  margin-top: -12px;
-  padding-top: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 5%;
-  opacity: 0.7;
+
+:host ::ng-deep .p-divider-content{
+  font-size: 1.7rem;
+  padding: 30px;
+  font-style: oblique;
+  letter-spacing: 1.5px;
 }
+
+:host ::ng-deep .p-divider-{
+  margin-top: 5%;
+}
+
+
 .titles{
   margin-top: 5%;
 }
-.team {
-  justify-content: space-between;
-  //margin-top: -5%;
-  position:absolute;
-  z-index: 1;
-}
+
 .little_title{
   font-size: 2.5rem;
   color: rgba(255, 255, 255, 0.71);
@@ -41,6 +35,7 @@
   font-size: 1.5rem;
 }
 .name{
+  font-size: 1.5rem;
   margin-left: 7%;
   margin-top: 15%;
   letter-spacing: 1.5px;
@@ -64,6 +59,11 @@
   background-color: #685ab7;
   transform: skew(-15deg);
   transition: 0.5s;
+}
+
+.characters-style{
+ max-width: 200px;
+  border-radius: 20%;
 }
 
 
