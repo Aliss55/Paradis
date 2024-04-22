@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ActivitiesComponent } from './Pages/activities/activities.component';
-import { CompleteSentencesActivityComponent } from './Pages/complete-sentences-activity/complete-sentences-activity.component';
+import { ProfessionsAndOccupationsComponent } from './Pages/professions-and-occupations/professions-and-occupations.component';
 
 const routes: Routes = [
   {
@@ -9,8 +9,8 @@ const routes: Routes = [
     component: ActivitiesComponent,
   },
   {
-    path: 'complete-sentences',
-    component: CompleteSentencesActivityComponent,
+    path: 'professions-and-occupations',
+    component: ProfessionsAndOccupationsComponent,
   },
 ];
 
