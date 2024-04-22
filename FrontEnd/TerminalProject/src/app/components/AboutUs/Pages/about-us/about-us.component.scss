@@ -26,10 +26,6 @@
   font-weight: bold;
 }
 
-.big_title_margin{
-  margin-left: 8%;
-}
-
 .description{
   margin: 5%;
   font-size: 1.5rem;
@@ -41,24 +37,9 @@
   letter-spacing: 1.5px;
 }
 
-.first-name{
-  padding-bottom:10%;
-  //background-color: #685ab7;
-  //transform: skew(-15deg);
-}
-.last-name{
-  padding-bottom: 20%;
-  padding-left:1.2%;
-}
-
 .name:hover{
   color: #c1e9ee;
-}
-
-.p-card>:hover{
-  background-color: #685ab7;
-  transform: skew(-15deg);
-  transition: 0.5s;
+  cursor:auto;
 }
 
 .characters-style{
