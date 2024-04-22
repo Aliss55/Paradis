@@ -11,6 +11,7 @@ import { Tooltip, TooltipModule } from 'primeng/tooltip';
 import { FieldsetModule } from 'primeng/fieldset';
 import { TagModule } from 'primeng/tag';
 import { ToastModule } from 'primeng/toast';
+import { DividerModule } from 'primeng/divider';
 
 @NgModule({
   declarations: [],
@@ -27,6 +28,7 @@ import { ToastModule } from 'primeng/toast';
     FieldsetModule,
     TagModule,
     ToastModule,
+    DividerModule
   ],
   exports: [
     ButtonModule,
@@ -40,6 +42,7 @@ import { ToastModule } from 'primeng/toast';
     FieldsetModule,
     TagModule,
     ToastModule,
+    DividerModule
   ],
 })
 export class PrimeNGModule {}

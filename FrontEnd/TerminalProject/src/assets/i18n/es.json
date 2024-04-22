@@ -7,6 +7,14 @@
     "ANALIZE_TEXT": "Analiza tu texto",
     "TERMS_AND_CONDITIONS": "Términos y condiciones"
   },
+  "ABOUT_US_LABELS": {
+    "TITLE": "Conoce más de",
+    "PROJECT_NAME": "Literata",
+    "DESCRIPTION": "Literata es un proyecto enfocado en ayudarte a practicar tus habilidades de escritura en español mexicano, a través de actividades de escritura que incluyen retroalimentación inmediata. Además de actividades de reforzamiento de vocabulario e información relevante de la lengua española.",
+    "HISTORY": "Literata es un proyecto desarrollado por estudiantes de la Escuela Superior de Cómputo de la carrera de Ingeniería en Sistemas Computacionales, con el objetivo de ayudar a estudiantes de español como lengua extranjera a mejorar sus habilidades de escritura.",
+    "TEAM": "Equipo de desarrollo"
+  },
+
   "ANALIZE_TEXT_LABELS": {
     "HOME_LABEL": "¡Escribe algo para experimentar!"
   },

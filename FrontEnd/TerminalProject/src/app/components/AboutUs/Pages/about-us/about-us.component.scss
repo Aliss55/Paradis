@@ -1,0 +1,50 @@
+
+:host ::ng-deep .p-divider-content{
+  font-size: 1.7rem;
+  padding: 30px;
+  font-style: oblique;
+  letter-spacing: 1.5px;
+}
+
+:host ::ng-deep .p-divider-{
+  margin-top: 5%;
+}
+
+
+.titles{
+  margin-top: 5%;
+}
+
+.little_title{
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.71);
+  font-weight: bold;
+  margin-right:25%
+}
+.big_title{
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.description{
+  margin: 5%;
+  font-size: 1.5rem;
+}
+.name{
+  font-size: 1.5rem;
+  margin-left: 7%;
+  margin-top: 15%;
+  letter-spacing: 1.5px;
+}
+
+.name:hover{
+  color: #c1e9ee;
+  cursor:auto;
+}
+
+.characters-style{
+ max-width: 200px;
+  border-radius: 20%;
+}
+
+
