@@ -55,6 +55,14 @@ export class CardsGameComponent {
     this.setCardData();
   }
 
+  resetGame() {
+    this.cardCounter = 0;
+    this.correctAnswersCounter = 0;
+    this.finalScoreDisplayed = false;
+    this.setOptions();
+    this.setCardData();
+  }
+
   private setOptions() {
     this.questions_and_answers.forEach((question_and_answer) => {
       let randomValues = this.getRandomEnumValues();
