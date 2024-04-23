@@ -20,7 +20,12 @@
   "BLOG_LABELS": {
     "HOME_LABEL": "Find out more about the spanish language",
     "BLOG_1": {
-      "TITLE": "Sentences"
+      "TITLE": "Sentences",
+      "DESCRIPTION": "What is a sentence?"
+    },
+    "BLOG_2": {
+      "TITLE": "Period",
+      "DESCRIPTION": "What is a period? How to use it?"
     }
   },
   "ACTIVITIES_LABELS": {

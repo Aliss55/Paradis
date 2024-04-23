@@ -21,7 +21,12 @@
   "BLOG_LABELS": {
     "HOME_LABEL": "Entérate más acerca de la lengua española",
     "BLOG_1": {
-      "TITLE": "La oración"
+      "TITLE": "La oración",
+      "DESCRIPTION": "¿Que es una oración?"
+    },
+    "BLOG_2": {
+      "TITLE": "El punto",
+      "DESCRIPTION": "¿Qué es el punto? ¿Para qué se utiliza?"
     }
   },
   "ACTIVITIES_LABELS": {
