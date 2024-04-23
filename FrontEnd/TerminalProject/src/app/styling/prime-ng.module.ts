@@ -28,7 +28,7 @@ import { DividerModule } from 'primeng/divider';
     FieldsetModule,
     TagModule,
     ToastModule,
-    DividerModule
+    DividerModule,
   ],
   exports: [
     ButtonModule,
@@ -42,7 +42,7 @@ import { DividerModule } from 'primeng/divider';
     FieldsetModule,
     TagModule,
     ToastModule,
-    DividerModule
+    DividerModule,
   ],
 })
 export class PrimeNGModule {}
