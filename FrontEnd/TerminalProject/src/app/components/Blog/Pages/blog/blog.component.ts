@@ -8,22 +8,16 @@ import { Options } from '../../../../interfaces/options';
 export class BlogComponent {
   public blogs: Options[] = [
     {
-      name: 'Oraciones',
-      description: '¿Que son las oraciones?',
+      name: 'BLOG_LABELS.BLOG_1.TITLE',
+      description: 'BLOG_LABELS.BLOG_1.DESCRIPTION',
       image: './assets/home-images/pingu.jpg',
       link: '/blog/sentences-1',
     },
     {
-      name: 'Blog 1',
-      description: 'in this blo we will talk about the latest news',
-      image: './assets/home-images/Blog-Igu.svg',
-      link: '/blog_1',
-    },
-    {
-      name: 'Blog 2',
-      description: 'in this blo we will talk about the latest news',
-      image: './assets/home-images/igu-actividades.svg',
-      link: '/blog_1',
+      name: 'BLOG_LABELS.BLOG_2.TITLE',
+      description: 'BLOG_LABELS.BLOG_2.DESCRIPTION',
+      image: './assets/home-images/pingu.jpg',
+      link: '/blog/period',
     },
   ];
 }

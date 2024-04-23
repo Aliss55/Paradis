@@ -9,12 +9,13 @@ import { BlogRoutingModule } from './blog-routing.module';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SentencesBlog1Component } from './Pages/articles/sentences-blog-1/sentences-blog-1.component';
+import { PeriodBlog2Component } from './Pages/articles/period-blog-2/period-blog-2.component';
 
 // export function HttpLoaderFactory(http: HttpClient) {
 //   return new TranslateHttpLoader(http);
 // }
 @NgModule({
-  declarations: [BlogComponent, SentencesBlog1Component],
+  declarations: [BlogComponent, SentencesBlog1Component, PeriodBlog2Component],
   imports: [
     CommonModule,
     BlogRoutingModule,
