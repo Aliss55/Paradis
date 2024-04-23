@@ -18,7 +18,10 @@
     "HOME_LABEL": "Write something to try!"
   },
   "BLOG_LABELS": {
-    "HOME_LABEL": "Find out more about the spanish language"
+    "HOME_LABEL": "Find out more about the spanish language",
+    "BLOG_1": {
+      "TITLE": "Sentences"
+    }
   },
   "ACTIVITIES_LABELS": {
     "HOME_LABEL": "Let's practice!",

@@ -19,7 +19,10 @@
     "HOME_LABEL": "¡Escribe algo para experimentar!"
   },
   "BLOG_LABELS": {
-    "HOME_LABEL": "Entérate más acerca de la lengua española"
+    "HOME_LABEL": "Entérate más acerca de la lengua española",
+    "BLOG_1": {
+      "TITLE": "La oración"
+    }
   },
   "ACTIVITIES_LABELS": {
     "HOME_LABEL": "¡A practicar!",
