@@ -27,6 +27,10 @@
     "BLOG_2": {
       "TITLE": "El punto",
       "DESCRIPTION": "¿Qué es el punto? ¿Para qué se utiliza?"
+    },
+    "BLOG_3": {
+      "TITLE": "La coma",
+      "DESCRIPTION": "¿Qué es la coma? Ejemplos de uso."
     }
   },
   "ACTIVITIES_LABELS": {

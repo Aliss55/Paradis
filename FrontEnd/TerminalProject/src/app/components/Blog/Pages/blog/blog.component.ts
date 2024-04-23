@@ -19,5 +19,11 @@ export class BlogComponent {
       image: './assets/home-images/pingu.jpg',
       link: '/blog/period',
     },
+    {
+      name: 'BLOG_LABELS.BLOG_3.TITLE',
+      description: 'BLOG_LABELS.BLOG_3.DESCRIPTION',
+      image: './assets/home-images/pingu.jpg',
+      link: '/blog/comma',
+    }
   ];
 }

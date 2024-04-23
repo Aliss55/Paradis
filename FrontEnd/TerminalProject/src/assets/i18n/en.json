@@ -26,6 +26,10 @@
     "BLOG_2": {
       "TITLE": "Period",
       "DESCRIPTION": "What is a period? How to use it?"
+    },
+    "BLOG_3": {
+      "TITLE": "Comma",
+      "DESCRIPTION": "What is a comma? Examples of use"
     }
   },
   "ACTIVITIES_LABELS": {
