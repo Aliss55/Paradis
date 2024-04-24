@@ -41,10 +41,19 @@
   color: #c1e9ee;
   cursor:auto;
 }
+.card-container:hover{
+  animation: scaling 0.5s forwards;
+}
 
 .characters-style{
  max-width: 200px;
   border-radius: 20%;
+}
+
+@keyframes scaling {
+to {
+  transform: scale(1.2);
+}
 }
 
 
