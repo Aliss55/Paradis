@@ -4,6 +4,7 @@ import { BlogComponent } from './Pages/blog/blog.component';
 import { SentencesBlog1Component } from './Pages/articles/sentences-blog-1/sentences-blog-1.component';
 import {PeriodBlog2Component} from "./Pages/articles/period-blog-2/period-blog-2.component";
 import {CommaBlog3Component} from "./Pages/articles/comma-blog-3/comma-blog-3.component";
+import {CapitalizationBlog4Component} from "./Pages/articles/capitalization-blog-4/capitalization-blog-4.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'comma',
     component: CommaBlog3Component,
+  },
+  {
+    path: 'capitalization',
+    component: CapitalizationBlog4Component,
   },
 ];
 

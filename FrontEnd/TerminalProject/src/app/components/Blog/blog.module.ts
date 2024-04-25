@@ -11,12 +11,13 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SentencesBlog1Component } from './Pages/articles/sentences-blog-1/sentences-blog-1.component';
 import { PeriodBlog2Component } from './Pages/articles/period-blog-2/period-blog-2.component';
 import { CommaBlog3Component } from './Pages/articles/comma-blog-3/comma-blog-3.component';
+import { CapitalizationBlog4Component } from './Pages/articles/capitalization-blog-4/capitalization-blog-4.component';
 
 // export function HttpLoaderFactory(http: HttpClient) {
 //   return new TranslateHttpLoader(http);
 // }
 @NgModule({
-  declarations: [BlogComponent, SentencesBlog1Component, PeriodBlog2Component, CommaBlog3Component],
+  declarations: [BlogComponent, SentencesBlog1Component, PeriodBlog2Component, CommaBlog3Component, CapitalizationBlog4Component],
   imports: [
     CommonModule,
     BlogRoutingModule,
