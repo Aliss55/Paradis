@@ -12,6 +12,7 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { TagModule } from 'primeng/tag';
 import { ToastModule } from 'primeng/toast';
 import { DividerModule } from 'primeng/divider';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @NgModule({
   declarations: [],
@@ -29,6 +30,7 @@ import { DividerModule } from 'primeng/divider';
     TagModule,
     ToastModule,
     DividerModule,
+    AnimateOnScrollModule,
   ],
   exports: [
     ButtonModule,
@@ -43,6 +45,7 @@ import { DividerModule } from 'primeng/divider';
     TagModule,
     ToastModule,
     DividerModule,
+    AnimateOnScrollModule,
   ],
 })
 export class PrimeNGModule {}
