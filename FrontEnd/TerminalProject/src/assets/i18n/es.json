@@ -31,6 +31,10 @@
     "BLOG_3": {
       "TITLE": "La coma",
       "DESCRIPTION": "¿Qué es la coma? Ejemplos de uso."
+    },
+    "BLOG_4": {
+      "TITLE": "Las mayúsculas",
+      "DESCRIPTION": "Definición, reglas y ejemplos de uso."
     }
   },
   "ACTIVITIES_LABELS": {

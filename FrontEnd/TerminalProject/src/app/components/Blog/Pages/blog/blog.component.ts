@@ -24,6 +24,12 @@ export class BlogComponent {
       description: 'BLOG_LABELS.BLOG_3.DESCRIPTION',
       image: './assets/home-images/pingu.jpg',
       link: '/blog/comma',
-    }
+    },
+    {
+      name: 'BLOG_LABELS.BLOG_4.TITLE',
+      description: 'BLOG_LABELS.BLOG_4.DESCRIPTION',
+      image: './assets/home-images/pingu.jpg',
+      link: '/blog/capitalization',
+    },
   ];
 }
