@@ -13,6 +13,7 @@ import { PeriodBlog2Component } from './Pages/articles/period-blog-2/period-blog
 import { CommaBlog3Component } from './Pages/articles/comma-blog-3/comma-blog-3.component';
 import { CapitalizationBlog4Component } from './Pages/articles/capitalization-blog-4/capitalization-blog-4.component';
 import { HallaHayaAyaAllaDifferenceBlog5Component } from './Pages/articles/halla-haya-aya-alla-difference-blog-5/halla-haya-aya-alla-difference-blog-5.component';
+import { AdverbBlog6Component } from './Pages/articles/adverb-blog-6/adverb-blog-6.component';
 
 // export function HttpLoaderFactory(http: HttpClient) {
 //   return new TranslateHttpLoader(http);
@@ -24,7 +25,8 @@ import { HallaHayaAyaAllaDifferenceBlog5Component } from './Pages/articles/halla
     PeriodBlog2Component,
     CommaBlog3Component,
     CapitalizationBlog4Component,
-    HallaHayaAyaAllaDifferenceBlog5Component
+    HallaHayaAyaAllaDifferenceBlog5Component,
+    AdverbBlog6Component
   ],
   imports: [
     CommonModule,

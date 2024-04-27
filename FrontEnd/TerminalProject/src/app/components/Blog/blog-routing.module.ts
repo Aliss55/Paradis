@@ -8,6 +8,7 @@ import {CapitalizationBlog4Component} from "./Pages/articles/capitalization-blog
 import {
   HallaHayaAyaAllaDifferenceBlog5Component
 } from "./Pages/articles/halla-haya-aya-alla-difference-blog-5/halla-haya-aya-alla-difference-blog-5.component";
+import {AdverbBlog6Component} from "./Pages/articles/adverb-blog-6/adverb-blog-6.component";
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: 'halla-haya-aya-alla-difference',
     component: HallaHayaAyaAllaDifferenceBlog5Component,
+  },
+  {
+    path: 'adverbs',
+    component: AdverbBlog6Component,
   },
 ];
 
