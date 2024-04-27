@@ -31,5 +31,11 @@ export class BlogComponent {
       image: './assets/home-images/pingu.jpg',
       link: '/blog/capitalization',
     },
+    {
+      name: 'BLOG_LABELS.BLOG_5.TITLE',
+      description: 'BLOG_LABELS.BLOG_5.DESCRIPTION',
+      image: './assets/home-images/pingu.jpg',
+      link: '/blog/halla-haya-aya-alla-difference',
+    }
   ];
 }

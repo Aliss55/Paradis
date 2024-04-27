@@ -5,6 +5,9 @@ import { SentencesBlog1Component } from './Pages/articles/sentences-blog-1/sente
 import {PeriodBlog2Component} from "./Pages/articles/period-blog-2/period-blog-2.component";
 import {CommaBlog3Component} from "./Pages/articles/comma-blog-3/comma-blog-3.component";
 import {CapitalizationBlog4Component} from "./Pages/articles/capitalization-blog-4/capitalization-blog-4.component";
+import {
+  HallaHayaAyaAllaDifferenceBlog5Component
+} from "./Pages/articles/halla-haya-aya-alla-difference-blog-5/halla-haya-aya-alla-difference-blog-5.component";
 
 const routes: Routes = [
   {
@@ -26,6 +29,10 @@ const routes: Routes = [
   {
     path: 'capitalization',
     component: CapitalizationBlog4Component,
+  },
+  {
+    path: 'halla-haya-aya-alla-difference',
+    component: HallaHayaAyaAllaDifferenceBlog5Component,
   },
 ];
 
