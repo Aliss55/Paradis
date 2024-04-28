@@ -11,7 +11,7 @@
       </div>
 
       <div class="flex justify-content-center overflow-hidden">
-        <img alt="analize_text" class="responsive-image-analizer zoom" src='assets/home-images/Text%20Analyzer%20Penguin.svg'>
+        <img alt="analize_text" class="responsive-image-analizer zoom" [src]="imageService.getImagePathAccordingToTheme('Analyze-text-penguin.svg','assets/home-cards')">
       </div>
 
     </p-card>
@@ -33,7 +33,7 @@
             </div>
 
             <div class="sm:col col-12 flex justify-content-center overflow-hidden">
-              <img alt="blog" class="responsive-image-blog zoom" src='assets/home-images/Computer%20penguin.svg'>
+              <img alt="blog" class="responsive-image-blog zoom" [src]="imageService.getImagePathAccordingToTheme('Computer-penguin.svg','assets/home-cards')">
             </div>
 
 
@@ -56,7 +56,7 @@
             </div>
 
             <div class="sm:col col-12 flex justify-content-center overflow-hidden">
-              <img alt="blog" class="responsive-image-blog zoom" src='assets/home-images/Puzzle%20penguin.svg'>
+              <img alt="blog" class="responsive-image-blog zoom" [src]="imageService.getImagePathAccordingToTheme('Puzzle-penguin.svg','assets/home-cards')">
             </div>
 
 
