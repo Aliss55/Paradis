@@ -11,7 +11,6 @@ import {ImageService} from "../../services/image.service";
 export class NavBarComponent implements OnInit {
   public actualTheme!: string | null;
   public sidebarVisible: boolean = false;
-  protected readonly Theme = Theme;
   constructor(
     private translateService: TranslateService,
     public themeService: ThemeSwitcherService,
@@ -20,10 +19,6 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit(): void {
     this.actualTheme = localStorage.getItem('theme$');
-    // cambiar a true sidbarVisible cuando la pantalla sea menor a 768px
-    if (window.innerWidth <= 929) {
-      this.sidebarVisible = !this.sidebarVisible;
-    }
   }
 
   public toggleLanguage() {
