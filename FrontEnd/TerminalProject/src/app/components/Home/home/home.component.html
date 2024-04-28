@@ -1,5 +1,9 @@
 <div class="grid p-1">
-  <div class="lg:col-6 col-12 h-max">
+  <div
+    pAnimateOnScroll enterClass="animate__animated animate__fadeInDown"
+    class="animation-duration-1000 lg:col-6 col-12 h-max"
+    [style.animation-delay]="1 * 0.2 + 's'"
+  >
     <p-card styleClass="card-1 cursor-pointer">
 
       <div class="title xl:text-7xl text-4xl">
@@ -20,7 +24,11 @@
   <div class="lg:col-6 col-12 pt-2">
 
     <div class="grid">
-      <div class="col-12">
+      <div
+        pAnimateOnScroll enterClass="animate__animated animate__fadeInDown"
+        class="col-12 animation-duration-1000"
+        [style.animation-delay]="2 * 0.2 + 's'"
+      >
         <p-card styleClass="card-2 cursor-pointer" [routerLink]="['/blog']">
           <div class="grid">
             <div class="sm:col col-12">
@@ -43,7 +51,12 @@
 
       </div>
 
-      <div class="col-12">
+      <div
+        pAnimateOnScroll enterClass="animate__animated animate__fadeInDown"
+        class="col-12 animation-duration-1000"
+        [style.animation-delay]="3 * 0.2 + 's'"
+      >
+
         <p-card styleClass="card-3 cursor-pointer" [routerLink]="['/activities']">
           <div class="grid">
             <div class="sm:col col-12">

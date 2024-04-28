@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ViewportScroller} from "@angular/common";
 
 @Component({
   selector: 'app-adverb-blog-6',
@@ -9,15 +10,11 @@ export class AdverbBlog6Component implements OnInit{
   examples:any[] = [];
   examplesMente:any[] = [];
 
+  constructor( private viewportScrollerService: ViewportScroller) {
+  }
+
   ngOnInit(): void {
-    /*
-    Carlos se encuentra muy mal.	Johan es un mal hombre.
-Hoy comiste mejor.	Mis ideas son mejores que las tuyas.
-Será peor decirle que no.	Los resultados fueron peores.
-Habla muy recio.	Iván tiene una recia musculatura.
-Trabaja duro.	El pan está duro.
-Hay que cantar bajo.	Es un techo bajo.
-    * */
+    this.viewportScrollerService.scrollToPosition([0, 0]);
     this.examples = [
       {
         'adverb':'Carlos se encuentra muy <strong>mal</strong>.',
