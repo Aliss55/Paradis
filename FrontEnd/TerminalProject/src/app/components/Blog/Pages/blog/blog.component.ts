@@ -75,6 +75,12 @@ export class BlogComponent implements OnDestroy {
         image: this.imageService.getImagePathAccordingToTheme('Blog-2-50px.svg', './assets/blogs-images'),
         link: '/blog/verb-to-be',
       },
+      {
+        name: 'BLOG_LABELS.BLOG_9.TITLE',
+        description: 'BLOG_LABELS.BLOG_9.DESCRIPTION',
+        image: this.imageService.getImagePathAccordingToTheme('Blog-3-50px.svg', './assets/blogs-images'),
+        link: '/blog/commas-and-tag-questions',
+      }
 
     ];
   }

@@ -13,6 +13,9 @@ import {
   VerbsRelatedNaturalPhenomenaBlog7Component
 } from "./Pages/articles/verbs-related-natural-phenomena-blog-7/verbs-related-natural-phenomena-blog-7.component";
 import {VerbToBeBlog8Component} from "./Pages/articles/verb-to-be-blog-8/verb-to-be-blog-8.component";
+import {
+  CommasAndTagQuestionsBlog9Component
+} from "./Pages/articles/commas-and-tag-questions-blog-9/commas-and-tag-questions-blog-9.component";
 
 const routes: Routes = [
   {
@@ -50,7 +53,11 @@ const routes: Routes = [
   {
     path: 'verb-to-be',
     component: VerbToBeBlog8Component
-  }
+  },
+  {
+    path: 'commas-and-tag-questions',
+    component: CommasAndTagQuestionsBlog9Component
+  },
 ];
 
 @NgModule({
