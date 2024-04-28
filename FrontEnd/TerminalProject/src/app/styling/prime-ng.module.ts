@@ -7,7 +7,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ToolbarModule } from 'primeng/toolbar';
 import { TableModule } from 'primeng/table';
 import { ChipModule } from 'primeng/chip';
-import { Tooltip, TooltipModule } from 'primeng/tooltip';
+import { TooltipModule } from 'primeng/tooltip';
 import { FieldsetModule } from 'primeng/fieldset';
 import { TagModule } from 'primeng/tag';
 import { ToastModule } from 'primeng/toast';
