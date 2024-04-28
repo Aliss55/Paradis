@@ -8,10 +8,10 @@
       <p-card
         styleClass="sm:p-4 sm:h-23rem md:h-30rem cursor-pointer"
       >
-        <div class="flex" [routerLink]="option.link">
+        <div class="flex justify-content-around" [routerLink]="option.link">
           <p class="title title xl:text-5xl text-2xl">{{ option.name  | translate }}</p>
-          <div class="overflow-hidden">
-            <img  [src]="option.image" alt="Image description" class="sm:h-10rem md:h-6rem lg:h-10rem xl:h-15rem h-7rem sm:mx-5 mx-1 zoom ">
+          <div class="overflow-hidden ">
+            <img  [src]="option.image" alt="Image description" class="border-round-left-3xl border-round-top-2xl sm:h-10rem md:h-6rem lg:h-10rem xl:h-15rem h-7rem sm:mx-5 mx-1 zoom">
           </div>
 
         </div>

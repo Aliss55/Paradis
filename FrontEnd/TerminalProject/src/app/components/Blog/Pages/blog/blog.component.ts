@@ -10,7 +10,7 @@ export class BlogComponent {
     {
       name: 'BLOG_LABELS.BLOG_1.TITLE',
       description: 'BLOG_LABELS.BLOG_1.DESCRIPTION',
-      image: './assets/home-images/pingu.jpg',
+      image: './assets/blogs-images/Oracion - 220x220.svg',
       link: '/blog/sentences-1',
     },
     {
@@ -31,5 +31,18 @@ export class BlogComponent {
       image: './assets/home-images/pingu.jpg',
       link: '/blog/capitalization',
     },
+    {
+      name: 'BLOG_LABELS.BLOG_5.TITLE',
+      description: 'BLOG_LABELS.BLOG_5.DESCRIPTION',
+      image: './assets/home-images/pingu.jpg',
+      link: '/blog/halla-haya-aya-alla-difference',
+    },
+    {
+      name: 'BLOG_LABELS.BLOG_6.TITLE',
+      description: 'BLOG_LABELS.BLOG_6.DESCRIPTION',
+      image: './assets/home-images/pingu.jpg',
+      link: '/blog/adverbs',
+    },
+
   ];
 }
