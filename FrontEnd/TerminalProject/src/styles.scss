@@ -1,6 +1,7 @@
 @import "primeng/resources/primeng.css";
 @import 'material-icons/iconfont/outlined.css';
 @import 'material-icons/iconfont/filled.css';
+@import 'animate.css';
 
 @font-face {
   font-family: 'Raleway-italic';
@@ -96,5 +97,13 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+.p-fieldset-legend {
+  border: 1px var(--surface-400) solid;
+}
+
+.p-fieldset {
+  border: 1px var(--surface-400) solid;
+}
 
 

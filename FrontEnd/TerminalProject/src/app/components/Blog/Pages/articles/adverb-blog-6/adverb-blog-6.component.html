@@ -1,0 +1,195 @@
+<div class="flex flex-column p-1">
+
+  <div class="flex justify-content-center w-full">
+    <!--<img src="https://primefaces.org/cdn/primeng/images/usercard.png" alt="">-->
+  </div>
+  <div class="flex justify-content-center mt-5">
+
+    <div class="title md:text-7xl text-6xl">
+      {{ 'BLOG_LABELS.BLOG_6.TITLE' | translate}}
+    </div>
+  </div>
+
+  <div class="surface-0 sm:p-8 sm:m-8 p-5 m-0 shadow-5 border-round text-lg ">
+    <h2>El adverbio</h2>
+    <p class="line-height-3">
+      El <strong>adverbio</strong> es la clase de palabra que modifica al verbo, al adjetivo o a otro adverbio.
+    </p>
+    <p class="line-height-3">
+      Su función más importante y más frecuente es modificar verbos, para denotar modo, tiempo, lugar, cantidad:
+    </p>
+
+    <ul class="list-disc">
+      <li class="line-height-4">
+        El presidente habló <strong>amenazadoramente</strong> (modo).
+      </li>
+      <li class="line-height-4">
+        Siempre llega con noticias <strong>desalentadoras</strong> (tiempo).
+      </li>
+      <li class="line-height-4">
+        Nosotras vivimos <strong>aquí</strong> (lugar).
+      </li>
+      <li class="line-height-4">
+        Comió <strong>demasiado</strong> (cantidad).
+      </li>
+    </ul>
+
+    <p class="line-height-3">
+      Cuando se refieren a adjetivos o a otros adverbios, intensifican o atenúan su significado:
+    </p>
+
+    <ul class="list-disc">
+      <li class="line-height-4">
+        Esta ciudad está <strong>densamente</strong> poblada.
+      </li>
+      <li class="line-height-4">
+        Mi primo Ricardo está <strong>gravemente</strong> enfermo.
+      </li>
+      <li class="line-height-4">
+        Mariana se sentó <strong>demasiado</strong> cerca de la fogata.
+      </li>
+      <li class="line-height-4">
+        Amanda baila <strong>extraordinariamente</strong> bien.
+      </li>
+    </ul>
+
+    <h3>Clasificación de los adverbios</h3>
+    <p class="line-height-3">
+      Existen dos grandes grupos de adverbios: calificativos y determinativos.
+    </p>
+
+    <h4>Adverbios calificativos</h4>
+
+    <p class="line-height-3">
+      Pertenecen a este grupo todos los adverbios derivados de adjetivos.
+      Funcionan como adverbios cuando no tienen flexión y modifican un verbo, un adjetivo u otro adverbio;
+      son adjetivos cuando acompañan un sustantivo y concuerdan con él en género y número.
+    </p>
+    <p-fieldset legend="Ejemplos adverbios derivados de adjetivos">
+      <p-table [value]="examples" styleClass="p-datatable-sm">
+        <ng-template pTemplate="header">
+          <tr class="font-italic">
+            <th>Adverbio</th>
+            <th>Adjetivo</th>
+          </tr>
+        </ng-template>
+
+        <ng-template let-examples pTemplate="body">
+          <tr class="font-italic">
+            <td [innerHTML]="examples.adverb"></td>
+            <td [innerHTML]="examples.adjective"></td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-fieldset>
+
+    <p class="line-height-3">
+      Este cuadro muestra cómo estos adverbios pueden transformarse en adjetivos dependiendo
+      del contexto en el que se utilizan.
+    </p>
+    <p class="line-height-3">
+      Son también adverbios calificativos los que se forman a partir de adjetivos, añadiéndoles
+      la terminación <strong>-mente</strong>. Estos adverbios, generalmente, indican modo o manera
+      de realizar una acción:
+    </p>
+
+    <ul class="list-disc">
+      <li class="line-height-4">
+        Contestó <strong>forzadamente</strong>.
+      </li>
+      <li class="line-height-4">
+        Traduce <strong>perfectamente</strong>.
+      </li>
+      <li class="line-height-4">
+        Revisó el documento <strong>cuidadosamente</strong>.
+      </li>
+      <li class="line-height-4">
+        Se enfrentaron <strong>valientemente</strong>.
+      </li>
+    </ul>
+
+    <p class="line-height-3">
+      Los adverbios terminados en -mente derivados de adjetivos que tienen acento ortográfico, lo mantienen:
+    </p>
+
+    <p-fieldset legend="Ejemplos adverbios derivados de adjetivos con terminación -mente">
+      <p-table [value]="examplesMente" styleClass="p-datatable-sm">
+        <ng-template pTemplate="header">
+          <tr class="font-italic">
+            <th>Adjetivo</th>
+            <th>Adverbio</th>
+          </tr>
+        </ng-template>
+
+        <ng-template let-examples pTemplate="body">
+          <tr class="font-italic">
+            <td [innerHTML]="examples.adjective"></td>
+            <td [innerHTML]="examples.adverb"></td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-fieldset>
+
+    <h4>Adverbios determinativos</h4>
+    <p class="line-height-3">
+      Los adverbios determinativos constituyen una clase en la que se incluye un número limitado de formas.
+    </p>
+    <p class="line-height-3">
+      De acuerdo con su significado, pueden distinguirse las siguientes subclases:
+    </p>
+
+    <p-fieldset legend="Adverbios de lugar" styleClass="mt-5">
+      <p class="m-0 font-italic">
+        aquí, allí, ahí, acá, allá, cerca, lejos, fuera, afuera, dentro, adentro, encima, debajo, arriba, abajo,
+        delante, adelante, alrededor, detrás, dónde, donde, dondequiera.
+      </p>
+    </p-fieldset>
+
+    <p-fieldset legend="Adverbios de tiempo" styleClass="mt-5">
+      <p class="m-0 font-italic">
+        mientras, luego, temprano, antes, después, pronto, tarde, ya , ahora, entonces, hoy, mañana, ayer, nunca, jamás,
+        siempre, todavía, cuándo, cuando.
+      </p>
+    </p-fieldset>
+
+    <p-fieldset legend="Adverbios de modo" styleClass="mt-5">
+      <p class="m-0 font-italic">
+        así, apenas, cómo, como.
+      </p>
+    </p-fieldset>
+
+    <p-fieldset legend="Adverbios de cantidad" styleClass="mt-5">
+      <p class="m-0 font-italic">
+        demasiado, muy, más, mucho, poco, menos, bastante, tanto, casi, nada, cuánto, cuanto.
+      </p>
+    </p-fieldset>
+
+    <p-fieldset legend="Adverbios de duda" styleClass="mt-5">
+      <p class="m-0 font-italic">
+        quizá, tal vez, acaso.
+      </p>
+    </p-fieldset>
+
+    <p-fieldset legend="Adverbios de afirmación" styleClass="mt-5">
+      <p class="m-0 font-italic">
+        sí, ciertamente, también.
+      </p>
+    </p-fieldset>
+
+    <p-fieldset legend="Adverbios de negación" styleClass="mt-5">
+      <p class="m-0 font-italic">
+        no, tampoco.
+      </p>
+    </p-fieldset>
+
+
+    <p-divider></p-divider>
+
+    <h3>Referencias</h3>
+    <p class="line-height-3 font-italic">
+      I. Munguía Zataraín, M. E. Munguía Zatarain, y G. Rocha, Gramática lengua española. México, D.F.: Larousse, 2013.
+    </p>
+  </div>
+
+</div>
+

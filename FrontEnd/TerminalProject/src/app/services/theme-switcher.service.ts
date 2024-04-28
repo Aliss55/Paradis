@@ -1,5 +1,5 @@
-import { Inject, Injectable, Renderer2, RendererFactory2 } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import {Inject, Injectable, OnDestroy, Renderer2, RendererFactory2} from '@angular/core';
+import {BehaviorSubject, Subscription} from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 
 export enum Theme {
@@ -10,9 +10,11 @@ export enum Theme {
 @Injectable({
   providedIn: 'root',
 })
-export class ThemeSwitcherService {
+export class ThemeSwitcherService implements OnDestroy{
   private theme$ = new BehaviorSubject<string>(Theme.LIGHT);
   public actualTheme = this.theme$.asObservable();
+  public currentAppTheme: string = Theme.LIGHT;
+  private themeSubscription: Subscription;
   private renderer: Renderer2;
 
   constructor(
@@ -20,7 +22,9 @@ export class ThemeSwitcherService {
     @Inject(DOCUMENT) private document: Document,
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
+    this.themeSubscription= this.actualTheme.subscribe(theme => this.currentAppTheme = theme);
   }
+
   initTheme(): void {
     this.setStoredTheme();
     this.createLinkToStylesheet();
@@ -76,4 +80,7 @@ export class ThemeSwitcherService {
       this.renderer.addClass(body, 'light-theme-gradient');
     }
   }
+    ngOnDestroy(): void {
+        this.themeSubscription.unsubscribe();
+    }
 }
