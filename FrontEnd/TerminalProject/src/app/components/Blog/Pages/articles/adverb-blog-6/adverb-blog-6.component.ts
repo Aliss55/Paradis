@@ -15,14 +15,6 @@ export class AdverbBlog6Component implements OnInit{
 
   ngOnInit(): void {
     this.viewportScrollerService.scrollToPosition([0, 0]);
-    /*
-    Carlos se encuentra muy mal.	Johan es un mal hombre.
-Hoy comiste mejor.	Mis ideas son mejores que las tuyas.
-Será peor decirle que no.	Los resultados fueron peores.
-Habla muy recio.	Iván tiene una recia musculatura.
-Trabaja duro.	El pan está duro.
-Hay que cantar bajo.	Es un techo bajo.
-    * */
     this.examples = [
       {
         'adverb':'Carlos se encuentra muy <strong>mal</strong>.',
