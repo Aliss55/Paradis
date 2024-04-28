@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ViewportScroller} from "@angular/common";
 
 @Component({
   selector: 'app-adverb-blog-6',
@@ -9,7 +10,11 @@ export class AdverbBlog6Component implements OnInit{
   examples:any[] = [];
   examplesMente:any[] = [];
 
+  constructor( private viewportScrollerService: ViewportScroller) {
+  }
+
   ngOnInit(): void {
+    this.viewportScrollerService.scrollToPosition([0, 0]);
     /*
     Carlos se encuentra muy mal.	Johan es un mal hombre.
 Hoy comiste mejor.	Mis ideas son mejores que las tuyas.
