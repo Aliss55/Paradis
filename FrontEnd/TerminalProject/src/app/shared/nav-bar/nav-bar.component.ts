@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import {Theme, ThemeSwitcherService} from '../../services/theme-switcher.service';
-import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 import {ImageService} from "../../services/image.service";
 
 @Component({
@@ -16,7 +15,6 @@ export class NavBarComponent implements OnInit {
   constructor(
     private translateService: TranslateService,
     public themeService: ThemeSwitcherService,
-    private sanitizer: DomSanitizer,
     private imageService: ImageService
   ) {}
 
@@ -44,10 +42,8 @@ export class NavBarComponent implements OnInit {
     observable$.unsubscribe();
   }
 
-  public getLogoUrl(logo_name: string): SafeResourceUrl {
-    const image_path = this.imageService.getImagePathAccordingToTheme(logo_name, 'assets/logos')
-    // return this.sanitizer.bypassSecurityTrustResourceUrl(image_path);
-    return image_path;
+  public getLogoPath(logo_name: string): string {
+    return this.imageService.getImagePathAccordingToTheme(logo_name, 'assets/logos')
   }
 
 }

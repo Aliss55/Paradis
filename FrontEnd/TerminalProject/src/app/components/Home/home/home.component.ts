@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ImageService} from "../../../services/image.service";
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  constructor(){}
+  constructor(public imageService: ImageService){}
 
 }
