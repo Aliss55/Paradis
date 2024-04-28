@@ -14,6 +14,7 @@ import { CommaBlog3Component } from './Pages/articles/comma-blog-3/comma-blog-3.
 import { CapitalizationBlog4Component } from './Pages/articles/capitalization-blog-4/capitalization-blog-4.component';
 import { HallaHayaAyaAllaDifferenceBlog5Component } from './Pages/articles/halla-haya-aya-alla-difference-blog-5/halla-haya-aya-alla-difference-blog-5.component';
 import { AdverbBlog6Component } from './Pages/articles/adverb-blog-6/adverb-blog-6.component';
+import { VerbsRelatedNaturalPhenomenaBlog7Component } from './Pages/articles/verbs-related-natural-phenomena-blog-7/verbs-related-natural-phenomena-blog-7.component';
 
 // export function HttpLoaderFactory(http: HttpClient) {
 //   return new TranslateHttpLoader(http);
@@ -26,7 +27,8 @@ import { AdverbBlog6Component } from './Pages/articles/adverb-blog-6/adverb-blog
     CommaBlog3Component,
     CapitalizationBlog4Component,
     HallaHayaAyaAllaDifferenceBlog5Component,
-    AdverbBlog6Component
+    AdverbBlog6Component,
+    VerbsRelatedNaturalPhenomenaBlog7Component
   ],
   imports: [
     CommonModule,
