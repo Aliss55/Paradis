@@ -12,6 +12,7 @@ import {AdverbBlog6Component} from "./Pages/articles/adverb-blog-6/adverb-blog-6
 import {
   VerbsRelatedNaturalPhenomenaBlog7Component
 } from "./Pages/articles/verbs-related-natural-phenomena-blog-7/verbs-related-natural-phenomena-blog-7.component";
+import {VerbToBeBlog8Component} from "./Pages/articles/verb-to-be-blog-8/verb-to-be-blog-8.component";
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
     path: 'verbs-related-to-natural-phenomena',
     component: VerbsRelatedNaturalPhenomenaBlog7Component
   },
+  {
+    path: 'verb-to-be',
+    component: VerbToBeBlog8Component
+  }
 ];
 
 @NgModule({
