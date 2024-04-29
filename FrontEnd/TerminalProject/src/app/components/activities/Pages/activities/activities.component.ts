@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Options } from '../../../../interfaces/options';
+import {ViewportScroller} from "@angular/common";
 
 @Component({
   selector: 'app-activities',
   templateUrl: './activities.component.html',
   styleUrl: './activities.component.scss',
 })
-export class ActivitiesComponent {
+export class ActivitiesComponent implements OnInit{
   public activities: Options[] = [
     {
       name: 'Oraciones incompletas',
@@ -27,4 +28,10 @@ export class ActivitiesComponent {
       link: '/home',
     },
   ];
+
+  constructor(private viewportScrollerService: ViewportScroller) {}
+
+  ngOnInit(): void {
+    this.viewportScrollerService.scrollToPosition([0, 0]);
+  }
 }
