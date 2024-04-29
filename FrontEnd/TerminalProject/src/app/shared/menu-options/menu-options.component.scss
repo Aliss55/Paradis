@@ -1,0 +1,17 @@
+:host ::ng-deep .p-card {
+
+  .zoom {
+    transition: transform 0.5s; /* Animation */
+  }
+
+  &:hover .zoom {
+    transform: scale(1.45); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+}
+
+:host-context(.light-theme-gradient) {
+  :host ::ng-deep .p-card, .title {
+    text-shadow: 2px 2px 7px #868181;
+  }
+}

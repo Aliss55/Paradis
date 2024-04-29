@@ -19,7 +19,43 @@
     "HOME_LABEL": "¡Escribe algo para experimentar!"
   },
   "BLOG_LABELS": {
-    "HOME_LABEL": "Entérate más acerca de la lengua española"
+    "HOME_LABEL": "Entérate más acerca de la lengua española",
+    "BLOG_1": {
+      "TITLE": "La oración",
+      "DESCRIPTION": "¿Que es una oración?"
+    },
+    "BLOG_2": {
+      "TITLE": "El punto",
+      "DESCRIPTION": "¿Qué es el punto? ¿Para qué se utiliza?"
+    },
+    "BLOG_3": {
+      "TITLE": "La coma",
+      "DESCRIPTION": "¿Qué es la coma? Ejemplos de uso."
+    },
+    "BLOG_4": {
+      "TITLE": "Las mayúsculas",
+      "DESCRIPTION": "Definición, reglas y ejemplos de uso."
+    },
+    "BLOG_5": {
+      "TITLE": "\"Halla\", \"haya\", \"aya\", \"allá\"",
+      "DESCRIPTION": "¿Cuál es la diferencia entre estas palabras?"
+    },
+    "BLOG_6": {
+      "TITLE": "El adverbio",
+      "DESCRIPTION": "¿Qué es un adverbio? Clasificación y ejemplos."
+    },
+    "BLOG_7": {
+      "TITLE": "Verbos relacionados con la naturaleza",
+      "DESCRIPTION": "Verbos relacionados a los fenómenos de la naturaleza."
+    },
+    "BLOG_8": {
+      "TITLE": "Verbos \"ser\" o \"estar\"",
+      "DESCRIPTION": "Usos, ejemplos y diferencias entre los verbos \"ser\" y \"estar\"."
+    },
+    "BLOG_9": {
+      "TITLE": "Coma y muletillas interrogativas",
+      "DESCRIPTION": "¿Cómo usar la coma con muletillas interrogativas?"
+    }
   },
   "ACTIVITIES_LABELS": {
     "HOME_LABEL": "¡A practicar!",

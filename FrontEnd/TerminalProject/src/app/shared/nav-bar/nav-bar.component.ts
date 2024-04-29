@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { ThemeSwitcherService } from '../../services/theme-switcher.service';
+import {Theme, ThemeSwitcherService} from '../../services/theme-switcher.service';
+import {ImageService} from "../../services/image.service";
 
 @Component({
   selector: 'shared-nav-bar',
@@ -12,21 +13,13 @@ export class NavBarComponent implements OnInit {
   public sidebarVisible: boolean = false;
   constructor(
     private translateService: TranslateService,
-    private themeService: ThemeSwitcherService,
+    public themeService: ThemeSwitcherService,
+    private imageService: ImageService
   ) {}
 
   ngOnInit(): void {
     this.actualTheme = localStorage.getItem('theme$');
-    // cambiar a true sidbarVisible cuando la pantalla sea menor a 768px
-    if (window.innerWidth <= 929) {
-      this.sidebarVisible = !this.sidebarVisible;
-    }
   }
-
-  // public actualTheme: any = this.themeService.actualTheme.subscribe(
-  //   (theme) => (this.actualTheme = theme),
-  // );
-
 
   public toggleLanguage() {
     const observable$ = this.translateService.use(
@@ -43,4 +36,9 @@ export class NavBarComponent implements OnInit {
     this.themeService.toggleTheme();
     observable$.unsubscribe();
   }
+
+  public getLogoPath(logo_name: string): string {
+    return this.imageService.getImagePathAccordingToTheme(logo_name, 'assets/logos')
+  }
+
 }
