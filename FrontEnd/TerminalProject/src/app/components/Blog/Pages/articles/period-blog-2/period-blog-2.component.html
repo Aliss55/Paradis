@@ -1,9 +1,6 @@
 <div class="flex flex-column p-1">
 
-  <div class="flex justify-content-center w-full">
-    <!--<img src="https://primefaces.org/cdn/primeng/images/usercard.png" alt="">-->
-  </div>
-  <div class="flex justify-content-center mt-5">
+  <div class="flex justify-content-center mt-5 sm:mb-2 mb-5">
 
     <div class="title text-7xl">
       {{ 'BLOG_LABELS.BLOG_2.TITLE' | translate}}
@@ -14,19 +11,30 @@
     class="surface-0 sm:p-8 sm:m-8 p-5 m-0 shadow-5 border-round text-lg animation-duration-1000 animate__animated animate__zoomIn"
     [style.animation-delay]="0.2 + 's'">
     <h2>¿Qué es el punto?</h2>
-    <p class="line-height-3">
-      El punto es un signo ortográfico (<strong>.</strong>) utilizado principalmente como signo de puntuación para indicar el final de
-      un enunciado, párrafo o texto. Además, tiene otras funciones lingüísticas y no lingüísticas.
-    </p>
 
-    <p class="line-height-3">
-      Como signo de puntuación, el punto se divide en varias categorías:
-    </p>
+    <div class="grid sm:m-2 m-1">
 
-    <p class="line-height-3">
-      El punto se coloca sin separación de la palabra precedente y con un espacio antes de la palabra o signo que
-      lo sigue. Después del punto, la palabra siguiente siempre se escribe con inicial mayúscula.
-    </p>
+      <div class="lg:col-4 col-12 flex justify-content-center">
+        <div class="h-15rem w-15rem">
+          <img src="./assets/blogs-images/Punto- 220x220.svg" alt="Oracion" >
+        </div>
+      </div>
+      <div class="lg:col-8 col-12">
+        <p class="line-height-3">
+          El punto es un signo ortográfico (<strong>&nbsp;.&nbsp;</strong>) utilizado principalmente como signo de puntuación para indicar el final de
+          un enunciado, párrafo o texto.
+        </p>
+
+        <p class="line-height-3">
+          El punto se coloca sin separación de la palabra precedente y con un espacio antes de la palabra o signo que
+          lo sigue. Después del punto, la palabra siguiente siempre se escribe con inicial mayúscula.
+        </p>
+
+        <p class="line-height-3">
+          Como signo de puntuación, el punto se divide en varias categorías:
+        </p>
+      </div>
+    </div>
 
     <ul>
       <li class="line-height-4"><strong>Punto y seguido:</strong>  separa enunciados dentro del mismo párrafo.</li>
@@ -52,7 +60,7 @@
         </ul>
       </li>
       <li class="line-height-4">
-        En usos no lingüísticos, separa las horas de los minutos y las expresiones numéricas de fechas.
+        Separa las horas de los minutos y las expresiones numéricas de fechas.
         <ul class="line-height-3">
           <li class="line-height-3">8<strong>.</strong>30 h, 12<strong>.</strong>00 h</li>
           <li class="line-height-3">21<strong>.</strong>6<strong>.</strong>2000</li>

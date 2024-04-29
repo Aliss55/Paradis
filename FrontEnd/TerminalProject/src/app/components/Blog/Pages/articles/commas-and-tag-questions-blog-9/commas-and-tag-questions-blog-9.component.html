@@ -1,6 +1,6 @@
 <div class="flex flex-column p-1">
 
-  <div class="flex justify-content-center mt-5">
+  <div class="flex justify-content-center mt-5 sm:mb-2 mb-5">
     <div class="title md:text-7xl text-6xl">
       {{ 'BLOG_LABELS.BLOG_9.TITLE' | translate}}
     </div>
@@ -15,15 +15,25 @@
 
     <p class="line-height-3">
       Cuando se desea escribir un enunciado con este tipo de muletillas, se debe usar la coma
-      como predecesora. Por ejemplo:
+      como predecesora, por ejemplo:
     </p>
 
-    <p-fieldset legend="Ejemplos de muletillas interrogativas">
-      <ul class="m-0 font-italic line-height-3">
-        <li>Yo tengo razón<strong class="text-2xl">,</strong> &nbsp;  <strong>¿no?</strong></li>
-        <li>Sacaste buenas calificaciones<strong class="text-2xl">,</strong> &nbsp; <strong>¿verdad?</strong></li>
-      </ul>
-    </p-fieldset>
+    <div class="flex justify-content-center flex-wrap">
+
+      <div class="h-15rem w-15rem mr-5">
+        <img
+          src="./assets/blogs-images/Muletillas%20-%20220x220.svg"
+          alt="Estar como auxiliar"
+          class="h-full w-full border-round-3xl"
+        >
+      </div>
+      <p-fieldset legend="Ejemplos de muletillas interrogativas">
+        <ul class="m-0 font-italic line-height-3">
+          <li>Yo tengo razón<strong class="text-2xl">,</strong> &nbsp;  <strong>¿no?</strong></li>
+          <li>Sacaste buenas calificaciones<strong class="text-2xl">,</strong> &nbsp; <strong>¿verdad?</strong></li>
+        </ul>
+      </p-fieldset>
+    </div>
 
     <p-divider></p-divider>
 

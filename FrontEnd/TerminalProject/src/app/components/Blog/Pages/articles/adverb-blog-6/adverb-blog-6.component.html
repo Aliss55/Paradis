@@ -1,10 +1,6 @@
 <div class="flex flex-column p-1">
 
-  <div class="flex justify-content-center w-full">
-    <!--<img src="https://primefaces.org/cdn/primeng/images/usercard.png" alt="">-->
-  </div>
-  <div class="flex justify-content-center mt-5">
-
+  <div class="flex justify-content-center mt-5 sm:mb-2 mb-5">
     <div class="title md:text-7xl text-6xl">
       {{ 'BLOG_LABELS.BLOG_6.TITLE' | translate}}
     </div>
@@ -18,7 +14,7 @@
       El <strong>adverbio</strong> es la clase de palabra que modifica al verbo, al adjetivo o a otro adverbio.
     </p>
     <p class="line-height-3">
-      Su función más importante y más frecuente es modificar verbos, para denotar modo, tiempo, lugar, cantidad:
+      Su función más importante y más frecuente es modificar verbos, para denotar modo, tiempo, lugar y cantidad.
     </p>
 
     <ul class="list-disc">
@@ -37,7 +33,7 @@
     </ul>
 
     <p class="line-height-3">
-      Cuando se refieren a adjetivos o a otros adverbios, intensifican o atenúan su significado:
+      Cuando se refieren a adjetivos o a otros adverbios, intensifican o atenúan su significado.
     </p>
 
     <ul class="list-disc">
@@ -67,23 +63,30 @@
       Funcionan como adverbios cuando no tienen flexión y modifican un verbo, un adjetivo u otro adverbio;
       son adjetivos cuando acompañan un sustantivo y concuerdan con él en género y número.
     </p>
-    <p-fieldset legend="Ejemplos adverbios derivados de adjetivos">
-      <p-table [value]="examples" styleClass="p-datatable-sm">
-        <ng-template pTemplate="header">
-          <tr class="font-italic">
-            <th>Adverbio</th>
-            <th>Adjetivo</th>
-          </tr>
-        </ng-template>
 
-        <ng-template let-examples pTemplate="body">
-          <tr class="font-italic">
-            <td [innerHTML]="examples.adverb"></td>
-            <td [innerHTML]="examples.adjective"></td>
-          </tr>
-        </ng-template>
-      </p-table>
-    </p-fieldset>
+    <div class="flex justify-content-center flex-wrap">
+      <div class="h-21rem w-21rem sm:m-3 m-0">
+        <img src="./assets/blogs-images/Adverbio%20-%20220x220.svg" alt="Adverbios iamgen" class="border-round-3xl h-full w-full">
+      </div>
+
+      <p-fieldset legend="Ejemplos adverbios derivados de adjetivos">
+        <p-table [value]="examples" styleClass="p-datatable-sm">
+          <ng-template pTemplate="header">
+            <tr class="font-italic">
+              <th>Adverbio</th>
+              <th>Adjetivo</th>
+            </tr>
+          </ng-template>
+
+          <ng-template let-examples pTemplate="body">
+            <tr class="font-italic">
+              <td [innerHTML]="examples.adverb"></td>
+              <td [innerHTML]="examples.adjective"></td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </p-fieldset>
+    </div>
 
     <p class="line-height-3">
       Este cuadro muestra cómo estos adverbios pueden transformarse en adjetivos dependiendo

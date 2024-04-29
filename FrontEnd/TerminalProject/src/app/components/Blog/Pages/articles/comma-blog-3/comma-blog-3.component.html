@@ -1,9 +1,6 @@
 <div class="flex flex-column p-1">
 
-  <div class="flex justify-content-center w-full">
-    <!--<img src="https://primefaces.org/cdn/primeng/images/usercard.png" alt="">-->
-  </div>
-  <div class="flex justify-content-center mt-5">
+  <div class="flex justify-content-center mt-5 sm:mb-2 mb-5">
 
     <div class="title text-7xl">
       {{ 'BLOG_LABELS.BLOG_3.TITLE' | translate}}
@@ -15,7 +12,7 @@
     [style.animation-delay]="0.2 + 's'">
     <h2>¿Qué es la coma?</h2>
     <p class="line-height-3">
-      La coma (<strong>,</strong>) es un signo de puntuación que se usa para separar partes de una oración o grupos de palabras.
+      La coma (<strong>&nbsp;,&nbsp;</strong>) es un signo de puntuación que se usa para separar partes de una oración o grupos de palabras.
       También se emplea para separar los números cuando se escriben con cifras. Se coloca justo después de la
       palabra o signo anterior, y se deja un espacio antes de la siguiente palabra o signo.
     </p>
@@ -52,13 +49,18 @@
         </ul>
       </li>
 
-      <li class="line-height-4">
-        La coma separa elementos de una enumeración. Por ejemplo:
-        <ul class="list-disc">
-          <li class="line-height-4"> "Compré manzanas<strong>,</strong> peras<strong>,</strong> plátanos y naranjas."</li>
-          <li class="line-height-4">"Los colores primarios son rojo<strong>,</strong> azul<strong>,</strong> amarillo y verde." </li>
-        </ul>
-      </li>
+      <div class="flex sm:m-2 m-1 flex-wrap">
+          <li class="line-height-4">
+            La coma separa elementos de una enumeración. Por ejemplo:
+            <ul class="list-disc">
+              <li class="line-height-4"> "Compré manzanas<strong>,</strong> peras<strong>,</strong> plátanos y naranjas."</li>
+              <li class="line-height-4">"Los colores primarios son rojo<strong>,</strong> azul<strong>,</strong> amarillo y verde." </li>
+            </ul>
+          </li>
+          <div class="h-full w-7rem justify-content-center sm:mx-4">
+            <img src="./assets/blogs-images/Coma - 220x220.svg" alt="Oracion" class="border-round-2xl">
+          </div>
+      </div>
 
       <li class="line-height-4">
         Se usa para separar miembros equivalentes dentro de un mismo enunciado. Por ejemplo:

@@ -1,24 +1,29 @@
-import {Component, OnDestroy} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Options} from '../../../../interfaces/options';
 import {ThemeSwitcherService} from "../../../../services/theme-switcher.service";
 import {Subscription} from "rxjs";
 import {ImageService} from "../../../../services/image.service";
+import {ViewportScroller} from "@angular/common";
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.scss',
 })
-export class BlogComponent implements OnDestroy {
+export class BlogComponent implements OnDestroy, OnInit {
 
   public blogs: Options[] = [];
   private themeSubscription: Subscription;
 
 
-  constructor(private imageService: ImageService, private themeService: ThemeSwitcherService) {
+  constructor(private imageService: ImageService, private themeService: ThemeSwitcherService, private viewportScrollerService: ViewportScroller) {
     this.themeSubscription = this.themeService.actualTheme.subscribe(() =>
       this.blogs = this.getBlogs())
   }
+
+  ngOnInit(): void {
+        this.viewportScrollerService.scrollToPosition([0, 0]);
+    }
 
   ngOnDestroy(): void {
     this.themeSubscription.unsubscribe();
