@@ -7,43 +7,73 @@ import { Component } from '@angular/core';
 export class ProfessionsAndOccupationsComponent {
   professions_and_occupations = [
     {
-      image_url: './assets/CardsGame/Astronauta.jpg',
+      image_url: './assets/ProfessionsOcupations/Astronauta.svg',
       answer: 'astronauta',
     },
     {
       image_url:
-        './assets/CardsGame/Policia.jpg',
-      answer: 'policia',
-    },
-    {
-      image_url:
-        './assets/CardsGame/Bombero.jpg',
-      answer: 'bombero',
-    },
-    {
-      image_url:
-        './assets/CardsGame/Bailarina.jpg',
+        './assets/ProfessionsOcupations/Bailarina.svg',
       answer: 'bailarina',
     },
     {
       image_url:
-        './assets/CardsGame/Dentista.jpg',
-      answer: 'dentista',
+        './assets/ProfessionsOcupations/Bombero.svg',
+      answer: 'bombero',
     },
     {
       image_url:
-        './assets/CardsGame/Chef.jpg',
+        './assets/ProfessionsOcupations/Chef.svg',
       answer: 'chef',
     },
     {
       image_url:
-        './assets/CardsGame/Medico.jpg',
-      answer: 'médico',
+        './assets/ProfessionsOcupations/Dentista.svg',
+      answer: 'dentista',
     },
     {
       image_url:
-        './assets/CardsGame/Piloto.jpg',
+        './assets/ProfessionsOcupations/Futbolista.svg',
+      answer: 'futbolista',
+    },
+    {
+      image_url:
+        './assets/ProfessionsOcupations/Maestra.svg',
+      answer: 'profesora',
+    },
+    {
+      image_url:
+        './assets/ProfessionsOcupations/Mariachi.svg',
+      answer: 'mariachi',
+    },
+    {
+      image_url:
+        './assets/ProfessionsOcupations/Mecanico.svg',
+      answer: 'mecánico',
+    },
+    {
+      image_url:
+        './assets/ProfessionsOcupations/Medico.svg',
+      answer: 'doctora',
+    },
+    {
+      image_url:
+        './assets/ProfessionsOcupations/Mesero.svg',
+      answer: 'mesero',
+    },
+    {
+      image_url:
+        './assets/ProfessionsOcupations/Militar.svg',
+      answer: 'militar',
+    },
+    {
+      image_url:
+        './assets/ProfessionsOcupations/Piloto.svg',
       answer: 'piloto',
+    },
+    {
+      image_url:
+        './assets/ProfessionsOcupations/Veterinario.svg',
+      answer: 'veterinario',
     },
   ];
 }

@@ -65,7 +65,8 @@
       "INSTRUCTIONS_DESCRIPTION": "En esta actividad verás un recuadro con una imagen y 3 botones. Tu tarea es seleccionar el botón que contenga la palabra que mejor describa la imagen. Un nuevo recuadro aparecerá cada que selecciones una opción. Al finalizar la actividad podrás ver cuántas respuestas correctas tuviste.",
       "INSTRUCTIONS_TO_START": "Da click en el botón de abajo para comenzar la actividad.",
       "INSTRUCTIONS_WARNING": "Considera que todas las actividades estarán disponibles únicamente en español, porque su objetivo es ayudarte a practicar el idioma.",
-      "START_GAME": "Empezar actividad"
+      "START_GAME": "Empezar actividad",
+      "FINAL_SCORE": "Tu puntaje final es: "
     }
   },
   "MENU": "Menú",
