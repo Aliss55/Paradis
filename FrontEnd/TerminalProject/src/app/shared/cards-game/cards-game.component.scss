@@ -4,3 +4,10 @@
     margin-right: 5rem !important;
   }
 }
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh; /* This will make the container take the full height of the viewport */
+}

@@ -1,82 +1,89 @@
 <div class="flex flex-column my-8 p-1">
+    <div class="flex align-items-center justify-content-center">
 
-  <div class="flex align-items-center justify-content-center">
-    <p-card>
-      <ng-template pTemplate="subheader">
-        <p class="md:text-xl">{{ 'ACTIVITIES_LABELS.CARDS_GAME.INSTRUCTIONS_DESCRIPTION' | translate }}</p>
-      </ng-template>
-    </p-card>
+        <p-card>
+            <ng-template pTemplate="subheader">
+                <p class="md:text-xl">{{ 'ACTIVITIES_LABELS.CARDS_GAME.INSTRUCTIONS_DESCRIPTION' | translate }}</p>
+            </ng-template>
+        </p-card>
 
-  </div>
-  <div *ngIf="!finalScoreDisplayed" class="flex align-content-center justify-content-center mt-8">
-    <p-card (@fadeInOut.done)="animationDone($event)" [@fadeInOut]="animationState">
-      <ng-template pTemplate="header">
-        <img [src]="currentCardData.img_url" class="md:h-23rem w-full">
-      </ng-template>
+    </div>
 
-      <div class="flex justify-content-around  flex-wrap">
-        <div class="flex options flex-wrap">
+    <div *ngIf="!finalScoreDisplayed " class="flex align-content-center justify-content-center mt-8">
 
-          <p-button (click)="updateCardData(0)"
-                    [label]="currentCardData.buttonValues ? currentCardData.buttonValues[0] : 'default'" [style]="{ 'margin-left': '.5em' }" icon="pi pi-times"
-                    styleClass="p-button-secondary m-1"></p-button>
-
-          <p-button (click)="updateCardData(1)"
-                    [label]="currentCardData.buttonValues ? currentCardData.buttonValues[1] : 'default'" [style]="{ 'margin-left': '.5em' }" icon="pi pi-times"
-                    styleClass="p-button-secondary m-1"></p-button>
-
-          <p-button (click)="updateCardData(2)"
-                    [label]="currentCardData.buttonValues ? currentCardData.buttonValues[2] : 'default'" [style]="{ 'margin-left': '.5em' }" icon="pi pi-times"
-                    styleClass="p-button-secondary m-1"></p-button>
-
-
+        <div *ngIf="isWebPageLoading" class="spinner-container">
+            <p-progressSpinner></p-progressSpinner>
         </div>
-        <div class=" mt-3 sm:mt-0">
-          <p-button
-            (click)="resetGame()"
-            [rounded]="true"
-            severity="help"
-          >
-            <i class="material-icons">refresh</i>
-          </p-button>
-        </div>
-      </div>
+
+        <p-card (@fadeInOut.done)="animationDone($event)" *ngIf="!isWebPageLoading" [@fadeInOut]="animationState">
+            <ng-template pTemplate="header">
+                <img [src]="currentCardData!.image!.src" class="md:h-23rem w-full">
+            </ng-template>
+
+            <div class="flex justify-content-around  flex-wrap">
+                <div class="flex options flex-wrap">
+
+                    <p-button (click)="updateCardData(0)"
+                              [label]="currentCardData.buttonValues ? currentCardData.buttonValues[0] : 'default'"
+                              [style]="{ 'margin-left': '.5em' }" icon="pi pi-times"
+                              styleClass="p-button-secondary m-1"></p-button>
+
+                    <p-button (click)="updateCardData(1)"
+                              [label]="currentCardData.buttonValues ? currentCardData.buttonValues[1] : 'default'"
+                              [style]="{ 'margin-left': '.5em' }" icon="pi pi-times"
+                              styleClass="p-button-secondary m-1"></p-button>
+
+                    <p-button (click)="updateCardData(2)"
+                              [label]="currentCardData.buttonValues ? currentCardData.buttonValues[2] : 'default'"
+                              [style]="{ 'margin-left': '.5em' }" icon="pi pi-times"
+                              styleClass="p-button-secondary m-1"></p-button>
 
 
-    </p-card>
-  </div>
+                </div>
+                <div class=" mt-3 sm:mt-0">
+                    <p-button
+                            (click)="resetGame()"
+                            [rounded]="true"
+                            severity="help"
+                    >
+                        <i class="material-icons">refresh</i>
+                    </p-button>
+                </div>
+            </div>
 
-  <div *ngIf="finalScoreDisplayed" class="flex align-content-center justify-content-center  mt-8">
-    <p-card (@fadeInOut.done)="animationDone($event)" [@fadeInOut]="animationState" styleClass="cards">
-      <ng-template pTemplate="header">
-        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
-      </ng-template>
-      <ng-template pTemplate="subheader">
-        <div class="flex justify-content-evenly flex-wrap">
-          <h2>
-            Your final score is: {{ correctAnswersCounter }}
-          </h2>
-          <div class="mt-3 sm:mt-0">
-            <p-button
-              (click)="resetGame()"
-              [rounded]="true"
-              severity="help"
-            >
-              <i class="material-icons">refresh</i>
-            </p-button>
-          </div>
-        </div>
-      </ng-template>
-    </p-card>
-  </div>
 
-  <p-toast [life]="1000" key="success" position="top-center"></p-toast>
-  <p-toast [life]="1000" key="error" position="top-center"></p-toast>
+        </p-card>
+    </div>
 
+    <div *ngIf="finalScoreDisplayed" class="flex align-content-center justify-content-center  mt-8">
+        <p-card (@fadeInOut.done)="animationDone($event)" [@fadeInOut]="animationState" styleClass="cards">
+            <ng-template pTemplate="header">
+                <img [src]="nextImage?.src" alt="Card"/>
+            </ng-template>
+            <ng-template pTemplate="subheader">
+                <div class="flex justify-content-evenly flex-wrap">
+                    <h2>
+                        {{'ACTIVITIES_LABELS.CARDS_GAME.FINAL_SCORE' | translate:{correct_answers: correctAnswersCounter, number_of_questions: questions_and_answers.length} }}
+                    </h2>
+                    <div class="mt-3 sm:mt-0">
+                        <p-button
+                                (click)="resetGame()"
+                                [rounded]="true"
+                                severity="help"
+                        >
+                            <i class="material-icons">refresh</i>
+                        </p-button>
+                    </div>
+                </div>
+            </ng-template>
+        </p-card>
+    </div>
+
+    <p-toast [life]="1000" key="success" position="top-center"></p-toast>
+    <p-toast [life]="1000" key="error" position="top-center"></p-toast>
 
 
 </div>
-
 
 
 
