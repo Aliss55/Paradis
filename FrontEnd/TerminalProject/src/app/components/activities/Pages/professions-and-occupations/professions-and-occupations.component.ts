@@ -22,11 +22,6 @@ export class ProfessionsAndOccupationsComponent {
     },
     {
       image_url:
-        './assets/ProfessionsOcupations/Chef.svg',
-      answer: 'chef',
-    },
-    {
-      image_url:
         './assets/ProfessionsOcupations/Dentista.svg',
       answer: 'dentista',
     },
