@@ -37,12 +37,13 @@ import { MessageService } from 'primeng/api';
 export class CardsGameComponent {
   @Input()
   public questions_and_answers!: vocabulary_card_interface[];
-  public currentCardData: { buttonValues?: string[]; img_url?: string } = {};
+  public currentCardData: { buttonValues?: string[]; image?: HTMLImageElement | null  } = {};
   public areInstructionsBeingDisplayed: boolean = true;
   public animationState: string = 'opacityZero';
   public cardCounter: number = 0;
   public correctAnswersCounter: number = 0;
   public finalScoreDisplayed: boolean = false;
+  public nextImage: HTMLImageElement | null=null;
 
   constructor(public messageService: MessageService) {}
 
@@ -51,19 +52,22 @@ export class CardsGameComponent {
   }
 
   ngOnInit() {
-    this.setOptions();
-    this.setCardData();
+    this.startLoadingImage(0);
+    this.setLabelsForIncorrectAnswersForTheWholeQuiz();
+    this.setAnswersAndImageToTheCurrentCard();
   }
 
-  resetGame() {
-    this.cardCounter = 0;
-    this.correctAnswersCounter = 0;
-    this.finalScoreDisplayed = false;
-    this.setOptions();
-    this.setCardData();
-  }
+    private startLoadingImage(indexImage:number){
+            this.nextImage = new Image();
+        if (indexImage < this.questions_and_answers.length) {
+            this.nextImage.src = this.questions_and_answers[indexImage].image_url;
+        }
+        else{
+          this.nextImage.src = './assets/ProfessionsOcupations/Bailarina.svg';
+        }
+    }
 
-  private setOptions() {
+  private setLabelsForIncorrectAnswersForTheWholeQuiz() {
     this.questions_and_answers.forEach((question_and_answer) => {
       let randomValues = this.getRandomEnumValues();
       while (
@@ -78,19 +82,31 @@ export class CardsGameComponent {
     });
   }
 
-  private getRandomEnumValues() {
-    const enumValues: string[] = Object.values(professions_and_occupations);
-    const shuffledValues: string[] = this.shuffleArray(enumValues);
-    return shuffledValues.slice(0, 2);
-  }
-
-  private shuffleArray(array: any[]) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+    setAnswersAndImageToTheCurrentCard() {
+        let buttonValues = [
+            this.questions_and_answers[this.cardCounter].answer,
+            this.questions_and_answers[this.cardCounter].option1,
+            this.questions_and_answers[this.cardCounter].option2,
+        ];
+        this.currentCardData['buttonValues'] = this.shuffleArray(buttonValues);
+        this.currentCardData.image = this.nextImage;
+        this.startLoadingImage(this.cardCounter + 1)
     }
-    return array;
-  }
+
+    private getRandomEnumValues() {
+        const enumValues: string[] = Object.values(professions_and_occupations);
+        const shuffledValues: string[] = this.shuffleArray(enumValues);
+        return shuffledValues.slice(0, 2);
+    }
+
+    private shuffleArray(array: any[]) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
 
   updateCardData(selectedButtonIndex: number) {
     this.notifySucess('Answer Submitted');
@@ -100,20 +116,11 @@ export class CardsGameComponent {
     if (this.cardCounter == this.questions_and_answers.length) {
       this.toggleShowFinalScore();
     } else {
-      this.setCardData();
+      this.setAnswersAndImageToTheCurrentCard();
     }
   }
 
-  setCardData() {
-    let buttonValues = [
-      this.questions_and_answers[this.cardCounter].answer,
-      this.questions_and_answers[this.cardCounter].option1,
-      this.questions_and_answers[this.cardCounter].option2,
-    ];
-    this.currentCardData['buttonValues'] = this.shuffleArray(buttonValues);
-    this.currentCardData.img_url =
-      this.questions_and_answers[this.cardCounter].image_url;
-  }
+
 
   private evaluateAnswer(selectedButtonIndex: number) {
     if (this.currentCardData?.buttonValues) {
@@ -129,7 +136,7 @@ export class CardsGameComponent {
     this.notifySucess(message);
   }
 
-  private notifyError(message: string) {
+  private notifyError(message: string) : void {
     this.messageService.clear();
     this.messageService.add({
       key: 'error',
@@ -151,6 +158,13 @@ export class CardsGameComponent {
     this.finalScoreDisplayed = !this.finalScoreDisplayed;
   }
 
+    resetGame() {
+        this.cardCounter = 0;
+        this.correctAnswersCounter = 0;
+        this.finalScoreDisplayed = false;
+        this.setLabelsForIncorrectAnswersForTheWholeQuiz();
+        this.setAnswersAndImageToTheCurrentCard();
+    }
   animationDone(event: AnimationEvent) {
     this.animationState = 'nonOpacity';
   }
