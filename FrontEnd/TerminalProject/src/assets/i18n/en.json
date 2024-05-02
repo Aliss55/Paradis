@@ -65,7 +65,7 @@
       "INSTRUCTIONS_TO_START": "Click on the button below to start the game.",
       "INSTRUCTIONS_WARNING": "Consider that all the activities will be available only in spanish, because they are made for you to practice the language.",
       "START_GAME": "Start activity",
-      "FINAL_SCORE": "Your final score is: "
+      "FINAL_SCORE": "Your answered correctly {{correct_answers}} questions out of {{number_of_questions}}"
     }
   },
   "MENU": "Menu",
