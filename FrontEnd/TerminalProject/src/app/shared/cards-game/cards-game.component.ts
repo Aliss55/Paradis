@@ -72,7 +72,7 @@ export class CardsGameComponent {
         if (this.cardCounter == this.questions_and_answers.length) {
             this.toggleShowFinalScore();
         } else {
-            this.isImageLoaded(this.nextImage!) == true ? this.isWebPageLoading = false : this.isWebPageLoading = true;
+            this.isImageLoaded(this.nextImage!)? this.isWebPageLoading = false : this.isWebPageLoading = true;
             this.setAnswersAndImageToTheCurrentCard();
         }
     }
