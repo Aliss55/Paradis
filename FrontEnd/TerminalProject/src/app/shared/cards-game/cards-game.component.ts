@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
 import {animate, AnimationEvent, state, style, transition, trigger,} from '@angular/animations';
-import {professions_and_occupations} from '../utils/professions_and_occupations_enum';
 import {vocabulary_card_interface} from '../utils/vocabulary_card_interface';
 import {MessageService} from 'primeng/api';
 
@@ -30,6 +29,8 @@ import {MessageService} from 'primeng/api';
 export class CardsGameComponent {
   @Input()
   public questions_and_answers!: vocabulary_card_interface[];
+  @Input()
+  public listOfIncorrectAnswers!: string[];
   public currentCardData: { buttonValues?: string[]; image?: HTMLImageElement | null } = {};
   public animationState: string = 'opacityZero';
   public cardCounter: number = 0;
@@ -86,7 +87,7 @@ export class CardsGameComponent {
   }
 
   private getRandomEnumValues() {
-    const enumValues: string[] = Object.values(professions_and_occupations);
+    const enumValues: string[] = this.listOfIncorrectAnswers;
     const shuffledValues: string[] = this.shuffleArray(enumValues);
     return shuffledValues.slice(0, 2);
   }
