@@ -1,15 +1,7 @@
-import { Component, Input } from '@angular/core';
-import {
-  animate,
-  AnimationEvent,
-  state,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
-import { professions_and_occupations } from '../utils/professions_and_occupations_enum';
-import { vocabulary_card_interface } from '../utils/vocabulary_card_interface';
-import { MessageService } from 'primeng/api';
+import {Component, Input} from '@angular/core';
+import {animate, AnimationEvent, state, style, transition, trigger,} from '@angular/animations';
+import {vocabulary_card_interface} from '../utils/vocabulary_card_interface';
+import {MessageService} from 'primeng/api';
 
 @Component({
   selector: 'shared-cards-game',
@@ -37,40 +29,47 @@ import { MessageService } from 'primeng/api';
 export class CardsGameComponent {
   @Input()
   public questions_and_answers!: vocabulary_card_interface[];
-  public currentCardData: { buttonValues?: string[]; img_url?: string } = {};
-  public areInstructionsBeingDisplayed: boolean = true;
+  @Input()
+  public listOfIncorrectAnswers!: string[];
+  @Input()
+  public description_word_for_images!: string ;
+  public currentCardData: { buttonValues?: string[]; image?: HTMLImageElement | null } = {};
   public animationState: string = 'opacityZero';
   public cardCounter: number = 0;
   public correctAnswersCounter: number = 0;
   public finalScoreDisplayed: boolean = false;
+  public nextImage: HTMLImageElement | null = null;
+  public isWebPageLoading: boolean = true;
 
-  constructor(public messageService: MessageService) {}
-
-  public toggleShowInstructions() {
-    this.areInstructionsBeingDisplayed = !this.areInstructionsBeingDisplayed;
+  constructor(public messageService: MessageService) {
   }
+
 
   ngOnInit() {
-    this.setOptions();
-    this.setCardData();
+    this.isWebPageLoading = true;
+    this.startLoadingImage(this.cardCounter);
+    this.setLabelsForIncorrectAnswersForTheWholeQuiz();
+    this.setAnswersAndImageToTheCurrentCard();
   }
 
-  resetGame() {
-    this.cardCounter = 0;
-    this.correctAnswersCounter = 0;
-    this.finalScoreDisplayed = false;
-    this.setOptions();
-    this.setCardData();
+  private startLoadingImage(indexImage: number) {
+    this.nextImage = new Image();
+    if (indexImage < this.questions_and_answers.length) {
+      this.nextImage.src = this.questions_and_answers[indexImage].image_url;
+      this.nextImage.onload = () => {
+        this.isWebPageLoading = false;
+      }
+    }
   }
 
-  private setOptions() {
+  private setLabelsForIncorrectAnswersForTheWholeQuiz() {
     this.questions_and_answers.forEach((question_and_answer) => {
       let randomValues = this.getRandomEnumValues();
       while (
         randomValues[0] === question_and_answer.answer ||
         randomValues[1] === question_and_answer.answer ||
         randomValues[0] === randomValues[1]
-      ) {
+        ) {
         randomValues = this.getRandomEnumValues();
       }
       question_and_answer.option1 = randomValues[0];
@@ -78,8 +77,19 @@ export class CardsGameComponent {
     });
   }
 
+  setAnswersAndImageToTheCurrentCard() {
+    let buttonValues = [
+      this.questions_and_answers[this.cardCounter].answer,
+      this.questions_and_answers[this.cardCounter].option1,
+      this.questions_and_answers[this.cardCounter].option2,
+    ];
+    this.currentCardData['buttonValues'] = this.shuffleArray(buttonValues);
+    this.currentCardData.image = this.nextImage;
+    this.startLoadingImage(this.cardCounter + 1)
+  }
+
   private getRandomEnumValues() {
-    const enumValues: string[] = Object.values(professions_and_occupations);
+    const enumValues: string[] = this.listOfIncorrectAnswers;
     const shuffledValues: string[] = this.shuffleArray(enumValues);
     return shuffledValues.slice(0, 2);
   }
@@ -93,27 +103,28 @@ export class CardsGameComponent {
   }
 
   updateCardData(selectedButtonIndex: number) {
-    this.notifySucess('Answer Submitted');
     this.evaluateAnswer(selectedButtonIndex);
-    this.animationState = 'opacityZero';
-    this.cardCounter++;
-    if (this.cardCounter == this.questions_and_answers.length) {
-      this.toggleShowFinalScore();
-    } else {
-      this.setCardData();
-    }
+    setTimeout(() => {
+      this.animationState = 'opacityZero';
+      this.cardCounter++;
+      if (this.cardCounter == this.questions_and_answers.length) {
+        this.toggleShowFinalScore();
+      } else {
+        this.isImageLoaded(this.nextImage!) ? this.isWebPageLoading = false : this.isWebPageLoading = true;
+        this.setAnswersAndImageToTheCurrentCard();
+      }
+
+    }, 50)
   }
 
-  setCardData() {
-    let buttonValues = [
-      this.questions_and_answers[this.cardCounter].answer,
-      this.questions_and_answers[this.cardCounter].option1,
-      this.questions_and_answers[this.cardCounter].option2,
-    ];
-    this.currentCardData['buttonValues'] = this.shuffleArray(buttonValues);
-    this.currentCardData.img_url =
-      this.questions_and_answers[this.cardCounter].image_url;
+  toggleShowFinalScore() {
+    this.finalScoreDisplayed = !this.finalScoreDisplayed;
   }
+
+  isImageLoaded(image: HTMLImageElement) {
+    return image.complete;
+  }
+
 
   private evaluateAnswer(selectedButtonIndex: number) {
     if (this.currentCardData?.buttonValues) {
@@ -128,8 +139,7 @@ export class CardsGameComponent {
     this.correctAnswersCounter++;
     this.notifySucess(message);
   }
-
-  private notifyError(message: string) {
+  private notifyError(message: string): void {
     this.messageService.clear();
     this.messageService.add({
       key: 'error',
@@ -147,8 +157,13 @@ export class CardsGameComponent {
     });
   }
 
-  toggleShowFinalScore() {
-    this.finalScoreDisplayed = !this.finalScoreDisplayed;
+  resetGame() {
+    this.cardCounter = 0;
+    this.correctAnswersCounter = 0;
+    this.finalScoreDisplayed = false;
+    this.startLoadingImage(this.cardCounter);
+    this.setLabelsForIncorrectAnswersForTheWholeQuiz();
+    this.setAnswersAndImageToTheCurrentCard();
   }
 
   animationDone(event: AnimationEvent) {
