@@ -17,7 +17,7 @@
 
         <p-card (@fadeInOut.done)="animationDone($event)" *ngIf="!isWebPageLoading" [@fadeInOut]="animationState">
             <ng-template pTemplate="header">
-                <img [src]="currentCardData!.image!.src" class="md:h-23rem w-full">
+                <img [src]="currentCardData!.image!.src" class="md:h-23rem w-full" alt="card-image">
             </ng-template>
 
             <div class="flex justify-content-around  flex-wrap">
@@ -58,7 +58,7 @@
     <div *ngIf="finalScoreDisplayed" class="flex align-content-center justify-content-center  mt-8">
         <p-card (@fadeInOut.done)="animationDone($event)" [@fadeInOut]="animationState" styleClass="cards">
             <ng-template pTemplate="header">
-                <img [src]="nextImage?.src" alt="Card"/>
+                <img src="assets/ProfessionsOcupations/Win1.svg" alt="Card"/>
             </ng-template>
             <ng-template pTemplate="subheader">
                 <div class="flex justify-content-evenly flex-wrap">
