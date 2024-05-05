@@ -11,3 +11,9 @@
   align-items: center;
   height: 30vh; /* This will make the container take the full height of the viewport */
 }
+
+:host-context(.light-theme-gradient) {
+  :host ::ng-deep .p-card{
+    text-shadow: 2.5px 2.5px 7px #737171;
+  }
+}
