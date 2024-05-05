@@ -31,6 +31,8 @@ export class CardsGameComponent {
   public questions_and_answers!: vocabulary_card_interface[];
   @Input()
   public listOfIncorrectAnswers!: string[];
+  @Input()
+  public description_word_for_images!: string ;
   public currentCardData: { buttonValues?: string[]; image?: HTMLImageElement | null } = {};
   public animationState: string = 'opacityZero';
   public cardCounter: number = 0;

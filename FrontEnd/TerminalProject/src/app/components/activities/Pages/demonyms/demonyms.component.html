@@ -5,5 +5,8 @@
 
 <div class="card_container">
 
-  <shared-cards-game [listOfIncorrectAnswers]="listOfCountries" [questions_and_answers]="countries"></shared-cards-game>
+  <shared-cards-game
+    [description_word_for_images]=" 'ACTIVITIES_LABELS.CARDS_GAME.DEMONYMS_KEYWORD' | translate"
+    [listOfIncorrectAnswers]="listOfCountries"
+    [questions_and_answers]="countries"></shared-cards-game>
 </div>
