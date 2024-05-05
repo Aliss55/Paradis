@@ -3,7 +3,7 @@
 
         <p-card>
             <ng-template pTemplate="subheader">
-                <p class="md:text-xl">{{ 'ACTIVITIES_LABELS.CARDS_GAME.INSTRUCTIONS_DESCRIPTION' | translate }}</p>
+                <p class="md:text-xl">{{ 'ACTIVITIES_LABELS.CARDS_GAME.INSTRUCTIONS_DESCRIPTION' | translate : {description_word: description_word_for_images} }}</p>
             </ng-template>
         </p-card>
 
@@ -58,7 +58,7 @@
     <div *ngIf="finalScoreDisplayed" class="flex align-content-center justify-content-center  mt-8">
         <p-card (@fadeInOut.done)="animationDone($event)" [@fadeInOut]="animationState" styleClass="cards">
             <ng-template pTemplate="header">
-                <img src="assets/ProfessionsOcupations/Win1.svg" alt="Card"/>
+                <img src="./assets/ProfessionsOcupations/Win1.svg" alt="Card"/>
             </ng-template>
             <ng-template pTemplate="subheader">
                 <div class="flex justify-content-evenly flex-wrap">

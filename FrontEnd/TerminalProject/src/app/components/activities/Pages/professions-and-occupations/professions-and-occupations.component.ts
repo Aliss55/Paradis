@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import {professions_and_occupations} from "../../../../shared/utils/professions_and_occupations_enum";
 @Component({
   selector: 'app-professions-and-occupations',
   templateUrl: './professions-and-occupations.component.html',
   styleUrl: './professions-and-occupations.component.scss',
 })
 export class ProfessionsAndOccupationsComponent {
+  listOfIncorrectAnswers:string[] = Object.values(professions_and_occupations);
   professions_and_occupations = [
     {
       image_url: './assets/ProfessionsOcupations/Astronauta.svg',
