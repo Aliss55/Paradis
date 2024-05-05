@@ -7,9 +7,14 @@ import { SharedModule } from '../../shared/shared.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { PrimeNGModule } from '../../styling/prime-ng.module';
 import { ProfessionsAndOccupationsComponent } from './Pages/professions-and-occupations/professions-and-occupations.component';
+import { DemonymsComponent } from './Pages/demonyms/demonyms.component';
 
 @NgModule({
-  declarations: [ActivitiesComponent, ProfessionsAndOccupationsComponent],
+  declarations: [
+    ActivitiesComponent,
+    ProfessionsAndOccupationsComponent,
+    DemonymsComponent,
+  ],
   imports: [
     CommonModule,
     ActivitiesRoutingModule,
