@@ -10,8 +10,8 @@
   "ABOUT_US_LABELS": {
     "TITLE": "Get to know more about",
     "PROJECT_NAME": "Literata",
-    "DESCRIPTION": "Literata es un proyecto enfocado en ayudarte a practicar tus habilidades de escritura en español mexicano, a través de actividades de escritura que incluyen retroalimentación inmediata. Además de actividades de reforzamiento de vocabulario e información relevante de la lengua española.",
-    "HISTORY": "Literata is a project developed by students of Computer Systems Engineering at the Escuela Superior de Cómputo from Instituto Politécnico Nacional. The main goal is to help spanish learners to improve their writing skills.",
+    "DESCRIPTION": "Literata es un proyecto enfocado en ayudarte a practicar tus habilidades de escritura en español mexicano, a través de actividades que incluyen retroalimentación inmediata, reforzamiento de vocabulario e información relevante de la lengua española.",
+    "HISTORY": "Literata is a project developed by students of Computer Systems Engineering at the Escuela Superior de Cómputo from Instituto Politécnico Nacional. The main goal is to help spanish learners to improve their writing skills at early stages.",
     "TEAM": "Development team"
   },
   "ANALIZE_TEXT_LABELS": {
