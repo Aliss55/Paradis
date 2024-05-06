@@ -133,3 +133,105 @@
 
 </div>
 
+<p-dialog
+  styleClass="surface-0"
+  header="Terminos y condiciones"
+  [modal]="true"
+  [maximizable]="true"
+  [(visible)]="visible"
+  [style]="{ width: '50rem' }"
+>
+
+  <p>
+    Bienvenido/a a nuestra aplicación web diseñada para apoyar el aprendizaje del español mexicano en el nivel A1
+    del Marco Común Europeo de Referencia para las Lenguas. Antes de comenzar a utilizar nuestra herramienta,
+    te solicitamos leer y aceptar los siguientes términos y condiciones que rigen su uso.
+    Al acceder y usar nuestra aplicación, aceptas cumplir con estos términos y condiciones.
+  </p>
+
+  <h3>Políticas</h3>
+  <ul class="list-decimal">
+    <li class="line-height-4">
+      <b>Términos y Condiciones</b>
+      <p>
+        Todos los usuarios deben leer detenidamente y aceptar los términos y condiciones de uso del proyecto para
+        poder utilizar la herramienta de aprendizaje del español mexicano.
+      </p>
+    </li>
+    <li class="line-height-4">
+      <b>Información de Identificación Personal (PII)</b>
+      <p>
+        En ningún caso se recopilará ni almacenará información personal de identificación de los usuarios.
+      </p>
+    </li>
+    <li class="line-height-4">
+      <b>Uso No Comercial</b>
+      <p>
+        La herramienta está destinada exclusivamente para fines educativos y no comerciales. Queda estrictamente
+        prohibido su uso con propósitos comerciales o publicitarios.
+      </p>
+    </li>
+  </ul>
+
+  <h3>Procesamiento de Textos</h3>
+  <ul class="list-decimal">
+    <li class="line-height-4">
+      <b>Competencia en Español Nivel A1</b>
+      <p>
+        Nuestro sistema ha sido diseñado para incorporar estructuras gramaticales conformes al nivel A1 del Marco
+        Común Europeo de Referencia para las Lenguas, facilitando el aprendizaje progresivo del español.
+      </p>
+    </li>
+    <li class="line-height-4">
+      <b>Textos del Corpus</b>
+      <p>
+        Los textos utilizados para la generación del Corpus corresponden a cuentos infantiles, seleccionados
+        específicamente para apoyar el aprendizaje del idioma.
+      </p>
+    </li>
+    <li class="line-height-4">
+      <b>Fuentes Confiables</b>
+      <p>
+        Los textos seleccionados para el Corpus y las páginas informativas han sido obtenidos de fuentes confiables
+        y verificadas para garantizar la calidad y precisión del contenido ofrecido.
+      </p>
+    </li>
+    <li class="line-height-4">
+      <b>Restricción de Contenido Inapropiado</b>
+      <p>
+        No está permitido ingresar ni visualizar textos que contengan contenido ofensivo, homofóbico, racista,
+        discriminatorio, violento o inapropiado de cualquier índole. Nos reservamos el derecho de eliminar dicho
+        contenido y tomar medidas correspondientes.
+      </p>
+    </li>
+    <li class="line-height-4">
+      <b>Protección de Datos Sensibles</b>
+      <p>
+        Por motivos de seguridad y protección de la privacidad, los usuarios no deben ingresar ni compartir
+        información personal sensible, como números de seguro social, números de tarjeta de crédito u otros datos
+        confidenciales en nuestra herramienta.
+      </p>
+    </li>
+  </ul>
+
+  <p>
+    Al utilizar nuestra aplicación web, <strong>aceptas cumplir con estos términos y condiciones</strong>. Si no estás de acuerdo
+    con alguna de estas políticas, te rogamos no utilizar nuestra herramienta.
+  </p>
+
+  <b class="font-italic">
+    Gracias por ser parte de nuestra comunidad de aprendizaje del español mexicano. ¡Disfruta tu experiencia de
+    aprendizaje!
+  </b>
+  <ng-template pTemplate="footer">
+    <p-button
+      label="Aceptar"
+      [text]="true"
+      severity="help"
+      (click)="visible = false">
+      <i class="material-icons">done</i>
+      </p-button>
+  </ng-template>
+
+</p-dialog>
+

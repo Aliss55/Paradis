@@ -14,6 +14,7 @@ export class TextAnalyzerComponent implements OnInit{
   isUnderline: boolean = false;
   textAlign: string = 'left';
   isAnalyzeButtonClicked: boolean = false;
+  visible: boolean = true;
 
   constructor(private formBuilder: FormBuilder) {
     this.analyzeTextForm = this.formBuilder.group({

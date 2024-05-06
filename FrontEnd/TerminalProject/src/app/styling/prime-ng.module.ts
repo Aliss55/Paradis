@@ -17,6 +17,7 @@ import {ProgressSpinnerModule} from "primeng/progressspinner";
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { SkeletonModule } from 'primeng/skeleton';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
     declarations: [],
@@ -39,6 +40,7 @@ import { SkeletonModule } from 'primeng/skeleton';
         InputTextareaModule,
         InputSwitchModule,
         SkeletonModule,
+        DialogModule,
     ],
     exports: [
         ButtonModule,
@@ -58,6 +60,7 @@ import { SkeletonModule } from 'primeng/skeleton';
         InputTextareaModule,
         InputSwitchModule,
         SkeletonModule,
+        DialogModule,
     ],
 })
 export class PrimeNGModule {
