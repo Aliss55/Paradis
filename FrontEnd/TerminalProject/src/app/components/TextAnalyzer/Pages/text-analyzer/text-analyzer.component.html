@@ -7,89 +7,92 @@
   <div class="grid sm:mt-7 mt-3">
 
     <div class="md:col-7 sm:px-5 px-0 col-12">
-      <p-card styleClass="sm:px-5 sm:pt-5 sm:pb-2 p-1">
+      <form [formGroup]="analyzeTextForm">
+        <p-card styleClass="sm:px-5 sm:pt-5 sm:pb-2 p-1">
 
-        <form [formGroup]="formGroup" class="flex flex-column gap-2">
+          <div class="flex flex-column gap-2">
 
-          <div class="flex justify-content-between p-2 surface-0 border-round-2xl">
-            <div class="text-options">
+            <div class="flex justify-content-between p-2 surface-0 border-round-2xl">
+              <div class="text-options">
 
-              <p-button (click)="toggleBold()" [rounded]="true" [text]="true" size="small">
-                <i class="material-icons">format_bold</i>
-              </p-button>
+                <p-button (click)="toggleBold()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">format_bold</i>
+                </p-button>
 
-              <p-button (click)="toggleItalic()" [rounded]="true" [text]="true" size="small">
-                <i class="material-icons">format_italic</i>
-              </p-button>
+                <p-button (click)="toggleItalic()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">format_italic</i>
+                </p-button>
 
-              <p-button (click)="toggleUnderline()" [rounded]="true" [text]="true" size="small">
-                <i class="material-icons">format_underlined</i>
-              </p-button>
+                <p-button (click)="toggleUnderline()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">format_underlined</i>
+                </p-button>
 
-              <p-button (click)="increaseFontSize()" [rounded]="true" [text]="true" size="small">
-                <i class="material-icons">text_increase</i>
-              </p-button>
+                <p-button (click)="increaseFontSize()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">text_increase</i>
+                </p-button>
 
-              <p-button (click)="decreaseFontSize()" [rounded]="true" [text]="true" size="small">
-                <i class="material-icons">text_decrease</i>
-              </p-button>
+                <p-button (click)="decreaseFontSize()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">text_decrease</i>
+                </p-button>
+              </div>
+              <div class="text-options">
+                <p-button (click)="alignLeft()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">format_align_left</i>
+                </p-button>
+
+                <p-button (click)="alignCenter()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">format_align_center</i>
+                </p-button>
+
+                <p-button (click)="alignRight()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">format_align_right</i>
+                </p-button>
+              </div>
             </div>
-            <div class="text-options">
-              <p-button (click)="alignLeft()" [rounded]="true" [text]="true" size="small">
-                <i class="material-icons">format_align_left</i>
-              </p-button>
 
-              <p-button (click)="alignCenter()" [rounded]="true" [text]="true" size="small">
-                <i class="material-icons">format_align_center</i>
-              </p-button>
-
-              <p-button (click)="alignRight()" [rounded]="true" [text]="true" size="small">
-                <i class="material-icons">format_align_right</i>
-              </p-button>
-            </div>
-          </div>
-
-          <textarea
-            [autoResize]="true"
-            formControlName="text"
-            pInputTextarea
-            placeholder="Enter text to analize..."
-            rows="6"
-            class="border-round-2xl p-4"
-            [style]="{
-            'font-size': fontSize + 'px',
-            'text-align': textAlign
-            }"
-            [ngClass]="{
+            <textarea
+              (keyup.space)="sugestNextWord()"
+              [autoResize]="true"
+              [ngClass]="{
             'bold-text': isBold,
             'italic-text': isItalic,
             'underline-text': isUnderline
             }"
-          >
-        </textarea>
+              [style]="{
+            'font-size': fontSize + 'px',
+            'text-align': textAlign
+            }"
+              class="border-round-2xl p-4"
+              formControlName="text"
+              pInputTextarea
+              placeholder="Enter text to analize..."
+              rows="6"
+            >
+          </textarea>
 
-        </form>
-
-        <ng-template pTemplate="footer">
-          <div class="flex justify-content-end gap-3 flex-wrap">
-
-
-            <div class="flex gap-2">
-              <p-inputSwitch formControlName="checked">
-              </p-inputSwitch>
-              <b class="text-sm p-2 sugerencia-palabra">Sugerir palabras</b>
-            </div>
-
-
-            <p-button severity="secondary" class="ml-3">
-              <b>Analizar</b>
-              <i class="material-icons ml-3">send</i>
-
-            </p-button>
           </div>
-        </ng-template>
 
-      </p-card>
+          <ng-template pTemplate="footer">
+            <div class="flex justify-content-end gap-3 flex-wrap">
+
+
+              <div class="flex gap-2">
+                <p-inputSwitch formControlName="suggesterChecked">
+                </p-inputSwitch>
+                <b class="text-sm p-2 sugerencia-palabra">Sugerir palabras</b>
+              </div>
+
+
+              <p-button class="ml-3" severity="secondary">
+                <b>Analizar</b>
+                <i class="material-icons ml-3">send</i>
+
+              </p-button>
+            </div>
+          </ng-template>
+
+        </p-card>
+      </form>
     </div>
 
     <div class="md:col-5 col-12 ">

@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
-import {MenuItem} from "primeng/api";
+import {FormBuilder} from "@angular/forms";
 
 @Component({
   selector: 'app-text-analyzer',
@@ -8,18 +7,24 @@ import {MenuItem} from "primeng/api";
   styleUrl: './text-analyzer.component.scss'
 })
 export class TextAnalyzerComponent implements OnInit{
-  formGroup: any | undefined;
+  analyzeTextForm: any | undefined;
   fontSize: number = 20; // Inicializa el tamaño de la fuente a 12px
   isBold: boolean = false;
   isItalic: boolean = false;
   isUnderline: boolean = false;
   textAlign: string = 'left';
 
-  constructor() {}
+  constructor(private formBuilder: FormBuilder) {
+    this.analyzeTextForm = this.formBuilder.group({
+      text: [''],
+      suggesterChecked: [false]
+    });
+  }
 
   ngOnInit() {
-    this.formGroup = new FormGroup({
-      text: new FormControl()
+    this.analyzeTextForm.valueChanges.subscribe((value: any) => {
+      console.log({value});
+
     });
   }
   toggleBold() {
@@ -51,5 +56,9 @@ export class TextAnalyzerComponent implements OnInit{
 
   alignRight() {
     this.textAlign = 'right'; // Cambia la alineación del texto a 'right'
+  }
+
+  sugestNextWord() {
+    console.log(this.analyzeTextForm.get('text').value); // Imprime el valor del campo de texto
   }
 }
