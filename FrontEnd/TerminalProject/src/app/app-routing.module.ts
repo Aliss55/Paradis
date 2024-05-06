@@ -16,7 +16,12 @@ const routes: Routes = [
     path: 'about',
     loadChildren: () => import('./components/AboutUs/about-us.module').then( m => m.AboutUsModule ),
   },
-  { path: '**', redirectTo: '/home',
+  {
+    path: 'text-analyzer',
+    loadChildren: () => import('./components/TextAnalyzer/text-analyzer.module').then( m => m.TextAnalyzerModule ),
+  },
+  {
+    path: '**', redirectTo: '/home',
   }
 ];
 

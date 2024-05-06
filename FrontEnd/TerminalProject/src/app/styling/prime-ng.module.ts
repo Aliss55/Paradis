@@ -14,6 +14,8 @@ import {ToastModule} from 'primeng/toast';
 import {DividerModule} from 'primeng/divider';
 import {AnimateOnScrollModule} from 'primeng/animateonscroll';
 import {ProgressSpinnerModule} from "primeng/progressspinner";
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputSwitchModule } from 'primeng/inputswitch';
 
 @NgModule({
     declarations: [],
@@ -32,7 +34,9 @@ import {ProgressSpinnerModule} from "primeng/progressspinner";
         ToastModule,
         DividerModule,
         AnimateOnScrollModule,
-        ProgressSpinnerModule
+        ProgressSpinnerModule,
+        InputTextareaModule,
+        InputSwitchModule,
     ],
     exports: [
         ButtonModule,
@@ -48,7 +52,9 @@ import {ProgressSpinnerModule} from "primeng/progressspinner";
         ToastModule,
         DividerModule,
         AnimateOnScrollModule,
-        ProgressSpinnerModule
+        ProgressSpinnerModule,
+        InputTextareaModule,
+        InputSwitchModule,
     ],
 })
 export class PrimeNGModule {
