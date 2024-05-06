@@ -13,6 +13,7 @@ export class TextAnalyzerComponent implements OnInit{
   isItalic: boolean = false;
   isUnderline: boolean = false;
   textAlign: string = 'left';
+  isAnalyzeButtonClicked: boolean = false;
 
   constructor(private formBuilder: FormBuilder) {
     this.analyzeTextForm = this.formBuilder.group({
@@ -60,5 +61,9 @@ export class TextAnalyzerComponent implements OnInit{
 
   sugestNextWord() {
     console.log(this.analyzeTextForm.get('text').value); // Imprime el valor del campo de texto
+  }
+
+  analyzeText() {
+    this.isAnalyzeButtonClicked = true;
   }
 }
