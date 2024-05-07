@@ -110,10 +110,36 @@
           <div class="flex flex-column">
             <div class="flex flex-column">
               <h2>Analisis ortográfico</h2>
-              <p-skeleton width="10rem" height="1rem" styleClass="mb-2"></p-skeleton>
-              <p-skeleton width="15rem" height="1rem" styleClass="mb-2"></p-skeleton>
-              <p-skeleton width="16rem" height="1rem" styleClass="mb-2"></p-skeleton>
-              <p-skeleton width="13rem" height="1rem" styleClass="mb-2"></p-skeleton>
+              <div *ngIf="!isThereSpellCheckerRespose; else SpellCheckerResponse">
+                <p-skeleton width="10rem" height="1rem" styleClass="mb-2"></p-skeleton>
+                <p-skeleton width="15rem" height="1rem" styleClass="mb-2"></p-skeleton>
+                <p-skeleton width="14rem" height="1rem" styleClass="mb-2"></p-skeleton>
+                <p-skeleton width="16rem" height="1rem" styleClass="mb-2"></p-skeleton>
+              </div>
+              <ng-template #SpellCheckerResponse>
+
+                <div *ngIf="spellChecker.length > 0; else noSpellCheckerResponse">
+                  <ul class="list-none">
+                      <li class="line-height-4" *ngFor="let sentence of spellChecker">
+                        <strong>Oración original:</strong>{{ sentence.originalSentence }}
+                        <ul class="list-none">
+                          <li class="line-height-4" *ngFor="let word of sentence.possibleCorrections">
+                            <strong>Palabra:</strong> {{ word.token }} <strong>Correcciones:</strong>
+                            <ul class="list-none">
+                              <li class="line-height-4" *ngFor="let correction of word.corrections">
+                                {{ correction.word }}
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </div>
+                <ng-template #noSpellCheckerResponse>
+                  <p>No se encontraron errores ortográficos</p>
+                </ng-template>
+
+              </ng-template>
             </div>
             <div class="flex flex-column">
               <h2>Analisis gramatical</h2>

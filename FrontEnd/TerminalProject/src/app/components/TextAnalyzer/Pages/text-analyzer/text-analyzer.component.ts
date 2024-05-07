@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder} from "@angular/forms";
+import {SpellCheckerService} from "../../services/spell-checker.service";
+import {SpellChecker} from "../../interfaces/spell-checker";
 
 @Component({
   selector: 'app-text-analyzer',
@@ -15,8 +17,13 @@ export class TextAnalyzerComponent implements OnInit{
   textAlign: string = 'left';
   isAnalyzeButtonClicked: boolean = false;
   visible: boolean = true;
+  spellChecker: SpellChecker[] = [];
+  isThereSpellCheckerRespose: boolean = false;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private spellCheckerService: SpellCheckerService
+  ) {
     this.analyzeTextForm = this.formBuilder.group({
       text: [''],
       suggesterChecked: [false]
@@ -66,5 +73,9 @@ export class TextAnalyzerComponent implements OnInit{
 
   analyzeText() {
     this.isAnalyzeButtonClicked = true;
+    this.spellCheckerService.checkSpelling(this.analyzeTextForm.get('text').value).subscribe((spellChecker: SpellChecker[]) => {
+      this.spellChecker = spellChecker;
+      this.isThereSpellCheckerRespose = true;
+    });
   }
 }
