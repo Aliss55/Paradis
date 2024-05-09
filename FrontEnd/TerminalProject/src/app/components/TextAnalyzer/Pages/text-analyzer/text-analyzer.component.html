@@ -119,21 +119,19 @@
               <ng-template #SpellCheckerResponse>
 
                 <div *ngIf="spellChecker.length > 0; else noSpellCheckerResponse">
-                  <ul class="list-none">
-                      <li class="line-height-4" *ngFor="let sentence of spellChecker">
-                        <strong>Oración original:</strong>{{ sentence.originalSentence }}
-                        <ul class="list-none">
-                          <li class="line-height-4" *ngFor="let word of sentence.possibleCorrections">
-                            <strong>Palabra:</strong> {{ word.token }} <strong>Correcciones:</strong>
-                            <ul class="list-none">
-                              <li class="line-height-4" *ngFor="let correction of word.corrections">
-                                {{ correction.word }}
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
+                  <div *ngFor="let sentence of spellChecker">
+                    <p><strong>Oración original:</strong> {{ sentence.original_sentence }}</p>
+                    <ul class="list-none line-height-4" *ngFor="let correction of sentence.possible_corrections">
+                      <li><strong>Palabra:</strong> {{correction.token}} </li>
+                      <li>
+                        <strong>Posibles correcciones:</strong>
+                         <span *ngFor="let correction of correction.corrections; let last = last">
+                          {{correction.word}}<span *ngIf="!last">, </span>
+                         </span>
                       </li>
-                  </ul>
+                    </ul>
+                  </div>
+
                 </div>
                 <ng-template #noSpellCheckerResponse>
                   <p>No se encontraron errores ortográficos</p>

@@ -1,6 +1,6 @@
 export interface SpellChecker {
-  originalSentence:    string;
-  possibleCorrections: PossibleCorrection[];
+  original_sentence:    string;
+  possible_corrections: PossibleCorrection[];
 }
 
 export interface PossibleCorrection {

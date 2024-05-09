@@ -72,10 +72,14 @@ export class TextAnalyzerComponent implements OnInit{
   }
 
   analyzeText() {
+    this.isThereSpellCheckerRespose = false;
     this.isAnalyzeButtonClicked = true;
-    this.spellCheckerService.checkSpelling(this.analyzeTextForm.get('text').value).subscribe((spellChecker: SpellChecker[]) => {
-      this.spellChecker = spellChecker;
-      this.isThereSpellCheckerRespose = true;
-    });
+    this.spellCheckerService.checkSpelling(this.analyzeTextForm.get('text').value)
+      .subscribe(
+        (spellChecker: SpellChecker[]) => {
+        this.spellChecker = spellChecker;
+        this.isThereSpellCheckerRespose = true;
+      }
+    );
   }
 }
