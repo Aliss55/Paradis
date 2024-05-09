@@ -110,10 +110,34 @@
           <div class="flex flex-column">
             <div class="flex flex-column">
               <h2>Analisis ortográfico</h2>
-              <p-skeleton width="10rem" height="1rem" styleClass="mb-2"></p-skeleton>
-              <p-skeleton width="15rem" height="1rem" styleClass="mb-2"></p-skeleton>
-              <p-skeleton width="16rem" height="1rem" styleClass="mb-2"></p-skeleton>
-              <p-skeleton width="13rem" height="1rem" styleClass="mb-2"></p-skeleton>
+              <div *ngIf="!isThereSpellCheckerRespose; else SpellCheckerResponse">
+                <p-skeleton width="10rem" height="1rem" styleClass="mb-2"></p-skeleton>
+                <p-skeleton width="15rem" height="1rem" styleClass="mb-2"></p-skeleton>
+                <p-skeleton width="14rem" height="1rem" styleClass="mb-2"></p-skeleton>
+                <p-skeleton width="16rem" height="1rem" styleClass="mb-2"></p-skeleton>
+              </div>
+              <ng-template #SpellCheckerResponse>
+
+                <div *ngIf="spellChecker.length > 0; else noSpellCheckerResponse">
+                  <div *ngFor="let sentence of spellChecker">
+                    <p><strong>Oración original:</strong> {{ sentence.original_sentence }}</p>
+                    <ul class="list-none line-height-4" *ngFor="let correction of sentence.possible_corrections">
+                      <li><strong>Palabra:</strong> {{correction.token}} </li>
+                      <li>
+                        <strong>Posibles correcciones:</strong>
+                         <span *ngFor="let correction of correction.corrections; let last = last">
+                          {{correction.word}}<span *ngIf="!last">, </span>
+                         </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+                <ng-template #noSpellCheckerResponse>
+                  <p>No se encontraron errores ortográficos</p>
+                </ng-template>
+
+              </ng-template>
             </div>
             <div class="flex flex-column">
               <h2>Analisis gramatical</h2>
