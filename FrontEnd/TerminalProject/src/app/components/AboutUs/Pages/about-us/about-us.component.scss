@@ -1,21 +1,3 @@
-
-:host ::ng-deep .p-divider-content {
-  font-size: 1.7rem;
-  padding: 30px;
-  font-style: oblique;
-  letter-spacing: 1.5px;
-}
-
-:host ::ng-deep .p-divider- {
-  margin-top: 5%;
-}
-
-.little_title {
-  font-size: 2.5rem;
-  color: rgba(255, 255, 255, 0.71);
-  font-weight: normal;
-}
-
 .big_title {
   font-size: 3.5rem;
   font-weight: bold;
@@ -25,20 +7,14 @@
 .description {
   margin: 5%;
   font-size: 1.5rem;
+  letter-spacing: 1.2px;
 }
 
-.name {
-  font-size: 1.5rem;
-  margin-left: 7%;
-  margin-top: 15%;
-  letter-spacing: 1.5px;
+.little_title {
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.71);
+  font-weight: normal;
 }
-
-.name:hover {
-  color: #c1e9ee;
-  cursor: auto;
-}
-
 
 .card-container {
   border-color: #f5f5f5;
@@ -67,6 +43,16 @@
   }
 }
 
+.name {
+  font-size: 1.5rem;
+  margin-left: 7%;
+  margin-top: 15%;
+  letter-spacing: 1.9px;
+}
+
+.name:hover {
+  cursor: auto;
+}
 
 .characters-style {
   max-width: 200px;
