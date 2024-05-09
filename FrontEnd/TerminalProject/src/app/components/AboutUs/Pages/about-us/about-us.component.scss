@@ -1,68 +1,99 @@
 
-:host ::ng-deep .p-divider-content{
+:host ::ng-deep .p-divider-content {
   font-size: 1.7rem;
   padding: 30px;
   font-style: oblique;
   letter-spacing: 1.5px;
 }
 
-:host ::ng-deep .p-divider-{
+:host ::ng-deep .p-divider- {
   margin-top: 5%;
 }
 
-
-.titles{
-  margin-top: 5%;
-}
-
-.little_title{
+.little_title {
   font-size: 2.5rem;
   color: rgba(255, 255, 255, 0.71);
-  font-weight: bold;
-  margin-right:25%
-}
-.big_title{
-  font-size: 3.5rem;
-  font-weight: bold;
+  font-weight: normal;
 }
 
-.description{
+.big_title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+.description {
   margin: 5%;
   font-size: 1.5rem;
 }
-.name{
+
+.name {
   font-size: 1.5rem;
   margin-left: 7%;
   margin-top: 15%;
   letter-spacing: 1.5px;
 }
 
-.name:hover{
+.name:hover {
   color: #c1e9ee;
-  cursor:auto;
-}
-.card-container:hover{
-  animation: scaling 0.5s forwards;
+  cursor: auto;
 }
 
-.characters-style{
- max-width: 200px;
+
+.card-container {
+  border-color: #f5f5f5;
+  border-width: 2px;
+  border-style: solid;
+  margin: 15px;
+  transform: skewY(-10deg);
+  padding-top: 15px;
+  border-radius: 3px;
+}
+
+.card-container:hover {
+  animation: scaling 0.5s forwards;
+  cursor: pointer;
+}
+
+:host-context(.dark-theme-gradient) {
+  .card-container:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+:host-context(.light-theme-gradient) {
+  .card-container:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+
+.characters-style {
+  max-width: 200px;
   border-radius: 20%;
 }
 
 @keyframes scaling {
-to {
-  transform: scale(1.2);
-}
+  to {
+    transform: scale(1.2);
+  }
 }
 
-.image{
-  display:flex;
-  flex-grow:1;
-  flex-shrink:1;
-  width:100vw;
+.image {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 100vw;
   margin: -20px 0 0 -20px;
 }
+
+:host-context(.light-theme-gradient) {
+  color: white;
+  text-shadow: 2px 2px 7px #868181;
+  letter-spacing: 1.5px;
+}
+
+
 
 
 
