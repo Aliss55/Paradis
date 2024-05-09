@@ -10,8 +10,8 @@
   "ABOUT_US_LABELS": {
     "TITLE": "Conoce más de",
     "PROJECT_NAME": "Literata",
-    "DESCRIPTION": "Literata es un proyecto enfocado en ayudarte a practicar tus habilidades de escritura en español mexicano, a través de actividades de escritura que incluyen retroalimentación inmediata. Además de actividades de reforzamiento de vocabulario e información relevante de la lengua española.",
-    "HISTORY": "Literata es un proyecto desarrollado por estudiantes de la Escuela Superior de Cómputo de la carrera de Ingeniería en Sistemas Computacionales, con el objetivo de ayudar a estudiantes de español como lengua extranjera a mejorar sus habilidades de escritura.",
+    "DESCRIPTION": "Literata es un proyecto enfocado en ayudarte a practicar tus habilidades de escritura en español mexicano, a través de actividades que incluyen retroalimentación inmediata, reforzamiento de vocabulario e información relevante de la lengua española.",
+    "HISTORY": "Literata es un proyecto desarrollado por estudiantes de la Escuela Superior de Cómputo de la carrera de Ingeniería en Sistemas Computacionales, con el objetivo de ayudar a estudiantes del español mexicano a mejorar sus habilidades de escritura en etapa inicial.",
     "TEAM": "Equipo de desarrollo"
   },
 
@@ -19,17 +19,56 @@
     "HOME_LABEL": "¡Escribe algo para experimentar!"
   },
   "BLOG_LABELS": {
-    "HOME_LABEL": "Entérate más acerca de la lengua española"
+    "HOME_LABEL": "Entérate más acerca de la lengua española",
+    "BLOG_1": {
+      "TITLE": "La oración",
+      "DESCRIPTION": "¿Que es una oración?"
+    },
+    "BLOG_2": {
+      "TITLE": "El punto",
+      "DESCRIPTION": "¿Qué es el punto? ¿Para qué se utiliza?"
+    },
+    "BLOG_3": {
+      "TITLE": "La coma",
+      "DESCRIPTION": "¿Qué es la coma? Ejemplos de uso."
+    },
+    "BLOG_4": {
+      "TITLE": "Las mayúsculas",
+      "DESCRIPTION": "Definición, reglas y ejemplos de uso."
+    },
+    "BLOG_5": {
+      "TITLE": "\"Halla\", \"haya\", \"aya\", \"allá\"",
+      "DESCRIPTION": "¿Cuál es la diferencia entre estas palabras?"
+    },
+    "BLOG_6": {
+      "TITLE": "El adverbio",
+      "DESCRIPTION": "¿Qué es un adverbio? Clasificación y ejemplos."
+    },
+    "BLOG_7": {
+      "TITLE": "Verbos relacionados con la naturaleza",
+      "DESCRIPTION": "Verbos relacionados a los fenómenos de la naturaleza."
+    },
+    "BLOG_8": {
+      "TITLE": "Verbos \"ser\" o \"estar\"",
+      "DESCRIPTION": "Usos, ejemplos y diferencias entre los verbos \"ser\" y \"estar\"."
+    },
+    "BLOG_9": {
+      "TITLE": "Coma y muletillas interrogativas",
+      "DESCRIPTION": "¿Cómo usar la coma con muletillas interrogativas?"
+    }
   },
   "ACTIVITIES_LABELS": {
     "HOME_LABEL": "¡A practicar!",
     "TITLE": "Actividades educativas",
     "CARDS_GAME": {
+      "INSTRUCTIONS_DESCRIPTION": "En esta actividad verás un recuadro con una imagen y 3 botones. Tu tarea es seleccionar el botón que contenga {{description_word}} que mejor describa a la imagen. Un nuevo recuadro aparecerá cada que selecciones una opción. Al finalizar la actividad podrás ver cuántas respuestas correctas tuviste.",
+      "FINAL_SCORE": "Acertaste en {{correct_answers}} preguntas de un total de {{number_of_questions}}",
       "PROFESSIONS_OCCUPATIONS": "Profesiones y ocupaciones",
-      "INSTRUCTIONS_DESCRIPTION": "En esta actividad verás un recuadro con una imagen y 3 botones. Tu tarea es seleccionar el botón que contenga la palabra que mejor describa la imagen. Un nuevo recuadro aparecerá cada que selecciones una opción. Al finalizar la actividad podrás ver cuántas respuestas correctas tuviste.",
-      "INSTRUCTIONS_TO_START": "Da click en el botón de abajo para comenzar la actividad.",
-      "INSTRUCTIONS_WARNING": "Considera que todas las actividades estarán disponibles únicamente en español, porque su objetivo es ayudarte a practicar el idioma.",
-      "START_GAME": "Empezar actividad"
+      "PROFESSIONS_OCCUPATIONS_CARD_DESCRIPTION": "Con esta actividad podrás practicar vocabulario relacionado a profesiones y ocupaciones.",
+      "PROFESSIONS_OCCUPATIONS_KEYWORD": "la profesión u ocupación",
+      "DEMONYMS": "Gentilicios",
+      "DEMONYMS_CARD_DESCRIPTION": "Con esta actividad podrás practicar vocabulario relacionado a gentilicios.",
+      "DEMONYMS_KEYWORD": "el gentilicio"
     }
   },
   "MENU": "Menú",

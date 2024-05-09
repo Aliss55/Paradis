@@ -10,25 +10,64 @@
   "ABOUT_US_LABELS": {
     "TITLE": "Get to know more about",
     "PROJECT_NAME": "Literata",
-    "DESCRIPTION": "Literata es un proyecto enfocado en ayudarte a practicar tus habilidades de escritura en español mexicano, a través de actividades de escritura que incluyen retroalimentación inmediata. Además de actividades de reforzamiento de vocabulario e información relevante de la lengua española.",
-    "HISTORY": "Literata is a project developed by students of Computer Systems Engineering at the Escuela Superior de Cómputo from Instituto Politécnico Nacional. The main goal is to help spanish learners to improve their writing skills.",
+    "DESCRIPTION": "Literata es un proyecto enfocado en ayudarte a practicar tus habilidades de escritura en español mexicano, a través de actividades que incluyen retroalimentación inmediata, reforzamiento de vocabulario e información relevante de la lengua española.",
+    "HISTORY": "Literata is a project developed by students of Computer Systems Engineering at the Escuela Superior de Cómputo from Instituto Politécnico Nacional. The main goal is to help spanish learners to improve their writing skills at early stages.",
     "TEAM": "Development team"
   },
   "ANALIZE_TEXT_LABELS": {
     "HOME_LABEL": "Write something to try!"
   },
   "BLOG_LABELS": {
-    "HOME_LABEL": "Find out more about the spanish language"
+    "HOME_LABEL": "Find out more about the spanish language",
+    "BLOG_1": {
+      "TITLE": "Sentences",
+      "DESCRIPTION": "What is a sentence?"
+    },
+    "BLOG_2": {
+      "TITLE": "Period",
+      "DESCRIPTION": "What is a period? How to use it?"
+    },
+    "BLOG_3": {
+      "TITLE": "Comma",
+      "DESCRIPTION": "What is a comma? Examples of use"
+    },
+    "BLOG_4": {
+      "TITLE": "Capitalization",
+      "DESCRIPTION": "Definition, rules and examples"
+    },
+    "BLOG_5": {
+      "TITLE": "\"Halla\", \"haya\", \"aya\", \"allá\"",
+      "DESCRIPTION": "Which is the difference between these words?"
+    },
+    "BLOG_6": {
+      "TITLE": "Adverbs",
+      "DESCRIPTION": "What is an adverb? classification and examples"
+    },
+    "BLOG_7": {
+      "TITLE": "Nature related verbs",
+      "DESCRIPTION": "Verbs related to natural phenomena."
+    },
+    "BLOG_8": {
+      "TITLE": "Verb to be",
+      "DESCRIPTION": "Usage and examples of the verb 'to be'."
+    },
+    "BLOG_9": {
+      "TITLE": "Comma and tag questions",
+      "DESCRIPTION": "How to use commas in tag questions."
+    }
   },
   "ACTIVITIES_LABELS": {
     "HOME_LABEL": "Let's practice!",
     "TITLE": "Educative activities",
     "CARDS_GAME": {
+      "INSTRUCTIONS_DESCRIPTION": "In this activity you are going to see a box with an image and three option buttons. \n Your task is to click on the button which shows the {{ description_word }} depicted in the image. After clicking one option another box with a new image will appear. At the end of the activity you will be able to see your score.",
+      "FINAL_SCORE": "Your answered correctly {{correct_answers}} questions out of {{number_of_questions}}",
       "PROFESSIONS_OCCUPATIONS": "Professions and occupations",
-      "INSTRUCTIONS_DESCRIPTION": "In this activity you are going to see a box with an image and three option buttons. \n Your task is to click on the button which shows the best description word for the image. After clicking one option another box with a new image will appear. At the end of the activity you will be able to see your score.",
-      "INSTRUCTIONS_TO_START": "Click on the button below to start the game.",
-      "INSTRUCTIONS_WARNING": "Consider that all the activities will be available only in spanish, because they are made for you to practice the language.",
-      "START_GAME": "Start activity"
+      "PROFESSIONS_OCCUPATIONS_CARD_DESCRIPTION": "This activity gives you a space to practice vocabulary related to professions and occupations",
+      "PROFESSIONS_OCCUPATIONS_KEYWORD": "profession or occupation",
+      "DEMONYMS": "Demonyms",
+      "DEMONYMS_CARD_DESCRIPTION": "This activity gives you a space to practice vocabulary related to demonyms",
+      "DEMONYMS_KEYWORD": "demonym"
     }
   },
   "MENU": "Menu",

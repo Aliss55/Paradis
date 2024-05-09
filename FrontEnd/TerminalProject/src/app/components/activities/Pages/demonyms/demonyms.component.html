@@ -1,0 +1,12 @@
+<div class="title xl:text-7xl text-4xl flex justify-content-center">
+  {{ 'ACTIVITIES_LABELS.CARDS_GAME.DEMONYMS' | translate}}
+</div>
+
+
+<div class="card_container">
+
+  <shared-cards-game
+    [description_word_for_images]=" 'ACTIVITIES_LABELS.CARDS_GAME.DEMONYMS_KEYWORD' | translate"
+    [listOfIncorrectAnswers]="listOfCountries"
+    [questions_and_answers]="countries"></shared-cards-game>
+</div>

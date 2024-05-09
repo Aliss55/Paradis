@@ -1,0 +1,237 @@
+<div class="flex flex-column p-3">
+
+  <div class="title flex justify-content-center sm:text-7xl text-5xl">
+    {{ 'OPTIONS.ANALIZE_TEXT' | translate }}
+  </div>
+
+  <div class="grid sm:mt-7 mt-3">
+
+    <div class="md:col-7 sm:px-5 px-0 col-12">
+      <form [formGroup]="analyzeTextForm">
+        <p-card styleClass="sm:px-5 sm:pt-5 sm:pb-2 p-1">
+
+          <div class="flex flex-column gap-2">
+
+            <div class="flex justify-content-between p-2 surface-0 border-round-2xl">
+              <div class="text-options">
+
+                <p-button (click)="toggleBold()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">format_bold</i>
+                </p-button>
+
+                <p-button (click)="toggleItalic()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">format_italic</i>
+                </p-button>
+
+                <p-button (click)="toggleUnderline()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">format_underlined</i>
+                </p-button>
+
+                <p-button (click)="increaseFontSize()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">text_increase</i>
+                </p-button>
+
+                <p-button (click)="decreaseFontSize()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">text_decrease</i>
+                </p-button>
+              </div>
+              <div class="text-options">
+                <p-button (click)="alignLeft()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">format_align_left</i>
+                </p-button>
+
+                <p-button (click)="alignCenter()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">format_align_center</i>
+                </p-button>
+
+                <p-button (click)="alignRight()" [rounded]="true" [text]="true" size="small">
+                  <i class="material-icons">format_align_right</i>
+                </p-button>
+              </div>
+            </div>
+
+            <textarea
+              (keyup.space)="sugestNextWord()"
+              [autoResize]="true"
+              [ngClass]="{
+            'bold-text': isBold,
+            'italic-text': isItalic,
+            'underline-text': isUnderline
+            }"
+              [style]="{
+            'font-size': fontSize + 'px',
+            'text-align': textAlign
+            }"
+              class="border-round-2xl p-4"
+              formControlName="text"
+              pInputTextarea
+              placeholder="Enter text to analize..."
+              rows="6"
+            >
+          </textarea>
+
+          </div>
+
+          <ng-template pTemplate="footer">
+            <div class="flex justify-content-end gap-3 flex-wrap">
+
+
+              <div class="flex gap-2">
+                <p-inputSwitch formControlName="suggesterChecked">
+                </p-inputSwitch>
+                <b class="text-sm p-2 sugerencia-palabra">Sugerir palabras</b>
+              </div>
+
+
+              <p-button class="ml-3" severity="secondary" (click)="analyzeText()">
+                <b>Analizar</b>
+                <i class="material-icons ml-3">send</i>
+
+              </p-button>
+            </div>
+          </ng-template>
+
+        </p-card>
+      </form>
+    </div>
+
+    <div class="md:col-5 col-12 ">
+      <p-card styleClass="sm:px-5 px-1 pb-1">
+        <div *ngIf="!isAnalyzeButtonClicked; else anaylyzedText">
+          <h1 class="title md:text-6xl">Instrucciones</h1>
+          <p class="md:text-4xl text-2xl sugerencia-palabra">
+            En el espacio blanco de la izquierda escribe un texto,
+            después da clic en el botón <strong>Analizar</strong> para analizar el texto
+          </p>
+        </div>
+
+        <ng-template #anaylyzedText>
+          <h1 class="title md:text-4xl">Resultados de análisis</h1>
+          <div class="flex flex-column">
+            <div class="flex flex-column">
+              <h2>Analisis ortográfico</h2>
+              <p-skeleton width="10rem" height="1rem" styleClass="mb-2"></p-skeleton>
+              <p-skeleton width="15rem" height="1rem" styleClass="mb-2"></p-skeleton>
+              <p-skeleton width="16rem" height="1rem" styleClass="mb-2"></p-skeleton>
+              <p-skeleton width="13rem" height="1rem" styleClass="mb-2"></p-skeleton>
+            </div>
+            <div class="flex flex-column">
+              <h2>Analisis gramatical</h2>
+              <p-skeleton width="10rem" height="1rem" styleClass="mb-2"></p-skeleton>
+              <p-skeleton width="15rem" height="1rem" styleClass="mb-2"></p-skeleton>
+              <p-skeleton width="14rem" height="1rem" styleClass="mb-2"></p-skeleton>
+              <p-skeleton width="16rem" height="1rem" styleClass="mb-2"></p-skeleton>
+            </div>
+          </div>
+        </ng-template>
+
+      </p-card>
+    </div>
+
+
+  </div>
+
+</div>
+
+<p-dialog
+  styleClass="surface-0"
+  header="Terminos y condiciones"
+  [modal]="true"
+  [maximizable]="true"
+  [(visible)]="visible"
+  [style]="{ width: '50rem' }"
+>
+
+  <p>
+    Bienvenido/a a nuestra aplicación web diseñada para apoyar el aprendizaje del español mexicano en el nivel A1
+    del Marco Común Europeo de Referencia para las Lenguas. Antes de comenzar a utilizar nuestra herramienta,
+    te solicitamos leer y aceptar los siguientes términos y condiciones que rigen su uso.
+    Al acceder y usar nuestra aplicación, aceptas cumplir con estos términos y condiciones.
+  </p>
+
+  <h3>Políticas</h3>
+  <ul class="list-decimal">
+    <li class="line-height-4">
+      <b>Términos y Condiciones</b>
+      <p>
+        Todos los usuarios deben leer detenidamente y aceptar los términos y condiciones de uso del proyecto para
+        poder utilizar la herramienta de aprendizaje del español mexicano.
+      </p>
+    </li>
+    <li class="line-height-4">
+      <b>Información de Identificación Personal (PII)</b>
+      <p>
+        En ningún caso se recopilará ni almacenará información personal de identificación de los usuarios.
+      </p>
+    </li>
+    <li class="line-height-4">
+      <b>Uso No Comercial</b>
+      <p>
+        La herramienta está destinada exclusivamente para fines educativos y no comerciales. Queda estrictamente
+        prohibido su uso con propósitos comerciales o publicitarios.
+      </p>
+    </li>
+  </ul>
+
+  <h3>Procesamiento de Textos</h3>
+  <ul class="list-decimal">
+    <li class="line-height-4">
+      <b>Competencia en Español Nivel A1</b>
+      <p>
+        Nuestro sistema ha sido diseñado para incorporar estructuras gramaticales conformes al nivel A1 del Marco
+        Común Europeo de Referencia para las Lenguas, facilitando el aprendizaje progresivo del español.
+      </p>
+    </li>
+    <li class="line-height-4">
+      <b>Textos del Corpus</b>
+      <p>
+        Los textos utilizados para la generación del Corpus corresponden a cuentos infantiles, seleccionados
+        específicamente para apoyar el aprendizaje del idioma.
+      </p>
+    </li>
+    <li class="line-height-4">
+      <b>Fuentes Confiables</b>
+      <p>
+        Los textos seleccionados para el Corpus y las páginas informativas han sido obtenidos de fuentes confiables
+        y verificadas para garantizar la calidad y precisión del contenido ofrecido.
+      </p>
+    </li>
+    <li class="line-height-4">
+      <b>Restricción de Contenido Inapropiado</b>
+      <p>
+        No está permitido ingresar ni visualizar textos que contengan contenido ofensivo, homofóbico, racista,
+        discriminatorio, violento o inapropiado de cualquier índole. Nos reservamos el derecho de eliminar dicho
+        contenido y tomar medidas correspondientes.
+      </p>
+    </li>
+    <li class="line-height-4">
+      <b>Protección de Datos Sensibles</b>
+      <p>
+        Por motivos de seguridad y protección de la privacidad, los usuarios no deben ingresar ni compartir
+        información personal sensible, como números de seguro social, números de tarjeta de crédito u otros datos
+        confidenciales en nuestra herramienta.
+      </p>
+    </li>
+  </ul>
+
+  <p>
+    Al utilizar nuestra aplicación web, <strong>aceptas cumplir con estos términos y condiciones</strong>. Si no estás de acuerdo
+    con alguna de estas políticas, te rogamos no utilizar nuestra herramienta.
+  </p>
+
+  <b class="font-italic">
+    Gracias por ser parte de nuestra comunidad de aprendizaje del español mexicano. ¡Disfruta tu experiencia de
+    aprendizaje!
+  </b>
+  <ng-template pTemplate="footer">
+    <p-button
+      label="Aceptar"
+      [text]="true"
+      severity="help"
+      (click)="visible = false">
+      <i class="material-icons">done</i>
+      </p-button>
+  </ng-template>
+
+</p-dialog>
+

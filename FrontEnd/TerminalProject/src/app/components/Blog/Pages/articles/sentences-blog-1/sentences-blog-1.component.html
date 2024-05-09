@@ -1,3 +1,82 @@
-<shared-blog-entry-template [mainExplanation]="mainExplanation" [secondExplanation]="mainExplanation"
-                            [title]="title" [subtitle]="subtitle">
-</shared-blog-entry-template>
+<div class="flex flex-column p-1">
+  <div class="flex justify-content-center mt-5 sm:mb-2 mb-5">
+
+    <div class="title text-7xl">
+      {{ 'BLOG_LABELS.BLOG_1.TITLE' | translate}}
+    </div>
+  </div>
+
+  <div
+    class="surface-0 sm:p-8 sm:m-8 p-5 m-0 shadow-5 border-round text-lg animation-duration-1000 animate__animated animate__zoomIn"
+    [style.animation-delay]="0.2 + 's'">
+    <h2>¿Qué es la oración?</h2>
+    <p class="line-height-3">
+      Una oración es un conjunto de palabras que tiene un significado completo. Está formada por dos partes: el
+      sujeto, que es de quien se habla, y el predicado, que dice algo sobre el sujeto.
+    </p>
+
+    <p class="line-height-3">
+      Tomemos como ejemplo la siguiente oración:
+    </p>
+
+    <div class="flex justify-content-center flex-wrap sm:m-2 m-1">
+
+      <div class="h-15rem w-15rem mx-5">
+        <img src="./assets/blogs-images/Oracion - 220x220.svg" alt="Oracion">
+      </div>
+      <p-fieldset legend="Ejemplo de oración">
+        <p class="m-0 font-italic">
+          Los astronautas viajan al espacio.
+        </p>
+      </p-fieldset>
+    </div>
+
+    <p class="line-height-4">
+      El sujeto y el predicado de esta oración son:
+    </p>
+
+    <ul>
+      <li class="line-height-4"><strong>Sujeto:</strong> Los astronautas</li>
+      <li class="line-height-4"><strong>Predicado:</strong> viajan al espacio</li>
+    </ul>
+
+    <p class="line-height-3">
+      Una oración que tiene sujeto y predicado se llama bimembre. También se le llama enunciado.
+    </p>
+
+    <p class="line-height-3">
+      Por otro lado, hay expresiones que son como oraciones pero no tienen sujeto y predicado claros, como las
+      interjecciones, saludos, despedidas y oraciones con verbos meteorológicos. A estas se les llama unimembres.
+    </p>
+
+    <p class="line-height-4">
+      Una oración que tiene sujeto y predicado se llama bimembre. También se le llama enunciado.
+    </p>
+
+    <p class="line-height-4">
+      Algunos ejemplos de oraciones unimembres son:
+    </p>
+
+    <ul>
+      <li class="line-height-4">¡Madre mía!</li>
+      <li class="line-height-4">¡Hola!</li>
+      <li class="line-height-4">¡Adiós!</li>
+      <li class="line-height-4">¡Fuego!</li>
+      <li class="line-height-4">Anocheció pronto</li>
+      <li class="line-height-4">Llueve intensamente</li>
+    </ul>
+
+    <p-divider></p-divider>
+
+    <h3>Referencias</h3>
+    <p class="line-height-4 font-italic">
+      I. Munguía Zataraín, M. E. Munguía Zatarain, y G. Rocha, Gramática lengua española. México, D.F.: Larousse,
+      2013.
+    </p>
+
+  </div>
+
+</div>
+
+
+

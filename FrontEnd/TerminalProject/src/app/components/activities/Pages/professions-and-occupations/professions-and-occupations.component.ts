@@ -1,49 +1,76 @@
 import { Component } from '@angular/core';
+import {professions_and_occupations} from "../../../../shared/utils/professions_and_occupations_enum";
 @Component({
   selector: 'app-professions-and-occupations',
   templateUrl: './professions-and-occupations.component.html',
   styleUrl: './professions-and-occupations.component.scss',
 })
 export class ProfessionsAndOccupationsComponent {
+  listOfIncorrectAnswers:string[] = Object.values(professions_and_occupations);
   professions_and_occupations = [
     {
-      image_url: 'https://primefaces.org/cdn/primeng/images/usercard.png',
-      answer: 'chef',
+      image_url: './assets/ProfessionsOcupations/Astronauta.svg',
+      answer: 'astronauta',
     },
     {
       image_url:
-        'https://th.bing.com/th/id/OIP.oG0VoZLfmlAXHnyBQ3u9TAAAAA?rs=1&pid=ImgDetMain',
-      answer: 'ingeniero',
+        './assets/ProfessionsOcupations/Bailarina.svg',
+      answer: 'bailarina',
     },
     {
       image_url:
-        'https://th.bing.com/th/id/R.93d0e0f55317e267d60d19b491e64593?rik=sMijo3M3iEmXww&pid=ImgRaw&r=0',
-      answer: 'chef',
+        './assets/ProfessionsOcupations/Bombero.svg',
+      answer: 'bombero',
     },
     {
       image_url:
-        'https://th.bing.com/th/id/OIP.YrjK5IjVQ3RoPAUHapLoBgHaE8?rs=1&pid=ImgDetMain',
-      answer: 'chef',
+        './assets/ProfessionsOcupations/Dentista.svg',
+      answer: 'dentista',
     },
     {
       image_url:
-        'https://th.bing.com/th/id/OIP.YrjK5IjVQ3RoPAUHapLoBgHaE8?rs=1&pid=ImgDetMain',
-      answer: 'chef',
+        './assets/ProfessionsOcupations/Futbolista.svg',
+      answer: 'futbolista',
     },
     {
       image_url:
-        'https://th.bing.com/th/id/OIP.Vb88MMxsJsFvpv0luRTJ0wHaEK?rs=1&pid=ImgDetMain',
-      answer: 'chef',
+        './assets/ProfessionsOcupations/Maestra.svg',
+      answer: 'profesora',
     },
     {
       image_url:
-        'https://i.pinimg.com/736x/b4/fc/be/b4fcbe5f2779d40c404f5ddd65c53401.jpg',
-      answer: 'chef',
+        './assets/ProfessionsOcupations/Mariachi.svg',
+      answer: 'mariachi',
     },
     {
       image_url:
-        'https://th.bing.com/th/id/OIP.z9iEAD6U0BtzskWZgSEu3AEgDY?rs=1&pid=ImgDetMain',
-      answer: 'chef',
+        './assets/ProfessionsOcupations/Mecanico.svg',
+      answer: 'mecánico',
+    },
+    {
+      image_url:
+        './assets/ProfessionsOcupations/Medico.svg',
+      answer: 'doctora',
+    },
+    {
+      image_url:
+        './assets/ProfessionsOcupations/Mesero.svg',
+      answer: 'mesero',
+    },
+    {
+      image_url:
+        './assets/ProfessionsOcupations/Militar.svg',
+      answer: 'militar',
+    },
+    {
+      image_url:
+        './assets/ProfessionsOcupations/Piloto.svg',
+      answer: 'piloto',
+    },
+    {
+      image_url:
+        './assets/ProfessionsOcupations/Veterinario.svg',
+      answer: 'veterinario',
     },
   ];
 }

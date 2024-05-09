@@ -2,6 +2,20 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogComponent } from './Pages/blog/blog.component';
 import { SentencesBlog1Component } from './Pages/articles/sentences-blog-1/sentences-blog-1.component';
+import {PeriodBlog2Component} from "./Pages/articles/period-blog-2/period-blog-2.component";
+import {CommaBlog3Component} from "./Pages/articles/comma-blog-3/comma-blog-3.component";
+import {CapitalizationBlog4Component} from "./Pages/articles/capitalization-blog-4/capitalization-blog-4.component";
+import {
+  HallaHayaAyaAllaDifferenceBlog5Component
+} from "./Pages/articles/halla-haya-aya-alla-difference-blog-5/halla-haya-aya-alla-difference-blog-5.component";
+import {AdverbBlog6Component} from "./Pages/articles/adverb-blog-6/adverb-blog-6.component";
+import {
+  VerbsRelatedNaturalPhenomenaBlog7Component
+} from "./Pages/articles/verbs-related-natural-phenomena-blog-7/verbs-related-natural-phenomena-blog-7.component";
+import {VerbToBeBlog8Component} from "./Pages/articles/verb-to-be-blog-8/verb-to-be-blog-8.component";
+import {
+  CommasAndTagQuestionsBlog9Component
+} from "./Pages/articles/commas-and-tag-questions-blog-9/commas-and-tag-questions-blog-9.component";
 
 const routes: Routes = [
   {
@@ -11,6 +25,38 @@ const routes: Routes = [
   {
     path: 'sentences-1',
     component: SentencesBlog1Component,
+  },
+  {
+    path: 'period',
+    component: PeriodBlog2Component,
+  },
+  {
+    path: 'comma',
+    component: CommaBlog3Component,
+  },
+  {
+    path: 'capitalization',
+    component: CapitalizationBlog4Component,
+  },
+  {
+    path: 'halla-haya-aya-alla-difference',
+    component: HallaHayaAyaAllaDifferenceBlog5Component,
+  },
+  {
+    path: 'adverbs',
+    component: AdverbBlog6Component,
+  },
+  {
+    path: 'verbs-related-to-natural-phenomena',
+    component: VerbsRelatedNaturalPhenomenaBlog7Component
+  },
+  {
+    path: 'verb-to-be',
+    component: VerbToBeBlog8Component
+  },
+  {
+    path: 'commas-and-tag-questions',
+    component: CommasAndTagQuestionsBlog9Component
   },
 ];
 

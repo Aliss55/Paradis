@@ -1,6 +1,7 @@
 @import "primeng/resources/primeng.css";
 @import 'material-icons/iconfont/outlined.css';
 @import 'material-icons/iconfont/filled.css';
+@import 'animate.css';
 
 @font-face {
   font-family: 'Raleway-italic';
@@ -24,8 +25,6 @@ body{
 
 .light-theme-gradient {
   background-size: 400% 400%;
-  height: 100vh;
-  width: 100vw;
   background-image: linear-gradient(120deg,
     #de6497,
     #d278a7,
@@ -41,8 +40,6 @@ body{
 }
 .dark-theme-gradient {
   background-size: 400% 400%;
-  height: 100vh;
-  width: 100vw;
   background-image: linear-gradient(120deg,
     #06132c,
     #2a27a3,
@@ -96,5 +93,13 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+.p-fieldset-legend {
+  border: 1px var(--surface-400) solid;
+}
+
+.p-fieldset {
+  border: 1px var(--surface-400) solid;
+}
 
 
