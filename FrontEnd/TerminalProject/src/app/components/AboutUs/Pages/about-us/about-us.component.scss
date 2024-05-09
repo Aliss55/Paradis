@@ -21,9 +21,14 @@
   border-width: 2px;
   border-style: solid;
   margin: 15px;
-  transform: skewY(-10deg);
   padding-top: 15px;
   border-radius: 3px;
+}
+
+@media screen and (min-width: 1122px) {
+  .card-container {
+    transform: skewY(-10deg);
+  }
 }
 
 .card-container:hover {
@@ -32,14 +37,24 @@
 }
 
 :host-context(.dark-theme-gradient) {
+  .card-container {
+    box-shadow: -10px 10px rgba(0, 0, 0, 0.5);
+  }
+
   .card-container:hover {
     background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: -20px 10px rgba(0, 0, 0, 0.0);
   }
 }
 
 :host-context(.light-theme-gradient) {
+  .card-container {
+    box-shadow: -10px 10px rgba(255, 255, 255, 0.5);
+  }
+
   .card-container:hover {
     background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: -15px 10px rgba(255, 255, 255, 0.0);
   }
 }
 
