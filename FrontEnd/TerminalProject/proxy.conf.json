@@ -1,0 +1,8 @@
+{
+  "/spellchecker": {
+    "target": "https://sina-tt-api.azurewebsites.net",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
