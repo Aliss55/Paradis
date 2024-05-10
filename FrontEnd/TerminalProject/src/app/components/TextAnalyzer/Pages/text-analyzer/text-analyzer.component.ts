@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder} from "@angular/forms";
 import {SpellCheckerService} from "../../services/spell-checker.service";
 import {SpellChecker} from "../../interfaces/spell-checker";
-
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 @Component({
   selector: 'app-text-analyzer',
   templateUrl: './text-analyzer.component.html',
@@ -22,7 +22,8 @@ export class TextAnalyzerComponent implements OnInit{
 
   constructor(
     private formBuilder: FormBuilder,
-    private spellCheckerService: SpellCheckerService
+    private spellCheckerService: SpellCheckerService,
+    private sanitizer: DomSanitizer
   ) {
     this.analyzeTextForm = this.formBuilder.group({
       text: [''],
@@ -64,8 +65,15 @@ export class TextAnalyzerComponent implements OnInit{
     this.textAlign = 'right'; // Cambia la alineación del texto a 'right'
   }
 
-  sugestNextWord() {
+  suggestNextWord() {
     console.log(this.analyzeTextForm.get('text').value);
+    this.appendWord('sugerencia');
+  }
+
+  appendWord(word: string) {
+    let currentText = this.analyzeTextForm.get('text').value;
+    currentText = currentText + ' ' + word;
+    this.analyzeTextForm.get('text').setValue(currentText);
   }
 
   analyzeText() {
