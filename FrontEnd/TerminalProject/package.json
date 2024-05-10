@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o",
+    "start": "npm run start:production",
     "start:development": "ng serve --host 0.0.0.0",
-    "start:production": "ng serve -o --configuration production",
+    "start:production": "ng serve --configuration production --proxy-config proxy.conf.json",
     "compile:scss": "npx sass --watch ../packages/Light-Theme/blue/theme.scss:./src/assets/themes/light-theme.css ../packages/Dark-Theme/purple/theme.scss:./src/assets/themes/dark-theme.css",
     "compile:scssOnce": "npx sass ../packages/Light-Theme/blue/theme.scss:./src/assets/themes/light-theme.css ../packages/Dark-Theme/purple/theme.scss:./src/assets/themes/dark-theme.css",
     "build": "ng build",

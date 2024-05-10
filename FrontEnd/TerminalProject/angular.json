@@ -83,7 +83,6 @@
           "configurations": {
             "production": {
               "buildTarget": "TerminalProject:build:production",
-              "proxyConfig": "proxy.conf.json"
             },
             "development": {
               "buildTarget": "TerminalProject:build:development"
