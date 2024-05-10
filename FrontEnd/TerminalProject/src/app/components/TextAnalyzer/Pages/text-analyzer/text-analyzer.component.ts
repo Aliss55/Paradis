@@ -31,10 +31,7 @@ export class TextAnalyzerComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.analyzeTextForm.valueChanges.subscribe((value: any) => {
-      console.log({value});
 
-    });
   }
   toggleBold() {
     this.isBold = !this.isBold; // Cambia el valor de isBold
@@ -68,7 +65,7 @@ export class TextAnalyzerComponent implements OnInit{
   }
 
   sugestNextWord() {
-    console.log(this.analyzeTextForm.get('text').value); // Imprime el valor del campo de texto
+    console.log(this.analyzeTextForm.get('text').value);
   }
 
   analyzeText() {
