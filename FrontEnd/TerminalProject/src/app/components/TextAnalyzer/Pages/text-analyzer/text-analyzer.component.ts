@@ -4,6 +4,8 @@ import {SpellCheckerService} from "../../services/spell-checker.service";
 import {SpellChecker} from "../../interfaces/spell-checker";
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import {Editor} from "primeng/editor";
+import {WordSuggesterService} from "../../services/word-suggester.service";
+import {WordSuggester} from "../../interfaces/word-suggester";
 
 @Component({
   selector: 'app-text-analyzer',
@@ -24,7 +26,8 @@ export class TextAnalyzerComponent{
 
   constructor(
     private formBuilder: FormBuilder,
-    private spellCheckerService: SpellCheckerService
+    private spellCheckerService: SpellCheckerService,
+    private wordSuggesterService: WordSuggesterService,
   ) {
     this.analyzeTextForm = this.formBuilder.group({
       text: [''],
@@ -53,7 +56,27 @@ export class TextAnalyzerComponent{
 
   suggestNextWord() {
     if(this.analyzeTextForm!.get('suggesterChecked')!.value) {
-      this.appendWord(this.suggestion);
+      this.wordSuggesterService.suggestWord(this.primeEditor!.quill.getText())
+        .subscribe(
+          (wordSuggester: WordSuggester[]) => {
+            console.log(wordSuggester);
+            const foundWord = wordSuggester.find(suggestion => {
+              const isValidWord = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+$/i.test(suggestion.word);
+              return isValidWord && suggestion.word !== '[UNK]';
+            });
+
+            if (foundWord) {
+              this.suggestion = foundWord.word;
+              this.appendWord(foundWord.word)
+            } else {
+              console.log('No se encontró ninguna palabra válida');
+            }
+          },
+          (error) => {
+            console.error(error);
+          }
+        );
+
     }
   }
 

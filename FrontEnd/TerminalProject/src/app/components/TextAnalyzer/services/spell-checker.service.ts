@@ -11,7 +11,7 @@ import {WordSuggester} from "../interfaces/word-suggester";
 export class SpellCheckerService {
 
   private spellCheckerServiceUrl = environment.spellCheckerService;
-  private wordSuggesterServiceUrl = environment.wordSuggesterService;
+
   constructor(private http: HttpClient) { }
 
   checkSpelling(text: string):Observable<SpellChecker[]> {
@@ -25,9 +25,4 @@ export class SpellCheckerService {
     );
   }
 
-  suggestWord(text: string):Observable<WordSuggester[]>  {
-    return this.http.post<WordSuggester[]>(`${this.wordSuggesterServiceUrl}/word_suggestion`, {
-      text,
-    });
-  }
 }
