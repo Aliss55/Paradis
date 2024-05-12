@@ -1,29 +1,30 @@
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder} from "@angular/forms";
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {FormBuilder, FormGroup} from "@angular/forms";
 import {SpellCheckerService} from "../../services/spell-checker.service";
 import {SpellChecker} from "../../interfaces/spell-checker";
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import {Editor} from "primeng/editor";
+
 @Component({
   selector: 'app-text-analyzer',
   templateUrl: './text-analyzer.component.html',
   styleUrl: './text-analyzer.component.scss'
 })
-export class TextAnalyzerComponent implements OnInit{
-  analyzeTextForm: any | undefined;
-  fontSize: number = 20; // Inicializa el tamaño de la fuente a 12px
-  isBold: boolean = false;
-  isItalic: boolean = false;
-  isUnderline: boolean = false;
-  textAlign: string = 'left';
+export class TextAnalyzerComponent{
+  analyzeTextForm: FormGroup<any>;
+  fontSize: number = 20;
   isAnalyzeButtonClicked: boolean = false;
   visible: boolean = true;
   spellChecker: SpellChecker[] = [];
-  isThereSpellCheckerRespose: boolean = false;
+  hasSpellCheckerResponse: boolean = false;
+  hasSuggestion: boolean = false;
+  suggestion: string = 'sugerencia';
+
+  @ViewChild('editor') primeEditor: Editor | undefined;
 
   constructor(
     private formBuilder: FormBuilder,
-    private spellCheckerService: SpellCheckerService,
-    private sanitizer: DomSanitizer
+    private spellCheckerService: SpellCheckerService
   ) {
     this.analyzeTextForm = this.formBuilder.group({
       text: [''],
@@ -31,60 +32,74 @@ export class TextAnalyzerComponent implements OnInit{
     });
   }
 
-  ngOnInit() {
-
-  }
-  toggleBold() {
-    this.isBold = !this.isBold; // Cambia el valor de isBold
+  toggleFormat(format: string) {
+    const currentFormat = this.primeEditor!.quill.getFormat();
+    this.primeEditor!.quill.format(format, !currentFormat[format]);
   }
 
-  toggleItalic() {
-    this.isItalic = !this.isItalic; // Cambia el valor de isItalic
+  updateFontSize(delta: number) {
+    this.fontSize += delta;
+    this.updateEditorStyle();
   }
 
-  toggleUnderline() {
-    this.isUnderline = !this.isUnderline; // Cambia el valor de isUnderline
-  }
-  increaseFontSize() {
-    this.fontSize += 1; // Incrementa el tamaño de la fuente en 1px
+  updateEditorStyle() {
+    const editorElement = this.primeEditor!.el.nativeElement.querySelector('.ql-editor');
+    editorElement.style.fontSize = this.fontSize + 'px';
   }
 
-  decreaseFontSize() {
-    this.fontSize -= 1; // Decrementa el tamaño de la fuente en 1px
-  }
-
-  alignLeft() {
-    this.textAlign = 'left'; // Cambia la alineación del texto a 'left'
-  }
-
-  alignCenter() {
-    this.textAlign = 'center'; // Cambia la alineación del texto a 'center'
-  }
-
-  alignRight() {
-    this.textAlign = 'right'; // Cambia la alineación del texto a 'right'
+  alignText(alignment: string) {
+    this.primeEditor!.quill.format('align', alignment);
   }
 
   suggestNextWord() {
-    console.log(this.analyzeTextForm.get('text').value);
-    this.appendWord('sugerencia');
+    if(this.analyzeTextForm!.get('suggesterChecked')!.value) {
+      this.appendWord(this.suggestion);
+    }
   }
 
-  appendWord(word: string) {
-    let currentText = this.analyzeTextForm.get('text').value;
-    currentText = currentText + ' ' + word;
-    this.analyzeTextForm.get('text').setValue(currentText);
+  appendWord(suggestion: string) {
+    let lastIndex = this.primeEditor!.quill.getLength() - 1;
+    this.primeEditor!.quill.insertText(lastIndex, ' ' + suggestion);
+    this.primeEditor!.quill.formatText(lastIndex, suggestion.length+1, 'color', 'gray');
+    this.primeEditor!.quill.setSelection(lastIndex, 0);
+    this.hasSuggestion = true;
   }
 
   analyzeText() {
-    this.isThereSpellCheckerRespose = false;
+    this.hasSpellCheckerResponse = false;
     this.isAnalyzeButtonClicked = true;
-    this.spellCheckerService.checkSpelling(this.analyzeTextForm.get('text').value)
+    this.spellCheckerService.checkSpelling(this.analyzeTextForm!.get('text')!.value)
       .subscribe(
         (spellChecker: SpellChecker[]) => {
-        this.spellChecker = spellChecker;
-        this.isThereSpellCheckerRespose = true;
-      }
-    );
+          this.spellChecker = spellChecker;
+          this.hasSpellCheckerResponse = true;
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+  }
+
+  acceptSuggestion() {
+    let lastIndex = this.primeEditor!.quill.getLength()-1;
+
+    // Replace the suggestion with itself without format
+    let theme = localStorage.getItem('theme$');
+    this.primeEditor!.quill.formatText(lastIndex-this.suggestion.length, this.suggestion.length, 'color', theme === 'dark' ? 'ligth' : 'black');
+    this.primeEditor!.quill.setSelection(lastIndex, 0);
+    this.hasSuggestion = false;
+  }
+
+
+  rejectSuggestion(event: KeyboardEvent) {
+    if (event.key !== 'Tab' && this.hasSuggestion) {
+      let allText = this.primeEditor!.quill.getText().split(' ');
+      allText.pop();
+      this.analyzeTextForm!.get('text')!.setValue('');
+      this.primeEditor!.quill.insertText(0, allText.join(' '));
+      let index = this.primeEditor!.quill.getLength();
+      this.primeEditor!.quill.setSelection(index+1, 0);
+      this.hasSuggestion = false;
+    }
   }
 }

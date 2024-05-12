@@ -11,64 +11,53 @@
         <p-card styleClass="sm:px-5 sm:pt-5 sm:pb-2 p-1">
 
           <div class="flex flex-column gap-2">
-
             <div class="flex justify-content-between p-2 surface-0 border-round-2xl">
               <div class="text-options">
 
-                <p-button (click)="toggleBold()" [rounded]="true" [text]="true" size="small">
+                <p-button (click)="toggleFormat('bold')" [rounded]="true" [text]="true" size="small">
                   <i class="material-icons">format_bold</i>
                 </p-button>
 
-                <p-button (click)="toggleItalic()" [rounded]="true" [text]="true" size="small">
+                <p-button (click)="toggleFormat('italic')" [rounded]="true" [text]="true" size="small">
                   <i class="material-icons">format_italic</i>
                 </p-button>
 
-                <p-button (click)="toggleUnderline()" [rounded]="true" [text]="true" size="small">
+                <p-button (click)="toggleFormat('underline')" [rounded]="true" [text]="true" size="small">
                   <i class="material-icons">format_underlined</i>
                 </p-button>
 
-                <p-button (click)="increaseFontSize()" [rounded]="true" [text]="true" size="small">
+                <p-button (click)="updateFontSize(1)" [rounded]="true" [text]="true" size="small">
                   <i class="material-icons">text_increase</i>
                 </p-button>
 
-                <p-button (click)="decreaseFontSize()" [rounded]="true" [text]="true" size="small">
+                <p-button (click)="updateFontSize(-1)" [rounded]="true" [text]="true" size="small">
                   <i class="material-icons">text_decrease</i>
                 </p-button>
               </div>
               <div class="text-options">
-                <p-button (click)="alignLeft()" [rounded]="true" [text]="true" size="small">
+                <p-button (click)="alignText('')" [rounded]="true" [text]="true" size="small">
                   <i class="material-icons">format_align_left</i>
                 </p-button>
 
-                <p-button (click)="alignCenter()" [rounded]="true" [text]="true" size="small">
+                <p-button (click)="alignText('center')" [rounded]="true" [text]="true" size="small">
                   <i class="material-icons">format_align_center</i>
                 </p-button>
 
-                <p-button (click)="alignRight()" [rounded]="true" [text]="true" size="small">
+                <p-button (click)="alignText('right')" [rounded]="true" [text]="true" size="small">
                   <i class="material-icons">format_align_right</i>
                 </p-button>
               </div>
             </div>
 
-            <textarea
-              (keyup.space)="suggestNextWord()"
-              [autoResize]="true"
-              [ngClass]="{
-            'bold-text': isBold,
-            'italic-text': isItalic,
-            'underline-text': isUnderline
-            }"
-              [style]="{
-            'font-size': fontSize + 'px',
-            'text-align': textAlign
-            }"
-              class="border-round-2xl p-4"
+
+            <p-editor
+              #editor
               formControlName="text"
-              pInputTextarea
-              placeholder="Enter text to analize..."
-              rows="6"
-            >
-          </textarea>
+              styleClass="h-12rem"
+              (keyup.space)="suggestNextWord()"
+              (keyup.tab)="acceptSuggestion()"
+              (keydown)="rejectSuggestion($event)">
+            </p-editor>
 
           </div>
 
@@ -110,7 +99,7 @@
           <div class="flex flex-column">
             <div class="flex flex-column">
               <h2>Analisis ortográfico</h2>
-              <div *ngIf="!isThereSpellCheckerRespose; else SpellCheckerResponse">
+              <div *ngIf="!hasSpellCheckerResponse; else SpellCheckerResponse">
                 <p-skeleton width="10rem" height="1rem" styleClass="mb-2"></p-skeleton>
                 <p-skeleton width="15rem" height="1rem" styleClass="mb-2"></p-skeleton>
                 <p-skeleton width="14rem" height="1rem" styleClass="mb-2"></p-skeleton>
