@@ -1,8 +1,7 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { Component, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {SpellCheckerService} from "../../services/spell-checker.service";
 import {SpellChecker} from "../../interfaces/spell-checker";
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import {Editor} from "primeng/editor";
 import {WordSuggesterService} from "../../services/word-suggester.service";
 import {WordSuggester} from "../../interfaces/word-suggester";
@@ -60,8 +59,8 @@ export class TextAnalyzerComponent{
         .subscribe({
           next: (wordSuggester: WordSuggester[]) => {
             console.log(wordSuggester);
-            const foundWord = wordSuggester.find(suggestion => {
-              const isValidWord = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+$/i.test(suggestion.word);
+            const foundWord: WordSuggester | undefined = wordSuggester.find((suggestion : WordSuggester) => {
+              const isValidWord: boolean = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+$/i.test(suggestion.word);
               return isValidWord && suggestion.word !== '[UNK]';
             });
             if (foundWord) {
@@ -108,7 +107,6 @@ export class TextAnalyzerComponent{
     this.primeEditor!.quill.deleteText(lastIndex - this.suggestion.length-2, 2);
 
     // Replace the suggestion with itself without format
-    let theme = localStorage.getItem('theme$');
     let newIndex = this.primeEditor!.quill.getLength()-1;
     this.primeEditor!.quill.formatText(newIndex-this.suggestion.length, this.suggestion.length, 'color', 'var(--text-color)');
     this.primeEditor!.quill.setSelection(newIndex, 0);
