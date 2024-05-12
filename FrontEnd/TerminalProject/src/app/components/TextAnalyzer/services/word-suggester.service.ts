@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {environment} from "../../../../environments/environment";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {WordSuggester} from "../interfaces/word-suggester";
 import {Observable} from "rxjs";
 
@@ -13,8 +13,11 @@ export class WordSuggesterService {
   constructor(private http: HttpClient) { }
 
   suggestWord(text: string): Observable<WordSuggester[]> {
+    const headers = new HttpHeaders({
+      'Access-Control-Allow-Origin': '*',
+    });
     return this.http.post<WordSuggester[]>(`${this.wordSuggesterServiceUrl}/word_suggestion`, {
       text,
-    });
+    }, {headers: headers});
   }
 }
