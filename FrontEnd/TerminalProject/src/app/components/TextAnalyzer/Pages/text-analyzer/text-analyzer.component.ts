@@ -57,14 +57,13 @@ export class TextAnalyzerComponent{
   suggestNextWord() {
     if(this.analyzeTextForm!.get('suggesterChecked')!.value) {
       this.wordSuggesterService.suggestWord(this.primeEditor!.quill.getText())
-        .subscribe(
-          (wordSuggester: WordSuggester[]) => {
+        .subscribe({
+          next: (wordSuggester: WordSuggester[]) => {
             console.log(wordSuggester);
             const foundWord = wordSuggester.find(suggestion => {
               const isValidWord = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+$/i.test(suggestion.word);
               return isValidWord && suggestion.word !== '[UNK]';
             });
-
             if (foundWord) {
               this.suggestion = foundWord.word;
               this.appendWord(foundWord.word)
@@ -72,10 +71,10 @@ export class TextAnalyzerComponent{
               console.log('No se encontró ninguna palabra válida');
             }
           },
-          (error) => {
+          error: (error) => {
             console.error(error);
           }
-        );
+        });
 
     }
   }
@@ -92,15 +91,15 @@ export class TextAnalyzerComponent{
     this.hasSpellCheckerResponse = false;
     this.isAnalyzeButtonClicked = true;
     this.spellCheckerService.checkSpelling(this.analyzeTextForm!.get('text')!.value)
-      .subscribe(
-        (spellChecker: SpellChecker[]) => {
+      .subscribe({
+        next: (spellChecker: SpellChecker[]) => {
           this.spellChecker = spellChecker;
           this.hasSpellCheckerResponse = true;
         },
-        (error) => {
+        error: (error) => {
           console.error(error);
         }
-      );
+      });
   }
 
   acceptSuggestion() {
