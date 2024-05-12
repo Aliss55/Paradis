@@ -81,12 +81,15 @@ export class TextAnalyzerComponent{
   }
 
   acceptSuggestion() {
+    //eliminar el tab dado
     let lastIndex = this.primeEditor!.quill.getLength()-1;
+    this.primeEditor!.quill.deleteText(lastIndex - this.suggestion.length-2, 2);
 
     // Replace the suggestion with itself without format
     let theme = localStorage.getItem('theme$');
-    this.primeEditor!.quill.formatText(lastIndex-this.suggestion.length, this.suggestion.length, 'color', theme === 'dark' ? 'ligth' : 'black');
-    this.primeEditor!.quill.setSelection(lastIndex, 0);
+    let newIndex = this.primeEditor!.quill.getLength()-1;
+    this.primeEditor!.quill.formatText(newIndex-this.suggestion.length, this.suggestion.length, 'color', 'var(--text-color)');
+    this.primeEditor!.quill.setSelection(newIndex, 0);
     this.hasSuggestion = false;
   }
 
@@ -94,11 +97,11 @@ export class TextAnalyzerComponent{
   rejectSuggestion(event: KeyboardEvent) {
     if (event.key !== 'Tab' && this.hasSuggestion) {
       let allText = this.primeEditor!.quill.getText().split(' ');
-      allText.pop();
-      this.analyzeTextForm!.get('text')!.setValue('');
-      this.primeEditor!.quill.insertText(0, allText.join(' '));
-      let index = this.primeEditor!.quill.getLength();
-      this.primeEditor!.quill.setSelection(index+1, 0);
+      let lastIndex = this.primeEditor!.quill.getLength() - 1;
+      let lastWord = allText[allText.length - 1];
+      this.primeEditor!.quill.deleteText(lastIndex - lastWord.length, lastWord.length);
+      this.primeEditor!.quill.setSelection(lastIndex, 0);
+
       this.hasSuggestion = false;
     }
   }
