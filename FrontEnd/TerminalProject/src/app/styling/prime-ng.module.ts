@@ -18,6 +18,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { SkeletonModule } from 'primeng/skeleton';
 import { DialogModule } from 'primeng/dialog';
+import { EditorModule } from 'primeng/editor';
 
 @NgModule({
     declarations: [],
@@ -41,6 +42,7 @@ import { DialogModule } from 'primeng/dialog';
         InputSwitchModule,
         SkeletonModule,
         DialogModule,
+        EditorModule,
     ],
     exports: [
         ButtonModule,
@@ -61,6 +63,7 @@ import { DialogModule } from 'primeng/dialog';
         InputSwitchModule,
         SkeletonModule,
         DialogModule,
+        EditorModule,
     ],
 })
 export class PrimeNGModule {
