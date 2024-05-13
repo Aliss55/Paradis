@@ -5,6 +5,8 @@ import {SpellChecker} from "../../interfaces/spell-checker";
 import {Editor} from "primeng/editor";
 import {WordSuggesterService} from "../../services/word-suggester.service";
 import {WordSuggester} from "../../interfaces/word-suggester";
+import {GrammaticalAnalyzerService} from "../../services/grammatical-analyzer.service";
+import {GrammaticalAnalyzer} from "../../interfaces/gammatical-analyzer";
 
 @Component({
   selector: 'app-text-analyzer',
@@ -17,8 +19,10 @@ export class TextAnalyzerComponent{
   isAnalyzeButtonClicked: boolean = false;
   visible: boolean = true;
   spellChecker: SpellChecker[] = [];
+  grammaticalAnalyzer: GrammaticalAnalyzer[] = [];
   hasSpellCheckerResponse: boolean = false;
   hasSuggestion: boolean = false;
+  hasGrammaticalAnalyzerResponse: boolean = false;
   suggestion: string = 'sugerencia';
 
   @ViewChild('editor') primeEditor: Editor | undefined;
@@ -27,6 +31,7 @@ export class TextAnalyzerComponent{
     private formBuilder: FormBuilder,
     private spellCheckerService: SpellCheckerService,
     private wordSuggesterService: WordSuggesterService,
+    private grammaticalAnalyzerService: GrammaticalAnalyzerService,
   ) {
     this.analyzeTextForm = this.formBuilder.group({
       text: [''],
@@ -94,6 +99,16 @@ export class TextAnalyzerComponent{
         next: (spellChecker: SpellChecker[]) => {
           this.spellChecker = spellChecker;
           this.hasSpellCheckerResponse = true;
+        },
+        error: (error) => {
+          console.error(error);
+        }
+      });
+    this.grammaticalAnalyzerService.analyzeGrammar(this.primeEditor!.quill.getText())
+      .subscribe({
+        next: (grammaticalAnalyzerResponse: GrammaticalAnalyzer[]) => {
+          this.grammaticalAnalyzer = grammaticalAnalyzerResponse;
+          this.hasGrammaticalAnalyzerResponse = true;
         },
         error: (error) => {
           console.error(error);

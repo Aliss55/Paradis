@@ -52,11 +52,11 @@
 
             <p-editor
               #editor
-              formControlName="text"
-              styleClass="h-12rem"
+              (keydown)="rejectSuggestion($event)"
               (keyup.space)="suggestNextWord()"
               (keyup.tab)="acceptSuggestion()"
-              (keydown)="rejectSuggestion($event)">
+              formControlName="text"
+              styleClass="h-12rem">
             </p-editor>
 
           </div>
@@ -72,7 +72,7 @@
               </div>
 
 
-              <p-button class="ml-3" severity="secondary" (click)="analyzeText()">
+              <p-button (click)="analyzeText()" class="ml-3" severity="secondary">
                 <b>Analizar</b>
                 <i class="material-icons ml-3">send</i>
 
@@ -100,25 +100,28 @@
             <div class="flex flex-column">
               <h2>Analisis ortográfico</h2>
               <div *ngIf="!hasSpellCheckerResponse; else SpellCheckerResponse">
-                <p-skeleton width="10rem" height="1rem" styleClass="mb-2"></p-skeleton>
-                <p-skeleton width="15rem" height="1rem" styleClass="mb-2"></p-skeleton>
-                <p-skeleton width="14rem" height="1rem" styleClass="mb-2"></p-skeleton>
-                <p-skeleton width="16rem" height="1rem" styleClass="mb-2"></p-skeleton>
+                <p-skeleton height="1rem" styleClass="mb-2" width="10rem"></p-skeleton>
+                <p-skeleton height="1rem" styleClass="mb-2" width="15rem"></p-skeleton>
+                <p-skeleton height="1rem" styleClass="mb-2" width="14rem"></p-skeleton>
+                <p-skeleton height="1rem" styleClass="mb-2" width="16rem"></p-skeleton>
               </div>
               <ng-template #SpellCheckerResponse>
 
                 <div *ngIf="spellChecker.length > 0; else noSpellCheckerResponse">
                   <div *ngFor="let sentence of spellChecker">
-                    <p><strong>Oración original:</strong> {{ sentence.original_sentence }}</p>
-                    <ul class="list-none line-height-4" *ngFor="let correction of sentence.possible_corrections">
-                      <li><strong>Palabra:</strong> {{correction.token}} </li>
-                      <li>
-                        <strong>Posibles correcciones:</strong>
-                         <span *ngFor="let correction of correction.corrections; let last = last">
+                    <div class="mb-3">
+                      <p><strong>Oración original:</strong> {{ sentence.original_sentence }}</p>
+                      <ul *ngFor="let correction of sentence.possible_corrections" class="list-none line-height-4">
+                        <li><strong>Palabra:</strong> {{correction.token}} </li>
+                        <li>
+                          <strong>Posibles correcciones:</strong>
+                          <span *ngFor="let correction of correction.corrections; let last = last">
                           {{correction.word}}<span *ngIf="!last">, </span>
                          </span>
-                      </li>
-                    </ul>
+                        </li>
+                      </ul>
+                      <p-divider></p-divider>
+                    </div>
                   </div>
 
                 </div>
@@ -130,10 +133,29 @@
             </div>
             <div class="flex flex-column">
               <h2>Analisis gramatical</h2>
-              <p-skeleton width="10rem" height="1rem" styleClass="mb-2"></p-skeleton>
-              <p-skeleton width="15rem" height="1rem" styleClass="mb-2"></p-skeleton>
-              <p-skeleton width="14rem" height="1rem" styleClass="mb-2"></p-skeleton>
-              <p-skeleton width="16rem" height="1rem" styleClass="mb-2"></p-skeleton>
+              <div *ngIf="!hasGrammaticalAnalyzerResponse; else GrammaticalAnalyzerResponse">
+                <p-skeleton height="1rem" styleClass="mb-2" width="10rem"></p-skeleton>
+                <p-skeleton height="1rem" styleClass="mb-2" width="15rem"></p-skeleton>
+                <p-skeleton height="1rem" styleClass="mb-2" width="14rem"></p-skeleton>
+                <p-skeleton height="1rem" styleClass="mb-2" width="16rem"></p-skeleton>
+              </div>
+
+              <ng-template #GrammaticalAnalyzerResponse>
+                <div *ngIf="grammaticalAnalyzer.length > 0; else noGrammaticalAnalyzerResponse">
+                  <div *ngFor="let sentence of grammaticalAnalyzer">
+                    <div class="mb-3">
+                      <p><strong>Oración original: </strong> {{ sentence.original_single_sentence}}</p>
+                      <p><strong>Explicación: </strong> {{sentence.explanation}}</p>
+                      <p-divider></p-divider>
+                    </div>
+
+
+                  </div>
+                </div>
+                <ng-template #noGrammaticalAnalyzerResponse>
+                  <p>No se encontraron errores gramaticales</p>
+                </ng-template>
+              </ng-template>
             </div>
           </div>
         </ng-template>
@@ -147,12 +169,12 @@
 </div>
 
 <p-dialog
-  styleClass="surface-0"
-  header="Terminos y condiciones"
-  [modal]="true"
-  [maximizable]="true"
   [(visible)]="visible"
+  [maximizable]="true"
+  [modal]="true"
   [style]="{ width: '50rem' }"
+  header="Terminos y condiciones"
+  styleClass="surface-0"
 >
 
   <p>
@@ -228,7 +250,8 @@
   </ul>
 
   <p>
-    Al utilizar nuestra aplicación web, <strong>aceptas cumplir con estos términos y condiciones</strong>. Si no estás de acuerdo
+    Al utilizar nuestra aplicación web, <strong>aceptas cumplir con estos términos y condiciones</strong>. Si no estás
+    de acuerdo
     con alguna de estas políticas, te rogamos no utilizar nuestra herramienta.
   </p>
 
@@ -238,12 +261,12 @@
   </b>
   <ng-template pTemplate="footer">
     <p-button
-      label="Aceptar"
+      (click)="visible = false"
       [text]="true"
-      severity="help"
-      (click)="visible = false">
+      label="Aceptar"
+      severity="help">
       <i class="material-icons">done</i>
-      </p-button>
+    </p-button>
   </ng-template>
 
 </p-dialog>
