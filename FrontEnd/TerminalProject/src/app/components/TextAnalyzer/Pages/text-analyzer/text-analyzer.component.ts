@@ -63,7 +63,7 @@ export class TextAnalyzerComponent{
       this.wordSuggesterService.suggestWord(this.primeEditor!.quill.getText())
         .subscribe({
           next: (wordSuggester: WordSuggester[]) => {
-            console.log(wordSuggester);
+            alert(wordSuggester);
             const foundWord: WordSuggester | undefined = wordSuggester.find((suggestion : WordSuggester) => {
               const isValidWord: boolean = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+$/i.test(suggestion.word);
               return isValidWord && suggestion.word !== '[UNK]';
@@ -77,6 +77,7 @@ export class TextAnalyzerComponent{
           },
           error: (error) => {
             console.error(error);
+            alert('error sugerencia' + error)
           }
         });
 
@@ -93,6 +94,7 @@ export class TextAnalyzerComponent{
 
   analyzeText() {
     this.hasSpellCheckerResponse = false;
+    this.hasGrammaticalAnalyzerResponse = false;
     this.isAnalyzeButtonClicked = true;
     this.spellCheckerService.checkSpelling(this.primeEditor!.quill.getText())
       .subscribe({
@@ -107,7 +109,12 @@ export class TextAnalyzerComponent{
     this.grammaticalAnalyzerService.analyzeGrammar(this.primeEditor!.quill.getText())
       .subscribe({
         next: (grammaticalAnalyzerResponse: GrammaticalAnalyzer[]) => {
-          this.grammaticalAnalyzer = grammaticalAnalyzerResponse;
+          this.grammaticalAnalyzer = [];
+          if(grammaticalAnalyzerResponse instanceof Array) {
+            this.grammaticalAnalyzer = grammaticalAnalyzerResponse;
+          } else {
+            this.grammaticalAnalyzer.push(grammaticalAnalyzerResponse);
+          }
           this.hasGrammaticalAnalyzerResponse = true;
         },
         error: (error) => {
