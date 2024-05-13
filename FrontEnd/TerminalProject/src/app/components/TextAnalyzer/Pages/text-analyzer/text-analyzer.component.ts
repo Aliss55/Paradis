@@ -63,7 +63,7 @@ export class TextAnalyzerComponent{
       this.wordSuggesterService.suggestWord(this.primeEditor!.quill.getText())
         .subscribe({
           next: (wordSuggester: WordSuggester[]) => {
-            console.log(wordSuggester);
+            alert(wordSuggester);
             const foundWord: WordSuggester | undefined = wordSuggester.find((suggestion : WordSuggester) => {
               const isValidWord: boolean = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+$/i.test(suggestion.word);
               return isValidWord && suggestion.word !== '[UNK]';
@@ -77,6 +77,7 @@ export class TextAnalyzerComponent{
           },
           error: (error) => {
             console.error(error);
+            alert('error sugerencia' + error)
           }
         });
 
@@ -107,11 +108,13 @@ export class TextAnalyzerComponent{
     this.grammaticalAnalyzerService.analyzeGrammar(this.primeEditor!.quill.getText())
       .subscribe({
         next: (grammaticalAnalyzerResponse: GrammaticalAnalyzer[]) => {
+          alert(grammaticalAnalyzerResponse)
           this.grammaticalAnalyzer = grammaticalAnalyzerResponse;
           this.hasGrammaticalAnalyzerResponse = true;
         },
         error: (error) => {
           console.error(error);
+          alert('error analizegrammar' + error)
         }
       });
   }
