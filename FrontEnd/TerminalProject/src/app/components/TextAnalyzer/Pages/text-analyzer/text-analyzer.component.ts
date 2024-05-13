@@ -89,7 +89,7 @@ export class TextAnalyzerComponent{
   analyzeText() {
     this.hasSpellCheckerResponse = false;
     this.isAnalyzeButtonClicked = true;
-    this.spellCheckerService.checkSpelling(this.analyzeTextForm!.get('text')!.value)
+    this.spellCheckerService.checkSpelling(this.primeEditor!.quill.getText())
       .subscribe({
         next: (spellChecker: SpellChecker[]) => {
           this.spellChecker = spellChecker;
