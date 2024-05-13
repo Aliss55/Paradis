@@ -114,7 +114,7 @@ export class TextAnalyzerComponent{
         },
         error: (error) => {
           console.error(error);
-          alert('error analizegrammar' + error)
+          alert('error analizegrammar' + {error})
         }
       });
   }
