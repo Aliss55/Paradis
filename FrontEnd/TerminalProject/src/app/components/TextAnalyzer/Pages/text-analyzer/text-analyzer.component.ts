@@ -144,8 +144,6 @@ export class TextAnalyzerComponent{
       this.primeEditor!.quill.setSelection(lastIndex, 0);
 
       this.hasSuggestion = false;
-    }else if(event.key=== ' '){
-      this.suggestNextWord();
     }
   }
 }
