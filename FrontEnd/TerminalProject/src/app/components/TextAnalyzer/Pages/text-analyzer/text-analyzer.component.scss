@@ -18,3 +18,9 @@
   font-size: 20px;
   color: var(--text-color);
 }
+
+:host-context(.light-theme-gradient) {
+  :host ::ng-deep .p-card, .title {
+    text-shadow: 2px 2px 7px #868181;
+  }
+}
