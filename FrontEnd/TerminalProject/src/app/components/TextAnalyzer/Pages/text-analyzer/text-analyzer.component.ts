@@ -76,6 +76,7 @@ export class TextAnalyzerComponent{
           },
           error: (error) => {
             console.error(error);
+            alert('error sugerencia' + error)
           }
         });
 
@@ -92,6 +93,7 @@ export class TextAnalyzerComponent{
 
   analyzeText() {
     this.hasSpellCheckerResponse = false;
+    this.hasGrammaticalAnalyzerResponse = false;
     this.isAnalyzeButtonClicked = true;
     this.spellCheckerService.checkSpelling(this.primeEditor!.quill.getText())
       .subscribe({
@@ -106,7 +108,12 @@ export class TextAnalyzerComponent{
     this.grammaticalAnalyzerService.analyzeGrammar(this.primeEditor!.quill.getText())
       .subscribe({
         next: (grammaticalAnalyzerResponse: GrammaticalAnalyzer[]) => {
-          this.grammaticalAnalyzer = grammaticalAnalyzerResponse;
+          this.grammaticalAnalyzer = [];
+          if(grammaticalAnalyzerResponse instanceof Array) {
+            this.grammaticalAnalyzer = grammaticalAnalyzerResponse;
+          } else {
+            this.grammaticalAnalyzer.push(grammaticalAnalyzerResponse);
+          }
           this.hasGrammaticalAnalyzerResponse = true;
         },
         error: (error) => {
@@ -137,6 +144,8 @@ export class TextAnalyzerComponent{
       this.primeEditor!.quill.setSelection(lastIndex, 0);
 
       this.hasSuggestion = false;
+    }else if(event.key=== ' '){
+      this.suggestNextWord();
     }
   }
 }
