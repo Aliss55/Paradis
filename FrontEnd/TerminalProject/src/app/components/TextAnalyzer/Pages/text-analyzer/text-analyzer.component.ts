@@ -63,7 +63,6 @@ export class TextAnalyzerComponent{
       this.wordSuggesterService.suggestWord(this.primeEditor!.quill.getText())
         .subscribe({
           next: (wordSuggester: WordSuggester[]) => {
-            alert(wordSuggester);
             const foundWord: WordSuggester | undefined = wordSuggester.find((suggestion : WordSuggester) => {
               const isValidWord: boolean = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+$/i.test(suggestion.word);
               return isValidWord && suggestion.word !== '[UNK]';
