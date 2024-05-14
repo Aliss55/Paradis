@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class CompleteSentencesToBeComponent {
 
+  public value: string = "";
+
+  public questions: Array<string> = [
+    'Yo __ me llamo Alicia.',
+    "Tú __ de México.",
+    "Él __ de España.",
+    "Ella __ de Colombia.",
+    "Nosotros __ de Argentina.",
+    "Ellos __ de Chile.",
+    "Ellas __ de Perú.",
+    "Ustedes __ de Venezuela.",
+
+  ]
+
 }

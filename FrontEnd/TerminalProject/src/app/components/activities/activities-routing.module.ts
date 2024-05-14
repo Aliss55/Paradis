@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ActivitiesComponent } from './Pages/activities/activities.component';
 import { ProfessionsAndOccupationsComponent } from './Pages/professions-and-occupations/professions-and-occupations.component';
 import {DemonymsComponent} from "./Pages/demonyms/demonyms.component";
+import {CompleteSentencesToBeComponent} from "./Pages/complete-sentences-to-be/complete-sentences-to-be.component";
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'demonyms',
     component: DemonymsComponent,
+  },
+  {
+    path: 'to-be',
+    component: CompleteSentencesToBeComponent
   }
 ];
 

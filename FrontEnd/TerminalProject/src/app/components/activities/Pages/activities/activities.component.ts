@@ -57,7 +57,7 @@ export class ActivitiesComponent implements OnInit, OnDestroy{
           'Penguin-1-50px.svg',
           './assets/penguin-images',
         ),
-        link: '/home',
+        link: '/activities/to-be',
       },
     ];
   };

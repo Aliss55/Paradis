@@ -8,12 +8,16 @@ import { TranslateModule } from '@ngx-translate/core';
 import { PrimeNGModule } from '../../styling/prime-ng.module';
 import { ProfessionsAndOccupationsComponent } from './Pages/professions-and-occupations/professions-and-occupations.component';
 import { DemonymsComponent } from './Pages/demonyms/demonyms.component';
+import {SharedActivitiesModule} from "./shared/shared-activities.module";
+import {CompleteSentencesToBeComponent} from "./Pages/complete-sentences-to-be/complete-sentences-to-be.component";
 
 @NgModule({
   declarations: [
     ActivitiesComponent,
     ProfessionsAndOccupationsComponent,
     DemonymsComponent,
+    CompleteSentencesToBeComponent
+
   ],
   imports: [
     CommonModule,
@@ -21,6 +25,7 @@ import { DemonymsComponent } from './Pages/demonyms/demonyms.component';
     SharedModule,
     TranslateModule,
     PrimeNGModule,
+    SharedActivitiesModule
   ],
 })
 export class ActivitiesModule {}
