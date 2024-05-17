@@ -7,6 +7,7 @@ import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
   styleUrl: './complete-sentences-input.component.scss'
 })
 export class CompleteSentencesInputComponent {
+  // TODO: this component is not finished
 
   @Input() public questions!: Array<string>;
   public trial = 'Soy alicia __'
