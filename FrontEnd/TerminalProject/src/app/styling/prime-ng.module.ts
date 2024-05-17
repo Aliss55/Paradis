@@ -16,6 +16,7 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { FormsModule } from '@angular/forms';
 import {InputTextModule} from "primeng/inputtext";
+import {RippleModule} from "primeng/ripple";
 
 @NgModule({
   declarations: [],
@@ -37,6 +38,7 @@ import {InputTextModule} from "primeng/inputtext";
     ProgressSpinnerModule,
     FormsModule,
     InputTextModule,
+    RippleModule
   ],
   exports: [
     ButtonModule,
@@ -55,6 +57,7 @@ import {InputTextModule} from "primeng/inputtext";
     ProgressSpinnerModule,
     FormsModule,
     InputTextModule,
+    RippleModule
   ],
 })
 export class PrimeNGModule {}
