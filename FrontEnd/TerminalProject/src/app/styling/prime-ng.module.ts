@@ -20,6 +20,7 @@ import {RippleModule} from "primeng/ripple";
 
 @NgModule({
   declarations: [],
+  providers: [],
   imports: [
     ButtonModule,
     CardModule,
