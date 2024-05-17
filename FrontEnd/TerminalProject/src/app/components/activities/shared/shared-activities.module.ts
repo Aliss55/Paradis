@@ -5,10 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 import {TranslateModule} from "@ngx-translate/core";
 import {CompleteSentencesInputComponent} from "./complete-sentences-input/complete-sentences-input.component";
 import {PrimeNGModule} from "../../../styling/prime-ng.module";
+import { WriteTheCorrectOptionComponent } from './write-the-correct-option/write-the-correct-option.component';
 
 @NgModule({
   declarations: [
-    CompleteSentencesInputComponent
+    CompleteSentencesInputComponent,
+    WriteTheCorrectOptionComponent,
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import {PrimeNGModule} from "../../../styling/prime-ng.module";
     PrimeNGModule
   ],
   exports: [
-    CompleteSentencesInputComponent
+    CompleteSentencesInputComponent,
+    WriteTheCorrectOptionComponent
   ],
 })
 export class SharedActivitiesModule {}
