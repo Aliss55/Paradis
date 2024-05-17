@@ -69,10 +69,12 @@
       "DEMONYMS_CARD_DESCRIPTION": "This activity gives you a space to practice vocabulary related to demonyms",
       "DEMONYMS_KEYWORD": "demonym"
     },
-    "SPELLING_ACTIVITIES": {
+    "SPELLING_ACTIVITIES":
+    {
       "USAGE_OF_THE_LETTER_U": "Usage of the letter 'u'",
       "USAGE_OF_THE_LETTER_U_CARD_DESCRIPTION": "This activity gives you a space to practice the usage of the letter 'u'",
-      "SEND": "Send"
+      "SEND": "Send",
+      "INSTRUCTIONS": "In the following boxes you will see 3 forms of writing a word. Your task is to write in the input field the only one that is correctly written. Once you are ready click on the 'Send' button to check your answer."
     }
   },
   "MENU": "Menu",

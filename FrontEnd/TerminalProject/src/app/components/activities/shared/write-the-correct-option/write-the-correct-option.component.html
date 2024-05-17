@@ -1,3 +1,13 @@
+<div class="flex align-items-center justify-content-center">
+
+  <p-card>
+    <ng-template pTemplate="subheader">
+      <p class="md:text-xl">{{ 'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.INSTRUCTIONS' | translate }}</p>
+    </ng-template>
+  </p-card>
+
+</div>
+
 <div class="grid">
   <div
     *ngFor="let question of shuffledQuestions; let i = index"
