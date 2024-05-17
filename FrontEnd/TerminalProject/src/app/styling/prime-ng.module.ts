@@ -17,6 +17,10 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { FormsModule } from '@angular/forms';
 import {InputTextModule} from "primeng/inputtext";
 import {RippleModule} from "primeng/ripple";
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { SkeletonModule } from 'primeng/skeleton';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   declarations: [],
@@ -39,7 +43,11 @@ import {RippleModule} from "primeng/ripple";
     ProgressSpinnerModule,
     FormsModule,
     InputTextModule,
-    RippleModule
+    RippleModule,
+        InputTextareaModule,
+        InputSwitchModule,
+        SkeletonModule,
+        DialogModule,
   ],
   exports: [
     ButtonModule,
@@ -58,7 +66,11 @@ import {RippleModule} from "primeng/ripple";
     ProgressSpinnerModule,
     FormsModule,
     InputTextModule,
-    RippleModule
+    RippleModule,
+        InputTextareaModule,
+        InputSwitchModule,
+        SkeletonModule,
+        DialogModule,
   ],
 })
 export class PrimeNGModule {}
