@@ -10,13 +10,15 @@ import { ProfessionsAndOccupationsComponent } from './Pages/professions-and-occu
 import { DemonymsComponent } from './Pages/demonyms/demonyms.component';
 import {SharedActivitiesModule} from "./shared/shared-activities.module";
 import {CompleteSentencesToBeComponent} from "./Pages/complete-sentences-to-be/complete-sentences-to-be.component";
+import { UsageOfULetterUComponent } from './Pages/usage-of-uletter-u/usage-of-uletter-u.component';
 
 @NgModule({
   declarations: [
     ActivitiesComponent,
     ProfessionsAndOccupationsComponent,
     DemonymsComponent,
-    CompleteSentencesToBeComponent
+    CompleteSentencesToBeComponent,
+    UsageOfULetterUComponent
 
   ],
   imports: [
