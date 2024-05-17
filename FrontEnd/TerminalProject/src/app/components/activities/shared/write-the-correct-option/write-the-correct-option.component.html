@@ -1,0 +1,26 @@
+<div class="grid">
+  <div *ngFor="let question of shuffledQuestions; let i = index" class="md:col-6 sm:col-12 col-12">
+    <div class=" surface-0 card text-center  shadow-5">
+      <div class="option">
+        {{ question[0] }}
+      </div>
+      <div class="option ">
+        {{ question[1] }}
+      </div>
+      <div class="option">
+        {{ question[2] }}
+      </div>
+      <div class="field flex gap-3 justify-content-center">
+        <input [(ngModel)]="answer"  placeholder="Escribe tu respuesta" pInputText type="text"/>
+        <p-button (click)="checkAnswer()"
+                  [label]="'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.SEND'|translate"
+                  pRipple
+                  styleClass="p-button-secondary m-1"
+        >
+        <i class="material-icons icon-space">check</i>
+        </p-button>
+      </div>
+
+
+
+</div>
