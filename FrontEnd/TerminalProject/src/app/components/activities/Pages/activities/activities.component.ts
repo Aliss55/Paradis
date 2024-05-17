@@ -51,6 +51,14 @@ export class ActivitiesComponent implements OnInit, OnDestroy{
         link: '/activities/demonyms',
       },
       {
+        name: 'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.USAGE_OF_THE_LETTER_U',
+        description: 'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.USAGE_OF_THE_LETTER_U_CARD_DESCRIPTION',
+        image: this.imageService.getImagePathAccordingToTheme(
+          'Penguin-1-50px.svg',
+          './assets/penguin-images',
+        ),
+        link: '/activities/UsageOfLetterU',
+      },      {
         name: 'Actividades 2',
         description: 'in this blo we will talk about the latest news',
         image: this.imageService.getImagePathAccordingToTheme(
