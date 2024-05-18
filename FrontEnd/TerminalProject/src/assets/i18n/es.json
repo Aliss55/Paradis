@@ -80,6 +80,10 @@
       "ORTHOGRAPHIC_RULE_OF_U": "¿Cuándo usar ü?",
       "ORTHOGRAPHIC_RULE_OF_U_DESCRIPTION_1": "La letra u se escribe con diéresis  ( <b>  ü </b> ) si cumple las siguientes condiciones:",
       "ORTHOGRAPHIC_RULE_OF_U_DESCRIPTION_2": "1. Se encuentra después de <b> g </b>. <br> 2. Está precedida por ' <b> i </b>' o ' <b>e </b>'. <br>3. Tiene sonido propio."
+    },
+    "GRAMMAR_CONJUGATION_ACTIVITY": {
+      "TITLE": "Conjugación de verbos",
+        "DESCRIPTION": "En esta actividad podrás prácticar la conjugación de verbos en presente indicativo."
     }
   },
   "MENU": "Menú",

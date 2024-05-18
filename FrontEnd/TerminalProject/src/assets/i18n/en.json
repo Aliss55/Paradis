@@ -79,6 +79,10 @@
       "ORTHOGRAPHIC_RULE_OF_U": "¿When to use the letter ü?",
       "ORTHOGRAPHIC_RULE_OF_U_DESCRIPTION_1": "The letter u is written with diaeresis  ( <b>  ü </b> ) if all the following conditions are met:",
       "ORTHOGRAPHIC_RULE_OF_U_DESCRIPTION_2": "1. It is found after the letter <b> g </b>. <br> 2. It is positioned before the letter ' <b> i </b>' or ' <b> e </b>'. <br>3. If the distinct sound of the letter u is heard when pronouncing a word."
+    },
+    "GRAMMAR_CONJUGATION_ACTIVITY": {
+      "TITLE": "Conjugate verbs",
+      "DESCRIPTION": "In this activity you will be able to practice the conjugation of verbs in the spanish tense 'presente indicativo'."
     }
     }
   ,
