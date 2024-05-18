@@ -74,9 +74,16 @@
       "USAGE_OF_THE_LETTER_U": "Usage of the letter 'u'",
       "USAGE_OF_THE_LETTER_U_CARD_DESCRIPTION": "This activity gives you a space to practice the usage of the letter 'u'",
       "SEND": "Send",
-      "INSTRUCTIONS": "In the following boxes you will see 3 forms of writing a word. Your task is to write in the input field the only one that is correctly written. Once you are ready click on the 'Send' button to check your answer."
+      "INSTRUCTIONS": "In the following boxes you will see 3 forms of writing a word. Your task is to write in the input field the only one that is correctly written. Once you are ready click on the 'Send' button to check your answer.",
+      "ORTHOGRAPHIC_GUIDE": "Orthographic guide",
+      "ORTHOGRAPHIC_RULE_OF_U": "¿When to use the letter ü?",
+      "ORTHOGRAPHIC_RULE_OF_U_DESCRIPTION_1": "The letter u is written with diaeresis  ( <b>  ü </b> ) if all the following conditions are met:",
+      "ORTHOGRAPHIC_RULE_OF_U_DESCRIPTION_2": "1. It is found after the letter <b> g </b>. <br> 2. It is positioned before the letter ' <b> i </b>' or ' <b> e </b>'. <br>3. If the distinct sound of the letter u is heard when pronouncing a word."
     }
-  },
+    }
+  ,
   "MENU": "Menu",
+  "ACCEPT": "Accept",
+  "WRITE_YOUR_ANSWER": "Write your answer",
   "PROJECT_NUMBER": "Terminal Project 2024-A012"
 }
