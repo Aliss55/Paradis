@@ -21,7 +21,7 @@ export class WriteTheCorrectOptionComponent implements OnChanges {
   public labels: string[][] = [];
   public shuffledQuestions: string[][] = [];
   public answer: string[] = [];
-  visible: boolean = true;
+  public visible: boolean = true;
 
   constructor(
     public shufflerService: ShufflerService,
