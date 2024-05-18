@@ -7,7 +7,6 @@ import {
 } from '@angular/core';
 import { orthography_options } from '../../Pages/utils/Orthography_options';
 import { ShufflerService } from '../services/shuffler.service';
-import { ThemeSwitcherService } from '../../../../services/theme-switcher.service';
 import { NotificationService } from '../services/notification-service.service';
 
 @Component({
