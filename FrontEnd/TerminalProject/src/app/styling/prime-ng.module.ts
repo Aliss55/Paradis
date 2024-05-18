@@ -21,6 +21,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { SkeletonModule } from 'primeng/skeleton';
 import { DialogModule } from 'primeng/dialog';
+import { EditorModule } from 'primeng/editor';
 
 @NgModule({
   declarations: [],
@@ -48,29 +49,31 @@ import { DialogModule } from 'primeng/dialog';
         InputSwitchModule,
         SkeletonModule,
         DialogModule,
-  ],
-  exports: [
-    ButtonModule,
-    CardModule,
-    DockModule,
-    SidebarModule,
-    ToolbarModule,
-    TableModule,
-    ChipModule,
-    TooltipModule,
-    FieldsetModule,
-    TagModule,
-    ToastModule,
-    DividerModule,
-    AnimateOnScrollModule,
-    ProgressSpinnerModule,
-    FormsModule,
-    InputTextModule,
-    RippleModule,
+        EditorModule,
+    ],
+    exports: [
+        ButtonModule,
+        CardModule,
+        DockModule,
+        SidebarModule,
+        ToolbarModule,
+        TableModule,
+        ChipModule,
+        TooltipModule,
+        FieldsetModule,
+        TagModule,
+        ToastModule,
+        DividerModule,
+        AnimateOnScrollModule,
+        ProgressSpinnerModule,
         InputTextareaModule,
         InputSwitchModule,
         SkeletonModule,
         DialogModule,
+        EditorModule,
+        FormsModule,
+        InputTextModule,
+        RippleModule,
   ],
 })
 export class PrimeNGModule {}
