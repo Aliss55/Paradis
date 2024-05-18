@@ -83,7 +83,10 @@
     },
     "GRAMMAR_CONJUGATION_ACTIVITY": {
       "TITLE": "Conjugación de verbos",
-        "DESCRIPTION": "En esta actividad podrás prácticar la conjugación de verbos en presente indicativo."
+      "DESCRIPTION": "En esta actividad podrás prácticar la conjugación de verbos en presente indicativo.",
+      "INSTRUCTIONS": "En los siguientes recuadros podrás ver un verbo en infinitivo y diferentes personas gramaticales del español, tu tarea es escribir al lado de la persona correspondiente la correcta conjugación del verbo mostrado.",
+      "GRAMMAR_GUIDE": "Guía de gramática"
+
     }
   },
   "MENU": "Menú",

@@ -1,2 +1,10 @@
-<shared-conjugation-cards>
+<div class="flex flex-column p-1">
+    <div class="flex justify-content-center mt-5 sm:mb-2 mb-5">
+        <div class="title text-7xl">
+            {{ 'ACTIVITIES_LABELS.GRAMMAR_CONJUGATION_ACTIVITY.TITLE' | translate}}
+        </div>
+    </div>
+</div>
+
+<shared-conjugation-cards [questions]="questions" >
 </shared-conjugation-cards>

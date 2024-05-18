@@ -1,1 +1,136 @@
-<p>conjugation-cards works!</p>
+<div class="flex align-items-center justify-content-center">
+  <p-card>
+    <ng-template pTemplate="subheader">
+      <p class="md:text-xl">
+        {{
+          "ACTIVITIES_LABELS.GRAMMAR_CONJUGATION_ACTIVITY.INSTRUCTIONS"
+            | translate
+        }}
+      </p>
+      <div class="flex justify-content-center">
+        <p-button
+          label="{{
+            'ACTIVITIES_LABELS.GRAMMAR_CONJUGATION_ACTIVITY.GRAMMAR_GUIDE'
+              | translate
+          }}"
+          pRipple
+          styleClass="p-button-secondary m-1"
+          (click)="showGrammarGuide()"
+        >
+          <i class="material-icons icon-space">check</i>
+        </p-button>
+      </div>
+    </ng-template>
+  </p-card>
+</div>
+
+<div class="grid">
+  <div
+    *ngFor="let question of questions; let i = index"
+    class="md:col-6 sm:col-12 col-12"
+  >
+    <p-toast [life]="1000" key="success" position="top-center"></p-toast>
+    <p-toast [life]="1000" key="error" position="top-center"></p-toast>
+    <div class="surface-0 card text-center shadow-5">
+      <div class="option">
+        <h3>
+          {{ question?.verb_infinitive_form }}
+        </h3>
+      </div>
+      <div class="option">
+        {{ question?.singular_first_person_yo_form?.[0] }}
+        <input
+          [(ngModel)]="answers[i][0]"
+          placeholder=" {{ 'WRITE_YOUR_ANSWER' | translate }} "
+          pInputText
+          type="text"
+        />
+      </div>
+      <div class="option">
+        {{ question.singular_second_person_tu_form[0] }}
+        <input
+          [(ngModel)]="answers[i][1]"
+          placeholder=" {{ 'WRITE_YOUR_ANSWER' | translate }} "
+          pInputText
+          type="text"
+        />
+      </div>
+      <div class="option">
+        {{ question.singular_third_person_el_form[0] }}
+        <input
+          [(ngModel)]="answers[i][2]"
+          placeholder=" {{ 'WRITE_YOUR_ANSWER' | translate }} "
+          pInputText
+          type="text"
+        />
+      </div>
+      <div class="option">
+        {{ question.singular_third_person_ella_form[0] }}
+        <input
+          [(ngModel)]="answers[i][3]"
+          placeholder=" {{ 'WRITE_YOUR_ANSWER' | translate }} "
+          pInputText
+          type="text"
+        />
+      </div>
+      <div class="option">
+        {{ question.plural_first_person_nosotros_form[0] }}
+        <input
+          [(ngModel)]="answers[i][4]"
+          placeholder=" {{ 'WRITE_YOUR_ANSWER' | translate }} "
+          pInputText
+          type="text"
+        />
+      </div>
+      <div class="option">
+        {{ question.plural_second_person_ustedes_form[0] }}
+        <input
+          [(ngModel)]="answers[i][5]"
+          placeholder=" {{ 'WRITE_YOUR_ANSWER' | translate }} "
+          pInputText
+          type="text"
+        />
+      </div>
+      <div class="option">
+        {{ question.plural_third_person_ellos_form[0] }}
+        <input
+          [(ngModel)]="answers[i][6]"
+          placeholder=" {{ 'WRITE_YOUR_ANSWER' | translate }} "
+          pInputText
+          type="text"
+        />
+      </div>
+      <div class="option">
+        {{ question.plural_third_person_ellas_form[0] }}
+        <input
+          [(ngModel)]="answers[i][7]"
+          placeholder=" {{ 'WRITE_YOUR_ANSWER' | translate }} "
+          pInputText
+          type="text"
+        />
+      </div>
+      <div class="field flex gap-3 justify-content-center">
+        HELLO
+        <!--                <input-->
+        <!--                        *ngIf="!isCorrect[i]"-->
+        <!--                        [(ngModel)]="answer[i]"-->
+        <!--                        placeholder=" {{ 'WRITE_YOUR_ANSWER' | translate }} "-->
+        <!--                        pInputText-->
+        <!--                        type="text"-->
+        <!--                />-->
+        <!--                <p-button-->
+        <!--                        *ngIf="!isCorrect[i]"-->
+        <!--                        (click)="checkAnswer(i)"-->
+        <!--                        [label]="'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.SEND' | translate"-->
+        <!--                        pRipple-->
+        <!--                        styleClass="p-button-secondary m-1"-->
+        <!--                >-->
+        <!--                    <i class="material-icons icon-space">check</i>-->
+        <!--                </p-button>-->
+        <!--                <i *ngIf="isCorrect[i]" class="material-icons icon-color"-->
+        <!--                >check_circle</i-->
+        <!--                >-->
+      </div>
+    </div>
+  </div>
+</div>

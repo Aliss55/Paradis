@@ -1,0 +1,65 @@
+$cardBorderRounded: 10px;
+
+.card {
+  border-radius: $cardBorderRounded;
+  margin-top: 6%;
+  padding-top: 4%;
+}
+
+.option{
+  padding-bottom: 4%;
+}
+
+.option:not(:first-child){
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+:host-context(.dark-theme-gradient) {
+  .option:hover {
+    background-color: #07111e;
+    border-radius: 10px;
+  }
+}
+
+:host-context(.light-theme-gradient) {
+  .option:hover {
+    background-color: rgba(167, 166, 206, 0.21);
+    border-radius: 10px;
+  }
+}
+
+
+
+.field{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-radius: $cardBorderRounded;
+}
+
+.field {
+  display: flex;
+  gap: 3%;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+:host-context(.dark-theme-gradient) {
+  .field {
+    background-color: #000000;
+  }
+}
+
+:host-context(.light-theme-gradient) {
+  .field {
+    background-color: rgba(162, 159, 246, 0.21);
+  }
+}
+
+.icon-space{
+  padding-right:10px;
+}
