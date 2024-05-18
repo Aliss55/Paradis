@@ -9,7 +9,6 @@ import { orthography_options } from '../../Pages/utils/Orthography_options';
 import { ShufflerService } from '../services/shuffler.service';
 import { ThemeSwitcherService } from '../../../../services/theme-switcher.service';
 import { NotificationService } from '../services/notification-service.service';
-import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-write-the-correct-option',
@@ -27,7 +26,6 @@ export class WriteTheCorrectOptionComponent implements OnChanges {
 
   constructor(
     public shufflerService: ShufflerService,
-    private themeService: ThemeSwitcherService,
     public notificationService: NotificationService,
     private cdr: ChangeDetectorRef,
   ) {}
