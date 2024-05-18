@@ -1,0 +1,116 @@
+<div class="flex align-items-center justify-content-center">
+  <p-card>
+    <ng-template pTemplate="subheader">
+      <p class="md:text-xl">
+        {{ "ACTIVITIES_LABELS.SPELLING_ACTIVITIES.INSTRUCTIONS" | translate }}
+      </p>
+      <div class="flex justify-content-center">
+        <p-button
+          label="{{
+            'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.ORTHOGRAPHIC_GUIDE'
+              | translate
+          }}"
+          pRipple
+          styleClass="p-button-secondary m-1"
+          (click)="showOrthographicGuide()"
+        >
+          <i class="material-icons icon-space">check</i>
+        </p-button>
+      </div>
+    </ng-template>
+  </p-card>
+</div>
+
+<div class="grid">
+  <div
+    *ngFor="let question of shuffledQuestions; let i = index"
+    class="md:col-6 sm:col-12 col-12"
+  >
+    <p-toast [life]="1000" key="success" position="top-center"></p-toast>
+    <p-toast [life]="1000" key="error" position="top-center"></p-toast>
+    <div class="surface-0 card text-center shadow-5">
+      <div class="option">
+        {{ question[0] }}
+      </div>
+      <div class="option">
+        {{ question[1] }}
+      </div>
+      <div class="option">
+        {{ question[2] }}
+      </div>
+      <div class="field flex gap-3 justify-content-center">
+        <input
+          *ngIf="!isCorrect[i]"
+          [(ngModel)]="answer[i]"
+          placeholder=" {{ 'WRITE_YOUR_ANSWER' | translate }} "
+          pInputText
+          type="text"
+        />
+        <p-button
+          *ngIf="!isCorrect[i]"
+          (click)="checkAnswer(i)"
+          [label]="'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.SEND' | translate"
+          pRipple
+          styleClass="p-button-secondary m-1"
+        >
+          <i class="material-icons icon-space">check</i>
+        </p-button>
+        <i *ngIf="isCorrect[i]" class="material-icons icon-color"
+          >check_circle</i
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<p-dialog
+  styleClass="surface-0"
+  header="{{
+    'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.ORTHOGRAPHIC_GUIDE' | translate
+  }}"
+  [modal]="true"
+  [maximizable]="true"
+  [(visible)]="visible"
+  [style]="{ width: '50rem' }"
+>
+  <h3>
+    {{
+      "ACTIVITIES_LABELS.SPELLING_ACTIVITIES.ORTHOGRAPHIC_RULE_OF_U" | translate
+    }}
+  </h3>
+
+  <ng-container class="line-height-4">
+    <ul style="list-style: none">
+      <li>
+        <p
+          innerHTML="{{
+            'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.ORTHOGRAPHIC_RULE_OF_U_DESCRIPTION_1'
+              | translate
+          }}"
+        ></p>
+        <ul style="list-style: none">
+          <li>
+            <p
+              class="line-height-4"
+              innerHTML="{{
+                'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.ORTHOGRAPHIC_RULE_OF_U_DESCRIPTION_2'
+                  | translate
+              }}"
+            ></p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </ng-container>
+
+  <ng-template pTemplate="footer">
+    <p-button
+      label="{{ 'ACCEPT' | translate }}"
+      [text]="true"
+      severity="help"
+      (click)="visible = false"
+    >
+      <i class="material-icons">done</i>
+    </p-button>
+  </ng-template>
+</p-dialog>
