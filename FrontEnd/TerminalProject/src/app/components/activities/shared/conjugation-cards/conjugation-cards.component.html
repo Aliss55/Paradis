@@ -34,7 +34,10 @@
     <div class="surface-0 card text-center shadow-5">
       <div class="option">
         <h3>
-          {{ 'ACTIVITIES_LABELS.GRAMMAR_CONJUGATION_ACTIVITY.INFINITIVE_VERB' | translate }}: &nbsp;  {{ question?.verb_infinitive_form }}
+          {{
+            "ACTIVITIES_LABELS.GRAMMAR_CONJUGATION_ACTIVITY.INFINITIVE_VERB"
+              | translate
+          }}: &nbsp; {{ question?.verb_infinitive_form }}
         </h3>
       </div>
       <div class="option">
@@ -110,19 +113,71 @@
         />
       </div>
       <div class="field flex gap-3 justify-content-center">
-                        <p-button
-                                *ngIf="!allCardAnswersAreCorrect[i]"
-                                (click)="notifyResultsToUser(i)"
-                                [label]="'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.SEND' | translate"
-                                pRipple
-                                styleClass="p-button-secondary m-1"
-                        >
-                            <i class="material-icons icon-space">check</i>
-                        </p-button>
-                        <i *ngIf="allCardAnswersAreCorrect[i]" class="material-icons icon-color"
-                        >check_circle</i
-                        >
+        <p-button
+          *ngIf="!allCardAnswersAreCorrect[i]"
+          (click)="notifyResultsToUser(i)"
+          [label]="'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.SEND' | translate"
+          pRipple
+          styleClass="p-button-secondary m-1"
+        >
+          <i class="material-icons icon-space">check</i>
+        </p-button>
+        <i *ngIf="allCardAnswersAreCorrect[i]" class="material-icons icon-color"
+          >check_circle</i
+        >
       </div>
     </div>
   </div>
 </div>
+
+<p-dialog
+  styleClass="surface-0"
+  header="{{
+    'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.ORTHOGRAPHIC_GUIDE' | translate
+  }}"
+  [modal]="true"
+  [maximizable]="true"
+  [(visible)]="visible"
+  [style]="{ width: '50rem' }"
+>
+  <h3>
+    {{
+      "ACTIVITIES_LABELS.GRAMMAR_CONJUGATION_ACTIVITY.GRAMMAR_GUIDE_TITLE"
+        | translate
+    }}
+  </h3>
+
+  <ng-container class="line-height-4">
+    <ul style="list-style: none">
+      <li>
+        <p
+           [innerHTML]="sanitizeHtml('ACTIVITIES_LABELS.GRAMMAR_CONJUGATION_ACTIVITY.GRAMMAR_GUIDE_EXPLANATION' | translate)"
+        ></p>
+
+      </li>
+    </ul>
+    <h3>
+      {{
+        "REFERENCES"
+          | translate
+      }}
+    </h3>
+    <p>
+      {{
+        "LAROUSSE_REFERENCE"
+          | translate
+      }}
+    </p>
+  </ng-container>
+
+  <ng-template pTemplate="footer">
+    <p-button
+      label="{{ 'ACCEPT' | translate }}"
+      [text]="true"
+      severity="help"
+      (click)="visible = false"
+    >
+      <i class="material-icons">done</i>
+    </p-button>
+  </ng-template>
+</p-dialog>

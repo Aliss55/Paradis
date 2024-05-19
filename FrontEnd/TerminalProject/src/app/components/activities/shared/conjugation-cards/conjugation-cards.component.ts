@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { verb_conjugation_by_subject } from '../../Pages/utils/Verb_conjugation_by_subject';
-import {NotificationService} from "../services/notification-service.service";
+import { NotificationService } from '../services/notification-service.service';
+import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
 
 @Component({
   selector: 'shared-conjugation-cards',
@@ -12,12 +13,10 @@ export class ConjugationCardsComponent implements OnChanges {
   public questions: verb_conjugation_by_subject[] = [];
   public visible: boolean = true;
   public answers!: string[][];
-  public showCards = false;
   public allCardAnswersAreCorrect: boolean[] = [];
   public cardResults: boolean[][] = [];
 
-  constructor(private notificationService : NotificationService) {
-  }
+  constructor(private notificationService: NotificationService, private sanitizer: DomSanitizer) {}
 
   public showGrammarGuide() {
     this.visible = !this.visible;
@@ -26,7 +25,7 @@ export class ConjugationCardsComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['questions'] && changes['questions'].currentValue) {
       this.answers = this.questions.map((question) =>
-        new Array(Object.keys(question).length-1).fill(null),
+        new Array(Object.keys(question).length - 1).fill(null),
       );
     }
   }
@@ -44,30 +43,32 @@ export class ConjugationCardsComponent implements OnChanges {
         this.cardResults[index_card][i] = true;
       } else {
         this.cardResults[index_card][i] = false;
-
       }
     }
   }
 
   public areAllUserAnswersCorrect(index_card: number): boolean {
-    return this.cardResults[index_card].every((result :boolean): boolean => result === true);
+    return this.cardResults[index_card].every(
+      (result: boolean): boolean => result === true,
+    );
   }
 
   public areAllPlaceholdersFilled(index_card: number): boolean {
-    return this.answers[index_card].every((answer :string): boolean => answer !== null);
+    return this.answers[index_card].every(
+      (answer: string): boolean => answer !== null,
+    );
   }
 
   public notifyResultsToUser(index_card: number): void {
-
     this.checkCardAnswers(index_card);
     if (this.areAllUserAnswersCorrect(index_card)) {
       this.allCardAnswersAreCorrect[index_card] = true;
       this.notificationService.notifySucess('¡Respuesta correcta!');
-    }
-    else if(!this.areAllPlaceholdersFilled(index_card)){
-      this.notificationService.notifyError('Por favor, llena todos los espacios');
-    }
-    else {
+    } else if (!this.areAllPlaceholdersFilled(index_card)) {
+      this.notificationService.notifyError(
+        'Por favor, llena todos los espacios',
+      );
+    } else {
       this.notificationService.notifyError('¡Inténtalo de nuevo!');
       this.resetIncorrectAnswers(index_card);
     }
@@ -81,5 +82,8 @@ export class ConjugationCardsComponent implements OnChanges {
     }
   }
 
+  public sanitizeHtml(html: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
+  }
 
 }
