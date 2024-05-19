@@ -69,8 +69,21 @@
       "DEMONYMS": "Gentilicios",
       "DEMONYMS_CARD_DESCRIPTION": "Con esta actividad podrás practicar vocabulario relacionado a gentilicios.",
       "DEMONYMS_KEYWORD": "el gentilicio"
+    },
+    "SPELLING_ACTIVITIES":
+    {
+      "USAGE_OF_THE_LETTER_U": "Uso de la letra 'u'",
+      "USAGE_OF_THE_LETTER_U_CARD_DESCRIPTION": "Con esta actividad podrás practicar el uso de la letra 'u'",
+      "SEND": "Enviar",
+      "INSTRUCTIONS": "En los siguientes recuadros se muestran 3 formas de escribir una palabra. Tu tarea es escribir en el recuadro la única que es correcta. Al finalizar da click en el botón 'Enviar' para verificar tu respuesta.",
+      "ORTHOGRAPHIC_GUIDE": "Guía de ortografía",
+      "ORTHOGRAPHIC_RULE_OF_U": "¿Cuándo usar ü?",
+      "ORTHOGRAPHIC_RULE_OF_U_DESCRIPTION_1": "La letra u se escribe con diéresis  ( <b>  ü </b> ) si cumple las siguientes condiciones:",
+      "ORTHOGRAPHIC_RULE_OF_U_DESCRIPTION_2": "1. Se encuentra después de <b> g </b>. <br> 2. Está precedida por ' <b> i </b>' o ' <b>e </b>'. <br>3. Tiene sonido propio."
     }
   },
   "MENU": "Menú",
+  "ACCEPT": "Aceptar",
+  "WRITE_YOUR_ANSWER": "Escribe tu respuesta",
   "PROJECT_NUMBER": "Trabajo terminal 2024-A012"
 }
