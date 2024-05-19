@@ -24,6 +24,11 @@ export class ConjugationCardsComponent implements  OnChanges{
     }
   }
 
+  public checkAnswer(index_card: number, index_answer: number): void {
+    console.warn('indexcard',this.questions[index_card])
+    // this.answers[index_card][index_answer] = this.questions[index_card][Object.keys(this.questions[index_card])[index_answer]];
+  }
+
 
 
 }

@@ -8,6 +8,10 @@ $cardBorderRounded: 10px;
 
 .option{
   padding-bottom: 4%;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  align-items: center;
 }
 
 .option:not(:first-child){
