@@ -8,6 +8,7 @@ import {
 import { orthography_options } from '../../Pages/utils/Orthography_options';
 import { ShufflerService } from '../services/shuffler.service';
 import { NotificationService } from '../services/notification-service.service';
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-write-the-correct-option',
@@ -27,6 +28,7 @@ export class WriteTheCorrectOptionComponent implements OnChanges {
     public shufflerService: ShufflerService,
     public notificationService: NotificationService,
     private cdr: ChangeDetectorRef,
+    private translateService: TranslateService
   ) {}
   ngOnChanges(changes: SimpleChanges) {
     if (changes['questions'] && changes['questions'].currentValue) {
@@ -49,15 +51,15 @@ export class WriteTheCorrectOptionComponent implements OnChanges {
       this.answer[index_card] === undefined
     ) {
       this.notificationService.notifyError(
-        'Por favor introduce una respuesta válida',
+        this.translateService.instant('FILL_CORRECTLY')
       );
       return;
     }
     if (this.answer[index_card] === this.questions[index_card].correct_word) {
       this.isCorrect[index_card] = true;
-      this.notificationService.notifySucess('¡Respuesta correcta!');
+      this.notificationService.notifySucess(this.translateService.instant('CORRECT_ANSWER'));
     } else {
-      this.notificationService.notifyError('¡Inténtalo de nuevo!');
+      this.notificationService.notifyError(this.translateService.instant('INCORRECT_ANSWER'));
       this.answer[index_card] = '';
     }
   }

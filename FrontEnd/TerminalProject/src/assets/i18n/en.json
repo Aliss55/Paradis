@@ -102,6 +102,7 @@
   "RAE_BASICS_OF_GRAMMAR_AND_ORTHOGRAPHY": "Real Academia Española y Asociación de Academias de la Lengua Española, Eds., Gramática y ortografía básicas de la lengua española, 1.a ed. Madrid: Editorial Planeta, 2019.",
   "CORRECT_ANSWER": "That's correct!",
   "INCORRECT_ANSWER": "Sorry, try again",
-  "FILL_ALL": "Please fill all the empty placeholders"
+  "FILL_ALL": "Please fill all the empty placeholders",
+  "FILL_CORRECTLY": "Please fill the empty placeholder"
 
 }
