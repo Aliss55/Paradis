@@ -110,26 +110,18 @@
         />
       </div>
       <div class="field flex gap-3 justify-content-center">
-        HELLO
-        <!--                <input-->
-        <!--                        *ngIf="!isCorrect[i]"-->
-        <!--                        [(ngModel)]="answer[i]"-->
-        <!--                        placeholder=" {{ 'WRITE_YOUR_ANSWER' | translate }} "-->
-        <!--                        pInputText-->
-        <!--                        type="text"-->
-        <!--                />-->
-        <!--                <p-button-->
-        <!--                        *ngIf="!isCorrect[i]"-->
-        <!--                        (click)="checkAnswer(i)"-->
-        <!--                        [label]="'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.SEND' | translate"-->
-        <!--                        pRipple-->
-        <!--                        styleClass="p-button-secondary m-1"-->
-        <!--                >-->
-        <!--                    <i class="material-icons icon-space">check</i>-->
-        <!--                </p-button>-->
-        <!--                <i *ngIf="isCorrect[i]" class="material-icons icon-color"-->
-        <!--                >check_circle</i-->
-        <!--                >-->
+                        <p-button
+                                *ngIf="!allCardAnswersAreCorrect[i]"
+                                (click)="notifyResultsToUser(i)"
+                                [label]="'ACTIVITIES_LABELS.SPELLING_ACTIVITIES.SEND' | translate"
+                                pRipple
+                                styleClass="p-button-secondary m-1"
+                        >
+                            <i class="material-icons icon-space">check</i>
+                        </p-button>
+                        <i *ngIf="allCardAnswersAreCorrect[i]" class="material-icons icon-color"
+                        >check_circle</i
+                        >
       </div>
     </div>
   </div>
