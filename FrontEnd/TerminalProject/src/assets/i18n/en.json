@@ -82,12 +82,26 @@
     },
     "GRAMMAR_CONJUGATION_ACTIVITY": {
       "TITLE": "Conjugate verbs",
-      "DESCRIPTION": "In this activity you will be able to practice the conjugation of verbs in the spanish tense 'presente indicativo'."
+      "DESCRIPTION": "In this activity you will be able to practice the conjugation of regular verbs in the Spanish present indicative tense.",
+      "INSTRUCTIONS": "In the boxes below, you will see a verb in its infinitive form and different subjects. The activity consists of writing the correct conjugation of the verb according to the rules of the Spanish present indicative tense next to each corresponding person.",
+      "GRAMMAR_GUIDE": "Grammar guide",
+      "INFINITIVE_VERB": "Infinitive verb",
+      "GRAMMAR_GUIDE_TITLE": "How do I conjugate regular verbs in the Spanish present indicative tense?",
+      "GRAMMAR_GUIDE_EXPLANATION": "The conjugation of regular verbs in the Spanish present indicative tense is formed by adding a specific ending to the verb root. There are three conjugation models: those ending in <b>-ar</b>, those ending in <b>-er</b> and those ending in <b>-ir</b>. <br>              <ol><li> <h3> Verbs ending in <b>-ar </b> </h3> They are those that are conjugated like the verb \"amar\".    <br>     <table style=\"border-collapse: collapse; margin-top:10px; \"> <tr><th style=\"border: 1px solid #dddddd;padding: 8px;\">Subject</th><th style=\"border: 1px solid #dddddd;padding: 8px;\">Conjugated verb</th></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Yo</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>o</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Tú</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>as</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">El/Ella</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>a</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Nosotros</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>amos</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Ustedes</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>an</b></td></tr> <tr> <td style=\"border: 1px solid #dddddd;padding: 8px;\">Ellos/Ellas</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>an</b></td> </tr> </table>  </li>                 <li> <h3> Verbs ending in <b>-er </b> </h3> They are those that are conjugated like the verb \"comer\".    <br>     <table style=\"border-collapse: collapse; margin-top:10px; \"> <tr><th style=\"border: 1px solid #dddddd;padding: 8px;\">Subject</th><th style=\"border: 1px solid #dddddd;padding: 8px;\">Conjugated verb</th></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Yo</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>o</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Tú</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>es</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">El/Ella</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>e</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Nosotros</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>emos</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Ustedes</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>en</b></td></tr> <tr> <td style=\"border: 1px solid #dddddd;padding: 8px;\">Ellos/Ellas</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>en</b></td> </tr> </table>  </li>      <li> <h3> Verbs ending in <b>-ir </b> </h3> They are those that are conjugated like the verb \"vivir\".<br>                  <table style=\"border-collapse: collapse; margin-top:10px; \"> <tr><th style=\"border: 1px solid #dddddd;padding: 8px;\">Subject</th><th style=\"border: 1px solid #dddddd;padding: 8px;\">Conjugated verb</th></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Yo</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>o</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Tú</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>es</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">El/Ella</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>e</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Nosotros</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>imos</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Ustedes</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>en</b></td></tr> <tr> <td style=\"border: 1px solid #dddddd;padding: 8px;\">Ellos/Ellas</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>en</b></td> </tr> </table>  </li>   </ul> </li></ol> "
+
+
     }
     }
   ,
   "MENU": "Menu",
   "ACCEPT": "Accept",
   "WRITE_YOUR_ANSWER": "Write your answer",
-  "PROJECT_NUMBER": "Terminal Project 2024-A012"
+  "PROJECT_NUMBER": "Terminal Project 2024-A012",
+  "REFERENCES": "References",
+  "LAROUSSE_REFERENCE": "I. Munguía Zataraín, M. E. Munguía Zatarain, y G. Rocha Romero, Gramática lengua española. México, D.F.: Larousse, 2013.",
+  "RAE_BASICS_OF_GRAMMAR_AND_ORTHOGRAPHY": "Real Academia Española y Asociación de Academias de la Lengua Española, Eds., Gramática y ortografía básicas de la lengua española, 1.a ed. Madrid: Editorial Planeta, 2019.",
+  "CORRECT_ANSWER": "That's correct!",
+  "INCORRECT_ANSWER": "Sorry, try again",
+  "FILL_ALL": "Please fill all the empty placeholders"
+
 }

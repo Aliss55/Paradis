@@ -2,6 +2,7 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { verb_conjugation_by_subject } from '../../Pages/utils/Verb_conjugation_by_subject';
 import { NotificationService } from '../services/notification-service.service';
 import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'shared-conjugation-cards',
@@ -16,7 +17,7 @@ export class ConjugationCardsComponent implements OnChanges {
   public allCardAnswersAreCorrect: boolean[] = [];
   public cardResults: boolean[][] = [];
 
-  constructor(private notificationService: NotificationService, private sanitizer: DomSanitizer) {}
+  constructor(private notificationService: NotificationService, private sanitizer: DomSanitizer, private translateService: TranslateService) {}
 
   public showGrammarGuide() {
     this.visible = !this.visible;
@@ -63,13 +64,13 @@ export class ConjugationCardsComponent implements OnChanges {
     this.checkCardAnswers(index_card);
     if (this.areAllUserAnswersCorrect(index_card)) {
       this.allCardAnswersAreCorrect[index_card] = true;
-      this.notificationService.notifySucess('¡Respuesta correcta!');
+      this.notificationService.notifySucess(this.translateService.instant('CORRECT_ANSWER'));
     } else if (!this.areAllPlaceholdersFilled(index_card)) {
       this.notificationService.notifyError(
-        'Por favor, llena todos los espacios',
+        this.translateService.instant('FILL_ALL')
       );
     } else {
-      this.notificationService.notifyError('¡Inténtalo de nuevo!');
+      this.notificationService.notifyError(this.translateService.instant('INCORRECT_ANSWER'));
       this.resetIncorrectAnswers(index_card);
     }
   }

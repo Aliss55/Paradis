@@ -83,7 +83,7 @@
     "GRAMMAR_CONJUGATION_ACTIVITY": {
       "TITLE": "Conjugación de verbos",
       "DESCRIPTION": "En esta actividad podrás prácticar la conjugación de verbos en presente indicativo.",
-      "INSTRUCTIONS": "En los siguientes recuadros podrás ver un verbo en infinitivo y diferentes personas gramaticales del español. La actividad consiste en escribir al lado de la persona correspondiente la correcta conjugación del verbo mostrado en el tiempo presente indicativo.",
+      "INSTRUCTIONS": "En los recuadros a continuación, verás un verbo en infinitivo y distintas personas gramaticales del español. La actividad consiste en escribir la conjugación correcta del verbo en presente del modo indicativo junto a cada persona correspondiente.",
       "GRAMMAR_GUIDE": "Guía de gramática",
       "INFINITIVE_VERB": "Verbo en infinitivo",
       "GRAMMAR_GUIDE_TITLE": "¿Cómo se conjugan los verbos regulares en presente indicativo?",
@@ -96,5 +96,8 @@
   "PROJECT_NUMBER": "Trabajo terminal 2024-A012",
   "REFERENCES": "Referencias",
   "LAROUSSE_REFERENCE": "I. Munguía Zataraín, M. E. Munguía Zatarain, y G. Rocha Romero, Gramática lengua española. México, D.F.: Larousse, 2013.",
-  "RAE_BASICS_OF_GRAMMAR_AND_ORTHOGRAPHY": "Real Academia Española y Asociación de Academias de la Lengua Española, Eds., Gramática y ortografía básicas de la lengua española, 1.a ed. Madrid: Editorial Planeta, 2019."
+  "RAE_BASICS_OF_GRAMMAR_AND_ORTHOGRAPHY": "Real Academia Española y Asociación de Academias de la Lengua Española, Eds., Gramática y ortografía básicas de la lengua española, 1.a ed. Madrid: Editorial Planeta, 2019.",
+  "CORRECT_ANSWER": "Respuesta correcta",
+  "INCORRECT_ANSWER": "Inténtalo de nuevo",
+  "FILL_ALL": "Por favor llena todos los espacios vacíos"
 }

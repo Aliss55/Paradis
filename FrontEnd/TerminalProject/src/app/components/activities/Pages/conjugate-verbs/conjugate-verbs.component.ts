@@ -76,15 +76,15 @@ export class ConjugateVerbsComponent {
       plural_third_person_ellas_form: ['ellas','viven']
     },
     {
-      verb_infinitive_form: 'enviar',
-      singular_first_person_yo_form: ['yo','envío'],
-      singular_second_person_tu_form: ['tú','envías'],
-      singular_third_person_el_form: ['el','envía'],
-      singular_third_person_ella_form: ['ella','envía'],
-      plural_first_person_nosotros_form: ['nosotros','enviamos'],
-      plural_second_person_ustedes_form: ['ustedes','envían'],
-      plural_third_person_ellos_form: ['ellos','envían'],
-      plural_third_person_ellas_form: ['ellas','envían']
+      verb_infinitive_form: 'estudiar',
+      singular_first_person_yo_form: ['yo','estudio'],
+      singular_second_person_tu_form: ['tú','estudias'],
+      singular_third_person_el_form: ['el','estudia'],
+      singular_third_person_ella_form: ['ella','estudia'],
+      plural_first_person_nosotros_form: ['nosotros','estudiamos'],
+      plural_second_person_ustedes_form: ['ustedes','estudian'],
+      plural_third_person_ellos_form: ['ellos','estudian'],
+      plural_third_person_ellas_form: ['ellas','estudian']
     },
     {
       verb_infinitive_form: 'correr',
@@ -119,13 +119,13 @@ export class ConjugateVerbsComponent {
     },    {
       verb_infinitive_form: 'perder',
       singular_first_person_yo_form: ['yo','pierdo'],
-      singular_second_person_tu_form: ['tú','perdiste'],
-      singular_third_person_el_form: ['el','perdió'],
-      singular_third_person_ella_form: ['ella','perdió'],
-      plural_first_person_nosotros_form: ['nosotros','perdimos'],
-      plural_second_person_ustedes_form: ['ustedes','perdieron'],
-      plural_third_person_ellos_form: ['ellos','perdieron'],
-      plural_third_person_ellas_form: ['ellas','perdieron']
+      singular_second_person_tu_form: ['tú','pierdes'],
+      singular_third_person_el_form: ['el','pierde'],
+      singular_third_person_ella_form: ['ella','pierde'],
+      plural_first_person_nosotros_form: ['nosotros','perdemos'],
+      plural_second_person_ustedes_form: ['ustedes','pierden'],
+      plural_third_person_ellos_form: ['ellos','pierden'],
+      plural_third_person_ellas_form: ['ellas','pierden']
     },    {
       verb_infinitive_form: 'prohibir',
       singular_first_person_yo_form: ['yo','prohibo'],
