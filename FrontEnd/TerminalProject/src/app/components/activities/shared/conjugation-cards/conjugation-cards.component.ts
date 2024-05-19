@@ -26,7 +26,7 @@ export class ConjugationCardsComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['questions'] && changes['questions'].currentValue) {
       this.answers = this.questions.map((question) =>
-        new Array(Object.keys(question).length).fill(null),
+        new Array(Object.keys(question).length-1).fill(null),
       );
     }
   }
@@ -38,15 +38,12 @@ export class ConjugationCardsComponent implements OnChanges {
 
     // Initialize the arrays at the index if they are not already initialized
     this.cardResults[index_card] = this.cardResults[index_card] || [];
-    // this.allCardAnswersAreCorrect[index_card] = this.allCardAnswersAreCorrect[index_card] || false;
 
     for (let i = 0; i < keys.length - 1; i++) {
       if (inputFieldValue[i] === cardCorrectAnswers[keys![i + 1]][1]) {
         this.cardResults[index_card][i] = true;
-        // this.allCardAnswersAreCorrect[index_card] = true;
       } else {
         this.cardResults[index_card][i] = false;
-        // this.allCardAnswersAreCorrect[index_card] = false;
 
       }
     }
@@ -56,12 +53,21 @@ export class ConjugationCardsComponent implements OnChanges {
     return this.cardResults[index_card].every((result :boolean): boolean => result === true);
   }
 
+  public areAllPlaceholdersFilled(index_card: number): boolean {
+    return this.answers[index_card].every((answer :string): boolean => answer !== null);
+  }
+
   public notifyResultsToUser(index_card: number): void {
+
     this.checkCardAnswers(index_card);
     if (this.areAllUserAnswersCorrect(index_card)) {
       this.allCardAnswersAreCorrect[index_card] = true;
       this.notificationService.notifySucess('¡Respuesta correcta!');
-    } else {
+    }
+    else if(!this.areAllPlaceholdersFilled(index_card)){
+      this.notificationService.notifyError('Por favor, llena todos los espacios');
+    }
+    else {
       this.notificationService.notifyError('¡Inténtalo de nuevo!');
       this.resetIncorrectAnswers(index_card);
     }
