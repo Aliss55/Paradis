@@ -58,14 +58,15 @@ export class ActivitiesComponent implements OnInit, OnDestroy{
           './assets/penguin-images',
         ),
         link: '/activities/UsageOfLetterU',
-      },      {
-        name: 'Actividades 2',
-        description: 'in this blo we will talk about the latest news',
+      },
+      {
+        name: 'ACTIVITIES_LABELS.GRAMMAR_CONJUGATION_ACTIVITY.TITLE',
+        description: 'ACTIVITIES_LABELS.GRAMMAR_CONJUGATION_ACTIVITY.DESCRIPTION',
         image: this.imageService.getImagePathAccordingToTheme(
-          'Penguin-1-50px.svg',
+          'Penguin-3-50px.svg',
           './assets/penguin-images',
         ),
-        link: '/activities/to-be',
+        link: '/activities/conjugateVerbs',
       },
     ];
   };

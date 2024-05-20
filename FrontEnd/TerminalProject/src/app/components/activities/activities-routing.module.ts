@@ -5,6 +5,7 @@ import { ProfessionsAndOccupationsComponent } from './Pages/professions-and-occu
 import {DemonymsComponent} from "./Pages/demonyms/demonyms.component";
 import {CompleteSentencesToBeComponent} from "./Pages/complete-sentences-to-be/complete-sentences-to-be.component";
 import {UsageOfULetterUComponent} from "./Pages/usage-of-uletter-u/usage-of-uletter-u.component";
+import {ConjugateVerbsComponent} from "./Pages/conjugate-verbs/conjugate-verbs.component";
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'UsageOfLetterU',
     component: UsageOfULetterUComponent
+  },
+  {
+    path: 'conjugateVerbs',
+    component: ConjugateVerbsComponent
   }
 ];
 
