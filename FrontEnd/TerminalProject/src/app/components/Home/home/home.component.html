@@ -1,11 +1,14 @@
 <div class="grid p-1">
   <div
-    pAnimateOnScroll enterClass="animate__animated animate__fadeInDown"
+    pAnimateOnScroll
+    enterClass="animate__animated animate__fadeInDown"
     class="animation-duration-1000 lg:col-6 col-12 h-max"
     [style.animation-delay]="1 * 0.2 + 's'"
   >
-    <p-card styleClass="card-1 cursor-pointer" [routerLink]="['/text-analyzer']">
-
+    <p-card
+      styleClass="card-1 cursor-pointer"
+      [routerLink]="['/text-analyzer']"
+    >
       <div class="title xl:text-7xl text-4xl">
         {{ "OPTIONS.ANALIZE_TEXT" | translate }}
       </div>
@@ -15,17 +18,25 @@
       </div>
 
       <div class="flex justify-content-center overflow-hidden">
-        <img alt="analize_text" class="responsive-image-analizer zoom" [src]="imageService.getImagePathAccordingToTheme('Analyze-text-penguin.svg','assets/home-cards')">
+        <img
+          alt="analize_text"
+          class="responsive-image-analizer zoom"
+          [src]="
+            imageService.getImagePathAccordingToTheme(
+              'Analyze-text-penguin.svg',
+              'assets/home-cards'
+            )
+          "
+        />
       </div>
-
     </p-card>
   </div>
 
   <div class="lg:col-6 col-12 pt-2">
-
     <div class="grid">
       <div
-        pAnimateOnScroll enterClass="animate__animated animate__fadeInDown"
+        pAnimateOnScroll
+        enterClass="animate__animated animate__fadeInDown"
         class="col-12 animation-duration-1000"
         [style.animation-delay]="2 * 0.2 + 's'"
       >
@@ -40,24 +51,34 @@
               </div>
             </div>
 
-            <div class="sm:col col-12 flex justify-content-center overflow-hidden">
-              <img alt="blog" class="responsive-image-blog zoom" [src]="imageService.getImagePathAccordingToTheme('Computer-penguin.svg','assets/home-cards')">
+            <div
+              class="sm:col col-12 flex justify-content-center overflow-hidden"
+            >
+              <img
+                alt="blog"
+                class="responsive-image-blog zoom"
+                [src]="
+                  imageService.getImagePathAccordingToTheme(
+                    'Computer-penguin.svg',
+                    'assets/home-cards'
+                  )
+                "
+              />
             </div>
-
-
           </div>
-
         </p-card>
-
       </div>
 
       <div
-        pAnimateOnScroll enterClass="animate__animated animate__fadeInDown"
+        pAnimateOnScroll
+        enterClass="animate__animated animate__fadeInDown"
         class="col-12 animation-duration-1000"
         [style.animation-delay]="3 * 0.2 + 's'"
       >
-
-        <p-card styleClass="card-3 cursor-pointer" [routerLink]="['/activities']">
+        <p-card
+          styleClass="card-3 cursor-pointer"
+          [routerLink]="['/activities']"
+        >
           <div class="grid">
             <div class="sm:col col-12">
               <div class="title xl:text-7xl text-4xl">
@@ -68,18 +89,23 @@
               </div>
             </div>
 
-            <div class="sm:col col-12 flex justify-content-center overflow-hidden">
-              <img alt="blog" class="responsive-image-blog zoom" [src]="imageService.getImagePathAccordingToTheme('Puzzle-penguin.svg','assets/home-cards')">
+            <div
+              class="sm:col col-12 flex justify-content-center overflow-hidden"
+            >
+              <img
+                alt="blog"
+                class="responsive-image-blog zoom"
+                [src]="
+                  imageService.getImagePathAccordingToTheme(
+                    'Puzzle-penguin.svg',
+                    'assets/home-cards'
+                  )
+                "
+              />
             </div>
-
-
           </div>
-
         </p-card>
       </div>
-
     </div>
-
-
   </div>
 </div>
