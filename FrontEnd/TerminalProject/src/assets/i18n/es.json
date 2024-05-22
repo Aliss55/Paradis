@@ -99,6 +99,8 @@
   "RAE_BASICS_OF_GRAMMAR_AND_ORTHOGRAPHY": "Real Academia Española y Asociación de Academias de la Lengua Española, Eds., Gramática y ortografía básicas de la lengua española, 1.a ed. Madrid: Editorial Planeta, 2019.",
   "CORRECT_ANSWER": "Respuesta correcta",
   "INCORRECT_ANSWER": "Inténtalo de nuevo",
-  "FILL_ALL": "Por favor llena todos los espacios vacíos",
-  "FILL_CORRECTLY": "Por favor introduce una respuesta válida"
+  "FILL_ALL": "Su actividad no se ha completado. Asegúrese de llenar todos los campos requeridos antes de continuar",
+  "FILL_CORRECTLY": "Su actividad no se ha completado. Asegúrese de llenar todos los campos requeridos antes de continuar.",
+  "NO_ORTHOGRAPHIC_ERRORS": "¡Excelente! Tu texto no contiene errores ortográficos",
+  "NO_GRAMMAR_ERRORS":"¡Excelente! Tu texto no contiene errores gramaticales"
 }
