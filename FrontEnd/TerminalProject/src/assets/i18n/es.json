@@ -11,7 +11,7 @@
     "TITLE": "Conoce más de",
     "PROJECT_NAME": "Literata",
     "DESCRIPTION": "Literata es un proyecto enfocado en ayudarte a practicar tus habilidades de escritura en español mexicano, a través de actividades que incluyen retroalimentación inmediata, reforzamiento de vocabulario e información relevante de la lengua española.",
-    "HISTORY": "Literata es un proyecto desarrollado por estudiantes de la Escuela Superior de Cómputo de la carrera de Ingeniería en Sistemas Computacionales, con el objetivo de ayudar a estudiantes del español mexicano a mejorar sus habilidades de escritura en etapa inicial.",
+    "HISTORY": "Literata es un proyecto desarrollado por estudiantes de la Escuela Superior de Cómputo, de la carrera de Ingeniería en Sistemas Computacionales, con el objetivo de ayudar a estudiantes del español mexicano a mejorar sus habilidades de escritura en etapa inicial.",
     "TEAM": "Equipo de desarrollo"
   },
 
@@ -74,7 +74,7 @@
       "USAGE_OF_THE_LETTER_U": "Uso de la letra 'u'",
       "USAGE_OF_THE_LETTER_U_CARD_DESCRIPTION": "Con esta actividad podrás practicar el uso de la letra 'u'",
       "SEND": "Enviar",
-      "INSTRUCTIONS": "En los siguientes recuadros se muestran 3 formas de escribir una palabra. Tu tarea es escribir en el recuadro la única que es correcta. Al finalizar da click en el botón 'Enviar' para verificar tu respuesta.",
+      "INSTRUCTIONS": "En los siguientes recuadros se muestran 3 formas de escribir una palabra. Tu tarea es escribir en el recuadro la única que es correcta. Al finalizar da clic en el botón 'Enviar' para verificar tu respuesta.",
       "ORTHOGRAPHIC_GUIDE": "Guía de ortografía",
       "ORTHOGRAPHIC_RULE_OF_U": "¿Cuándo usar ü?",
       "ORTHOGRAPHIC_RULE_OF_U_DESCRIPTION_1": "La letra u se escribe con diéresis  ( <b>  ü </b> ) si cumple las siguientes condiciones:",
@@ -99,6 +99,8 @@
   "RAE_BASICS_OF_GRAMMAR_AND_ORTHOGRAPHY": "Real Academia Española y Asociación de Academias de la Lengua Española, Eds., Gramática y ortografía básicas de la lengua española, 1.a ed. Madrid: Editorial Planeta, 2019.",
   "CORRECT_ANSWER": "Respuesta correcta",
   "INCORRECT_ANSWER": "Inténtalo de nuevo",
-  "FILL_ALL": "Por favor llena todos los espacios vacíos",
-  "FILL_CORRECTLY": "Por favor introduce una respuesta válida"
+  "FILL_ALL": "Su actividad no se ha completado. Asegúrese de llenar todos los campos requeridos antes de continuar",
+  "FILL_CORRECTLY": "Su actividad no se ha completado. Asegúrese de llenar todos los campos requeridos antes de continuar.",
+  "NO_ORTHOGRAPHIC_ERRORS": "¡Excelente! Tu texto no contiene errores ortográficos",
+  "NO_GRAMMAR_ERRORS":"¡Excelente! Tu texto no contiene errores gramaticales"
 }
