@@ -63,16 +63,16 @@
       "INSTRUCTIONS_DESCRIPTION": "In this activity you are going to see a box with an image and three option buttons. \n Your task is to click on the button which shows the {{ description_word }} depicted in the image. After clicking one option another box with a new image will appear. At the end of the activity you will be able to see your score.",
       "FINAL_SCORE": "Your answered correctly {{correct_answers}} questions out of {{number_of_questions}}",
       "PROFESSIONS_OCCUPATIONS": "Professions and occupations",
-      "PROFESSIONS_OCCUPATIONS_CARD_DESCRIPTION": "This activity gives you a space to practice vocabulary related to professions and occupations",
+      "PROFESSIONS_OCCUPATIONS_CARD_DESCRIPTION": "This activity gives you a space to practice vocabulary related to professions and occupations.",
       "PROFESSIONS_OCCUPATIONS_KEYWORD": "profession or occupation",
       "DEMONYMS": "Demonyms",
-      "DEMONYMS_CARD_DESCRIPTION": "This activity gives you a space to practice vocabulary related to demonyms",
+      "DEMONYMS_CARD_DESCRIPTION": "This activity gives you a space to practice vocabulary related to demonyms.",
       "DEMONYMS_KEYWORD": "demonym"
     },
     "SPELLING_ACTIVITIES":
     {
       "USAGE_OF_THE_LETTER_U": "Usage of the letter 'u'",
-      "USAGE_OF_THE_LETTER_U_CARD_DESCRIPTION": "This activity gives you a space to practice the usage of the letter 'u'",
+      "USAGE_OF_THE_LETTER_U_CARD_DESCRIPTION": "This activity gives you a space to practice the usage of the letter 'u'.",
       "SEND": "Send",
       "INSTRUCTIONS": "In the following boxes you will see 3 forms of writing a word. Your task is to write in the input field the only one that is correctly written. Once you are ready click on the 'Send' button to check your answer.",
       "ORTHOGRAPHIC_GUIDE": "Orthographic guide",
