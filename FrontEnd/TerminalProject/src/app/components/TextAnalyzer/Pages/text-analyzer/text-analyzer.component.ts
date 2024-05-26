@@ -63,7 +63,8 @@ export class TextAnalyzerComponent{
       this.wordSuggesterService.suggestWord(this.primeEditor!.quill.getText())
         .subscribe({
           next: (wordSuggester: WordSuggester[]) => {
-            const foundWord: WordSuggester | undefined = wordSuggester.find((suggestion : WordSuggester) => {
+            const foundWord: WordSuggester | undefined = wordSuggester.find(
+              (suggestion : WordSuggester) => {
               const isValidWord: boolean = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+$/i.test(suggestion.word);
               return isValidWord && suggestion.word !== '[UNK]';
             });
@@ -76,7 +77,6 @@ export class TextAnalyzerComponent{
           },
           error: (error) => {
             console.error(error);
-            alert('error sugerencia' + error)
           }
         });
 
@@ -95,7 +95,12 @@ export class TextAnalyzerComponent{
     this.hasSpellCheckerResponse = false;
     this.hasGrammaticalAnalyzerResponse = false;
     this.isAnalyzeButtonClicked = true;
-    this.spellCheckerService.checkSpelling(this.primeEditor!.quill.getText())
+
+    let text = this.primeEditor!.quill.getText()
+
+    text = text.replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚñÑüÜ\s\n.,]/g, '');
+
+    this.spellCheckerService.checkSpelling(text)
       .subscribe({
         next: (spellChecker: SpellChecker[]) => {
           this.spellChecker = spellChecker;
