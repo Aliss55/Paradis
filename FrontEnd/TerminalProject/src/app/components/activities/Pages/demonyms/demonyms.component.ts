@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {demonyms} from "../utils/Demonyms";
+import {ViewportScroller} from "@angular/common";
 
 @Component({
   selector: 'app-demonyms',
   templateUrl: './demonyms.component.html',
   styleUrl: './demonyms.component.scss'
 })
-export class DemonymsComponent {
+export class DemonymsComponent implements OnInit{
   public listOfCountries: string[] = Object.values(demonyms)
 
   public countries = [
@@ -63,6 +64,13 @@ export class DemonymsComponent {
       answer: 'argentino',
     },
   ]
+
+  constructor( private viewportScrollerService: ViewportScroller) {
+  }
+
+  ngOnInit(): void {
+    this.viewportScrollerService.scrollToPosition([0, 0]);
+  }
 
 
 
