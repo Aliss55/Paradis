@@ -6,85 +6,8 @@
 
   <div class="grid sm:mt-7 mt-3">
 
-    <div class="md:col-5 col-12 ">
-      <p-card styleClass="sm:px-5 px-1 pb-1">
-        <p-toast key="error" [baseZIndex]="10000" position="bottom-center"></p-toast>
-        <div *ngIf="!isAnalyzeButtonClicked; else anaylyzedText">
-          <h1 class="title md:text-6xl">{{'INSTRUCTIONS'| translate }}</h1>
-          <p class="md:text-2xl text-2xl sugerencia-palabra" [innerHTML]="'ANALYZE_TEXT.INSTRUCTIONS' | translate" >
-          </p>
-        </div>
 
-        <ng-template #anaylyzedText>
-          <h1 class="title md:text-4xl">Resultados de análisis</h1>
-          <div class="flex flex-column">
-            <div class="flex flex-column">
-              <h2>Análisis ortográfico</h2>
-              <div *ngIf="!hasSpellCheckerResponse; else SpellCheckerResponse">
-                <p-skeleton height="1rem" styleClass="mb-2" width="10rem"></p-skeleton>
-                <p-skeleton height="1rem" styleClass="mb-2" width="15rem"></p-skeleton>
-                <p-skeleton height="1rem" styleClass="mb-2" width="14rem"></p-skeleton>
-                <p-skeleton height="1rem" styleClass="mb-2" width="16rem"></p-skeleton>
-              </div>
-              <ng-template #SpellCheckerResponse>
-
-                <div *ngIf="spellChecker.length > 0; else noSpellCheckerResponse">
-                  <div *ngFor="let sentence of spellChecker">
-                    <div class="mb-3">
-                      <p><strong>Oración original:</strong> {{ sentence.original_sentence }}</p>
-                      <ul *ngFor="let correction of sentence.possible_corrections" class="list-none line-height-4">
-                        <li><strong>Palabra:</strong> {{correction.token}} </li>
-                        <li>
-                          <strong>Posibles correcciones:</strong>
-                          <span *ngFor="let correction of correction.corrections; let last = last">
-                          {{correction.word}}<span *ngIf="!last">, </span>
-                         </span>
-                        </li>
-                      </ul>
-                      <p-divider></p-divider>
-                    </div>
-                  </div>
-
-                </div>
-                <ng-template #noSpellCheckerResponse>
-                  <p>{{ 'NO_ORTHOGRAPHIC_ERRORS' | translate}}</p>
-                </ng-template>
-
-              </ng-template>
-            </div>
-            <div class="flex flex-column">
-              <h2>Análisis gramatical</h2>
-              <div *ngIf="!hasGrammaticalAnalyzerResponse; else GrammaticalAnalyzerResponse">
-                <p-skeleton height="1rem" styleClass="mb-2" width="10rem"></p-skeleton>
-                <p-skeleton height="1rem" styleClass="mb-2" width="15rem"></p-skeleton>
-                <p-skeleton height="1rem" styleClass="mb-2" width="14rem"></p-skeleton>
-                <p-skeleton height="1rem" styleClass="mb-2" width="16rem"></p-skeleton>
-              </div>
-
-              <ng-template #GrammaticalAnalyzerResponse>
-                <div *ngIf="grammaticalAnalyzer.length > 0; else noGrammaticalAnalyzerResponse">
-                  <div *ngFor="let sentence of grammaticalAnalyzer">
-                    <div class="mb-3">
-                      <p><strong>Oración original: </strong> {{ sentence.original_single_sentence}}</p>
-                      <p><strong>Explicación: </strong> {{sentence.explanation}}</p>
-                      <p-divider></p-divider>
-                    </div>
-
-
-                  </div>
-                </div>
-                <ng-template #noGrammaticalAnalyzerResponse>
-                  <p>{{ 'NO_GRAMMAR_ERRORS' | translate}}</p>
-                </ng-template>
-              </ng-template>
-            </div>
-          </div>
-        </ng-template>
-
-      </p-card>
-    </div>
-
-    <div class="md:col-7 sm:px-5 px-0 col-12">
+    <div class="flex-order-1 md:flex-order-0 md:col-7 sm:px-5 px-0 col-12">
       <form [formGroup]="analyzeTextForm">
         <p-card styleClass="sm:px-5 sm:pt-5 sm:pb-2 p-1">
 
@@ -163,7 +86,83 @@
       </form>
     </div>
 
+    <div class="flex-order-0 md:flex-order-1 md:col-5 col-12 ">
+      <p-card styleClass="sm:px-5 px-1 pb-1">
+        <p-toast key="error" [baseZIndex]="10000" position="bottom-center"></p-toast>
+        <div *ngIf="!isAnalyzeButtonClicked; else anaylyzedText">
+          <h1 class="title md:text-6xl">{{'INSTRUCTIONS'| translate }}</h1>
+          <p class="md:text-2xl text-2xl sugerencia-palabra" [innerHTML]="'ANALYZE_TEXT.INSTRUCTIONS' | translate" >
+          </p>
+        </div>
 
+        <ng-template #anaylyzedText>
+          <h1 class="title md:text-4xl">Resultados de análisis</h1>
+          <div class="flex flex-column">
+            <div class="flex flex-column">
+              <h2>Análisis ortográfico</h2>
+              <div *ngIf="!hasSpellCheckerResponse; else SpellCheckerResponse">
+                <p-skeleton height="1rem" styleClass="mb-2" width="10rem"></p-skeleton>
+                <p-skeleton height="1rem" styleClass="mb-2" width="15rem"></p-skeleton>
+                <p-skeleton height="1rem" styleClass="mb-2" width="14rem"></p-skeleton>
+                <p-skeleton height="1rem" styleClass="mb-2" width="16rem"></p-skeleton>
+              </div>
+              <ng-template #SpellCheckerResponse>
+
+                <div *ngIf="spellChecker.length > 0; else noSpellCheckerResponse">
+                  <div *ngFor="let sentence of spellChecker">
+                    <div class="mb-3">
+                      <p><strong>Oración original:</strong> {{ sentence.original_sentence }}</p>
+                      <ul *ngFor="let correction of sentence.possible_corrections" class="list-none line-height-4">
+                        <li><strong>Palabra:</strong> {{correction.token}} </li>
+                        <li>
+                          <strong>Posibles correcciones:</strong>
+                          <span *ngFor="let correction of correction.corrections; let last = last">
+                          {{correction.word}}<span *ngIf="!last">, </span>
+                         </span>
+                        </li>
+                      </ul>
+                      <p-divider></p-divider>
+                    </div>
+                  </div>
+
+                </div>
+                <ng-template #noSpellCheckerResponse>
+                  <p>{{ 'NO_ORTHOGRAPHIC_ERRORS' | translate}}</p>
+                </ng-template>
+
+              </ng-template>
+            </div>
+            <div class="flex flex-column">
+              <h2>Análisis gramatical</h2>
+              <div *ngIf="!hasGrammaticalAnalyzerResponse; else GrammaticalAnalyzerResponse">
+                <p-skeleton height="1rem" styleClass="mb-2" width="10rem"></p-skeleton>
+                <p-skeleton height="1rem" styleClass="mb-2" width="15rem"></p-skeleton>
+                <p-skeleton height="1rem" styleClass="mb-2" width="14rem"></p-skeleton>
+                <p-skeleton height="1rem" styleClass="mb-2" width="16rem"></p-skeleton>
+              </div>
+
+              <ng-template #GrammaticalAnalyzerResponse>
+                <div *ngIf="grammaticalAnalyzer.length > 0; else noGrammaticalAnalyzerResponse">
+                  <div *ngFor="let sentence of grammaticalAnalyzer">
+                    <div class="mb-3">
+                      <p><strong>Oración original: </strong> {{ sentence.original_single_sentence}}</p>
+                      <p><strong>Explicación: </strong> {{sentence.explanation}}</p>
+                      <p-divider></p-divider>
+                    </div>
+
+
+                  </div>
+                </div>
+                <ng-template #noGrammaticalAnalyzerResponse>
+                  <p>{{ 'NO_GRAMMAR_ERRORS' | translate}}</p>
+                </ng-template>
+              </ng-template>
+            </div>
+          </div>
+        </ng-template>
+
+      </p-card>
+    </div>
 
 
   </div>
