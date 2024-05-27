@@ -88,7 +88,11 @@
   "ANALYZE_TEXT":{
     "INSTRUCTIONS": "In the editor on the right, write a text, then click the <strong>Analyze</strong> button to analyze the text. <br> If you want to receive word suggestions, click the switch to the left of the <strong>Suggest words</strong> label. <br> To accept a suggestion, press the tab key once the suggestion appears in the editor.",
     "ANALYZE": "Analyze",
-    "SUGGEST_WORDS": "Suggest words"
+    "SUGGEST_WORDS": "Suggest words",
+    "TOAST": {
+      "INAPPROPRIATE_CONTENT_MESSAGE": "The content you have entered contains inappropriate material. Please edit your text before proceeding.",
+      "SENSITIVE_DATA_MESSAGE": "The content you have entered contains sensitive information. Please review and remove any confidential data before proceeding."
+    }
 
   },
   "TERMS_AND_CONDITIONS": {
