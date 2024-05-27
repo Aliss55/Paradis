@@ -90,8 +90,39 @@
       "GRAMMAR_GUIDE_EXPLANATION": "La conjugación de verbos regulares en presente indicativo se puede formar añadiendo a la raiz del verbo una terminación específica. Existen tres modelos de conjugación: terminados en <b>-ar</b>, terminados en <b>-er</b> y terminados en <b>-ir</b>. <br>              <ol><li> <h3> Verbos terminados en <b>-ar </b> </h3> Son aquellos que se conjugan como el verbo amar.    <br>     <table style=\"border-collapse: collapse; margin-top:10px; \"> <tr><th style=\"border: 1px solid #dddddd;padding: 8px;\">Persona</th><th style=\"border: 1px solid #dddddd;padding: 8px;\">Verbo conjugado</th></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Yo</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>o</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Tú</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>as</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">El/Ella</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>a</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Nosotros</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>amos</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Ustedes</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>an</b></td></tr> <tr> <td style=\"border: 1px solid #dddddd;padding: 8px;\">Ellos/Ellas</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>an</b></td> </tr> </table>  </li>                 <li> <h3> Verbos terminados en <b>-er </b> </h3> Son aquellos que se conjugan como el verbo comer.    <br>     <table style=\"border-collapse: collapse; margin-top:10px; \"> <tr><th style=\"border: 1px solid #dddddd;padding: 8px;\">Persona</th><th style=\"border: 1px solid #dddddd;padding: 8px;\">Verbo conjugado</th></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Yo</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>o</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Tú</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>es</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">El/Ella</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>e</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Nosotros</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>emos</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Ustedes</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>en</b></td></tr> <tr> <td style=\"border: 1px solid #dddddd;padding: 8px;\">Ellos/Ellas</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>en</b></td> </tr> </table>  </li>      <li> <h3> Verbos terminados en <b>-ir </b> </h3> Son aquellos que se conjugan como el verbo vivir.<br>                  <table style=\"border-collapse: collapse; margin-top:10px; \"> <tr><th style=\"border: 1px solid #dddddd;padding: 8px;\">Persona</th><th style=\"border: 1px solid #dddddd;padding: 8px;\">Verbo conjugado</th></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Yo</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>o</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Tú</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>es</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">El/Ella</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>e</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Nosotros</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>imos</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Ustedes</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>en</b></td></tr> <tr> <td style=\"border: 1px solid #dddddd;padding: 8px;\">Ellos/Ellas</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>en</b></td> </tr> </table>  </li>   </ul> </li></ol> "
     }
   },
+  "ANALYZE_TEXT":{
+    "INSTRUCTIONS": "En el editor de la derecha escribe un texto, después da clic en el botón <strong>Analizar</strong> para analizar el texto. <br> Si deseas recibir sugerencias de palabras da click en el interruptor al lado izquierdo de la etiqueta <strong>Sugerir palabras</strong>. <br> Para aceptar alguna sugerencia presiona la tecla tabulador una vez que la sugerencia se muestre en el editor.",
+    "ANALYZE": "Analizar",
+    "SUGGEST_WORDS": "Sugerir palabras"
+  },
+  "TERMS_AND_CONDITIONS": {
+    "TITLE": "Términos y Condiciones",
+    "WELCOME": "Bienvenido/a a nuestra aplicación web diseñada para apoyar el aprendizaje del español mexicano en el nivel A1 del Marco Común Europeo de Referencia para las Lenguas. Antes de comenzar a utilizar nuestra herramienta, te solicitamos leer y aceptar los siguientes términos y condiciones que rigen su uso. Al acceder y usar nuestra aplicación, aceptas cumplir con estos términos y condiciones.",
+    "POLITICS": "Políticas",
+    "POLITICS_1": "Todos los usuarios deben leer detenidamente y aceptar los términos y condiciones de uso del proyecto para poder utilizar la herramienta de aprendizaje del español mexicano.",
+    "POLITIC_2_TITLE": "Información de Identificación Personal (PII)",
+    "POLITIC_2": "En ningún caso se recopilará ni almacenará información personal de identificación de los usuarios.",
+    "POLITIC_3_TITLE": "Uso No Comercial",
+    "POLITIC_3": "La herramienta está destinada exclusivamente para fines educativos y no comerciales. Queda estrictamente prohibido su uso con propósitos comerciales o publicitarios.",
+    "TEXT_PROCESSING": "Procesamiento de Textos",
+"TEXT_PROCESSING_1_TITLE": "Competencia en Español Nivel A1",
+    "TEXT_PROCESSING_1": "Nuestro sistema ha sido diseñado para incorporar estructuras gramaticales conformes al nivel A1 del Marco Común Europeo de Referencia para las Lenguas, facilitando el aprendizaje progresivo del español.",
+    "TEXT_PROCESSING_2_TITLE": "Textos del Corpus",
+    "TEXT_PROCESSING_2": "Los textos utilizados para la generación del Corpus corresponden a cuentos infantiles, seleccionados específicamente para apoyar el aprendizaje del idioma.",
+    "TEXT_PROCESSING_3_TITLE": "Fuentes Confiables",
+    "TEXT_PROCESSING_3": "Los textos seleccionados para el Corpus y las páginas informativas han sido obtenidos de fuentes confiables y verificadas para garantizar la calidad y precisión del contenido ofrecido.",
+    "TEXT_PROCESSING_4_TITLE": "Restricción de Contenido Inapropiado",
+    "TEXT_PROCESSING_4": "No está permitido ingresar ni visualizar textos que contengan contenido ofensivo, homofóbico, racista, discriminatorio, violento o inapropiado de cualquier índole. Nos reservamos el derecho de eliminar dicho contenido y tomar medidas correspondientes.",
+    "TEXT_PROCESSING_5_TITLE": "Protección de Datos Sensibles",
+    "TEXT_PROCESSING_5": "Por motivos de seguridad y protección de la privacidad, los usuarios no deben ingresar ni compartir información personal sensible, como números de seguro social, números de tarjeta de crédito u otros datos confidenciales en nuestra herramienta.",
+    "CONSIDERATIONS": "Al utilizar nuestra aplicación web, <strong>aceptas cumplir con estos términos y condiciones</strong>. Si no estás de acuerdo con alguna de estas políticas, te rogamos no utilizar nuestra herramienta.",
+    "THANKS_USER": "Gracias por ser parte de nuestra comunidad de aprendizaje del español mexicano. ¡Disfruta tu experiencia de aprendizaje!"
+
+  },
+
   "MENU": "Menú",
   "ACCEPT": "Aceptar",
+  "INSTRUCTIONS": "Instrucciones",
   "WRITE_YOUR_ANSWER": "Escribe tu respuesta",
   "PROJECT_NUMBER": "Trabajo terminal 2024-A012",
   "REFERENCES": "Referencias",

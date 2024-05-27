@@ -84,10 +84,40 @@
       "GRAMMAR_GUIDE": "Grammar guide",
       "INFINITIVE_VERB": "Infinitive verb"
     }
-    }
-  ,
+    },
+  "ANALYZE_TEXT":{
+    "INSTRUCTIONS": "In the editor on the right, write a text, then click the <strong>Analyze</strong> button to analyze the text. <br> If you want to receive word suggestions, click the switch to the left of the <strong>Suggest words</strong> label. <br> To accept a suggestion, press the tab key once the suggestion appears in the editor.",
+    "ANALYZE": "Analyze",
+    "SUGGEST_WORDS": "Suggest words"
+
+  },
+  "TERMS_AND_CONDITIONS": {
+    "TITLE": "Terms and conditions",
+    "WELCOME": "Welcome to our web application designed to support the learning of Mexican Spanish at the A1 level of the Common European Framework of Reference for Languages. Before you start using our tool, we ask you to read and accept the following terms and conditions that govern its use. By accessing and using our application, you agree to comply with these terms and conditions.",
+    "POLITICS": "Politics",
+    "POLITICS_1": "All users must carefully read and accept the terms and conditions of use of the project in order to use the Mexican Spanish learning tool.",
+    "POLITIC_2_TITLE": "Personally Identifiable Information (PII)",
+    "POLITIC_2": "Personally identifiable information of users is not going to be collected or stored",
+    "POLITIC_3_TITLE": "Non-Commercial Use",
+    "POLITIC_3": "The tool is intended exclusively for educational and non-commercial purposes. Its use for commercial or advertising purposes is strictly prohibited.",
+    "TEXT_PROCESSING": "Text Processing",
+    "TEXT_PROCESSING_1_TITLE": "Spanish Proficiency Level A1",
+    "TEXT_PROCESSING_1": "Our system has been designed to incorporate grammatical structures in accordance with level A1 of the Common European Framework of Reference for Languages, facilitating the progressive learning of Spanish.",
+    "TEXT_PROCESSING_2_TITLE": "Corpora",
+    "TEXT_PROCESSING_2": "The texts used for the generation of the corpora correspond to children's stories, specifically selected to support language learning.",
+    "TEXT_PROCESSING_3_TITLE": "Reliable Sources",
+    "TEXT_PROCESSING_3": "The texts selected for the corpora and informational pages have been obtained from reliable and verified sources to ensure the quality and accuracy of the content offered.",
+    "TEXT_PROCESSING_4_TITLE": "Restriction of Inappropriate Content",
+    "TEXT_PROCESSING_4": "It is not allowed to input or view texts containing offensive, homophobic, racist, discriminatory, violent, or inappropriate content of any kind. We reserve the right to remove such content and take appropriate measures.",
+    "TEXT_PROCESSING_5_TITLE": "Protection of Sensitive Data",
+    "TEXT_PROCESSING_5": "For security and privacy protection reasons, users should not enter or share sensitive personal information such as social security numbers, credit card numbers, or other confidential data in our tool.",
+    "CONSIDERATIONS": "By using our web application, <strong>you agree to comply with these terms and conditions</strong>. If you do not agree with any of these policies, please do not use our tool.",
+    "THANKS_USER": "Thank you for being part of our Mexican Spanish learning community. Enjoy your learning experience!"
+
+  },
   "MENU": "Menu",
   "ACCEPT": "Accept",
+  "INSTRUCTIONS": "Instructions",
   "WRITE_YOUR_ANSWER": "Write your answer",
   "PROJECT_NUMBER": "Terminal Project 2024-A012",
   "LAROUSSE_REFERENCE": "I. Munguía Zataraín, M. E. Munguía Zatarain, y G. Rocha Romero, Gramática lengua española. México, D.F.: Larousse, 2013.",
