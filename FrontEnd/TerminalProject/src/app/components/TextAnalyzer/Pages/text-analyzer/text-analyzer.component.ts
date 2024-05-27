@@ -126,7 +126,7 @@ export class TextAnalyzerComponent{
 
     let text = this.primeEditor!.quill.getText()
 
-    text = text.replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚñÑüÜ\s\n.,]/g, '');
+    text = text.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s\n.,]/g, '');
 
     this.spellCheckerService.checkSpelling(text)
       .subscribe({
