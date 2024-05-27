@@ -125,6 +125,10 @@
   "CORRECT_ANSWER": "That's correct!",
   "INCORRECT_ANSWER": "Sorry, try again",
   "FILL_ALL": "Please fill all the empty placeholders",
-  "FILL_CORRECTLY": "Please fill the empty placeholder"
-
+  "FILL_CORRECTLY": "Please fill the empty placeholder",
+  "RESTRICTIONS_ON_USE_TITLE": "Restrictions on use",
+  "RESTRICTIONS_ON_USE": "This document contains information developed by the Escuela Superior de Cómputo of the Instituto Politécnico Nacional, based on data and documents with proprietary rights. Therefore, its use will be restricted to explicitly agreed-upon applications.",
+  "RESTRICTIONS_ON_USE_1": "Unauthorized use releases the school from its technical responsibility and may result in legal consequences.",
+  "RESTRICTIONS_ON_USE_2": "Additional information about this technical report can be obtained from the Academic Subdirection of the Escuela Superior de Cómputo of the Instituto Politécnico Nacional, located at Av. Juan de Dios Bátiz s/n Phone: 57296000, extension 52000.",
+  "RESTRICTIONS_ON_USE_3": ""
 }
