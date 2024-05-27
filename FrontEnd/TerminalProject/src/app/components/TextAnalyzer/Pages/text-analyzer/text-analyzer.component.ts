@@ -59,7 +59,7 @@ export class TextAnalyzerComponent{
   }
 
   suggestNextWord() {
-    if(this.analyzeTextForm!.get('suggesterChecked')!.value) {
+    if(this.analyzeTextForm!.get('suggesterChecked')!.value && !this.hasSuggestion) {
       this.wordSuggesterService.suggestWord(this.primeEditor!.quill.getText())
         .subscribe({
           next: (wordSuggester: WordSuggester[]) => {
@@ -70,7 +70,7 @@ export class TextAnalyzerComponent{
             });
             if (foundWord) {
               this.suggestion = foundWord.word;
-              this.appendWord(foundWord.word)
+              this.appendWord(foundWord.word);
             } else {
               console.log('No se encontró ninguna palabra válida');
             }
@@ -84,11 +84,39 @@ export class TextAnalyzerComponent{
   }
 
   appendWord(suggestion: string) {
-    let lastIndex = this.primeEditor!.quill.getLength() - 1;
-    this.primeEditor!.quill.insertText(lastIndex, ' ' + suggestion);
-    this.primeEditor!.quill.formatText(lastIndex, suggestion.length+1, 'color', 'gray');
-    this.primeEditor!.quill.setSelection(lastIndex, 0);
-    this.hasSuggestion = true;
+
+    if(!this.hasSuggestion) {
+      let lastIndex = this.primeEditor!.quill.getLength() - 1;
+      this.primeEditor!.quill.insertText(lastIndex, ' ' + suggestion);
+      this.primeEditor!.quill.formatText(lastIndex, suggestion.length + 1, 'color', 'gray');
+      this.primeEditor!.quill.setSelection(lastIndex, 0);
+      this.hasSuggestion = true;
+    }
+
+  }
+
+  acceptSuggestion() {
+    this.hasSuggestion = false;
+    //eliminar el tab dado
+    let lastIndex = this.primeEditor!.quill.getLength()-1;
+    this.primeEditor!.quill.deleteText(lastIndex - this.suggestion.length-2, 2);
+
+    // Replace the suggestion with itself without format
+    let newIndex = this.primeEditor!.quill.getLength()-1;
+    this.primeEditor!.quill.formatText(newIndex-this.suggestion.length, this.suggestion.length, 'color', 'var(--text-color)');
+    this.primeEditor!.quill.setSelection(newIndex, 0);
+  }
+
+
+  rejectSuggestion(event: KeyboardEvent) {
+    if (event.key !== 'Tab' && this.hasSuggestion) {
+      this.hasSuggestion = false;
+      let allText = this.primeEditor!.quill.getText().split(' ');
+      let lastIndex = this.primeEditor!.quill.getLength() - 1;
+      let lastWord = allText[allText.length - 1];
+      this.primeEditor!.quill.deleteText(lastIndex - lastWord.length, lastWord.length);
+      this.primeEditor!.quill.setSelection(lastIndex, 0);
+    }
   }
 
   analyzeText() {
@@ -127,28 +155,4 @@ export class TextAnalyzerComponent{
       });
   }
 
-  acceptSuggestion() {
-    //eliminar el tab dado
-    let lastIndex = this.primeEditor!.quill.getLength()-1;
-    this.primeEditor!.quill.deleteText(lastIndex - this.suggestion.length-2, 2);
-
-    // Replace the suggestion with itself without format
-    let newIndex = this.primeEditor!.quill.getLength()-1;
-    this.primeEditor!.quill.formatText(newIndex-this.suggestion.length, this.suggestion.length, 'color', 'var(--text-color)');
-    this.primeEditor!.quill.setSelection(newIndex, 0);
-    this.hasSuggestion = false;
-  }
-
-
-  rejectSuggestion(event: KeyboardEvent) {
-    if (event.key !== 'Tab' && this.hasSuggestion) {
-      let allText = this.primeEditor!.quill.getText().split(' ');
-      let lastIndex = this.primeEditor!.quill.getLength() - 1;
-      let lastWord = allText[allText.length - 1];
-      this.primeEditor!.quill.deleteText(lastIndex - lastWord.length, lastWord.length);
-      this.primeEditor!.quill.setSelection(lastIndex, 0);
-
-      this.hasSuggestion = false;
-    }
-  }
 }
