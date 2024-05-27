@@ -177,6 +177,7 @@
   [style]="{ width: '50rem' }"
   header="{{'TERMS_AND_CONDITIONS.TITLE' | translate}}"
   styleClass="surface-0"
+  (onHide)="onClose()"
 >
 
   <p>
@@ -247,7 +248,7 @@
   </b>
   <ng-template pTemplate="footer">
     <p-button
-      (click)="visible = false"
+      (click)="acceptTermsAndConditions()"
       [text]="true"
       label="{{'ACCEPT' | translate}}"
       severity="help">
