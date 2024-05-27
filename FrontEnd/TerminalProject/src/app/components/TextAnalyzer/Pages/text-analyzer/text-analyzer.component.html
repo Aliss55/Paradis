@@ -8,6 +8,7 @@
 
     <div class="md:col-5 col-12 ">
       <p-card styleClass="sm:px-5 px-1 pb-1">
+        <p-toast key="error" [baseZIndex]="10000" position="bottom-center"></p-toast>
         <div *ngIf="!isAnalyzeButtonClicked; else anaylyzedText">
           <h1 class="title md:text-6xl">{{'INSTRUCTIONS'| translate }}</h1>
           <p class="md:text-2xl text-2xl sugerencia-palabra" [innerHTML]="'ANALYZE_TEXT.INSTRUCTIONS' | translate" >
