@@ -11,6 +11,7 @@ import {ModerationService} from "../../services/moderation.service";
 import {Moderation, Result} from "../../interfaces/moderation";
 import {NotificationService} from "../../../activities/shared/services/notification-service.service";
 import {TranslateService} from "@ngx-translate/core";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-text-analyzer',
@@ -32,9 +33,11 @@ export class TextAnalyzerComponent {
   isContentInappropriate: boolean = false;
 
   @ViewChild('editor') primeEditor: Editor | undefined;
+  hasAcceptTermsAndConditions: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
+    private router: Router,
     private spellCheckerService: SpellCheckerService,
     private wordSuggesterService: WordSuggesterService,
     private grammaticalAnalyzerService: GrammaticalAnalyzerService,
@@ -225,5 +228,15 @@ export class TextAnalyzerComponent {
           console.error(error);
         }
       });
+  }
+
+  onClose() {
+    if(!this.hasAcceptTermsAndConditions)
+      this.router.navigate(['/home']);
+  }
+
+  acceptTermsAndConditions() {
+    this.hasAcceptTermsAndConditions = true;
+    this.visible = false;
   }
 }
