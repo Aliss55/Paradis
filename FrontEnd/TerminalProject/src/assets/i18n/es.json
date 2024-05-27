@@ -95,8 +95,10 @@
     "ANALYZE": "Analizar",
     "SUGGEST_WORDS": "Sugerir palabras",
     "TOAST": {
+      "SUCCESS": "Texto analizado con éxito",
       "INAPPROPRIATE_CONTENT_MESSAGE": "El contenido que ha ingresado contiene material inapropiado. Por favor, edite su texto antes de continuar.",
-      "SENSITIVE_DATA_MESSAGE": "El contenido que ha ingresado contiene información sensible. Por favor, revise y elimine cualquier dato confidencial antes de continuar"
+      "SENSITIVE_DATA_MESSAGE": "El contenido que ha ingresado contiene información sensible. Por favor, revise y elimine cualquier dato confidencial antes de continuar",
+      "EMPTY_TEXT_MESSAGE": "Texto faltante."
     }
   },
   "TERMS_AND_CONDITIONS": {

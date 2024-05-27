@@ -134,11 +134,20 @@ export class TextAnalyzerComponent {
     this.isAnalyzeButtonClicked = false;
     this.isContentInappropriate = false;
 
-    this.moderationService.checkModeration(this.primeEditor!.quill.getText())
-      .subscribe({
-        next: (moderationResponse: Moderation) => this.handleModerationResponse(moderationResponse),
-        error: (error) => console.error(error)
-      });
+    let text = this.primeEditor!.quill.getText();
+
+    if (text.trim().length === 0) {
+      this.notificationService.notifyError(
+        this.translateService.instant('ANALYZE_TEXT.TOAST.EMPTY_TEXT_MESSAGE')
+      );
+    }else {
+
+      this.moderationService.checkModeration(text)
+        .subscribe({
+          next: (moderationResponse: Moderation) => this.handleModerationResponse(moderationResponse),
+          error: (error) => console.error(error)
+        });
+    }
 
   }
 
@@ -171,6 +180,9 @@ export class TextAnalyzerComponent {
       text = text.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s\n.,]/g, '');
       this.checkSpell(text);
       this.checkGrammar();
+      this.notificationService.notifySucess(
+        this.translateService.instant('ANALYZE_TEXT.TOAST.SUCCESS')
+      );
     }
   }
 

@@ -90,8 +90,10 @@
     "ANALYZE": "Analyze",
     "SUGGEST_WORDS": "Suggest words",
     "TOAST": {
+      "SUCCESS": "Text analyzed successfully",
       "INAPPROPRIATE_CONTENT_MESSAGE": "The content you have entered contains inappropriate material. Please edit your text before proceeding.",
-      "SENSITIVE_DATA_MESSAGE": "The content you have entered contains sensitive information. Please review and remove any confidential data before proceeding."
+      "SENSITIVE_DATA_MESSAGE": "The content you have entered contains sensitive information. Please review and remove any confidential data before proceeding.",
+      "EMPTY_TEXT_MESSAGE": "Empty text."
     }
 
   },
