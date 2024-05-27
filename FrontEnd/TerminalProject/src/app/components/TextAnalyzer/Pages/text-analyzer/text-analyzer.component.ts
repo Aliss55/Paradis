@@ -10,6 +10,7 @@ import {GrammaticalAnalyzer} from "../../interfaces/gammatical-analyzer";
 import {ModerationService} from "../../services/moderation.service";
 import {Moderation, Result} from "../../interfaces/moderation";
 import {NotificationService} from "../../../activities/shared/services/notification-service.service";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-text-analyzer',
@@ -38,7 +39,8 @@ export class TextAnalyzerComponent {
     private wordSuggesterService: WordSuggesterService,
     private grammaticalAnalyzerService: GrammaticalAnalyzerService,
     private moderationService: ModerationService,
-    private notificationService: NotificationService
+    private notificationService: NotificationService,
+    private translateService: TranslateService
   ) {
     this.analyzeTextForm = this.formBuilder.group({
       text: [''],
@@ -132,11 +134,20 @@ export class TextAnalyzerComponent {
     this.isAnalyzeButtonClicked = false;
     this.isContentInappropriate = false;
 
-    this.moderationService.checkModeration(this.primeEditor!.quill.getText())
-      .subscribe({
-        next: (moderationResponse: Moderation) => this.handleModerationResponse(moderationResponse),
-        error: (error) => console.error(error)
-      });
+    let text = this.primeEditor!.quill.getText();
+
+    if (text.trim().length === 0) {
+      this.notificationService.notifyError(
+        this.translateService.instant('ANALYZE_TEXT.TOAST.EMPTY_TEXT_MESSAGE')
+      );
+    }else {
+
+      this.moderationService.checkModeration(text)
+        .subscribe({
+          next: (moderationResponse: Moderation) => this.handleModerationResponse(moderationResponse),
+          error: (error) => console.error(error)
+        });
+    }
 
   }
 
@@ -153,8 +164,7 @@ export class TextAnalyzerComponent {
   private handleInappropriateContent() {
     this.isAnalyzeButtonClicked = false;
     this.notificationService.notifyError(
-      'El contenido que ha ingresado contiene material inapropiado. ' +
-      'Por favor, edite su texto antes de continuar."'
+      this.translateService.instant('ANALYZE_TEXT.TOAST.INAPPROPRIATE_CONTENT_MESSAGE')
     );
   }
 
@@ -163,14 +173,16 @@ export class TextAnalyzerComponent {
     if (this.containsSensitiveData(text)) {
       this.isAnalyzeButtonClicked = false;
       this.notificationService.notifyError(
-        'El contenido que ha ingresado contiene información sensible. ' +
-        'Por favor, revise y elimine cualquier dato confidencial antes de continuar."'
+        this.translateService.instant('ANALYZE_TEXT.TOAST.SENSITIVE_DATA_MESSAGE')
       );
     } else {
       this.isAnalyzeButtonClicked = true;
       text = text.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s\n.,]/g, '');
       this.checkSpell(text);
       this.checkGrammar();
+      this.notificationService.notifySucess(
+        this.translateService.instant('ANALYZE_TEXT.TOAST.SUCCESS')
+      );
     }
   }
 

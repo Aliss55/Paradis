@@ -93,7 +93,13 @@
   "ANALYZE_TEXT":{
     "INSTRUCTIONS": "En el editor de la derecha escribe un texto, después da clic en el botón <strong>Analizar</strong> para analizar el texto. <br> Si deseas recibir sugerencias de palabras da click en el interruptor al lado izquierdo de la etiqueta <strong>Sugerir palabras</strong>. <br> Para aceptar alguna sugerencia presiona la tecla tabulador una vez que la sugerencia se muestre en el editor.",
     "ANALYZE": "Analizar",
-    "SUGGEST_WORDS": "Sugerir palabras"
+    "SUGGEST_WORDS": "Sugerir palabras",
+    "TOAST": {
+      "SUCCESS": "Texto analizado con éxito",
+      "INAPPROPRIATE_CONTENT_MESSAGE": "El contenido que ha ingresado contiene material inapropiado. Por favor, edite su texto antes de continuar.",
+      "SENSITIVE_DATA_MESSAGE": "El contenido que ha ingresado contiene información sensible. Por favor, revise y elimine cualquier dato confidencial antes de continuar",
+      "EMPTY_TEXT_MESSAGE": "Texto faltante."
+    }
   },
   "TERMS_AND_CONDITIONS": {
     "TITLE": "Términos y Condiciones",
