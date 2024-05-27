@@ -1,4 +1,4 @@
-import { Component, ViewChild} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {SpellCheckerService} from "../../services/spell-checker.service";
 import {SpellChecker} from "../../interfaces/spell-checker";
@@ -7,13 +7,16 @@ import {WordSuggesterService} from "../../services/word-suggester.service";
 import {WordSuggester} from "../../interfaces/word-suggester";
 import {GrammaticalAnalyzerService} from "../../services/grammatical-analyzer.service";
 import {GrammaticalAnalyzer} from "../../interfaces/gammatical-analyzer";
+import {ModerationService} from "../../services/moderation.service";
+import {Moderation, Result} from "../../interfaces/moderation";
+import {NotificationService} from "../../../activities/shared/services/notification-service.service";
 
 @Component({
   selector: 'app-text-analyzer',
   templateUrl: './text-analyzer.component.html',
   styleUrl: './text-analyzer.component.scss'
 })
-export class TextAnalyzerComponent{
+export class TextAnalyzerComponent {
   analyzeTextForm: FormGroup<any>;
   fontSize: number = 20;
   isAnalyzeButtonClicked: boolean = false;
@@ -25,6 +28,8 @@ export class TextAnalyzerComponent{
   hasGrammaticalAnalyzerResponse: boolean = false;
   suggestion: string = 'sugerencia';
 
+  isContentInappropriate: boolean = false;
+
   @ViewChild('editor') primeEditor: Editor | undefined;
 
   constructor(
@@ -32,6 +37,8 @@ export class TextAnalyzerComponent{
     private spellCheckerService: SpellCheckerService,
     private wordSuggesterService: WordSuggesterService,
     private grammaticalAnalyzerService: GrammaticalAnalyzerService,
+    private moderationService: ModerationService,
+    private notificationService: NotificationService
   ) {
     this.analyzeTextForm = this.formBuilder.group({
       text: [''],
@@ -59,15 +66,15 @@ export class TextAnalyzerComponent{
   }
 
   suggestNextWord() {
-    if(this.analyzeTextForm!.get('suggesterChecked')!.value && !this.hasSuggestion) {
+    if (this.analyzeTextForm!.get('suggesterChecked')!.value && !this.hasSuggestion) {
       this.wordSuggesterService.suggestWord(this.primeEditor!.quill.getText())
         .subscribe({
           next: (wordSuggester: WordSuggester[]) => {
             const foundWord: WordSuggester | undefined = wordSuggester.find(
-              (suggestion : WordSuggester) => {
-              const isValidWord: boolean = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+$/i.test(suggestion.word);
-              return isValidWord && suggestion.word !== '[UNK]';
-            });
+              (suggestion: WordSuggester) => {
+                const isValidWord: boolean = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+$/i.test(suggestion.word);
+                return isValidWord && suggestion.word !== '[UNK]';
+              });
             if (foundWord) {
               this.suggestion = foundWord.word;
               this.appendWord(foundWord.word);
@@ -85,7 +92,7 @@ export class TextAnalyzerComponent{
 
   appendWord(suggestion: string) {
 
-    if(!this.hasSuggestion) {
+    if (!this.hasSuggestion) {
       let lastIndex = this.primeEditor!.quill.getLength() - 1;
       this.primeEditor!.quill.insertText(lastIndex, ' ' + suggestion);
       this.primeEditor!.quill.formatText(lastIndex, suggestion.length + 1, 'color', 'gray');
@@ -98,12 +105,12 @@ export class TextAnalyzerComponent{
   acceptSuggestion() {
     this.hasSuggestion = false;
     //eliminar el tab dado
-    let lastIndex = this.primeEditor!.quill.getLength()-1;
-    this.primeEditor!.quill.deleteText(lastIndex - this.suggestion.length-2, 2);
+    let lastIndex = this.primeEditor!.quill.getLength() - 1;
+    this.primeEditor!.quill.deleteText(lastIndex - this.suggestion.length - 2, 2);
 
     // Replace the suggestion with itself without format
-    let newIndex = this.primeEditor!.quill.getLength()-1;
-    this.primeEditor!.quill.formatText(newIndex-this.suggestion.length, this.suggestion.length, 'color', 'var(--text-color)');
+    let newIndex = this.primeEditor!.quill.getLength() - 1;
+    this.primeEditor!.quill.formatText(newIndex - this.suggestion.length, this.suggestion.length, 'color', 'var(--text-color)');
     this.primeEditor!.quill.setSelection(newIndex, 0);
   }
 
@@ -122,27 +129,67 @@ export class TextAnalyzerComponent{
   analyzeText() {
     this.hasSpellCheckerResponse = false;
     this.hasGrammaticalAnalyzerResponse = false;
-    this.isAnalyzeButtonClicked = true;
+    this.isAnalyzeButtonClicked = false;
+    this.isContentInappropriate = false;
 
-    let text = this.primeEditor!.quill.getText()
-
-    text = text.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s\n.,]/g, '');
-
-    this.spellCheckerService.checkSpelling(text)
+    this.moderationService.checkModeration(this.primeEditor!.quill.getText())
       .subscribe({
-        next: (spellChecker: SpellChecker[]) => {
-          this.spellChecker = spellChecker;
-          this.hasSpellCheckerResponse = true;
-        },
-        error: (error) => {
-          console.error(error);
-        }
+        next: (moderationResponse: Moderation) => this.handleModerationResponse(moderationResponse),
+        error: (error) => console.error(error)
       });
+
+  }
+
+  private handleModerationResponse(moderationResponse: Moderation) {
+    this.isContentInappropriate = moderationResponse.results.some((result) => result.flagged);
+    console.log(this.isContentInappropriate)
+    if (this.isContentInappropriate) {
+      this.handleInappropriateContent();
+    } else {
+      this.handleAppropriateContent();
+    }
+  }
+
+  private handleInappropriateContent() {
+    this.isAnalyzeButtonClicked = false;
+    this.notificationService.notifyError(
+      'El contenido que ha ingresado contiene material inapropiado. ' +
+      'Por favor, edite su texto antes de continuar."'
+    );
+  }
+
+  private handleAppropriateContent() {
+    let text:string = this.primeEditor!.quill.getText()
+    if (this.containsSensitiveData(text)) {
+      this.isAnalyzeButtonClicked = false;
+      this.notificationService.notifyError(
+        'El contenido que ha ingresado contiene información sensible. ' +
+        'Por favor, revise y elimine cualquier dato confidencial antes de continuar."'
+      );
+    } else {
+      this.isAnalyzeButtonClicked = true;
+      text = text.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s\n.,]/g, '');
+      this.checkSpell(text);
+      this.checkGrammar();
+    }
+  }
+
+  private containsSensitiveData(text: string): boolean {
+    const phoneRegex = /^(\(\+?\d{2,3}\)[*|\s\-.]?((\d[*|\s\-.]?){6})((\d[\s|\-.]?){2})?|(\+?\d[\s|\-.]?){8}((\d[\s|.]?){2}((\d[\s|\-.]?){2})?)?)$/;
+    const emailRegex = /[\w.-]+@[\w.-]+\.\w+/;
+    const nssRegex = /\b\d{11}\b/;
+    const cardNumberRegex = /\b\d{16}\b/;
+
+    return phoneRegex.test(text) || emailRegex.test(text) || nssRegex.test(text) || cardNumberRegex.test(text);
+  }
+
+  private checkGrammar() {
     this.grammaticalAnalyzerService.analyzeGrammar(this.primeEditor!.quill.getText())
       .subscribe({
         next: (grammaticalAnalyzerResponse: GrammaticalAnalyzer[]) => {
           this.grammaticalAnalyzer = [];
-          if(grammaticalAnalyzerResponse instanceof Array) {
+
+          if (grammaticalAnalyzerResponse instanceof Array) {
             this.grammaticalAnalyzer = grammaticalAnalyzerResponse;
           } else {
             this.grammaticalAnalyzer.push(grammaticalAnalyzerResponse);
@@ -155,4 +202,16 @@ export class TextAnalyzerComponent{
       });
   }
 
+  private checkSpell(text:string) {
+    this.spellCheckerService.checkSpelling(text)
+      .subscribe({
+        next: (spellChecker: SpellChecker[]) => {
+          this.spellChecker = spellChecker;
+          this.hasSpellCheckerResponse = true;
+        },
+        error: (error) => {
+          console.error(error);
+        }
+      });
+  }
 }
