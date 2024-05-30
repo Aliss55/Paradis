@@ -10,6 +10,6 @@ const environment = {
   production: true,
 }
 
-const content = `export const environment = ${JSON.stringify(environmet)};`;
+const content = `export const environment = ${JSON.stringify(environment)};`;
 
 fs.writeFileSync('./src/environments/environment.prod.ts', content);
