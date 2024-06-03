@@ -12,7 +12,9 @@ const envFile = `export const environment = {
   moderationService: '${process.env.moderationService}',
   production: true,
 };`
-
+if (!fs.existsSync('./src/environments')) {
+  fs.mkdirSync('./src/environments');
+}
 const targetPath = path.join(process.cwd(), './src/environments/environment.prod.ts');
 fs.writeFile(targetPath, envFile, (err) => {
   if (err) {
