@@ -29,11 +29,11 @@
     },
     "BLOG_3": {
       "TITLE": "Comma",
-      "DESCRIPTION": "What is a comma? Examples of use"
+      "DESCRIPTION": "What is a comma? Examples of use."
     },
     "BLOG_4": {
       "TITLE": "Capitalization",
-      "DESCRIPTION": "Definition, rules and examples"
+      "DESCRIPTION": "Definition, rules and examples."
     },
     "BLOG_5": {
       "TITLE": "\"Halla\", \"haya\", \"aya\", \"allá\"",
@@ -41,7 +41,7 @@
     },
     "BLOG_6": {
       "TITLE": "Adverbs",
-      "DESCRIPTION": "What is an adverb? classification and examples"
+      "DESCRIPTION": "What is an adverb? classification and examples."
     },
     "BLOG_7": {
       "TITLE": "Nature related verbs",
@@ -63,46 +63,78 @@
       "INSTRUCTIONS_DESCRIPTION": "In this activity you are going to see a box with an image and three option buttons. \n Your task is to click on the button which shows the {{ description_word }} depicted in the image. After clicking one option another box with a new image will appear. At the end of the activity you will be able to see your score.",
       "FINAL_SCORE": "Your answered correctly {{correct_answers}} questions out of {{number_of_questions}}",
       "PROFESSIONS_OCCUPATIONS": "Professions and occupations",
-      "PROFESSIONS_OCCUPATIONS_CARD_DESCRIPTION": "This activity gives you a space to practice vocabulary related to professions and occupations",
+      "PROFESSIONS_OCCUPATIONS_CARD_DESCRIPTION": "This activity gives you a space to practice vocabulary related to professions and occupations.",
       "PROFESSIONS_OCCUPATIONS_KEYWORD": "profession or occupation",
       "DEMONYMS": "Demonyms",
-      "DEMONYMS_CARD_DESCRIPTION": "This activity gives you a space to practice vocabulary related to demonyms",
+      "DEMONYMS_CARD_DESCRIPTION": "This activity gives you a space to practice vocabulary related to demonyms.",
       "DEMONYMS_KEYWORD": "demonym"
     },
     "SPELLING_ACTIVITIES":
     {
       "USAGE_OF_THE_LETTER_U": "Usage of the letter 'u'",
-      "USAGE_OF_THE_LETTER_U_CARD_DESCRIPTION": "This activity gives you a space to practice the usage of the letter 'u'",
+      "USAGE_OF_THE_LETTER_U_CARD_DESCRIPTION": "This activity gives you a space to practice the usage of the letter 'u'.",
       "SEND": "Send",
       "INSTRUCTIONS": "In the following boxes you will see 3 forms of writing a word. Your task is to write in the input field the only one that is correctly written. Once you are ready click on the 'Send' button to check your answer.",
-      "ORTHOGRAPHIC_GUIDE": "Orthographic guide",
-      "ORTHOGRAPHIC_RULE_OF_U": "When to use the letter ü?",
-      "ORTHOGRAPHIC_RULE_OF_U_DESCRIPTION_1": "The letter u is written with diaeresis  ( <b>  ü </b> ) if all the following conditions are met:",
-      "ORTHOGRAPHIC_RULE_OF_U_DESCRIPTION_2": "1. It is found after the letter <b> g </b>. <br> 2. It is positioned before the letter ' <b> i </b>' or ' <b> e </b>'. <br>3. If the distinct sound of the letter u is heard when pronouncing a word."
+      "ORTHOGRAPHIC_GUIDE": "Orthographic guide"
     },
     "GRAMMAR_CONJUGATION_ACTIVITY": {
       "TITLE": "Conjugate verbs",
       "DESCRIPTION": "In this activity you will be able to practice the conjugation of regular verbs in the Spanish present indicative tense.",
       "INSTRUCTIONS": "In the boxes below, you will see a verb in its infinitive form and different pronouns. The activity consists of writing the correct conjugation of the verb according to the rules of the Spanish present indicative tense next to each corresponding pronoun.",
       "GRAMMAR_GUIDE": "Grammar guide",
-      "INFINITIVE_VERB": "Infinitive verb",
-      "GRAMMAR_GUIDE_TITLE": "How do I conjugate regular verbs in the Spanish present indicative tense?",
-      "GRAMMAR_GUIDE_EXPLANATION": "The conjugation of regular verbs in the Spanish present indicative tense is formed by adding a specific ending to the verb root. There are three conjugation models: those ending in <b>-ar</b>, those ending in <b>-er</b> and those ending in <b>-ir</b>. <br>              <ol><li> <h3> Verbs ending in <b>-ar </b> </h3> They are those that are conjugated like the verb \"amar\".    <br>     <table style=\"border-collapse: collapse; margin-top:10px; \"> <tr><th style=\"border: 1px solid #dddddd;padding: 8px;\">Subject</th><th style=\"border: 1px solid #dddddd;padding: 8px;\">Conjugated verb</th></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Yo</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>o</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Tú</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>as</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">El/Ella</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>a</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Nosotros</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>amos</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Ustedes</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>an</b></td></tr> <tr> <td style=\"border: 1px solid #dddddd;padding: 8px;\">Ellos/Ellas</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">am<b>an</b></td> </tr> </table>  </li>                 <li> <h3> Verbs ending in <b>-er </b> </h3> They are those that are conjugated like the verb \"comer\".    <br>     <table style=\"border-collapse: collapse; margin-top:10px; \"> <tr><th style=\"border: 1px solid #dddddd;padding: 8px;\">Subject</th><th style=\"border: 1px solid #dddddd;padding: 8px;\">Conjugated verb</th></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Yo</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>o</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Tú</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>es</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">El/Ella</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>e</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Nosotros</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>emos</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Ustedes</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>en</b></td></tr> <tr> <td style=\"border: 1px solid #dddddd;padding: 8px;\">Ellos/Ellas</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">com<b>en</b></td> </tr> </table>  </li>      <li> <h3> Verbs ending in <b>-ir </b> </h3> They are those that are conjugated like the verb \"vivir\".<br>                  <table style=\"border-collapse: collapse; margin-top:10px; \"> <tr><th style=\"border: 1px solid #dddddd;padding: 8px;\">Subject</th><th style=\"border: 1px solid #dddddd;padding: 8px;\">Conjugated verb</th></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Yo</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>o</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Tú</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>es</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">El/Ella</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>e</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Nosotros</td><td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>imos</b></td></tr> <tr><td style=\"border: 1px solid #dddddd;padding: 8px;\">Ustedes</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>en</b></td></tr> <tr> <td style=\"border: 1px solid #dddddd;padding: 8px;\">Ellos/Ellas</td> <td style=\"border: 1px solid #dddddd;padding: 8px;\">viv<b>en</b></td> </tr> </table>  </li>   </ul> </li></ol> "
-
-
+      "INFINITIVE_VERB": "Infinitive verb"
     }
+    },
+  "ANALYZE_TEXT":{
+    "INSTRUCTIONS": "In the editor on the right, write a text, then click the <strong>Analyze</strong> button to analyze the text. <br> If you want to receive word suggestions, click the switch to the left of the <strong>Suggest words</strong> label. <br> To accept a suggestion, press the tab key once the suggestion appears in the editor.",
+    "ANALYZE": "Analyze",
+    "SUGGEST_WORDS": "Suggest words",
+    "TOAST": {
+      "SUCCESS": "Text analyzed successfully",
+      "INAPPROPRIATE_CONTENT_MESSAGE": "The content you have entered contains inappropriate material. Please edit your text before proceeding.",
+      "SENSITIVE_DATA_MESSAGE": "The content you have entered contains sensitive information. Please review and remove any confidential data before proceeding.",
+      "EMPTY_TEXT_MESSAGE": "Empty text."
     }
-  ,
+
+  },
+  "TERMS_AND_CONDITIONS": {
+    "TITLE": "Terms and conditions",
+    "WELCOME": "Welcome to our web application designed to support the learning of Mexican Spanish at the A1 level of the Common European Framework of Reference for Languages. Before you start using our tool, we ask you to read and accept the following terms and conditions that govern its use. By accessing and using our application, you agree to comply with these terms and conditions.",
+    "POLITICS": "Politics",
+    "POLITICS_1": "All users must carefully read and accept the terms and conditions of use of the project in order to use the Mexican Spanish learning tool.",
+    "POLITIC_2_TITLE": "Personally Identifiable Information (PII)",
+    "POLITIC_2": "Personally identifiable information of users is not going to be collected or stored",
+    "POLITIC_3_TITLE": "Non-Commercial Use",
+    "POLITIC_3": "The tool is intended exclusively for educational and non-commercial purposes. Its use for commercial or advertising purposes is strictly prohibited.",
+    "TEXT_PROCESSING": "Text Processing",
+    "TEXT_PROCESSING_1_TITLE": "Spanish Proficiency Level A1",
+    "TEXT_PROCESSING_1": "Our system has been designed to incorporate grammatical structures in accordance with level A1 of the Common European Framework of Reference for Languages, facilitating the progressive learning of Spanish.",
+    "TEXT_PROCESSING_2_TITLE": "Corpora",
+    "TEXT_PROCESSING_2": "The texts used for the generation of the corpora correspond to children's stories, specifically selected to support language learning.",
+    "TEXT_PROCESSING_3_TITLE": "Reliable Sources",
+    "TEXT_PROCESSING_3": "The texts selected for the corpora and informational pages have been obtained from reliable and verified sources to ensure the quality and accuracy of the content offered.",
+    "TEXT_PROCESSING_4_TITLE": "Restriction of Inappropriate Content",
+    "TEXT_PROCESSING_4": "It is not allowed to input or view texts containing offensive, homophobic, racist, discriminatory, violent, or inappropriate content of any kind. We reserve the right to remove such content and take appropriate measures.",
+    "TEXT_PROCESSING_5_TITLE": "Protection of Sensitive Data",
+    "TEXT_PROCESSING_5": "For security and privacy protection reasons, users should not enter or share sensitive personal information such as social security numbers, credit card numbers, or other confidential data in our tool.",
+    "CONSIDERATIONS": "By using our web application, <strong>you agree to comply with these terms and conditions</strong>. If you do not agree with any of these policies, please do not use our tool.",
+    "THANKS_USER": "Thank you for being part of our Mexican Spanish learning community. Enjoy your learning experience!"
+
+  },
   "MENU": "Menu",
   "ACCEPT": "Accept",
+  "INSTRUCTIONS": "Instructions",
   "WRITE_YOUR_ANSWER": "Write your answer",
   "PROJECT_NUMBER": "Terminal Project 2024-A012",
-  "REFERENCES": "References",
   "LAROUSSE_REFERENCE": "I. Munguía Zataraín, M. E. Munguía Zatarain, y G. Rocha Romero, Gramática lengua española. México, D.F.: Larousse, 2013.",
   "RAE_BASICS_OF_GRAMMAR_AND_ORTHOGRAPHY": "Real Academia Española y Asociación de Academias de la Lengua Española, Eds., Gramática y ortografía básicas de la lengua española, 1.a ed. Madrid: Editorial Planeta, 2019.",
   "CORRECT_ANSWER": "That's correct!",
   "INCORRECT_ANSWER": "Sorry, try again",
   "FILL_ALL": "Please fill all the empty placeholders",
-  "FILL_CORRECTLY": "Please fill the empty placeholder"
-
+  "FILL_CORRECTLY": "Your activity is not complete. Please make sure to fill in all required fields before proceeding.",
+  "RESTRICTIONS_ON_USE_TITLE": "Restrictions on use",
+  "RESTRICTIONS_ON_USE": "This document contains information developed by the Escuela Superior de Cómputo of the Instituto Politécnico Nacional, based on data and documents with proprietary rights. Therefore, its use will be restricted to explicitly agreed-upon applications.",
+  "RESTRICTIONS_ON_USE_1": "Unauthorized use releases the school from its technical responsibility and may result in legal consequences.",
+  "RESTRICTIONS_ON_USE_2": "Additional information about this technical report can be obtained from the Academic Subdirection of the Escuela Superior de Cómputo of the Instituto Politécnico Nacional, located at Av. Juan de Dios Bátiz s/n Phone: 57296000, extension 52000.",
+  "RESTRICTIONS_ON_USE_3": ""
 }

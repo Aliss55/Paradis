@@ -23,14 +23,13 @@
     </ng-template>
   </p-card>
 </div>
-
+<p-toast [life]="1000" key="success" position="top-center"></p-toast>
+<p-toast [life]="1000" key="error" position="top-center"></p-toast>
 <div class="grid">
   <div
     *ngFor="let question of questions; let i = index"
     class="md:col-6 sm:col-12 col-12"
   >
-    <p-toast [life]="1000" key="success" position="top-center"></p-toast>
-    <p-toast [life]="1000" key="error" position="top-center"></p-toast>
     <div class="surface-0 card text-center shadow-5">
       <div class="option">
         <h3>

@@ -6,7 +6,8 @@
 
   <div class="grid sm:mt-7 mt-3">
 
-    <div class="md:col-7 sm:px-5 px-0 col-12">
+
+    <div class="flex-order-1 md:flex-order-0 md:col-7 sm:px-5 px-0 col-12">
       <form [formGroup]="analyzeTextForm">
         <p-card styleClass="sm:px-5 sm:pt-5 sm:pb-2 p-1">
 
@@ -55,6 +56,7 @@
               (keydown)="rejectSuggestion($event)"
               (keyup.space)="suggestNextWord()"
               (keyup.tab)="acceptSuggestion()"
+              spellcheck="false"
               formControlName="text"
               styleClass="h-12rem">
             </p-editor>
@@ -65,15 +67,15 @@
             <div class="flex justify-content-end gap-3 flex-wrap">
 
 
-              <div class="flex gap-2">
+              <div class="hidden sm:flex gap-2">
                 <p-inputSwitch formControlName="suggesterChecked">
                 </p-inputSwitch>
-                <b class="text-sm p-2 sugerencia-palabra">Sugerir palabras</b>
+                <b class="text-sm p-2 sugerencia-palabra">{{'ANALYZE_TEXT.SUGGEST_WORDS' | translate}}</b>
               </div>
 
 
               <p-button (click)="analyzeText()" class="ml-3" severity="secondary">
-                <b>Analizar</b>
+                <b>{{'ANALYZE_TEXT.ANALYZE' | translate}}</b>
                 <i class="material-icons ml-3">send</i>
 
               </p-button>
@@ -84,13 +86,13 @@
       </form>
     </div>
 
-    <div class="md:col-5 col-12 ">
+    <div class="flex-order-0 md:flex-order-1 md:col-5 col-12 ">
       <p-card styleClass="sm:px-5 px-1 pb-1">
+        <p-toast key="error" [baseZIndex]="10000" position="bottom-center"></p-toast>
+        <p-toast key="success" [baseZIndex]="10000" position="bottom-center"></p-toast>
         <div *ngIf="!isAnalyzeButtonClicked; else anaylyzedText">
-          <h1 class="title md:text-6xl">Instrucciones</h1>
-          <p class="md:text-4xl text-2xl sugerencia-palabra">
-            En el espacio blanco de la izquierda escribe un texto,
-            después da clic en el botón <strong>Analizar</strong> para analizar el texto
+          <h1 class="title md:text-6xl">{{'INSTRUCTIONS'| translate }}</h1>
+          <p class="md:text-2xl text-2xl sugerencia-palabra" [innerHTML]="'ANALYZE_TEXT.INSTRUCTIONS' | translate" >
           </p>
         </div>
 
@@ -173,97 +175,82 @@
   [maximizable]="true"
   [modal]="true"
   [style]="{ width: '50rem' }"
-  header="Terminos y condiciones"
+  header="{{'TERMS_AND_CONDITIONS.TITLE' | translate}}"
   styleClass="surface-0"
+  (onHide)="onClose()"
 >
 
   <p>
-    Bienvenido/a a nuestra aplicación web diseñada para apoyar el aprendizaje del español mexicano en el nivel A1
-    del Marco Común Europeo de Referencia para las Lenguas. Antes de comenzar a utilizar nuestra herramienta,
-    te solicitamos leer y aceptar los siguientes términos y condiciones que rigen su uso.
-    Al acceder y usar nuestra aplicación, aceptas cumplir con estos términos y condiciones.
+   {{ 'TERMS_AND_CONDITIONS.WELCOME' | translate }}
   </p>
 
-  <h3>Políticas</h3>
+  <h3>  {{ 'TERMS_AND_CONDITIONS.POLITICS' | translate }} </h3>
   <ul class="list-decimal">
     <li class="line-height-4">
-      <b>Términos y Condiciones</b>
+      <b> {{ 'TERMS_AND_CONDITIONS.TITLE' | translate }} </b>
       <p>
-        Todos los usuarios deben leer detenidamente y aceptar los términos y condiciones de uso del proyecto para
-        poder utilizar la herramienta de aprendizaje del español mexicano.
+        {{ 'TERMS_AND_CONDITIONS.POLITICS_1' | translate }}
       </p>
     </li>
     <li class="line-height-4">
-      <b>Información de Identificación Personal (PII)</b>
+      <b>{{ 'TERMS_AND_CONDITIONS.POLITIC_2_TITLE' | translate }}</b>
       <p>
-        En ningún caso se recopilará ni almacenará información personal de identificación de los usuarios.
+        {{ 'TERMS_AND_CONDITIONS.POLITIC_2' | translate }}
       </p>
     </li>
     <li class="line-height-4">
-      <b>Uso No Comercial</b>
+      <b>{{ 'TERMS_AND_CONDITIONS.POLITIC_3_TITLE' | translate }}</b>
       <p>
-        La herramienta está destinada exclusivamente para fines educativos y no comerciales. Queda estrictamente
-        prohibido su uso con propósitos comerciales o publicitarios.
+        {{ 'TERMS_AND_CONDITIONS.POLITIC_3' | translate }}
       </p>
     </li>
   </ul>
 
-  <h3>Procesamiento de Textos</h3>
+  <h3>{{ 'TERMS_AND_CONDITIONS.TEXT_PROCESSING' | translate }}</h3>
   <ul class="list-decimal">
     <li class="line-height-4">
-      <b>Competencia en Español Nivel A1</b>
+      <b>{{ 'TERMS_AND_CONDITIONS.TEXT_PROCESSING_1_TITLE' | translate }}</b>
       <p>
-        Nuestro sistema ha sido diseñado para incorporar estructuras gramaticales conformes al nivel A1 del Marco
-        Común Europeo de Referencia para las Lenguas, facilitando el aprendizaje progresivo del español.
+        {{ 'TERMS_AND_CONDITIONS.TEXT_PROCESSING_1' | translate }}
       </p>
     </li>
     <li class="line-height-4">
-      <b>Textos del Corpus</b>
+      <b> {{ 'TERMS_AND_CONDITIONS.TEXT_PROCESSING_2_TITLE' | translate }}</b>
       <p>
-        Los textos utilizados para la generación del Corpus corresponden a cuentos infantiles, seleccionados
-        específicamente para apoyar el aprendizaje del idioma.
+        {{ 'TERMS_AND_CONDITIONS.TEXT_PROCESSING_2' | translate }}
       </p>
     </li>
     <li class="line-height-4">
-      <b>Fuentes Confiables</b>
+      <b>{{ 'TERMS_AND_CONDITIONS.TEXT_PROCESSING_3_TITLE' | translate }}</b>
       <p>
-        Los textos seleccionados para el Corpus y las páginas informativas han sido obtenidos de fuentes confiables
-        y verificadas para garantizar la calidad y precisión del contenido ofrecido.
+        {{ 'TERMS_AND_CONDITIONS.TEXT_PROCESSING_3' | translate }}
       </p>
     </li>
     <li class="line-height-4">
-      <b>Restricción de Contenido Inapropiado</b>
+      <b>{{ 'TERMS_AND_CONDITIONS.TEXT_PROCESSING_4_TITLE' | translate }}</b>
       <p>
-        No está permitido ingresar ni visualizar textos que contengan contenido ofensivo, homofóbico, racista,
-        discriminatorio, violento o inapropiado de cualquier índole. Nos reservamos el derecho de eliminar dicho
-        contenido y tomar medidas correspondientes.
+        {{ 'TERMS_AND_CONDITIONS.TEXT_PROCESSING_4' | translate }}
       </p>
     </li>
     <li class="line-height-4">
-      <b>Protección de Datos Sensibles</b>
+      <b>{{ 'TERMS_AND_CONDITIONS.TEXT_PROCESSING_5_TITLE' | translate }}</b>
       <p>
-        Por motivos de seguridad y protección de la privacidad, los usuarios no deben ingresar ni compartir
-        información personal sensible, como números de seguro social, números de tarjeta de crédito u otros datos
-        confidenciales en nuestra herramienta.
+        {{ 'TERMS_AND_CONDITIONS.TEXT_PROCESSING_5' | translate }}
       </p>
     </li>
   </ul>
 
-  <p>
-    Al utilizar nuestra aplicación web, <strong>aceptas cumplir con estos términos y condiciones</strong>. Si no estás
-    de acuerdo
-    con alguna de estas políticas, te rogamos no utilizar nuestra herramienta.
+  <p [innerHTML]="'TERMS_AND_CONDITIONS.CONSIDERATIONS' | translate ">
   </p>
 
   <b class="font-italic">
-    Gracias por ser parte de nuestra comunidad de aprendizaje del español mexicano. ¡Disfruta tu experiencia de
-    aprendizaje!
+    {{ 'TERMS_AND_CONDITIONS.THANKS_USER' | translate }}
   </b>
   <ng-template pTemplate="footer">
     <p-button
-      (click)="visible = false"
+      (click)="acceptTermsAndConditions()"
       [text]="true"
-      label="Aceptar"
+      label="{{'ACCEPT' | translate}}"
       severity="help">
       <i class="material-icons">done</i>
     </p-button>

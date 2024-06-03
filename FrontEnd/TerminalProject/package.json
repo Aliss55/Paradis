@@ -8,7 +8,7 @@
     "start:production": "ng serve --configuration production --proxy-config proxy.conf.json",
     "compile:scss": "npx sass --watch ../packages/Light-Theme/blue/theme.scss:./src/assets/themes/light-theme.css ../packages/Dark-Theme/purple/theme.scss:./src/assets/themes/dark-theme.css",
     "compile:scssOnce": "npx sass ../packages/Light-Theme/blue/theme.scss:./src/assets/themes/light-theme.css ../packages/Dark-Theme/purple/theme.scss:./src/assets/themes/dark-theme.css",
-    "build": "ng build",
+    "build": "node -r dotenv/config set-env.js && ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -25,6 +25,7 @@
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
     "animate.css": "^4.1.1",
+    "dotenv": "^16.4.5",
     "material-icons": "^1.13.12",
     "primeflex": "^3.3.1",
     "primeng": "^17.16.0",
