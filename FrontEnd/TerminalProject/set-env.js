@@ -33,10 +33,10 @@ const dotenv = require('dotenv').config({ path: 'src/.env' });
     await fs.mkdir(envDirPath, { recursive: true });
 
     // Escribir el archivo environment.prod.ts
-    const targetPath = path.join(envDirPath, 'environment.prod.ts');
+    const targetPath = path.join(envDirPath, 'environment.ts');
     await fs.writeFile(targetPath, envFileContent);
 
-    console.log('\x1b[32m%s\x1b[0m', '\u{2705} Successfully generated environment.prod.ts');
+    console.log('\x1b[32m%s\x1b[0m', '\u{2705} Successfully generated environment.ts');
 
     // Ejecutar la compilación de Angular
     require('child_process').execSync('ng build --configuration production', { stdio: 'inherit' });
