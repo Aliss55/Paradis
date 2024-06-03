@@ -8,7 +8,7 @@
     "start:production": "ng serve --configuration production --proxy-config proxy.conf.json",
     "compile:scss": "npx sass --watch ../packages/Light-Theme/blue/theme.scss:./src/assets/themes/light-theme.css ../packages/Dark-Theme/purple/theme.scss:./src/assets/themes/dark-theme.css",
     "compile:scssOnce": "npx sass ../packages/Light-Theme/blue/theme.scss:./src/assets/themes/light-theme.css ../packages/Dark-Theme/purple/theme.scss:./src/assets/themes/dark-theme.css",
-    "build": "node set-env.js && ng build --prod",
+    "build": "node -r dotenv/config set-env.js && ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
