@@ -93,7 +93,8 @@
       "SUCCESS": "Text analyzed successfully",
       "INAPPROPRIATE_CONTENT_MESSAGE": "The content you have entered contains inappropriate material. Please edit your text before proceeding.",
       "SENSITIVE_DATA_MESSAGE": "The content you have entered contains sensitive information. Please review and remove any confidential data before proceeding.",
-      "EMPTY_TEXT_MESSAGE": "Empty text."
+      "EMPTY_TEXT_MESSAGE": "Empty text.",
+      "MAX_WORDS_MESSAGE": "The text you have entered exceeds the maximum number of words allowed (500 words). Please reduce the number of words before proceeding."
     }
 
   },

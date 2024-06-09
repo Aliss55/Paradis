@@ -8,7 +8,7 @@ import {WordSuggester} from "../../interfaces/word-suggester";
 import {GrammaticalAnalyzerService} from "../../services/grammatical-analyzer.service";
 import {GrammaticalAnalyzer} from "../../interfaces/gammatical-analyzer";
 import {ModerationService} from "../../services/moderation.service";
-import {Moderation, Result} from "../../interfaces/moderation";
+import {Moderation} from "../../interfaces/moderation";
 import {NotificationService} from "../../../activities/shared/services/notification-service.service";
 import {TranslateService} from "@ngx-translate/core";
 import {Router} from "@angular/router";
@@ -21,6 +21,7 @@ import {Router} from "@angular/router";
 export class TextAnalyzerComponent {
   analyzeTextForm: FormGroup<any>;
   fontSize: number = 20;
+  MAX_WORDS: number = 500;
   isAnalyzeButtonClicked: boolean = false;
   visible: boolean = true;
   spellChecker: SpellChecker[] = [];
@@ -30,7 +31,7 @@ export class TextAnalyzerComponent {
   hasGrammaticalAnalyzerResponse: boolean = false;
   suggestion: string = 'sugerencia';
 
-  isContentInappropriate: boolean = false;
+  isContentInappropriate: boolean | undefined = false;
 
   @ViewChild('editor') primeEditor: Editor | undefined;
   hasAcceptTermsAndConditions: boolean = false;
@@ -71,8 +72,17 @@ export class TextAnalyzerComponent {
   }
 
   suggestNextWord() {
+    let text = this.primeEditor!.quill.getText();
+    let words = text.split(' ');
+    let wordCount = words.length;
+
+    if(wordCount >= 150){
+      let lastWords = words.slice(wordCount - 150, wordCount);
+      text = lastWords.join(' ');
+    }
+
     if (this.analyzeTextForm!.get('suggesterChecked')!.value && !this.hasSuggestion) {
-      this.wordSuggesterService.suggestWord(this.primeEditor!.quill.getText())
+      this.wordSuggesterService.suggestWord(text)
         .subscribe({
           next: (wordSuggester: WordSuggester[]) => {
             const foundWord: WordSuggester | undefined = wordSuggester.find(
@@ -139,6 +149,16 @@ export class TextAnalyzerComponent {
 
     let text = this.primeEditor!.quill.getText();
 
+    let words = text.split(' ');
+    let wordCount = words.length;
+
+    if(wordCount >= this.MAX_WORDS){
+      this.notificationService.notifyError(
+        this.translateService.instant('ANALYZE_TEXT.TOAST.MAX_WORDS_MESSAGE')
+      );
+      return;
+    }
+
     if (text.trim().length === 0) {
       this.notificationService.notifyError(
         this.translateService.instant('ANALYZE_TEXT.TOAST.EMPTY_TEXT_MESSAGE')
@@ -155,7 +175,7 @@ export class TextAnalyzerComponent {
   }
 
   private handleModerationResponse(moderationResponse: Moderation) {
-    this.isContentInappropriate = moderationResponse.results.some((result) => result.flagged);
+    this.isContentInappropriate = moderationResponse.results?.some((result) => result.flagged);
     console.log(this.isContentInappropriate)
     if (this.isContentInappropriate) {
       this.handleInappropriateContent();
