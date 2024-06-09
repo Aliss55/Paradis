@@ -98,7 +98,8 @@
       "SUCCESS": "Texto analizado con éxito",
       "INAPPROPRIATE_CONTENT_MESSAGE": "El contenido que ha ingresado contiene material inapropiado. Por favor, edite su texto antes de continuar.",
       "SENSITIVE_DATA_MESSAGE": "El contenido que ha ingresado contiene información sensible. Por favor, revise y elimine cualquier dato confidencial antes de continuar",
-      "EMPTY_TEXT_MESSAGE": "Texto faltante."
+      "EMPTY_TEXT_MESSAGE": "Texto faltante.",
+      "MAX_WORDS_MESSAGE": "El texto que ha ingresado excede el número máximo de palabras permitidas (500 palabras). Por favor, reduzca el número de palabras antes de continuar."
     }
   },
   "TERMS_AND_CONDITIONS": {
