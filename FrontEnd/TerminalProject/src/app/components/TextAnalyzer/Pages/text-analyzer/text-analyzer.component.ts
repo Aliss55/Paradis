@@ -210,7 +210,7 @@ export class TextAnalyzerComponent {
   }
 
   private containsSensitiveData(text: string): boolean {
-    const phoneRegex = /^(\(\+?\d{2,3}\)[*|\s\-.]?((\d[*|\s\-.]?){6})((\d[\s|\-.]?){2})?|(\+?\d[\s|\-.]?){8}((\d[\s|.]?){2}((\d[\s|\-.]?){2})?)?)$/;
+    const phoneRegex = /(\(\+?\d{2,3}\)[*|\s\-.]?((\d[*|\s\-.]?){6})((\d[\s|\-.]?){2})?|(\+?\d[\s|\-.]?){8}((\d[\s|.]?){2}((\d[\s|\-.]?){2})?)?)/;
     const emailRegex = /[\w.-]+@[\w.-]+\.\w+/;
     const nssRegex = /\b\d{11}\b/;
     const cardNumberRegex = /\b\d{16}\b/;
